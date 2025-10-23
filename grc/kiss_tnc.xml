@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<block>
+  <name>KISS TNC</name>
+  <key>packet_protocols_kiss_tnc</key>
+  <category>Packet Protocols</category>
+  <import>from gnuradio import packet_protocols</import>
+  <make>packet_protocols.kiss_tnc($device, $baud_rate, $hardware_flow_control)</make>
+  <param>
+    <name>Device</name>
+    <key>device</key>
+    <value>/dev/ttyUSB0</value>
+    <type>string</type>
+  </param>
+  <param>
+    <name>Baud Rate</name>
+    <key>baud_rate</key>
+    <value>9600</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Hardware Flow Control</name>
+    <key>hardware_flow_control</key>
+    <value>False</value>
+    <type>bool</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>byte</type>
+  </source>
+</block>
+
+
+
+
+

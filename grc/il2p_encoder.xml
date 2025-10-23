@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<block>
+  <name>IL2P Encoder</name>
+  <key>packet_protocols_il2p_encoder</key>
+  <category>Packet Protocols</category>
+  <import>from gnuradio import packet_protocols</import>
+  <make>packet_protocols.il2p_encoder($dest_callsign, $dest_ssid, $src_callsign, $src_ssid, $fec_type, $add_checksum)</make>
+  <param>
+    <name>Destination Callsign</name>
+    <key>dest_callsign</key>
+    <value>N0CALL</value>
+    <type>string</type>
+  </param>
+  <param>
+    <name>Destination SSID</name>
+    <key>dest_ssid</key>
+    <value>0</value>
+    <type>string</type>
+  </param>
+  <param>
+    <name>Source Callsign</name>
+    <key>src_callsign</key>
+    <value>N0CALL</value>
+    <type>string</type>
+  </param>
+  <param>
+    <name>Source SSID</name>
+    <key>src_ssid</key>
+    <value>0</value>
+    <type>string</type>
+  </param>
+  <param>
+    <name>FEC Type</name>
+    <key>fec_type</key>
+    <value>1</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Add Checksum</name>
+    <key>add_checksum</key>
+    <value>True</value>
+    <type>bool</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>byte</type>
+  </source>
+</block>
+
+
+
+
+

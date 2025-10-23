@@ -1,0 +1,140 @@
+cmake_minimum_required(VERSION 3.16)
+
+project(gr-packet-protocols)
+
+# Find required packages
+find_package(PkgConfig)
+pkg_check_modules(PC_GNURADIO gnuradio)
+
+if(NOT PC_GNURADIO_FOUND)
+    find_package(Gnuradio "3.8" REQUIRED)
+endif()
+
+# Set the version
+set(GR_PACKET_PROTOCOLS_VERSION_MAJOR 1)
+set(GR_PACKET_PROTOCOLS_VERSION_MINOR 0)
+set(GR_PACKET_PROTOCOLS_VERSION_PATCH 0)
+set(GR_PACKET_PROTOCOLS_VERSION 
+    "${GR_PACKET_PROTOCOLS_VERSION_MAJOR}.${GR_PACKET_PROTOCOLS_VERSION_MINOR}.${GR_PACKET_PROTOCOLS_VERSION_PATCH}")
+
+# Include directories
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/lib)
+
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Compiler flags
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
+
+# Enable clang-format if available
+find_program(CLANG_FORMAT clang-format)
+if(CLANG_FORMAT)
+    add_custom_target(format
+        COMMAND ${CLANG_FORMAT} -i ${GR_PACKET_PROTOCOLS_SOURCES}
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+        COMMENT "Running clang-format"
+    )
+endif()
+
+# Define the library
+set(GR_PACKET_PROTOCOLS_SOURCES
+    lib/ax25/ax25_encoder_impl.cc
+    lib/ax25/ax25_decoder_impl.cc
+    lib/ax25/kiss_tnc_impl.cc
+    lib/ax25/ax25_protocol.c
+    lib/ax25/kiss_protocol.c
+    lib/fx25/fx25_encoder_impl.cc
+    lib/fx25/fx25_decoder_impl.cc
+    lib/fx25/fx25_fec_impl.cc
+    lib/fx25/fx25_protocol.c
+    lib/il2p/il2p_encoder_impl.cc
+    lib/il2p/il2p_decoder_impl.cc
+    lib/il2p/il2p_reed_solomon_impl.cc
+    lib/il2p/il2p_protocol.c
+)
+
+# Create the library
+add_library(gnuradio-packet_protocols SHARED ${GR_PACKET_PROTOCOLS_SOURCES})
+
+# Link libraries
+target_link_libraries(gnuradio-packet_protocols
+    ${GNURADIO_LIBRARIES}
+)
+
+# Set target properties
+set_target_properties(gnuradio-packet_protocols PROPERTIES
+    VERSION ${GR_PACKET_PROTOCOLS_VERSION}
+    SOVERSION ${GR_PACKET_PROTOCOLS_VERSION_MAJOR}
+)
+
+# Install the library
+install(TARGETS gnuradio-packet_protocols
+    DESTINATION ${CMAKE_INSTALL_LIBDIR}
+)
+
+# Install headers
+install(DIRECTORY include/gnuradio/packet_protocols/
+    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/gnuradio/packet_protocols
+    FILES_MATCHING PATTERN "*.h"
+)
+
+# Install Python bindings
+install(DIRECTORY python/
+    DESTINATION ${CMAKE_INSTALL_PYTHONDIR}
+    FILES_MATCHING PATTERN "*.py"
+)
+
+# Install GRC blocks
+install(DIRECTORY grc/
+    DESTINATION ${CMAKE_INSTALL_DATADIR}/gnuradio/grc/blocks
+    FILES_MATCHING PATTERN "*.xml"
+)
+
+# Install examples
+install(DIRECTORY examples/
+    DESTINATION ${CMAKE_INSTALL_DATADIR}/gr-packet-protocols/examples
+    FILES_MATCHING PATTERN "*.grc"
+)
+
+# Install documentation
+install(DIRECTORY docs/
+    DESTINATION ${CMAKE_INSTALL_DATADIR}/gr-packet-protocols/docs
+    FILES_MATCHING PATTERN "*.md"
+)
+
+# Python bindings
+if(ENABLE_PYTHON)
+    find_package(Python3 COMPONENTS Interpreter Development)
+    find_package(pybind11)
+    
+    if(Python3_FOUND AND pybind11_FOUND)
+        pybind11_add_module(packet_protocols_python
+            python/packet_protocols_bindings.cc
+        )
+        
+        target_link_libraries(packet_protocols_python PRIVATE
+            gnuradio-packet_protocols
+            ${GNURADIO_LIBRARIES}
+        )
+        
+        install(TARGETS packet_protocols_python
+            DESTINATION ${CMAKE_INSTALL_PYTHONDIR}/packet_protocols
+        )
+    endif()
+endif()
+
+# Testing
+if(ENABLE_TESTING)
+    enable_testing()
+    add_subdirectory(tests)
+endif()
+
+# Documentation
+if(ENABLE_DOXYGEN)
+    find_package(Doxygen)
+    if(DOXYGEN_FOUND)
+        add_subdirectory(docs)
+    endif()
+endif()

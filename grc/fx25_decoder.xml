@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<block>
+  <name>FX.25 Decoder</name>
+  <key>packet_protocols_fx25_decoder</key>
+  <category>Packet Protocols</category>
+  <import>from gnuradio import packet_protocols</import>
+  <make>packet_protocols.fx25_decoder()</make>
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>byte</type>
+  </source>
+</block>
+
+
+
+
+
