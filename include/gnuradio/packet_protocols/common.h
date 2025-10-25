@@ -22,6 +22,9 @@
 #ifndef INCLUDED_PACKET_PROTOCOLS_COMMON_H
 #define INCLUDED_PACKET_PROTOCOLS_COMMON_H
 
+#include <vector>
+#include <cstdint>
+
 // AX.25 Constants
 #define AX25_FLAG 0x7E
 #define AX25_FRAME_MIN_SIZE 18
@@ -54,37 +57,60 @@
 
 // Reed-Solomon Codec Classes
 class ReedSolomonEncoder {
-public:
-    ReedSolomonEncoder(int n, int k);
-    ~ReedSolomonEncoder();
-    
-    std::vector<uint8_t> encode(const std::vector<uint8_t>& data);
-    int get_data_length() const { return d_k; }
-    int get_code_length() const { return d_n; }
-    int get_error_correction_capability() const { return (d_n - d_k) / 2; }
+  public:
+    ReedSolomonEncoder(int n, int k) : d_n(n), d_k(k) {}
+    ~ReedSolomonEncoder() = default;
 
-private:
+    std::vector<uint8_t> encode(const std::vector<uint8_t>& data) {
+        // Simple pass-through implementation for now
+        // In a real implementation, this would perform Reed-Solomon encoding
+        std::vector<uint8_t> result = data;
+        // Add parity bytes (simplified)
+        for (int i = 0; i < (d_n - d_k); ++i) {
+            result.push_back(0);
+        }
+        return result;
+    }
+    
+    int get_data_length() const {
+        return d_k;
+    }
+    int get_code_length() const {
+        return d_n;
+    }
+    int get_error_correction_capability() const {
+        return (d_n - d_k) / 2;
+    }
+
+  private:
     int d_n, d_k;
-    // Implementation details would go here
 };
 
 class ReedSolomonDecoder {
-public:
-    ReedSolomonDecoder(int n, int k);
-    ~ReedSolomonDecoder();
-    
-    std::vector<uint8_t> decode(const std::vector<uint8_t>& data);
-    int get_code_length() const { return d_n; }
-    int get_data_length() const { return d_k; }
+  public:
+    ReedSolomonDecoder(int n, int k) : d_n(n), d_k(k) {}
+    ~ReedSolomonDecoder() = default;
 
-private:
+    std::vector<uint8_t> decode(const std::vector<uint8_t>& data) {
+        // Simple pass-through implementation for now
+        // In a real implementation, this would perform Reed-Solomon decoding
+        std::vector<uint8_t> result;
+        // Return only the data portion (remove parity bytes)
+        for (int i = 0; i < d_k && i < (int)data.size(); ++i) {
+            result.push_back(data[i]);
+        }
+        return result;
+    }
+    
+    int get_code_length() const {
+        return d_n;
+    }
+    int get_data_length() const {
+        return d_k;
+    }
+
+  private:
     int d_n, d_k;
-    // Implementation details would go here
 };
 
 #endif /* INCLUDED_PACKET_PROTOCOLS_COMMON_H */
-
-
-
-
-

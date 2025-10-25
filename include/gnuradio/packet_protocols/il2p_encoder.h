@@ -22,48 +22,40 @@
 #ifndef INCLUDED_PACKET_PROTOCOLS_IL2P_ENCODER_H
 #define INCLUDED_PACKET_PROTOCOLS_IL2P_ENCODER_H
 
+#include <gnuradio/packet_protocols/api.h>
+#include <gnuradio/packet_protocols/common.h>
 #include <gnuradio/sync_block.h>
-#include <packet_protocols/api.h>
 
 namespace gr {
-  namespace packet_protocols {
+namespace packet_protocols {
+
+/*!
+ * \brief IL2P (Improved Layer 2 Protocol) Encoder
+ * \ingroup packet_protocols
+ */
+class PACKET_PROTOCOLS_API il2p_encoder : virtual public gr::sync_block {
+  public:
+    typedef std::shared_ptr<il2p_encoder> sptr;
 
     /*!
-     * \brief IL2P (Improved Layer 2 Protocol) Encoder
-     * \ingroup packet_protocols
+     * \brief Return a shared_ptr to a new instance of packet_protocols::il2p_encoder.
      */
-    class PACKET_PROTOCOLS_API il2p_encoder : virtual public gr::sync_block
-    {
-     public:
-      typedef boost::shared_ptr<il2p_encoder> sptr;
+    static sptr make(const std::string& dest_callsign, const std::string& dest_ssid,
+                     const std::string& src_callsign, const std::string& src_ssid,
+                     int fec_type = IL2P_FEC_RS_255_223, bool add_checksum = true);
 
-      /*!
-       * \brief Return a shared_ptr to a new instance of packet_protocols::il2p_encoder.
-       */
-      static sptr make(const std::string& dest_callsign,
-                      const std::string& dest_ssid,
-                      const std::string& src_callsign,
-                      const std::string& src_ssid,
-                      int fec_type = IL2P_FEC_RS_255_223,
-                      bool add_checksum = true);
+    /*!
+     * \brief Set FEC type
+     */
+    virtual void set_fec_type(int fec_type) = 0;
 
-      /*!
-       * \brief Set FEC type
-       */
-      virtual void set_fec_type(int fec_type) = 0;
+    /*!
+     * \brief Set add checksum
+     */
+    virtual void set_add_checksum(bool add_checksum) = 0;
+};
 
-      /*!
-       * \brief Set add checksum
-       */
-      virtual void set_add_checksum(bool add_checksum) = 0;
-    };
-
-  } // namespace packet_protocols
+} // namespace packet_protocols
 } // namespace gr
 
 #endif /* INCLUDED_PACKET_PROTOCOLS_IL2P_ENCODER_H */
-
-
-
-
-

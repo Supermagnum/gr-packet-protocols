@@ -22,33 +22,27 @@
 #ifndef INCLUDED_PACKET_PROTOCOLS_FX25_DECODER_H
 #define INCLUDED_PACKET_PROTOCOLS_FX25_DECODER_H
 
+#include <gnuradio/packet_protocols/api.h>
 #include <gnuradio/sync_block.h>
-#include <packet_protocols/api.h>
 
 namespace gr {
-  namespace packet_protocols {
+namespace packet_protocols {
+
+/*!
+ * \brief FX.25 Decoder with Forward Error Correction
+ * \ingroup packet_protocols
+ */
+class PACKET_PROTOCOLS_API fx25_decoder : virtual public gr::sync_block {
+  public:
+    typedef std::shared_ptr<fx25_decoder> sptr;
 
     /*!
-     * \brief FX.25 Decoder with Forward Error Correction
-     * \ingroup packet_protocols
+     * \brief Return a shared_ptr to a new instance of packet_protocols::fx25_decoder.
      */
-    class PACKET_PROTOCOLS_API fx25_decoder : virtual public gr::sync_block
-    {
-     public:
-      typedef boost::shared_ptr<fx25_decoder> sptr;
+    static sptr make();
+};
 
-      /*!
-       * \brief Return a shared_ptr to a new instance of packet_protocols::fx25_decoder.
-       */
-      static sptr make();
-    };
-
-  } // namespace packet_protocols
+} // namespace packet_protocols
 } // namespace gr
 
 #endif /* INCLUDED_PACKET_PROTOCOLS_FX25_DECODER_H */
-
-
-
-
-

@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------
 
 #include "il2p_protocol.h"
-#include "fx25_protocol.h"  // For Reed-Solomon operations
+#include "../fx25/fx25_protocol.h"  // For Reed-Solomon operations
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -305,7 +305,12 @@ int il2p_extract_frame(const uint8_t* data, uint16_t length, il2p_frame_t* frame
     int sync_pos = il2p_detect_frame(data, length);
     if (sync_pos < 0) return -1;
     
-    offset = sync_pos - IL2P_SYNC_WORD_SIZE;
+    offset = sync_pos;
+    
+    // Bounds check: ensure we have enough data for the entire frame
+    if (offset + IL2P_SYNC_WORD_SIZE + IL2P_HEADER_SIZE + IL2P_HEADER_PARITY > length) {
+        return -1;
+    }
     
     // Copy sync word
     memcpy(frame->sync_word, data + offset, IL2P_SYNC_WORD_SIZE);

@@ -9,25 +9,27 @@
 //--------------------------------------------------------------------
 #pragma once
 
-#include <stdint.h>
 #include <stdbool.h>
 #include <stddef.h>
+#include <stdint.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 // IL2P Constants
-#define IL2P_PREAMBLE            0x55
-#define IL2P_SYNC_WORD           0xF15E48
-#define IL2P_SYNC_WORD_SIZE      3
-#define IL2P_HEADER_SIZE         13      // Does not include 2 parity
-#define IL2P_HEADER_PARITY       2
-#define IL2P_MAX_PAYLOAD_SIZE    1023
-#define IL2P_MAX_PAYLOAD_BLOCKS  5
-#define IL2P_MAX_PARITY_SYMBOLS  16      // For payload only
-#define IL2P_MAX_ENCODED_PAYLOAD_SIZE (IL2P_MAX_PAYLOAD_SIZE + IL2P_MAX_PAYLOAD_BLOCKS * IL2P_MAX_PARITY_SYMBOLS)
-#define IL2P_MAX_PACKET_SIZE     (IL2P_SYNC_WORD_SIZE + IL2P_HEADER_SIZE + IL2P_HEADER_PARITY + IL2P_MAX_ENCODED_PAYLOAD_SIZE)
+#define IL2P_PREAMBLE 0x55
+#define IL2P_SYNC_WORD 0xF15E48
+#define IL2P_SYNC_WORD_SIZE 3
+#define IL2P_HEADER_SIZE 13 // Does not include 2 parity
+#define IL2P_HEADER_PARITY 2
+#define IL2P_MAX_PAYLOAD_SIZE 1023
+#define IL2P_MAX_PAYLOAD_BLOCKS 5
+#define IL2P_MAX_PARITY_SYMBOLS 16 // For payload only
+#define IL2P_MAX_ENCODED_PAYLOAD_SIZE                                                              \
+    (IL2P_MAX_PAYLOAD_SIZE + IL2P_MAX_PAYLOAD_BLOCKS * IL2P_MAX_PARITY_SYMBOLS)
+#define IL2P_MAX_PACKET_SIZE                                                                       \
+    (IL2P_SYNC_WORD_SIZE + IL2P_HEADER_SIZE + IL2P_HEADER_PARITY + IL2P_MAX_ENCODED_PAYLOAD_SIZE)
 
 // IL2P Header Structure
 typedef struct {
@@ -43,22 +45,22 @@ typedef struct {
 
 // IL2P Context
 typedef struct {
-    bool enabled;                    // IL2P enabled
-    uint32_t frames_encoded;        // Frames encoded
-    uint32_t frames_decoded;        // Frames decoded
-    uint32_t errors_corrected;      // Errors corrected
-    uint8_t debug_level;            // Debug level
+    bool enabled;              // IL2P enabled
+    uint32_t frames_encoded;   // Frames encoded
+    uint32_t frames_decoded;   // Frames decoded
+    uint32_t errors_corrected; // Errors corrected
+    uint8_t debug_level;       // Debug level
 } il2p_context_t;
 
 // IL2P Header Fields
 typedef struct {
-    uint8_t version;                 // Protocol version
-    uint8_t type;                   // Frame type
-    uint8_t sequence;                // Sequence number
-    uint8_t source[6];               // Source address
-    uint8_t destination[6];         // Destination address
-    uint16_t payload_length;         // Payload length
-    uint8_t checksum;                // Header checksum
+    uint8_t version;         // Protocol version
+    uint8_t type;            // Frame type
+    uint8_t sequence;        // Sequence number
+    uint8_t source[6];       // Source address
+    uint8_t destination[6];  // Destination address
+    uint16_t payload_length; // Payload length
+    uint8_t checksum;        // Header checksum
 } il2p_header_t;
 
 // Function Declarations
@@ -70,10 +72,10 @@ void il2p_set_debug(il2p_context_t* ctx, uint8_t level);
 uint8_t il2p_get_debug(const il2p_context_t* ctx);
 
 // Frame Operations
-int il2p_encode_frame(il2p_context_t* ctx, const uint8_t* data, uint16_t length, 
-                     il2p_frame_t* frame);
-int il2p_decode_frame(il2p_context_t* ctx, const il2p_frame_t* frame, 
-                     uint8_t* data, uint16_t* length);
+int il2p_encode_frame(il2p_context_t* ctx, const uint8_t* data, uint16_t length,
+                      il2p_frame_t* frame);
+int il2p_decode_frame(il2p_context_t* ctx, const il2p_frame_t* frame, uint8_t* data,
+                      uint16_t* length);
 int il2p_detect_frame(const uint8_t* data, uint16_t length);
 int il2p_extract_frame(const uint8_t* data, uint16_t length, il2p_frame_t* frame);
 
@@ -83,8 +85,8 @@ int il2p_decode_header(il2p_context_t* ctx, const uint8_t* encoded, il2p_header_
 uint8_t il2p_calculate_header_checksum(const il2p_header_t* header);
 
 // Payload Operations
-int il2p_encode_payload(il2p_context_t* ctx, const uint8_t* data, uint16_t length, 
-                        uint8_t* encoded, uint16_t* encoded_length);
+int il2p_encode_payload(il2p_context_t* ctx, const uint8_t* data, uint16_t length, uint8_t* encoded,
+                        uint16_t* encoded_length);
 int il2p_decode_payload(il2p_context_t* ctx, const uint8_t* encoded, uint16_t encoded_length,
                         uint8_t* data, uint16_t* length);
 
@@ -98,7 +100,8 @@ int il2p_encode_rs(uint8_t* tx_data, int data_size, int num_parity, uint8_t* par
 int il2p_decode_rs(uint8_t* rec_block, int data_size, int num_parity, uint8_t* out);
 
 // Statistics
-void il2p_get_stats(const il2p_context_t* ctx, uint32_t* encoded, uint32_t* decoded, uint32_t* errors);
+void il2p_get_stats(const il2p_context_t* ctx, uint32_t* encoded, uint32_t* decoded,
+                    uint32_t* errors);
 
 #ifdef __cplusplus
 }

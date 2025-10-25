@@ -1,0 +1,50 @@
+# FX.25 Protocol Dictionary
+# Reed-Solomon configurations
+"\x00"  # RS(255,223)
+"\x01"  # RS(255,239)
+"\x02"  # RS(255,247)
+"\x03"  # RS(255,251)
+
+# Preamble patterns
+"\x55"  # Standard preamble
+"\xAA"  # Inverted preamble
+"\x5A"  # Alternating pattern
+"\xA5"  # Reverse alternating
+
+# Sync word variations
+"\xF1\x5E\x48"  # Standard sync
+"\x0E\xA1\xB7"  # Inverted sync
+"\x48\x5E\xF1"  # Reversed sync
+"\x5E\xF1\x48"  # Rotated sync
+
+# CRC patterns
+"\x00\x00"  # Zero CRC
+"\xFF\xFF"  # All ones CRC
+"\x55\xAA"  # Alternating CRC
+"\xAA\x55"  # Reverse alternating
+
+# FEC block sizes
+"\x00"  # 0 bytes
+"\x01"  # 1 byte
+"\x1F"  # 31 bytes
+"\x20"  # 32 bytes
+"\xFF"  # 255 bytes
+
+# Correlation tags
+"\x00\x00"  # Tag 0
+"\x01\x00"  # Tag 1
+"\xFF\xFF"  # Tag 65535
+"\x55\xAA"  # Tag 21930
+
+# Parity symbols
+"\x00"  # Zero parity
+"\xFF"  # All ones parity
+"\x55"  # Alternating parity
+"\xAA"  # Reverse alternating
+
+# Frame types
+"\x00"  # Data frame
+"\x01"  # Control frame
+"\x02"  # Management frame
+"\x03"  # Test frame
+

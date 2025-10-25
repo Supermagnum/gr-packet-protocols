@@ -21,7 +21,7 @@ static unsigned char genpoly[32];
 
 // Initialize Reed-Solomon codec
 struct fx25_rs* fx25_rs_init(int symsize, int genpoly_val, int fcs, int prim, int nroots) {
-    struct fx25_rs* rs = malloc(sizeof(struct fx25_rs));
+    struct fx25_rs* rs = (struct fx25_rs*)malloc(sizeof(struct fx25_rs));
     if (!rs) return NULL;
     
     rs->mm = symsize;
@@ -31,9 +31,9 @@ struct fx25_rs* fx25_rs_init(int symsize, int genpoly_val, int fcs, int prim, in
     rs->nroots = nroots;
     
     // Allocate lookup tables
-    rs->alpha_to = malloc((rs->nn + 1) * sizeof(unsigned char));
-    rs->index_of = malloc((rs->nn + 1) * sizeof(unsigned char));
-    rs->genpoly = malloc((nroots + 1) * sizeof(unsigned char));
+    rs->alpha_to = (unsigned char*)malloc((rs->nn + 1) * sizeof(unsigned char));
+    rs->index_of = (unsigned char*)malloc((rs->nn + 1) * sizeof(unsigned char));
+    rs->genpoly = (unsigned char*)malloc((nroots + 1) * sizeof(unsigned char));
     
     if (!rs->alpha_to || !rs->index_of || !rs->genpoly) {
         fx25_rs_free(rs);
@@ -101,6 +101,11 @@ void fx25_rs_free(struct fx25_rs* rs) {
 int fx25_rs_encode(struct fx25_rs* rs, uint8_t* data, int data_len, uint8_t* parity) {
     if (!rs || !data || !parity) return -1;
     
+    // Bounds checking to prevent buffer overflow
+    if (data_len < 0 || data_len > 255) return -1;
+    if (rs->nroots <= 0 || rs->nroots > 32) return -1;
+    if (rs->nn <= 0 || rs->nn > 255) return -1;
+    
     int i, j;
     uint8_t feedback;
     
@@ -108,12 +113,30 @@ int fx25_rs_encode(struct fx25_rs* rs, uint8_t* data, int data_len, uint8_t* par
     memset(parity, 0, rs->nroots);
     
     for (i = 0; i < data_len; i++) {
-        feedback = rs->index_of[data[i] ^ parity[0]];
+        // Bounds check for index_of array access
+        uint8_t data_byte = data[i];
+        if (data_byte >= rs->nn) return -1; // Invalid data byte
+        
+        feedback = rs->index_of[data_byte ^ parity[0]];
         if (feedback != rs->nn) {
             for (j = 0; j < rs->nroots - 1; j++) {
-                parity[j] = parity[j + 1] ^ rs->alpha_to[(feedback + rs->genpoly[rs->nroots - 1 - j]) % rs->nn];
+                // Bounds check for array access
+                int genpoly_idx = rs->nroots - 1 - j;
+                if (genpoly_idx < 0 || genpoly_idx >= rs->nroots) continue;
+                
+                int alpha_idx = (feedback + rs->genpoly[genpoly_idx]) % rs->nn;
+                if (alpha_idx < 0 || alpha_idx >= rs->nn) continue;
+                
+                parity[j] = parity[j + 1] ^ rs->alpha_to[alpha_idx];
             }
-            parity[rs->nroots - 1] = rs->alpha_to[(feedback + rs->genpoly[0]) % rs->nn];
+            
+            // Bounds check for genpoly[0] access
+            int alpha_idx = (feedback + rs->genpoly[0]) % rs->nn;
+            if (alpha_idx >= 0 && alpha_idx < rs->nn) {
+                parity[rs->nroots - 1] = rs->alpha_to[alpha_idx];
+            } else {
+                parity[rs->nroots - 1] = 0;
+            }
         } else {
             for (j = 0; j < rs->nroots; j++) {
                 parity[j] = parity[j + 1];

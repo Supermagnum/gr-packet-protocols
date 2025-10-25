@@ -204,13 +204,18 @@ int ax25_parse_frame(const uint8_t* data, uint16_t length, ax25_frame_t* frame) 
     while (pos < length - 2) { // Leave room for control field
         if (pos + 7 > length) break;
         
+        // Bounds check: prevent buffer overflow
+        if (frame->num_addresses >= AX25_MAX_ADDRS) {
+            return -1; // Too many addresses
+        }
+        
         // Check if this is the last address (bit 0 of SSID byte is set)
         // AX.25 SSID byte format (Dire Wolf authoritative):
         // Bit 7: H bit, Bit 6-5: Reserved (11), Bits 4-1: SSID, Bit 0: Last address flag
         // Bit 0 (LSB) is the address extension bit: 1 = last address, 0 = more addresses
         bool last_addr = (data[pos + 6] & 0x01) != 0;
         
-        // Copy address
+        // Copy address with bounds checking
         memcpy(frame->addresses[frame->num_addresses].callsign, &data[pos], 6);
         // Extract SSID from bits 4-1 of SSID byte
         frame->addresses[frame->num_addresses].ssid = (data[pos + 6] >> 1) & 0x0F;
@@ -248,19 +253,33 @@ int ax25_parse_frame(const uint8_t* data, uint16_t length, ax25_frame_t* frame) 
     // Parse information field
     if ((frame->control & 0x01) == 0) { // I or UI frame
         frame->info_length = length - pos - 2; // Subtract FCS
+        
+        // Bounds checking for information field
         if (frame->info_length > AX25_MAX_INFO) {
             frame->info_length = AX25_MAX_INFO;
         }
-        if (frame->info_length > 0) {
+        
+        // Additional bounds check to prevent buffer overflow
+        if (frame->info_length > (length - pos - 2)) {
+            frame->info_length = length - pos - 2;
+        }
+        
+        if (frame->info_length > 0 && pos + frame->info_length <= length) {
             memcpy(frame->info, &data[pos], frame->info_length);
         }
         pos += frame->info_length;
     }
     
-    // Parse FCS
+    // Parse FCS with bounds checking
     if (pos + 2 > length) {
         return -1;
     }
+    
+    // Additional bounds check to prevent buffer overflow
+    if (pos + 1 >= length) {
+        return -1;
+    }
+    
     frame->fcs = (data[pos + 1] << 8) | data[pos];
     
     // Validate frame

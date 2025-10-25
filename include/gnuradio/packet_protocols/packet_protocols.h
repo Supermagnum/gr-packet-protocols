@@ -22,19 +22,19 @@
 #ifndef INCLUDED_PACKET_PROTOCOLS_PACKET_PROTOCOLS_H
 #define INCLUDED_PACKET_PROTOCOLS_PACKET_PROTOCOLS_H
 
-#include <packet_protocols/api.h>
-#include <packet_protocols/ax25_encoder.h>
-#include <packet_protocols/ax25_decoder.h>
-#include <packet_protocols/kiss_tnc.h>
-#include <packet_protocols/fx25_encoder.h>
-#include <packet_protocols/fx25_decoder.h>
-#include <packet_protocols/fx25_fec.h>
-#include <packet_protocols/il2p_encoder.h>
-#include <packet_protocols/il2p_decoder.h>
-#include <packet_protocols/il2p_reed_solomon.h>
-#include <packet_protocols/ax25_protocol.h>
-#include <packet_protocols/fx25_protocol.h>
-#include <packet_protocols/il2p_protocol.h>
-#include <packet_protocols/kiss_protocol.h>
+#include <gnuradio/packet_protocols/api.h>
+#include <gnuradio/packet_protocols/ax25_decoder.h>
+#include <gnuradio/packet_protocols/ax25_encoder.h>
+#include <gnuradio/packet_protocols/ax25_protocol.h>
+#include <gnuradio/packet_protocols/fx25_decoder.h>
+#include <gnuradio/packet_protocols/fx25_encoder.h>
+#include <gnuradio/packet_protocols/fx25_fec.h>
+#include <gnuradio/packet_protocols/fx25_protocol.h>
+#include <gnuradio/packet_protocols/il2p_decoder.h>
+#include <gnuradio/packet_protocols/il2p_encoder.h>
+#include <gnuradio/packet_protocols/il2p_protocol.h>
+#include <gnuradio/packet_protocols/il2p_reed_solomon.h>
+#include <gnuradio/packet_protocols/kiss_protocol.h>
+#include <gnuradio/packet_protocols/kiss_tnc.h>
 
 #endif /* INCLUDED_PACKET_PROTOCOLS_PACKET_PROTOCOLS_H */

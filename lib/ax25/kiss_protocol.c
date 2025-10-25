@@ -91,7 +91,7 @@ int kiss_send_frame(kiss_tnc_t* tnc, const uint8_t* data, uint16_t length, uint8
     }
     
     // Allocate frame buffer
-    uint8_t* frame = malloc(length + 3); // FEND + command + data + FEND
+    uint8_t* frame = (uint8_t*)malloc(length + 3); // FEND + command + data + FEND
     if (!frame) {
         return -1;
     }
@@ -181,7 +181,7 @@ int kiss_process_byte(kiss_tnc_t* tnc, uint8_t byte) {
                 // End of frame
                 if (tnc->buffer_pos > 0) {
                     // Unescape data
-                    uint8_t* unescaped = malloc(tnc->buffer_pos);
+                    uint8_t* unescaped = (uint8_t*)malloc(tnc->buffer_pos);
                     if (!unescaped) {
                         tnc->state = KISS_STATE_IDLE;
                         return -1;

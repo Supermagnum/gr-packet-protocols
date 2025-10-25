@@ -22,50 +22,44 @@
 #ifndef INCLUDED_PACKET_PROTOCOLS_FX25_ENCODER_H
 #define INCLUDED_PACKET_PROTOCOLS_FX25_ENCODER_H
 
+#include <gnuradio/packet_protocols/api.h>
+#include <gnuradio/packet_protocols/common.h>
 #include <gnuradio/sync_block.h>
-#include <packet_protocols/api.h>
 
 namespace gr {
-  namespace packet_protocols {
+namespace packet_protocols {
+
+/*!
+ * \brief FX.25 Encoder with Forward Error Correction
+ * \ingroup packet_protocols
+ */
+class PACKET_PROTOCOLS_API fx25_encoder : virtual public gr::sync_block {
+  public:
+    typedef std::shared_ptr<fx25_encoder> sptr;
 
     /*!
-     * \brief FX.25 Encoder with Forward Error Correction
-     * \ingroup packet_protocols
+     * \brief Return a shared_ptr to a new instance of packet_protocols::fx25_encoder.
      */
-    class PACKET_PROTOCOLS_API fx25_encoder : virtual public gr::sync_block
-    {
-     public:
-      typedef boost::shared_ptr<fx25_encoder> sptr;
+    static sptr make(int fec_type = FX25_FEC_RS_16_12, int interleaver_depth = 1,
+                     bool add_checksum = true);
 
-      /*!
-       * \brief Return a shared_ptr to a new instance of packet_protocols::fx25_encoder.
-       */
-      static sptr make(int fec_type = FX25_FEC_RS_16_12,
-                       int interleaver_depth = 1,
-                       bool add_checksum = true);
+    /*!
+     * \brief Set FEC type
+     */
+    virtual void set_fec_type(int fec_type) = 0;
 
-      /*!
-       * \brief Set FEC type
-       */
-      virtual void set_fec_type(int fec_type) = 0;
+    /*!
+     * \brief Set interleaver depth
+     */
+    virtual void set_interleaver_depth(int depth) = 0;
 
-      /*!
-       * \brief Set interleaver depth
-       */
-      virtual void set_interleaver_depth(int depth) = 0;
+    /*!
+     * \brief Set add checksum
+     */
+    virtual void set_add_checksum(bool add_checksum) = 0;
+};
 
-      /*!
-       * \brief Set add checksum
-       */
-      virtual void set_add_checksum(bool add_checksum) = 0;
-    };
-
-  } // namespace packet_protocols
+} // namespace packet_protocols
 } // namespace gr
 
 #endif /* INCLUDED_PACKET_PROTOCOLS_FX25_ENCODER_H */
-
-
-
-
-

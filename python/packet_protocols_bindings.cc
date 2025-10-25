@@ -19,30 +19,17 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_PACKET_PROTOCOLS_IL2P_DECODER_H
-#define INCLUDED_PACKET_PROTOCOLS_IL2P_DECODER_H
+#include <pybind11/pybind11.h>
+#include <pybind11/stl.h>
 
-#include <gnuradio/packet_protocols/api.h>
-#include <gnuradio/sync_block.h>
+namespace py = pybind11;
 
-namespace gr {
-namespace packet_protocols {
+// Minimal Python bindings for gr-packet-protocols
+// This is a placeholder - actual bindings would be implemented here
 
-/*!
- * \brief IL2P (Improved Layer 2 Protocol) Decoder
- * \ingroup packet_protocols
- */
-class PACKET_PROTOCOLS_API il2p_decoder : virtual public gr::sync_block {
-  public:
-    typedef std::shared_ptr<il2p_decoder> sptr;
+PYBIND11_MODULE(packet_protocols_python, m) {
+    m.doc() = "gr-packet-protocols Python bindings";
 
-    /*!
-     * \brief Return a shared_ptr to a new instance of packet_protocols::il2p_decoder.
-     */
-    static sptr make();
-};
-
-} // namespace packet_protocols
-} // namespace gr
-
-#endif /* INCLUDED_PACKET_PROTOCOLS_IL2P_DECODER_H */
+    // Placeholder for future Python bindings
+    // Actual protocol functions would be bound here
+}

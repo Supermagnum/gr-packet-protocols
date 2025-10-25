@@ -4,10 +4,10 @@ project(gr-packet-protocols)
 
 # Find required packages
 find_package(PkgConfig)
-pkg_check_modules(PC_GNURADIO gnuradio)
+pkg_check_modules(PC_GNURADIO gnuradio-runtime)
 
 if(NOT PC_GNURADIO_FOUND)
-    find_package(Gnuradio "3.8" REQUIRED)
+    find_package(Gnuradio "3.10" REQUIRED)
 endif()
 
 # Set the version
@@ -82,7 +82,7 @@ install(DIRECTORY include/gnuradio/packet_protocols/
 
 # Install Python bindings
 install(DIRECTORY python/
-    DESTINATION ${CMAKE_INSTALL_PYTHONDIR}
+    DESTINATION ${CMAKE_INSTALL_PYTHONDIR}/gr_packet_protocols
     FILES_MATCHING PATTERN "*.py"
 )
 
@@ -128,7 +128,7 @@ endif()
 # Testing
 if(ENABLE_TESTING)
     enable_testing()
-    add_subdirectory(tests)
+    # add_subdirectory(tests)  # Commented out - tests directory doesn't exist
 endif()
 
 # Documentation

@@ -25,14 +25,9 @@
 #include <gnuradio/attributes.h>
 
 #ifdef gnuradio_packet_protocols_EXPORTS
-#  define PACKET_PROTOCOLS_API __GR_ATTR_EXPORT
+#define PACKET_PROTOCOLS_API __GR_ATTR_EXPORT
 #else
-#  define PACKET_PROTOCOLS_API __GR_ATTR_IMPORT
+#define PACKET_PROTOCOLS_API __GR_ATTR_IMPORT
 #endif
 
 #endif /* INCLUDED_PACKET_PROTOCOLS_API_H */
-
-
-
-
-
