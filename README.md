@@ -18,14 +18,14 @@ This is offering complete packet radio protocol support for GNU Radio applicatio
 - Reed-Solomon encoding with multiple FEC types
 - Interleaving support for burst error correction
 - Maintains compatibility with standard AX.25
-- Production-tested implementation
+
 
 ### IL2P Protocol
 - Improved Layer 2 Protocol implementation
 - Reed-Solomon forward error correction
 - Enhanced reliability over noisy channels
 - Modern replacement for AX.25
-- Hardware-optimized algorithms
+
 
 ## Installation
 
