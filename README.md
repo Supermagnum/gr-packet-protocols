@@ -2,7 +2,7 @@
 
 A GNU Radio out-of-tree (OOT) module implementing packet radio protocols including AX.25, FX.25, and IL2P.
 
-This module provides production-ready implementations extracted from the gr-m17 project, offering complete packet radio protocol support for GNU Radio applications.
+This is offering complete packet radio protocol support for GNU Radio applications.
 
 ## Features
 
