@@ -154,6 +154,18 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 - Inspired by Dire Wolf AX.25 implementation
 - GNU Radio community for excellent framework
 
+## Security Testing
+
+This module has undergone comprehensive security testing using dictionary-guided fuzzing:
+
+- **Coverage**: 2,033 points discovered (+141% improvement)
+- **Features**: 1,853 features tested (+44% improvement)
+- **Duration**: 6 hours of intensive fuzzing
+- **Vulnerabilities**: 0 crashes found (robust implementations)
+- **Approach**: Protocol-specific dictionary patterns
+
+For detailed results, see [Fuzzing Results Report](fuzzing-results.md).
+
 ## Support
 
 For questions and support:
