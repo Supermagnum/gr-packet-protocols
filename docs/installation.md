@@ -140,6 +140,18 @@ g++ -I/usr/include/gnuradio -I/usr/include/gnuradio/packet_protocols \
     -o test_compile test_file.cpp -lgnuradio-packet_protocols
 ```
 
+### Import this package with:
+```python
+# Basic import
+from gnuradio import packet_protocols
+
+# Specific imports
+from gnuradio.packet_protocols import ax25_encoder, ax25_decoder
+from gnuradio.packet_protocols import fx25_encoder, fx25_decoder
+from gnuradio.packet_protocols import il2p_encoder, il2p_decoder
+from gnuradio.packet_protocols import kiss_tnc
+```
+
 ### Run Examples
 ```bash
 # Test AX.25 example
@@ -208,12 +220,36 @@ ldd /usr/local/lib/libgnuradio-packet_protocols.so
 
 ## Uninstallation
 
+### Method 1: Using CMake Uninstall Target (Recommended)
+
+If you have the build directory available:
+
 ```bash
-# Remove installed files
-sudo rm -rf /usr/local/lib/libgnuradio-packet_protocols*
+cd build
+sudo make uninstall
+sudo ldconfig
+```
+
+This method automatically removes all files that were installed, tracking them from the `install_manifest.txt` file generated during installation.
+
+### Method 2: Manual Removal
+
+If you don't have the build directory, you can manually remove the files:
+
+```bash
+# For system-wide installation (CMAKE_INSTALL_PREFIX=/usr)
+sudo rm -rf /usr/lib/x86_64-linux-gnu/libgnuradio-packet_protocols*
+sudo rm -rf /usr/include/gnuradio/packet_protocols/
+sudo rm -rf /usr/lib/python3/dist-packages/gnuradio/packet_protocols/
+sudo rm -rf /usr/share/gnuradio/grc/blocks/packet_protocols*.block.yml
+sudo rm -rf /usr/share/gnuradio/gr-packet-protocols/
+
+# For local installation (CMAKE_INSTALL_PREFIX=/usr/local)
+sudo rm -rf /usr/local/lib/x86_64-linux-gnu/libgnuradio-packet_protocols*
 sudo rm -rf /usr/local/include/gnuradio/packet_protocols/
 sudo rm -rf /usr/local/lib/python3/dist-packages/gnuradio/packet_protocols/
-sudo rm -rf /usr/local/share/gnuradio/grc/blocks/packet_protocols/
+sudo rm -rf /usr/local/share/gnuradio/grc/blocks/packet_protocols*.block.yml
+sudo rm -rf /usr/local/share/gnuradio/gr-packet-protocols/
 
 # Update library cache
 sudo ldconfig

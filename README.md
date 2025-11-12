@@ -61,7 +61,7 @@ sudo make install
 sudo ldconfig
 ```
 
-**Note for GNU Radio 3.10+**: This module uses YAML block definitions (`.yml`) which are compatible with GNU Radio 3.10.12.0 and later. The installation paths are automatically configured to match your GNU Radio installation.
+**Note for GNU Radio 3.10+**: This module uses YAML block definitions (`.block.yml`) which are compatible with GNU Radio 3.10.12.0 and later. The installation paths are automatically configured to match your GNU Radio installation.
 
 ### Dependencies
 
@@ -178,6 +178,18 @@ For questions and support:
 - Create an issue on GitHub
 - Join the GNU Radio mailing list
 - Check the documentation in `docs/`
+
+## Uninstallation
+
+To uninstall the module:
+
+```bash
+cd build
+sudo make uninstall
+sudo ldconfig
+```
+
+This will remove all installed files. If you don't have the build directory, see the [Installation Guide](docs/installation.md) for manual removal instructions.
 
 ## Changelog
 

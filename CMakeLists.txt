@@ -96,9 +96,16 @@ install(DIRECTORY python/
 )
 
 # Install GRC blocks (YAML format for GNU Radio 3.10+)
-install(DIRECTORY grc/
+# Install files directly to avoid nested directory structure
+install(FILES
+    grc/ax25_decoder.block.yml
+    grc/ax25_encoder.block.yml
+    grc/fx25_decoder.block.yml
+    grc/fx25_encoder.block.yml
+    grc/il2p_decoder.block.yml
+    grc/il2p_encoder.block.yml
+    grc/kiss_tnc.block.yml
     DESTINATION ${GR_PKG_DATA_DIR}/grc/blocks
-    FILES_MATCHING PATTERN "*.yml"
 )
 
 # Install examples
@@ -129,7 +136,7 @@ if(ENABLE_PYTHON)
         )
         
         install(TARGETS packet_protocols_python
-            DESTINATION ${GR_PYTHON_DIR}/packet_protocols
+            DESTINATION ${GR_PYTHON_DIR}/gnuradio/packet_protocols
         )
     endif()
 endif()
@@ -147,3 +154,15 @@ if(ENABLE_DOXYGEN)
         add_subdirectory(docs)
     endif()
 endif()
+
+# Uninstall target
+configure_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/cmake_uninstall.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake"
+    IMMEDIATE @ONLY
+)
+
+add_custom_target(uninstall
+    COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake
+    COMMENT "Uninstalling gr-packet-protocols"
+)
