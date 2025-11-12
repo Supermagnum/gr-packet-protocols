@@ -10,6 +10,15 @@ if(NOT PC_GNURADIO_FOUND)
     find_package(Gnuradio "3.10" REQUIRED)
 endif()
 
+# Use GNU Radio installation paths
+# These paths are relative to CMAKE_INSTALL_PREFIX
+# For system-wide installation, use CMAKE_INSTALL_PREFIX=/usr
+# For local installation, use CMAKE_INSTALL_PREFIX=/usr/local
+set(GR_LIBRARY_DIR "${CMAKE_INSTALL_PREFIX}/lib/x86_64-linux-gnu")
+set(GR_INCLUDE_DIR "${CMAKE_INSTALL_PREFIX}/include")
+set(GR_PKG_DATA_DIR "${CMAKE_INSTALL_PREFIX}/share/gnuradio")
+set(GR_PYTHON_DIR "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages")
+
 # Set the version
 set(GR_PACKET_PROTOCOLS_VERSION_MAJOR 1)
 set(GR_PACKET_PROTOCOLS_VERSION_MINOR 0)
@@ -71,36 +80,36 @@ set_target_properties(gnuradio-packet_protocols PROPERTIES
 
 # Install the library
 install(TARGETS gnuradio-packet_protocols
-    DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    DESTINATION ${GR_LIBRARY_DIR}
 )
 
 # Install headers
 install(DIRECTORY include/gnuradio/packet_protocols/
-    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/gnuradio/packet_protocols
+    DESTINATION ${GR_INCLUDE_DIR}/gnuradio/packet_protocols
     FILES_MATCHING PATTERN "*.h"
 )
 
 # Install Python bindings
 install(DIRECTORY python/
-    DESTINATION ${CMAKE_INSTALL_PYTHONDIR}/gr_packet_protocols
+    DESTINATION ${GR_PYTHON_DIR}/gnuradio/packet_protocols
     FILES_MATCHING PATTERN "*.py"
 )
 
-# Install GRC blocks
+# Install GRC blocks (YAML format for GNU Radio 3.10+)
 install(DIRECTORY grc/
-    DESTINATION ${CMAKE_INSTALL_DATADIR}/gnuradio/grc/blocks
-    FILES_MATCHING PATTERN "*.xml"
+    DESTINATION ${GR_PKG_DATA_DIR}/grc/blocks
+    FILES_MATCHING PATTERN "*.yml"
 )
 
 # Install examples
 install(DIRECTORY examples/
-    DESTINATION ${CMAKE_INSTALL_DATADIR}/gr-packet-protocols/examples
+    DESTINATION ${GR_PKG_DATA_DIR}/gr-packet-protocols/examples
     FILES_MATCHING PATTERN "*.grc"
 )
 
 # Install documentation
 install(DIRECTORY docs/
-    DESTINATION ${CMAKE_INSTALL_DATADIR}/gr-packet-protocols/docs
+    DESTINATION ${GR_PKG_DATA_DIR}/gr-packet-protocols/docs
     FILES_MATCHING PATTERN "*.md"
 )
 
@@ -120,7 +129,7 @@ if(ENABLE_PYTHON)
         )
         
         install(TARGETS packet_protocols_python
-            DESTINATION ${CMAKE_INSTALL_PYTHONDIR}/packet_protocols
+            DESTINATION ${GR_PYTHON_DIR}/packet_protocols
         )
     endif()
 endif()

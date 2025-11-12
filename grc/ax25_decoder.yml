@@ -1,0 +1,19 @@
+id: packet_protocols_ax25_decoder
+label: AX.25 Decoder
+category: '[Packet Protocols]'
+flags: [python, cpp]
+
+inputs:
+-   domain: stream
+    dtype: byte
+
+outputs:
+-   domain: stream
+    dtype: byte
+
+templates:
+    imports: |-
+        from gnuradio import packet_protocols
+    make: |-
+        packet_protocols.ax25_decoder()
+

@@ -1,0 +1,45 @@
+id: packet_protocols_il2p_encoder
+label: IL2P Encoder
+category: '[Packet Protocols]'
+flags: [python, cpp]
+
+parameters:
+-   id: dest_callsign
+    label: Destination Callsign
+    dtype: string
+    default: 'N0CALL'
+-   id: dest_ssid
+    label: Destination SSID
+    dtype: string
+    default: '0'
+-   id: src_callsign
+    label: Source Callsign
+    dtype: string
+    default: 'N0CALL'
+-   id: src_ssid
+    label: Source SSID
+    dtype: string
+    default: '0'
+-   id: fec_type
+    label: FEC Type
+    dtype: int
+    default: '1'
+-   id: add_checksum
+    label: Add Checksum
+    dtype: bool
+    default: 'True'
+
+inputs:
+-   domain: stream
+    dtype: byte
+
+outputs:
+-   domain: stream
+    dtype: byte
+
+templates:
+    imports: |-
+        from gnuradio import packet_protocols
+    make: |-
+        packet_protocols.il2p_encoder(${dest_callsign}, ${dest_ssid}, ${src_callsign}, ${src_ssid}, ${fec_type}, ${add_checksum})
+

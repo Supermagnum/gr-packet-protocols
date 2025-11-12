@@ -30,7 +30,7 @@ This is offering complete packet radio protocol support for GNU Radio applicatio
 ## Installation
 
 ### Prerequisites
-- GNU Radio 3.8 or later
+- GNU Radio 3.10.12.0 or later (tested with 3.10.12.0)
 - CMake 3.16 or later
 - C++17 compatible compiler
 - Python 3 (for bindings)
@@ -47,7 +47,11 @@ mkdir build
 cd build
 
 # Configure with CMake
-cmake ..
+# For system-wide installation (recommended):
+cmake .. -DCMAKE_INSTALL_PREFIX=/usr
+
+# Or for local installation:
+# cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local
 
 # Build the module
 make -j$(nproc)
@@ -56,6 +60,8 @@ make -j$(nproc)
 sudo make install
 sudo ldconfig
 ```
+
+**Note for GNU Radio 3.10+**: This module uses YAML block definitions (`.yml`) which are compatible with GNU Radio 3.10.12.0 and later. The installation paths are automatically configured to match your GNU Radio installation.
 
 ### Dependencies
 
