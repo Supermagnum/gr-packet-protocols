@@ -18,12 +18,12 @@ options:
     qt_qss_theme: ''
     realtime_scheduling: ''
     run: 'True'
-    run_command: '{python3} -u {filename}'
+    run_command: '{python} -u {filename}'
     run_options: prompt
     sizing_mode: fixed
     thread_safe_setters: ''
     title: FX.25 FEC Example
-    window_size: 1280, 1024
+    window_size: (1280, 1024)
   states:
     bus_sink: false
     bus_source: false
@@ -43,8 +43,8 @@ blocks:
     minoutbuf: '0'
     repeat: 'True'
     tags: ''
-    type: complex
-    vector: (0, 0, 0)
+    type: byte
+    vector: [0, 0, 0]
     vlen: '1'
   states:
     bus_sink: false
@@ -86,10 +86,27 @@ blocks:
     coordinate: [240, 128.0]
     rotation: 0
     state: enabled
+- name: blocks_null_sink_0
+  id: blocks_null_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    num_inputs: '1'
+    type: byte
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [656, 144.0]
+    rotation: 0
+    state: enabled
 
 connections:
 - [blocks_vector_source_x_0, '0', packet_protocols_fx25_encoder_0, '0']
 - [packet_protocols_fx25_encoder_0, '0', packet_protocols_fx25_decoder_0, '0']
+- [packet_protocols_fx25_decoder_0, '0', blocks_null_sink_0, '0']
 
 metadata:
   file_format: 1
