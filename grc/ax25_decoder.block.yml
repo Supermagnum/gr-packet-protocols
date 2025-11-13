@@ -17,3 +17,4 @@ templates:
     make: |-
         packet_protocols.ax25_decoder()
 
+file_format: 1

@@ -31,3 +31,4 @@ templates:
     make: |-
         packet_protocols.kiss_tnc(${device}, ${baud_rate}, ${hardware_flow_control})
 
+file_format: 1

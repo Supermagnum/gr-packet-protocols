@@ -17,3 +17,4 @@ templates:
     make: |-
         packet_protocols.il2p_decoder()
 
+file_format: 1

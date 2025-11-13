@@ -17,3 +17,4 @@ templates:
     make: |-
         packet_protocols.fx25_decoder()
 
+file_format: 1

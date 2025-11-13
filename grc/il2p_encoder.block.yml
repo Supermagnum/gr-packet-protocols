@@ -43,3 +43,4 @@ templates:
     make: |-
         packet_protocols.il2p_encoder(${dest_callsign}, ${dest_ssid}, ${src_callsign}, ${src_ssid}, ${fec_type}, ${add_checksum})
 
+file_format: 1

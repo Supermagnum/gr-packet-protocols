@@ -1,186 +1,96 @@
-<?xml version='1.0' encoding='utf-8'?>
-<?grc format='3'?>
-<flow_graph>
-  <timestamp>2024-01-01 00:00:00.000000</timestamp>
-  <block>
-    <key>options</key>
-    <param>
-      <key>author</key>
-      <value>gr-packet-protocols</value>
-    </param>
-    <param>
-      <key>window_size</key>
-      <value>1280, 1024</value>
-    </param>
-    <param>
-      <key>category</key>
-      <value>Packet Protocols</value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value>FX.25 FEC Example</value>
-    </param>
-    <param>
-      <key>description</key>
-      <value>Example flowgraph demonstrating FX.25 Forward Error Correction</value>
-    </param>
-    <param>
-      <key>generate_options</key>
-      <value>qt_gui</value>
-    </param>
-    <param>
-      <key>hier_block_src_path</key>
-      <value>.:</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>top_block</value>
-    </param>
-    <param>
-      <key>max_nouts</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>qt_qss_theme</key>
-      <value></value>
-    </param>
-    <param>
-      <key>realtime_scheduling</key>
-      <value></value>
-    </param>
-    <param>
-      <key>run_command</key>
-      <value>{python3} -u {filename}</value>
-    </param>
-    <param>
-      <key>run_options</key>
-      <value>prompt</value>
-    </param>
-    <param>
-      <key>sizing_mode</key>
-      <value>fixed</value>
-    </param>
-    <param>
-      <key>thread_safe_setters</key>
-      <value></value>
-    </param>
-    <param>
-      <key>title</key>
-      <value>FX.25 FEC Example</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>top_block</value>
-    </param>
-  </block>
-  <block>
-    <key>packet_protocols_fx25_encoder</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>add_checksum</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value>FX.25 Encoder</value>
-    </param>
-    <param>
-      <key>enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>fec_type</key>
-      <value>2</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>packet_protocols_fx25_encoder_0</value>
-    </param>
-    <param>
-      <key>interleaver_depth</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>packet_protocols_fx25_encoder</value>
-    </param>
-  </block>
-  <block>
-    <key>packet_protocols_fx25_decoder</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value>FX.25 Decoder</value>
-    </param>
-    <param>
-      <key>enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>packet_protocols_fx25_decoder_0</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>packet_protocols_fx25_decoder</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_vector_source_x</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value>Test Data Source</value>
-    </param>
-    <param>
-      <key>enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>blocks_vector_source_x_0</value>
-    </param>
-    <param>
-      <key>repeat</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>tags</key>
-      <value></value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>vector_source</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-  </block>
-  <connection>
-    <source_block_id>blocks_vector_source_x_0</source_block_id>
-    <sink_block_id>packet_protocols_fx25_encoder_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>packet_protocols_fx25_encoder_0</source_block_id>
-    <sink_block_id>packet_protocols_fx25_decoder_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-</flow_graph>
+options:
+  parameters:
+    author: gr-packet-protocols
+    catch_exceptions: 'True'
+    category: Packet Protocols
+    cmake_opt: ''
+    comment: FX.25 FEC Example
+    copyright: ''
+    description: Example flowgraph demonstrating FX.25 Forward Error Correction
+    gen_cmake: 'On'
+    gen_linking: dynamic
+    generate_options: qt_gui
+    hier_block_src_path: '.:'
+    id: top_block
+    max_nouts: '0'
+    output_language: python
+    placement: (0,0)
+    qt_qss_theme: ''
+    realtime_scheduling: ''
+    run: 'True'
+    run_command: '{python3} -u {filename}'
+    run_options: prompt
+    sizing_mode: fixed
+    thread_safe_setters: ''
+    title: FX.25 FEC Example
+    window_size: 1280, 1024
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [32, 0.0]
+    rotation: 0
+    state: enabled
 
+blocks:
+- name: blocks_vector_source_x_0
+  id: blocks_vector_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: Test Data Source
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    repeat: 'True'
+    tags: ''
+    type: complex
+    vector: (0, 0, 0)
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [56, 136.0]
+    rotation: 0
+    state: enabled
+- name: packet_protocols_fx25_decoder_0
+  id: packet_protocols_fx25_decoder
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: FX.25 Decoder
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [448, 144.0]
+    rotation: 0
+    state: enabled
+- name: packet_protocols_fx25_encoder_0
+  id: packet_protocols_fx25_encoder
+  parameters:
+    add_checksum: 'True'
+    affinity: ''
+    alias: ''
+    comment: FX.25 Encoder
+    fec_type: '2'
+    interleaver_depth: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [240, 128.0]
+    rotation: 0
+    state: enabled
 
+connections:
+- [blocks_vector_source_x_0, '0', packet_protocols_fx25_encoder_0, '0']
+- [packet_protocols_fx25_encoder_0, '0', packet_protocols_fx25_decoder_0, '0']
 
-
-
+metadata:
+  file_format: 1
+  grc_version: 3.10.9.2

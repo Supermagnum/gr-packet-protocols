@@ -47,3 +47,4 @@ templates:
     make: |-
         packet_protocols.ax25_encoder(${dest_callsign}, ${dest_ssid}, ${src_callsign}, ${src_ssid}, ${digipeaters}, ${command_response}, ${poll_final})
 
+file_format: 1
