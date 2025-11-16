@@ -30,10 +30,75 @@ This module provides implementations of:
 '''
 
 # import pybind11 generated symbols into the packet_protocols namespace
+import os
+import importlib.util
+import glob
+
+# Try to import the compiled module
+# The .so file name varies by Python version and platform
+_loaded = False
+
+# First, try the standard import
 try:
     from .packet_protocols_python import *
+    _loaded = True
 except ImportError:
     pass
+
+# If that failed, try to find and load the .so file directly
+# This handles cases where the module is in a different location
+if not _loaded:
+    try:
+        # Get the directory of this __init__.py file
+        _current_dir = os.path.dirname(os.path.abspath(__file__))
+        # Look for .so files in the same directory
+        _so_files = glob.glob(os.path.join(_current_dir, 'packet_protocols_python*.so'))
+        if _so_files:
+            _spec = importlib.util.spec_from_file_location('packet_protocols_python', _so_files[0])
+            if _spec and _spec.loader:
+                _mod = importlib.util.module_from_spec(_spec)
+                _spec.loader.exec_module(_mod)
+                # Import all public symbols
+                for _name in dir(_mod):
+                    if not _name.startswith('_'):
+                        globals()[_name] = getattr(_mod, _name)
+                _loaded = True
+    except Exception:
+        pass
+
+# If still not loaded, try looking in /usr/local (common installation path)
+if not _loaded:
+    try:
+        import sysconfig
+        # Try common installation paths
+        for _base_path in ['/usr/local/lib', '/usr/lib']:
+            # Try to find Python version-specific path
+            _python_version = f"{sysconfig.get_python_version()}"
+            for _pattern in [
+                f"{_base_path}/python{_python_version}/dist-packages/gnuradio/packet_protocols/packet_protocols_python*.so",
+                f"{_base_path}/python{_python_version[0]}/dist-packages/gnuradio/packet_protocols/packet_protocols_python*.so",
+            ]:
+                _so_files = glob.glob(_pattern)
+                if _so_files:
+                    _spec = importlib.util.spec_from_file_location('packet_protocols_python', _so_files[0])
+                    if _spec and _spec.loader:
+                        _mod = importlib.util.module_from_spec(_spec)
+                        _spec.loader.exec_module(_mod)
+                        # Import all public symbols
+                        for _name in dir(_mod):
+                            if not _name.startswith('_'):
+                                globals()[_name] = getattr(_mod, _name)
+                        _loaded = True
+                        break
+                if _loaded:
+                    break
+            if _loaded:
+                break
+    except Exception:
+        pass
+
+# Clean up internal variables to avoid polluting the namespace
+del _loaded, _current_dir, _so_files, _spec, _mod, _name, _base_path, _python_version, _pattern
 
 # import any pure python here
 #

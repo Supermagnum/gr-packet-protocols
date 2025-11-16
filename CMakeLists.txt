@@ -122,6 +122,13 @@ install(DIRECTORY python/
     FILES_MATCHING PATTERN "*.py"
 )
 
+# Also install __init__.py to system location if it exists
+# This ensures the module works even if Python loads the system version first
+install(FILES python/__init__.py
+    DESTINATION /usr/lib/python3/dist-packages/gnuradio/packet_protocols
+    OPTIONAL
+)
+
 # Install GRC blocks (YAML format for GNU Radio 3.10+)
 # Install files directly to avoid nested directory structure
 install(FILES
