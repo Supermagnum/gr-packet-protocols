@@ -1,0 +1,66 @@
+=================================================================
+==1259124==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x75549aa098a0 at pc 0x5da3999749e6 bp 0x7ffc982a20c0 sp 0x7ffc982a20b8
+WRITE of size 1 at 0x75549aa098a0 thread T0
+    #0 0x5da3999749e5 in il2p_encode_header /home/haaken/github-projects/gr-packet-protocols/lib/il2p/il2p_protocol.c:131:23
+    #1 0x5da39995ccea in LLVMFuzzerTestOneInput /home/haaken/github-projects/gr-packet-protocols/security/fuzzing/harnesses/il2p_protocol_libfuzzer.cpp:65:13
+    #2 0x5da399867c84 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/il2p_protocol_libfuzzer_20251025_020528/il2p_protocol_fuzzer+0x68c84) (BuildId: 791b118fe0d22063dfc99cb0d2fadff7ce1946f2)
+    #3 0x5da399867379 in fuzzer::Fuzzer::RunOne(unsigned char const*, unsigned long, bool, fuzzer::InputInfo*, bool, bool*) (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/il2p_protocol_libfuzzer_20251025_020528/il2p_protocol_fuzzer+0x68379) (BuildId: 791b118fe0d22063dfc99cb0d2fadff7ce1946f2)
+    #4 0x5da399868b65 in fuzzer::Fuzzer::MutateAndTestOne() (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/il2p_protocol_libfuzzer_20251025_020528/il2p_protocol_fuzzer+0x69b65) (BuildId: 791b118fe0d22063dfc99cb0d2fadff7ce1946f2)
+    #5 0x5da3998696c5 in fuzzer::Fuzzer::Loop(std::vector<fuzzer::SizedFile, std::allocator<fuzzer::SizedFile>>&) (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/il2p_protocol_libfuzzer_20251025_020528/il2p_protocol_fuzzer+0x6a6c5) (BuildId: 791b118fe0d22063dfc99cb0d2fadff7ce1946f2)
+    #6 0x5da39985699f in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/il2p_protocol_libfuzzer_20251025_020528/il2p_protocol_fuzzer+0x5799f) (BuildId: 791b118fe0d22063dfc99cb0d2fadff7ce1946f2)
+    #7 0x5da399881026 in main (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/il2p_protocol_libfuzzer_20251025_020528/il2p_protocol_fuzzer+0x82026) (BuildId: 791b118fe0d22063dfc99cb0d2fadff7ce1946f2)
+    #8 0x75549c22a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #9 0x75549c22a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #10 0x5da39984b984 in _start (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/il2p_protocol_libfuzzer_20251025_020528/il2p_protocol_fuzzer+0x4c984) (BuildId: 791b118fe0d22063dfc99cb0d2fadff7ce1946f2)
+
+Address 0x75549aa098a0 is located in stack of thread T0 at offset 6304 in frame
+    #0 0x5da39995c747 in LLVMFuzzerTestOneInput /home/haaken/github-projects/gr-packet-protocols/security/fuzzing/harnesses/il2p_protocol_libfuzzer.cpp:11
+
+  This frame has 13 object(s):
+    [32, 52) 'ctx' (line 22)
+    [96, 1238) 'frame' (line 23)
+    [1376, 2400) 'decoded' (line 32)
+    [2528, 2530) 'decoded_len' (line 33)
+    [2544, 2564) 'header' (line 36)
+    [2608, 3750) 'encoded_frame' (line 43)
+    [3888, 4912) 'payload_encoded' (line 46)
+    [5040, 5042) 'payload_encoded_len' (line 47)
+    [5056, 6080) 'payload_decoded' (line 50)
+    [6208, 6210) 'payload_decoded_len' (line 51)
+    [6224, 6244) 'header37' (line 57)
+    [6288, 6304) 'header_encoded' (line 64) <== Memory access at offset 6304 overflows this variable
+    [6320, 6340) 'decoded_header' (line 67)
+HINT: this may be a false positive if your program uses some custom stack unwind mechanism, swapcontext or vfork
+      (longjmp and C++ exceptions *are* supported)
+Shadow bytes around the buggy address:
+  0x75549aa09600: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
+  0x75549aa09680: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
+  0x75549aa09700: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
+  0x75549aa09780: f8 f8 f8 f8 f8 f8 f8 f8 f2 f2 f2 f2 f2 f2 f2 f2
+  0x75549aa09800: f2 f2 f2 f2 f2 f2 f2 f2 f8 f2 00 00 04 f2 f2 f2
+=>0x75549aa09880: f2 f2 00 00[f2]f2 f8 f8 f8 f3 f3 f3 f3 f3 f3 f3
+  0x75549aa09900: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x75549aa09980: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x75549aa09a00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x75549aa09a80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x75549aa09b00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==1259124==ABORTING

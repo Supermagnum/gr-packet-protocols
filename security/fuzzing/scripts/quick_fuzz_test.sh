@@ -7,8 +7,10 @@ set -e
 echo "Quick Fuzzing Test for gr-packet-protocols"
 echo "=========================================="
 
-# Configuration
-FUZZ_DIR="/home/haaken/github-projects/gr-packet-protocols/security/fuzzing"
+# Configuration - Use relative paths from script location
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/../../.." && pwd)"
+FUZZ_DIR="$PROJECT_ROOT/security/fuzzing"
 HARNESS_DIR="$FUZZ_DIR/harnesses"
 CORPUS_DIR="$FUZZ_DIR/corpus"
 REPORTS_DIR="$FUZZ_DIR/reports"
@@ -46,8 +48,11 @@ test_harness() {
     local binary_name="${harness_name}_test"
     local binary_path="$TEST_DIR/$binary_name"
     
-    # Simple compilation without protocol libraries for now
+    # Compilation with proper include paths
+    local include_paths="-I$PROJECT_ROOT/include/gnuradio/packet_protocols"
+    
     g++ -O2 -fsanitize=address,undefined -fno-omit-frame-pointer \
+        $include_paths \
         -o "$binary_path" \
         "$harness_file" \
         2>&1 | tee "$TEST_DIR/${harness_name}_compile.log"

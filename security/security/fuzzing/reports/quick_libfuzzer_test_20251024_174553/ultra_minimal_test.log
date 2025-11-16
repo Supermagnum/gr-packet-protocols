@@ -1,0 +1,10 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 3564487531
+INFO: Loaded 1 modules   (1 inline 8-bit counters): 1 [0x5a1c040c3e88, 0x5a1c040c3e89), 
+INFO: Loaded 1 PC tables (1 PCs): 1 [0x5a1c040c3e90,0x5a1c040c3ea0), 
+INFO: A corpus is not provided, starting from an empty corpus
+#2	INITED cov: 1 ft: 1 corp: 1/1b exec/s: 0 rss: 31Mb
+#4194304	pulse  cov: 1 ft: 1 corp: 1/1b lim: 1024 exec/s: 2097152 rss: 346Mb
+#8388608	pulse  cov: 1 ft: 1 corp: 1/1b lim: 1024 exec/s: 2097152 rss: 613Mb
+==881306== libFuzzer: run interrupted; exiting
+==881306== libFuzzer: run interrupted; exiting

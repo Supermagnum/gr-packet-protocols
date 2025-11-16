@@ -4,7 +4,10 @@
 
 set -e
 
-CORPUS_DIR="/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/corpus/il2p_corpus"
+# Use relative paths from script location
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/../../.." && pwd)"
+CORPUS_DIR="$PROJECT_ROOT/security/fuzzing/corpus/il2p_corpus"
 mkdir -p "$CORPUS_DIR"
 
 echo "Creating IL2P fuzzing corpus for gr-packet-protocols..."

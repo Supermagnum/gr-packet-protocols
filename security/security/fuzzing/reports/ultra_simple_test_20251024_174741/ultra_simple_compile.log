@@ -1,0 +1,2 @@
+clang++: error: no such file or directory: '/home/haaken/github-projects/gr-packet-protocols/security/security/fuzzing/harnesses/ultra_simple_libfuzzer.cpp'
+clang++: error: no input files

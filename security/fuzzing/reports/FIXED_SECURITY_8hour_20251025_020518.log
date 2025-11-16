@@ -1,0 +1,91 @@
+libFuzzer Fuzzing Framework
+==========================
+Project root: /home/haaken/github-projects/gr-packet-protocols
+Harness directory: /home/haaken/github-projects/gr-packet-protocols/security/fuzzing/harnesses
+Corpus directory: /home/haaken/github-projects/gr-packet-protocols/security/fuzzing/corpus
+Reports directory: /home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports
+Starting libFuzzer fuzzing campaign...
+Found 4 harnesses: ax25_protocol fx25_protocol il2p_protocol kiss_tnc
+Starting parallel fuzzing for all protocols...
+All protocols will run simultaneously for 8 hours
+Starting parallel 8-hour fuzzing session for ax25_protocol...
+
+Fuzzing ax25_protocol with libFuzzer...
+Harness: /home/haaken/github-projects/gr-packet-protocols/security/fuzzing/harnesses/ax25_protocol_libfuzzer.cpp
+Corpus: /home/haaken/github-projects/gr-packet-protocols/security/fuzzing/corpus/ax25_protocol
+Report: /home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/ax25_protocol_libfuzzer_20251025_020518
+Compiling ax25_protocol harness with protocol sources...
+[SUCCESS] ax25_protocol harness compiled
+Running libFuzzer on ax25_protocol continuously...
+libFuzzer PID: 1231234
+Running for 0h 0m (0s)... Remaining: 8h 0m
+  Unique crashes found: 0, Unique hangs: 0
+Starting parallel 8-hour fuzzing session for fx25_protocol...
+
+Fuzzing fx25_protocol with libFuzzer...
+Harness: /home/haaken/github-projects/gr-packet-protocols/security/fuzzing/harnesses/fx25_protocol_libfuzzer.cpp
+Corpus: /home/haaken/github-projects/gr-packet-protocols/security/fuzzing/corpus/fx25_protocol
+Report: /home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/fx25_protocol_libfuzzer_20251025_020523
+Compiling fx25_protocol harness with protocol sources...
+[SUCCESS] fx25_protocol harness compiled
+Running libFuzzer on fx25_protocol continuously...
+libFuzzer PID: 1231325
+Running for 0h 0m (0s)... Remaining: 8h 0m
+  Unique crashes found: 0, Unique hangs: 0
+Starting parallel 8-hour fuzzing session for il2p_protocol...
+
+Fuzzing il2p_protocol with libFuzzer...
+Harness: /home/haaken/github-projects/gr-packet-protocols/security/fuzzing/harnesses/il2p_protocol_libfuzzer.cpp
+Corpus: /home/haaken/github-projects/gr-packet-protocols/security/fuzzing/corpus/il2p_protocol
+Report: /home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/il2p_protocol_libfuzzer_20251025_020528
+Compiling il2p_protocol harness with protocol sources...
+[SUCCESS] il2p_protocol harness compiled
+Running libFuzzer on il2p_protocol continuously...
+libFuzzer PID: 1231394
+Running for 0h 0m (0s)... Remaining: 8h 0m
+  Unique crashes found: 0, Unique hangs: 0
+Starting parallel 8-hour fuzzing session for kiss_tnc...
+
+Fuzzing kiss_tnc with libFuzzer...
+Harness: /home/haaken/github-projects/gr-packet-protocols/security/fuzzing/harnesses/kiss_tnc_libfuzzer.cpp
+Corpus: /home/haaken/github-projects/gr-packet-protocols/security/fuzzing/corpus/kiss_tnc
+Report: /home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/kiss_tnc_libfuzzer_20251025_020533
+Compiling kiss_tnc harness with protocol sources...
+[SUCCESS] kiss_tnc harness compiled
+Running libFuzzer on kiss_tnc continuously...
+libFuzzer PID: 1231677
+Running for 0h 0m (0s)... Remaining: 8h 0m
+  Unique crashes found: 0, Unique hangs: 0
+All fuzzers started in parallel (PIDs: 1231211 1231311 1231374 1231597)
+Monitoring all fuzzers for 8 hours...
+Parallel fuzzing running for 0h 0m (0s)... Remaining: 8h 0m
+  ax25_protocol: 0 crashes, 0 hangs
+  fx25_protocol: 0 crashes, 0 hangs
+  il2p_protocol: 85 crashes, 0 hangs
+  kiss_tnc: 40 crashes, 0 hangs
+Running for 0h 5m (300s)... Remaining: 7h 55m
+  Unique crashes found: 0, Unique hangs: 0
+Running for 0h 5m (300s)... Remaining: 7h 55m
+  Unique crashes found: 0, Unique hangs: 0
+Running for 0h 5m (300s)... Remaining: 7h 55m
+  Unique crashes found: 2235, Unique hangs: 0
+Running for 0h 5m (300s)... Remaining: 7h 55m
+  Unique crashes found: 2251, Unique hangs: 0
+Parallel fuzzing running for 0h 5m (300s)... Remaining: 7h 55m
+  ax25_protocol: 0 crashes, 0 hangs
+  fx25_protocol: 0 crashes, 0 hangs
+  il2p_protocol: 2293 crashes, 0 hangs
+  kiss_tnc: 2281 crashes, 0 hangs
+Running for 0h 10m (600s)... Remaining: 7h 50m
+  Unique crashes found: 0, Unique hangs: 0
+Running for 0h 10m (600s)... Remaining: 7h 50m
+  Unique crashes found: 0, Unique hangs: 0
+Running for 0h 10m (600s)... Remaining: 7h 50m
+  Unique crashes found: 4109, Unique hangs: 0
+Running for 0h 10m (600s)... Remaining: 7h 50m
+  Unique crashes found: 4118, Unique hangs: 0
+Parallel fuzzing running for 0h 10m (600s)... Remaining: 7h 50m
+  ax25_protocol: 0 crashes, 0 hangs
+  fx25_protocol: 0 crashes, 0 hangs
+  il2p_protocol: 4165 crashes, 0 hangs
+  kiss_tnc: 4144 crashes, 0 hangs

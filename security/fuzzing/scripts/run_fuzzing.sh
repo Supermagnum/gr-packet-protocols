@@ -4,8 +4,10 @@
 
 set -e
 
-# Configuration
-FUZZ_DIR="/home/haaken/github-projects/gr-packet-protocols/security/fuzzing"
+# Configuration - Use relative paths from script location
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/../../.." && pwd)"
+FUZZ_DIR="$PROJECT_ROOT/security/fuzzing"
 HARNESS_DIR="$FUZZ_DIR/harnesses"
 CORPUS_DIR="$FUZZ_DIR/corpus"
 REPORTS_DIR="$FUZZ_DIR/reports"
@@ -50,16 +52,16 @@ run_fuzzing() {
     local binary_path="$REPORT_DIR/$binary_name"
     
     # Check if we have the protocol headers
-    local include_paths="-I/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols"
+    local include_paths="-I$PROJECT_ROOT/include/gnuradio/packet_protocols"
     
     g++ -O2 -fsanitize=address,undefined -fno-omit-frame-pointer \
         $include_paths \
         -o "$binary_path" \
         "$harness_file" \
-        /home/haaken/github-projects/gr-packet-protocols/lib/ax25/ax25_protocol.c \
-        /home/haaken/github-projects/gr-packet-protocols/lib/fx25/fx25_protocol.c \
-        /home/haaken/github-projects/gr-packet-protocols/lib/il2p/il2p_protocol.c \
-        /home/haaken/github-projects/gr-packet-protocols/lib/ax25/kiss_protocol.c \
+        "$PROJECT_ROOT/lib/ax25/ax25_protocol.c" \
+        "$PROJECT_ROOT/lib/fx25/fx25_protocol.c" \
+        "$PROJECT_ROOT/lib/il2p/il2p_protocol.c" \
+        "$PROJECT_ROOT/lib/ax25/kiss_protocol.c" \
         2>&1 | tee "$REPORT_DIR/${harness_name}_compile.log"
     
     if [ ${PIPESTATUS[0]} -ne 0 ]; then

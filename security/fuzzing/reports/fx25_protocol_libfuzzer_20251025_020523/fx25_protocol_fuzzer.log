@@ -1,0 +1,138 @@
+
+
+WARNING: unrecognized flag '-corpus_dir=/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/corpus/fx25_protocol'; use -help=1 to list all flags
+
+
+
+WARNING: unrecognized flag '-dedup_token_length=16'; use -help=1 to list all flags
+
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 3602857029
+INFO: Loaded 1 modules   (2704 inline 8-bit counters): 2704 [0x583236c49890, 0x583236c4a320), 
+INFO: Loaded 1 PC tables (2704 PCs): 2704 [0x583236c4a320,0x583236c54c20), 
+INFO: -fork=1: fuzzing in separate process(s)
+INFO: -fork=1: 0 seed inputs, starting to fuzz in /tmp/libFuzzerTemp.FuzzWithFork1231325.dir
+#22103: cov: 0 ft: 0 corp: 0 exec/s: 11051 oom/timeout/crash: 0/0/0 time: 2s job: 1 dft_time: 0
+  NEW_FUNC: 0x583236bde738 in LLVMFuzzerTestOneInput /home/haaken/github-projects/gr-packet-protocols/security/fuzzing/harnesses/fx25_protocol_libfuzzer.cpp:11
+  NEW_FUNC: 0x583236bedbf8 in fx25_rs_init /home/haaken/github-projects/gr-packet-protocols/lib/fx25/fx25_protocol.c:23
+  NEW_FUNC: 0x583236bf0db8 in fx25_rs_free /home/haaken/github-projects/gr-packet-protocols/lib/fx25/fx25_protocol.c:91
+  NEW_FUNC: 0x583236bf1178 in fx25_rs_encode /home/haaken/github-projects/gr-packet-protocols/lib/fx25/fx25_protocol.c:101
+  NEW_FUNC: 0x583236bf2c78 in fx25_rs_decode /home/haaken/github-projects/gr-packet-protocols/lib/fx25/fx25_protocol.c:152
+  NEW_FUNC: 0x583236bf2cc8 in fx25_init /home/haaken/github-projects/gr-packet-protocols/lib/fx25/fx25_protocol.c:161
+  NEW_FUNC: 0x583236bf2fa8 in fx25_cleanup /home/haaken/github-projects/gr-packet-protocols/lib/fx25/fx25_protocol.c:208
+  NEW_FUNC: 0x583236bf3198 in fx25_calculate_crc /home/haaken/github-projects/gr-packet-protocols/lib/fx25/fx25_protocol.c:220
+  NEW_FUNC: 0x583236bf3358 in fx25_verify_crc /home/haaken/github-projects/gr-packet-protocols/lib/fx25/fx25_protocol.c:238
+  NEW_FUNC: 0x583236bf3768 in fx25_encode_frame /home/haaken/github-projects/gr-packet-protocols/lib/fx25/fx25_protocol.c:258
+  NEW_FUNC: 0x583236bf43d8 in fx25_decode_frame /home/haaken/github-projects/gr-packet-protocols/lib/fx25/fx25_protocol.c:295
+#36520: cov: 334 ft: 681 corp: 53 exec/s: 4805 oom/timeout/crash: 0/0/0 time: 5s job: 2 dft_time: 0
+#63840: cov: 335 ft: 703 corp: 55 exec/s: 6830 oom/timeout/crash: 0/0/0 time: 9s job: 3 dft_time: 0
+#88723: cov: 335 ft: 706 corp: 57 exec/s: 4976 oom/timeout/crash: 0/0/0 time: 14s job: 4 dft_time: 0
+#129360: cov: 335 ft: 706 corp: 57 exec/s: 6772 oom/timeout/crash: 0/0/0 time: 20s job: 5 dft_time: 0
+#170327: cov: 336 ft: 717 corp: 60 exec/s: 5852 oom/timeout/crash: 0/0/0 time: 27s job: 6 dft_time: 0
+#230822: cov: 336 ft: 717 corp: 60 exec/s: 7561 oom/timeout/crash: 0/0/0 time: 35s job: 7 dft_time: 0
+#292112: cov: 336 ft: 717 corp: 60 exec/s: 6810 oom/timeout/crash: 0/0/0 time: 44s job: 8 dft_time: 0
+#356851: cov: 336 ft: 717 corp: 60 exec/s: 6473 oom/timeout/crash: 0/0/0 time: 54s job: 9 dft_time: 0
+#420008: cov: 336 ft: 717 corp: 60 exec/s: 5741 oom/timeout/crash: 0/0/0 time: 66s job: 10 dft_time: 0
+#470093: cov: 336 ft: 717 corp: 60 exec/s: 4173 oom/timeout/crash: 0/0/0 time: 78s job: 11 dft_time: 0
+#544112: cov: 336 ft: 717 corp: 60 exec/s: 5693 oom/timeout/crash: 0/0/0 time: 91s job: 12 dft_time: 0
+#612626: cov: 336 ft: 717 corp: 60 exec/s: 4893 oom/timeout/crash: 0/0/0 time: 105s job: 13 dft_time: 0
+#686213: cov: 336 ft: 717 corp: 60 exec/s: 4905 oom/timeout/crash: 0/0/0 time: 120s job: 14 dft_time: 0
+#767131: cov: 336 ft: 717 corp: 60 exec/s: 5057 oom/timeout/crash: 0/0/0 time: 136s job: 15 dft_time: 0
+#853823: cov: 336 ft: 717 corp: 60 exec/s: 5099 oom/timeout/crash: 0/0/0 time: 153s job: 16 dft_time: 0
+#938661: cov: 336 ft: 717 corp: 60 exec/s: 4713 oom/timeout/crash: 0/0/0 time: 171s job: 17 dft_time: 0
+#1064451: cov: 336 ft: 717 corp: 60 exec/s: 6620 oom/timeout/crash: 0/0/0 time: 190s job: 18 dft_time: 0
+#1183431: cov: 336 ft: 717 corp: 60 exec/s: 5949 oom/timeout/crash: 0/0/0 time: 211s job: 19 dft_time: 0
+#1298057: cov: 336 ft: 717 corp: 60 exec/s: 5458 oom/timeout/crash: 0/0/0 time: 232s job: 20 dft_time: 0
+#1413335: cov: 336 ft: 717 corp: 60 exec/s: 5239 oom/timeout/crash: 0/0/0 time: 254s job: 21 dft_time: 0
+#1517466: cov: 336 ft: 717 corp: 60 exec/s: 4527 oom/timeout/crash: 0/0/0 time: 277s job: 22 dft_time: 0
+#1668459: cov: 336 ft: 717 corp: 60 exec/s: 6291 oom/timeout/crash: 0/0/0 time: 301s job: 23 dft_time: 0
+#1810722: cov: 336 ft: 717 corp: 60 exec/s: 5690 oom/timeout/crash: 0/0/0 time: 326s job: 24 dft_time: 0
+#1953508: cov: 336 ft: 717 corp: 60 exec/s: 5491 oom/timeout/crash: 0/0/0 time: 352s job: 25 dft_time: 0
+#2152376: cov: 336 ft: 717 corp: 60 exec/s: 7365 oom/timeout/crash: 0/0/0 time: 379s job: 26 dft_time: 0
+#2259193: cov: 336 ft: 717 corp: 60 exec/s: 3814 oom/timeout/crash: 0/0/0 time: 408s job: 27 dft_time: 0
+#2426932: cov: 336 ft: 717 corp: 60 exec/s: 5784 oom/timeout/crash: 0/0/0 time: 437s job: 28 dft_time: 0
+#2574650: cov: 336 ft: 717 corp: 60 exec/s: 4923 oom/timeout/crash: 0/0/0 time: 467s job: 29 dft_time: 0
+#2726188: cov: 336 ft: 717 corp: 60 exec/s: 4888 oom/timeout/crash: 0/0/0 time: 498s job: 30 dft_time: 0
+#2868794: cov: 336 ft: 717 corp: 60 exec/s: 4456 oom/timeout/crash: 0/0/0 time: 530s job: 31 dft_time: 0
+#3048261: cov: 336 ft: 717 corp: 60 exec/s: 5438 oom/timeout/crash: 0/0/0 time: 563s job: 32 dft_time: 0
+#3218022: cov: 336 ft: 717 corp: 60 exec/s: 4992 oom/timeout/crash: 0/0/0 time: 597s job: 33 dft_time: 0
+#3421777: cov: 336 ft: 717 corp: 60 exec/s: 5821 oom/timeout/crash: 0/0/0 time: 633s job: 34 dft_time: 0
+#3686530: cov: 336 ft: 717 corp: 60 exec/s: 7354 oom/timeout/crash: 0/0/0 time: 669s job: 35 dft_time: 0
+==1231325== libFuzzer: run interrupted; exiting
+COVERAGE:
+UNCOVERED_FUNC: hits: 0 edges: 0/21 LLVMFuzzerTestOneInput /home/haaken/github-projects/gr-packet-protocols/security/fuzzing/harnesses/fx25_protocol_libfuzzer.cpp:11
+UNCOVERED_FUNC: hits: 0 edges: 0/113 ax25_init /home/haaken/github-projects/gr-packet-protocols/lib/ax25/ax25_protocol.c:16
+UNCOVERED_FUNC: hits: 0 edges: 0/22 ax25_cleanup /home/haaken/github-projects/gr-packet-protocols/lib/ax25/ax25_protocol.c:54
+UNCOVERED_FUNC: hits: 0 edges: 0/31 ax25_disconnect /home/haaken/github-projects/gr-packet-protocols/lib/ax25/ax25_protocol.c:412
+UNCOVERED_FUNC: hits: 0 edges: 0/5 ax25_set_config /home/haaken/github-projects/gr-packet-protocols/lib/ax25/ax25_protocol.c:71
+UNCOVERED_FUNC: hits: 0 edges: 0/5 ax25_get_config /home/haaken/github-projects/gr-packet-protocols/lib/ax25/ax25_protocol.c:81
+UNCOVERED_FUNC: hits: 0 edges: 0/14 ax25_set_address /home/haaken/github-projects/gr-packet-protocols/lib/ax25/ax25_protocol.c:91
+UNCOVERED_FUNC: hits: 0 edges: 0/19 ax25_get_address /home/haaken/github-projects/gr-packet-protocols/lib/ax25/ax25_protocol.c:122
+UNCOVERED_FUNC: hits: 0 edges: 0/5 ax25_address_equal /home/haaken/github-projects/gr-packet-protocols/lib/ax25/ax25_protocol.c:149
+UNCOVERED_FUNC: hits: 0 edges: 0/42 ax25_create_frame /home/haaken/github-projects/gr-packet-protocols/lib/ax25/ax25_protocol.c:160
+UNCOVERED_FUNC: hits: 0 edges: 0/139 ax25_parse_frame /home/haaken/github-projects/gr-packet-protocols/lib/ax25/ax25_protocol.c:193
+UNCOVERED_FUNC: hits: 0 edges: 0/14 ax25_validate_frame /home/haaken/github-projects/gr-packet-protocols/lib/ax25/ax25_protocol.c:355
+UNCOVERED_FUNC: hits: 0 edges: 0/88 ax25_encode_frame /home/haaken/github-projects/gr-packet-protocols/lib/ax25/ax25_protocol.c:294
+UNCOVERED_FUNC: hits: 0 edges: 0/11 ax25_calculate_fcs /home/haaken/github-projects/gr-packet-protocols/lib/ax25/ax25_protocol.c:616
+UNCOVERED_FUNC: hits: 0 edges: 0/116 ax25_connect /home/haaken/github-projects/gr-packet-protocols/lib/ax25/ax25_protocol.c:376
+UNCOVERED_FUNC: hits: 0 edges: 0/84 ax25_send_data /home/haaken/github-projects/gr-packet-protocols/lib/ax25/ax25_protocol.c:430
+UNCOVERED_FUNC: hits: 0 edges: 0/69 ax25_receive_data /home/haaken/github-projects/gr-packet-protocols/lib/ax25/ax25_protocol.c:477
+UNCOVERED_FUNC: hits: 0 edges: 0/38 ax25_send_ui_frame /home/haaken/github-projects/gr-packet-protocols/lib/ax25/ax25_protocol.c:511
+UNCOVERED_FUNC: hits: 0 edges: 0/104 ax25_receive_ui_frame /home/haaken/github-projects/gr-packet-protocols/lib/ax25/ax25_protocol.c:567
+UNCOVERED_FUNC: hits: 0 edges: 0/11 ax25_check_fcs /home/haaken/github-projects/gr-packet-protocols/lib/ax25/ax25_protocol.c:634
+UNCOVERED_FUNC: hits: 0 edges: 0/38 ax25_bit_stuff /home/haaken/github-projects/gr-packet-protocols/lib/ax25/ax25_protocol.c:639
+UNCOVERED_FUNC: hits: 0 edges: 0/35 ax25_bit_unstuff /home/haaken/github-projects/gr-packet-protocols/lib/ax25/ax25_protocol.c:694
+UNCOVERED_FUNC: hits: 0 edges: 0/21 ax25_add_flags /home/haaken/github-projects/gr-packet-protocols/lib/ax25/ax25_protocol.c:749
+UNCOVERED_FUNC: hits: 0 edges: 0/76 kiss_init /home/haaken/github-projects/gr-packet-protocols/lib/ax25/kiss_protocol.c:19
+UNCOVERED_FUNC: hits: 0 edges: 0/33 kiss_cleanup /home/haaken/github-projects/gr-packet-protocols/lib/ax25/kiss_protocol.c:48
+UNCOVERED_FUNC: hits: 0 edges: 0/5 kiss_set_config /home/haaken/github-projects/gr-packet-protocols/lib/ax25/kiss_protocol.c:68
+UNCOVERED_FUNC: hits: 0 edges: 0/5 kiss_get_config /home/haaken/github-projects/gr-packet-protocols/lib/ax25/kiss_protocol.c:78
+UNCOVERED_FUNC: hits: 0 edges: 0/20 kiss_send_frame /home/haaken/github-projects/gr-packet-protocols/lib/ax25/kiss_protocol.c:88
+UNCOVERED_FUNC: hits: 0 edges: 0/29 kiss_escape_data /home/haaken/github-projects/gr-packet-protocols/lib/ax25/kiss_protocol.c:243
+UNCOVERED_FUNC: hits: 0 edges: 0/11 kiss_serial_send /home/haaken/github-projects/gr-packet-protocols/lib/ax25/kiss_protocol.c:330
+UNCOVERED_FUNC: hits: 0 edges: 0/57 kiss_receive_frame /home/haaken/github-projects/gr-packet-protocols/lib/ax25/kiss_protocol.c:126
+UNCOVERED_FUNC: hits: 0 edges: 0/132 kiss_process_byte /home/haaken/github-projects/gr-packet-protocols/lib/ax25/kiss_protocol.c:154
+UNCOVERED_FUNC: hits: 0 edges: 0/30 kiss_unescape_data /home/haaken/github-projects/gr-packet-protocols/lib/ax25/kiss_protocol.c:271
+UNCOVERED_FUNC: hits: 0 edges: 0/8 kiss_frame_ready /home/haaken/github-projects/gr-packet-protocols/lib/ax25/kiss_protocol.c:234
+UNCOVERED_FUNC: hits: 0 edges: 0/21 kiss_validate_frame /home/haaken/github-projects/gr-packet-protocols/lib/ax25/kiss_protocol.c:309
+UNCOVERED_FUNC: hits: 0 edges: 0/21 kiss_serial_receive /home/haaken/github-projects/gr-packet-protocols/lib/ax25/kiss_protocol.c:354
+UNCOVERED_FUNC: hits: 0 edges: 0/11 kiss_tcp_send /home/haaken/github-projects/gr-packet-protocols/lib/ax25/kiss_protocol.c:391
+UNCOVERED_FUNC: hits: 0 edges: 0/21 kiss_tcp_receive /home/haaken/github-projects/gr-packet-protocols/lib/ax25/kiss_protocol.c:412
+UNCOVERED_FUNC: hits: 0 edges: 0/1 kiss_bt_send /home/haaken/github-projects/gr-packet-protocols/lib/ax25/kiss_protocol.c:451
+UNCOVERED_FUNC: hits: 0 edges: 0/6 kiss_bt_receive /home/haaken/github-projects/gr-packet-protocols/lib/ax25/kiss_protocol.c:467
+UNCOVERED_FUNC: hits: 0 edges: 0/316 fx25_rs_init /home/haaken/github-projects/gr-packet-protocols/lib/fx25/fx25_protocol.c:23
+UNCOVERED_FUNC: hits: 0 edges: 0/29 fx25_rs_free /home/haaken/github-projects/gr-packet-protocols/lib/fx25/fx25_protocol.c:91
+UNCOVERED_FUNC: hits: 0 edges: 0/156 fx25_rs_encode /home/haaken/github-projects/gr-packet-protocols/lib/fx25/fx25_protocol.c:101
+UNCOVERED_FUNC: hits: 0 edges: 0/5 fx25_rs_decode /home/haaken/github-projects/gr-packet-protocols/lib/fx25/fx25_protocol.c:152
+UNCOVERED_FUNC: hits: 0 edges: 0/18 fx25_init /home/haaken/github-projects/gr-packet-protocols/lib/fx25/fx25_protocol.c:161
+UNCOVERED_FUNC: hits: 0 edges: 0/15 fx25_cleanup /home/haaken/github-projects/gr-packet-protocols/lib/fx25/fx25_protocol.c:208
+UNCOVERED_FUNC: hits: 0 edges: 0/11 fx25_calculate_crc /home/haaken/github-projects/gr-packet-protocols/lib/fx25/fx25_protocol.c:220
+UNCOVERED_FUNC: hits: 0 edges: 0/11 fx25_verify_crc /home/haaken/github-projects/gr-packet-protocols/lib/fx25/fx25_protocol.c:238
+UNCOVERED_FUNC: hits: 0 edges: 0/7 fx25_generate_preamble /home/haaken/github-projects/gr-packet-protocols/lib/fx25/fx25_protocol.c:243
+UNCOVERED_FUNC: hits: 0 edges: 0/6 fx25_verify_sync_word /home/haaken/github-projects/gr-packet-protocols/lib/fx25/fx25_protocol.c:251
+UNCOVERED_FUNC: hits: 0 edges: 0/83 fx25_encode_frame /home/haaken/github-projects/gr-packet-protocols/lib/fx25/fx25_protocol.c:258
+UNCOVERED_FUNC: hits: 0 edges: 0/40 fx25_decode_frame /home/haaken/github-projects/gr-packet-protocols/lib/fx25/fx25_protocol.c:295
+UNCOVERED_FUNC: hits: 0 edges: 0/16 fx25_detect_frame /home/haaken/github-projects/gr-packet-protocols/lib/fx25/fx25_protocol.c:319
+UNCOVERED_FUNC: hits: 0 edges: 0/56 fx25_extract_frame /home/haaken/github-projects/gr-packet-protocols/lib/fx25/fx25_protocol.c:342
+UNCOVERED_FUNC: hits: 0 edges: 0/23 fx25_get_stats /home/haaken/github-projects/gr-packet-protocols/lib/fx25/fx25_protocol.c:385
+UNCOVERED_FUNC: hits: 0 edges: 0/10 il2p_init /home/haaken/github-projects/gr-packet-protocols/lib/il2p/il2p_protocol.c:22
+UNCOVERED_FUNC: hits: 0 edges: 0/3 il2p_cleanup /home/haaken/github-projects/gr-packet-protocols/lib/il2p/il2p_protocol.c:33
+UNCOVERED_FUNC: hits: 0 edges: 0/6 il2p_set_debug /home/haaken/github-projects/gr-packet-protocols/lib/il2p/il2p_protocol.c:40
+UNCOVERED_FUNC: hits: 0 edges: 0/6 il2p_get_debug /home/haaken/github-projects/gr-packet-protocols/lib/il2p/il2p_protocol.c:46
+UNCOVERED_FUNC: hits: 0 edges: 0/9 il2p_scramble_data /home/haaken/github-projects/gr-packet-protocols/lib/il2p/il2p_protocol.c:52
+UNCOVERED_FUNC: hits: 0 edges: 0/9 il2p_descramble_data /home/haaken/github-projects/gr-packet-protocols/lib/il2p/il2p_protocol.c:68
+UNCOVERED_FUNC: hits: 0 edges: 0/30 il2p_calculate_header_checksum /home/haaken/github-projects/gr-packet-protocols/lib/il2p/il2p_protocol.c:84
+UNCOVERED_FUNC: hits: 0 edges: 0/40 il2p_encode_header /home/haaken/github-projects/gr-packet-protocols/lib/il2p/il2p_protocol.c:107
+UNCOVERED_FUNC: hits: 0 edges: 0/46 il2p_decode_header /home/haaken/github-projects/gr-packet-protocols/lib/il2p/il2p_protocol.c:140
+UNCOVERED_FUNC: hits: 0 edges: 0/15 il2p_encode_payload /home/haaken/github-projects/gr-packet-protocols/lib/il2p/il2p_protocol.c:180
+UNCOVERED_FUNC: hits: 0 edges: 0/14 il2p_decode_payload /home/haaken/github-projects/gr-packet-protocols/lib/il2p/il2p_protocol.c:200
+UNCOVERED_FUNC: hits: 0 edges: 0/53 il2p_encode_frame /home/haaken/github-projects/gr-packet-protocols/lib/il2p/il2p_protocol.c:216
+UNCOVERED_FUNC: hits: 0 edges: 0/40 il2p_decode_frame /home/haaken/github-projects/gr-packet-protocols/lib/il2p/il2p_protocol.c:256
+UNCOVERED_FUNC: hits: 0 edges: 0/16 il2p_detect_frame /home/haaken/github-projects/gr-packet-protocols/lib/il2p/il2p_protocol.c:282
+UNCOVERED_FUNC: hits: 0 edges: 0/60 il2p_extract_frame /home/haaken/github-projects/gr-packet-protocols/lib/il2p/il2p_protocol.c:297
+UNCOVERED_FUNC: hits: 0 edges: 0/23 il2p_get_stats /home/haaken/github-projects/gr-packet-protocols/lib/il2p/il2p_protocol.c:341
+stat::number_of_executed_units: 0
+stat::average_exec_per_sec:     0
+stat::new_units_added:          0
+stat::slowest_unit_time_sec:    0
+stat::peak_rss_mb:              60

@@ -1,0 +1,59 @@
+=================================================================
+==1209577==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x502000000051 at pc 0x5a3450056dda bp 0x7ffc236cdab0 sp 0x7ffc236cdaa8
+READ of size 1 at 0x502000000051 thread T0
+    #0 0x5a3450056dd9 in LLVMFuzzerTestOneInput /home/haaken/github-projects/gr-packet-protocols/security/fuzzing/harnesses/il2p_protocol_libfuzzer.cpp:54:23
+    #1 0x5a344ff61c84 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/il2p_protocol_libfuzzer_20251025_015418/il2p_protocol_fuzzer+0x67c84) (BuildId: ea65a0bddfdd971fb33bb6b26377cf447b82f1d9)
+    #2 0x5a344ff61379 in fuzzer::Fuzzer::RunOne(unsigned char const*, unsigned long, bool, fuzzer::InputInfo*, bool, bool*) (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/il2p_protocol_libfuzzer_20251025_015418/il2p_protocol_fuzzer+0x67379) (BuildId: ea65a0bddfdd971fb33bb6b26377cf447b82f1d9)
+    #3 0x5a344ff63006 in fuzzer::Fuzzer::ReadAndExecuteSeedCorpora(std::vector<fuzzer::SizedFile, std::allocator<fuzzer::SizedFile>>&) (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/il2p_protocol_libfuzzer_20251025_015418/il2p_protocol_fuzzer+0x69006) (BuildId: ea65a0bddfdd971fb33bb6b26377cf447b82f1d9)
+    #4 0x5a344ff634a7 in fuzzer::Fuzzer::Loop(std::vector<fuzzer::SizedFile, std::allocator<fuzzer::SizedFile>>&) (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/il2p_protocol_libfuzzer_20251025_015418/il2p_protocol_fuzzer+0x694a7) (BuildId: ea65a0bddfdd971fb33bb6b26377cf447b82f1d9)
+    #5 0x5a344ff5099f in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/il2p_protocol_libfuzzer_20251025_015418/il2p_protocol_fuzzer+0x5699f) (BuildId: ea65a0bddfdd971fb33bb6b26377cf447b82f1d9)
+    #6 0x5a344ff7b026 in main (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/il2p_protocol_libfuzzer_20251025_015418/il2p_protocol_fuzzer+0x81026) (BuildId: ea65a0bddfdd971fb33bb6b26377cf447b82f1d9)
+    #7 0x7bc755c2a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #8 0x7bc755c2a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #9 0x5a344ff45984 in _start (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/il2p_protocol_libfuzzer_20251025_015418/il2p_protocol_fuzzer+0x4b984) (BuildId: ea65a0bddfdd971fb33bb6b26377cf447b82f1d9)
+
+0x502000000051 is located 0 bytes after 1-byte region [0x502000000050,0x502000000051)
+allocated by thread T0 here:
+    #0 0x5a34500544d1 in operator new[](unsigned long) (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/il2p_protocol_libfuzzer_20251025_015418/il2p_protocol_fuzzer+0x15a4d1) (BuildId: ea65a0bddfdd971fb33bb6b26377cf447b82f1d9)
+    #1 0x5a344ff61b95 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/il2p_protocol_libfuzzer_20251025_015418/il2p_protocol_fuzzer+0x67b95) (BuildId: ea65a0bddfdd971fb33bb6b26377cf447b82f1d9)
+    #2 0x5a344ff61379 in fuzzer::Fuzzer::RunOne(unsigned char const*, unsigned long, bool, fuzzer::InputInfo*, bool, bool*) (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/il2p_protocol_libfuzzer_20251025_015418/il2p_protocol_fuzzer+0x67379) (BuildId: ea65a0bddfdd971fb33bb6b26377cf447b82f1d9)
+    #3 0x5a344ff63006 in fuzzer::Fuzzer::ReadAndExecuteSeedCorpora(std::vector<fuzzer::SizedFile, std::allocator<fuzzer::SizedFile>>&) (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/il2p_protocol_libfuzzer_20251025_015418/il2p_protocol_fuzzer+0x69006) (BuildId: ea65a0bddfdd971fb33bb6b26377cf447b82f1d9)
+    #4 0x5a344ff634a7 in fuzzer::Fuzzer::Loop(std::vector<fuzzer::SizedFile, std::allocator<fuzzer::SizedFile>>&) (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/il2p_protocol_libfuzzer_20251025_015418/il2p_protocol_fuzzer+0x694a7) (BuildId: ea65a0bddfdd971fb33bb6b26377cf447b82f1d9)
+    #5 0x5a344ff5099f in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/il2p_protocol_libfuzzer_20251025_015418/il2p_protocol_fuzzer+0x5699f) (BuildId: ea65a0bddfdd971fb33bb6b26377cf447b82f1d9)
+    #6 0x5a344ff7b026 in main (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/il2p_protocol_libfuzzer_20251025_015418/il2p_protocol_fuzzer+0x81026) (BuildId: ea65a0bddfdd971fb33bb6b26377cf447b82f1d9)
+    #7 0x7bc755c2a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #8 0x7bc755c2a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #9 0x5a344ff45984 in _start (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/il2p_protocol_libfuzzer_20251025_015418/il2p_protocol_fuzzer+0x4b984) (BuildId: ea65a0bddfdd971fb33bb6b26377cf447b82f1d9)
+
+Shadow bytes around the buggy address:
+  0x501ffffffd80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x501ffffffe00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x501ffffffe80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x501fffffff00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x501fffffff80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x502000000000: fa fa fd fa fa fa 01 fa fa fa[01]fa fa fa fa fa
+  0x502000000080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x502000000100: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x502000000180: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x502000000200: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x502000000280: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==1209577==ABORTING

@@ -4,7 +4,10 @@
 
 set -e
 
-CORPUS_DIR="/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/corpus/kiss_corpus"
+# Use relative paths from script location
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/../../.." && pwd)"
+CORPUS_DIR="$PROJECT_ROOT/security/fuzzing/corpus/kiss_corpus"
 mkdir -p "$CORPUS_DIR"
 
 echo "Creating KISS TNC fuzzing corpus for gr-packet-protocols..."
@@ -34,12 +37,12 @@ create_kiss_frame() {
         local char="${data:$i:1}"
         local byte=$(printf "%d" "'$char")
         
-        if [ $byte -eq $KISS_FEND ]; then
+        if [ $byte -eq 192 ]; then  # 0xC0 = KISS_FEND
             # Escape FEND
-            frame+=$(printf "%02x%02x" $KISS_FESC $KISS_TFEND)
-        elif [ $byte -eq $KISS_FESC ]; then
+            frame+=$(printf "%02x%02x" 219 220)  # 0xDB 0xDC
+        elif [ $byte -eq 219 ]; then  # 0xDB = KISS_FESC
             # Escape FESC
-            frame+=$(printf "%02x%02x" $KISS_FESC $KISS_TFESC)
+            frame+=$(printf "%02x%02x" 219 221)  # 0xDB 0xDD
         else
             frame+=$(printf "%02x" $byte)
         fi

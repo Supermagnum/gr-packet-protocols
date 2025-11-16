@@ -1,0 +1,226 @@
+/* Custom stylesheet for gr-packet-protocols Doxygen documentation */
+
+/* Main body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Header styling */
+#titlearea {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#titlearea h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: 300;
+}
+
+#titlearea p {
+    font-size: 1.2em;
+    margin: 10px 0 0 0;
+    opacity: 0.9;
+}
+
+/* Navigation styling */
+#navrow1 {
+    background-color: #34495e;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#navrow1 ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#navrow1 li {
+    margin: 0;
+}
+
+#navrow1 a {
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border-radius: 3px;
+    margin: 2px;
+}
+
+#navrow1 a:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Content area styling */
+#mainpage {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+/* Code blocks */
+.code {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    padding: 15px;
+    font-family: 'Courier New', monospace;
+    overflow-x: auto;
+}
+
+/* Function and class documentation */
+.memitem {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+.memproto {
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}
+
+.memdoc {
+    padding: 10px 0;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #dee2e6;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+/* Links */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #2c3e50;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+}
+
+h2 {
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 8px;
+}
+
+/* Lists */
+ul, ol {
+    margin: 15px 0;
+    padding-left: 30px;
+}
+
+li {
+    margin: 5px 0;
+}
+
+/* Footer */
+.footer {
+    background-color: #34495e;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer a {
+    color: #3498db;
+}
+
+.footer a:hover {
+    color: #2980b9;
+}
+
+/* Search box */
+#MSearchBox {
+    background-color: white;
+    border: 2px solid #3498db;
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+
+/* Sidebar */
+#side-nav {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #navrow1 ul {
+        flex-direction: column;
+    }
+    
+    #navrow1 a {
+        margin: 1px 0;
+    }
+    
+    #mainpage {
+        padding: 15px;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background-color: white;
+    }
+    
+    #navrow1 {
+        display: none;
+    }
+    
+    #mainpage {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}

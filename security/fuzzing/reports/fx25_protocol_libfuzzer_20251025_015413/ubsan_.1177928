@@ -1,0 +1,58 @@
+=================================================================
+==1177928==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x72ed8eb0d080 at pc 0x55b0682ab484 bp 0x7ffc26410f30 sp 0x7ffc26410f28
+READ of size 1 at 0x72ed8eb0d080 thread T0
+    #0 0x55b0682ab483 in fx25_rs_encode /home/haaken/github-projects/gr-packet-protocols/lib/fx25/fx25_protocol.c:119:29
+    #1 0x55b0682978f2 in LLVMFuzzerTestOneInput /home/haaken/github-projects/gr-packet-protocols/security/fuzzing/harnesses/fx25_protocol_libfuzzer.cpp:25:13
+    #2 0x55b0681a2c84 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/fx25_protocol_libfuzzer_20251025_015413/fx25_protocol_fuzzer+0x67c84) (BuildId: c2565b12d2281beeb6d2f00fcbeb2dc98dc91b0f)
+    #3 0x55b0681a2379 in fuzzer::Fuzzer::RunOne(unsigned char const*, unsigned long, bool, fuzzer::InputInfo*, bool, bool*) (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/fx25_protocol_libfuzzer_20251025_015413/fx25_protocol_fuzzer+0x67379) (BuildId: c2565b12d2281beeb6d2f00fcbeb2dc98dc91b0f)
+    #4 0x55b0681a3b65 in fuzzer::Fuzzer::MutateAndTestOne() (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/fx25_protocol_libfuzzer_20251025_015413/fx25_protocol_fuzzer+0x68b65) (BuildId: c2565b12d2281beeb6d2f00fcbeb2dc98dc91b0f)
+    #5 0x55b0681a46c5 in fuzzer::Fuzzer::Loop(std::vector<fuzzer::SizedFile, std::allocator<fuzzer::SizedFile>>&) (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/fx25_protocol_libfuzzer_20251025_015413/fx25_protocol_fuzzer+0x696c5) (BuildId: c2565b12d2281beeb6d2f00fcbeb2dc98dc91b0f)
+    #6 0x55b06819199f in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/fx25_protocol_libfuzzer_20251025_015413/fx25_protocol_fuzzer+0x5699f) (BuildId: c2565b12d2281beeb6d2f00fcbeb2dc98dc91b0f)
+    #7 0x55b0681bc026 in main (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/fx25_protocol_libfuzzer_20251025_015413/fx25_protocol_fuzzer+0x81026) (BuildId: c2565b12d2281beeb6d2f00fcbeb2dc98dc91b0f)
+    #8 0x72ed9042a1c9 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+    #9 0x72ed9042a28a in __libc_start_main csu/../csu/libc-start.c:360:3
+    #10 0x55b068186984 in _start (/home/haaken/github-projects/gr-packet-protocols/security/fuzzing/reports/fx25_protocol_libfuzzer_20251025_015413/fx25_protocol_fuzzer+0x4b984) (BuildId: c2565b12d2281beeb6d2f00fcbeb2dc98dc91b0f)
+
+Address 0x72ed8eb0d080 is located in stack of thread T0 at offset 128 in frame
+    #0 0x55b068297747 in LLVMFuzzerTestOneInput /home/haaken/github-projects/gr-packet-protocols/security/fuzzing/harnesses/fx25_protocol_libfuzzer.cpp:11
+
+  This frame has 5 object(s):
+    [32, 56) 'ctx' (line 17)
+    [96, 128) 'parity' (line 23) <== Memory access at offset 128 overflows this variable
+    [160, 1236) 'fx25_frame' (line 32)
+    [1376, 2400) 'decoded_data' (line 35)
+    [2528, 2530) 'decoded_len' (line 36)
+HINT: this may be a false positive if your program uses some custom stack unwind mechanism, swapcontext or vfork
+      (longjmp and C++ exceptions *are* supported)
+Shadow bytes around the buggy address:
+  0x72ed8eb0ce00: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x72ed8eb0ce80: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x72ed8eb0cf00: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x72ed8eb0cf80: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x72ed8eb0d000: f1 f1 f1 f1 00 00 00 f2 f2 f2 f2 f2 00 00 00 00
+=>0x72ed8eb0d080:[f2]f2 f2 f2 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
+  0x72ed8eb0d100: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
+  0x72ed8eb0d180: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
+  0x72ed8eb0d200: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
+  0x72ed8eb0d280: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
+  0x72ed8eb0d300: f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==1177928==ABORTING

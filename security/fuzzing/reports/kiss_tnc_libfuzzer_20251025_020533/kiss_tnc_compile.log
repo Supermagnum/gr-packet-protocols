@@ -1,0 +1,8 @@
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+/home/haaken/github-projects/gr-packet-protocols/lib/ax25/ax25_protocol.c:32:36: warning: implicit conversion from 'int' to 'uint8_t' (aka 'unsigned char') changes value from 256 to 0 [-Wconstant-conversion]
+   32 |     tnc->config.max_frame_length = 256;
+      |                                  ~ ^~~
+1 warning generated.
