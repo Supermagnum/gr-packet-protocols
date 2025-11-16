@@ -1,0 +1,135 @@
+options:
+  parameters:
+    author: gr-packet-protocols
+    catch_exceptions: 'True'
+    category: Packet Protocols
+    cmake_opt: ''
+    comment: FX.25 FEC Example
+    copyright: ''
+    description: Example flowgraph demonstrating FX.25 Forward Error Correction
+    gen_cmake: 'On'
+    gen_linking: dynamic
+    generate_options: qt_gui
+    hier_block_src_path: '.:'
+    id: top_block
+    max_nouts: '0'
+    output_language: python
+    placement: (0,0)
+    qt_qss_theme: ''
+    realtime_scheduling: ''
+    run: 'True'
+    run_command: '{python} -u {filename}'
+    run_options: prompt
+    samp_rate: '9600'
+    sizing_mode: fixed
+    thread_safe_setters: ''
+    title: FX.25 FEC Example
+    window_size: (1280, 1024)
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [32, 0.0]
+    rotation: 0
+    state: enabled
+
+blocks:
+- name: blocks_null_sink_0
+  id: blocks_null_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    bus_structure_sink: '[[0,],]'
+    comment: ''
+    num_inputs: '1'
+    type: byte
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1000, 152.0]
+    rotation: 0
+    state: enabled
+- name: blocks_throttle_0
+  id: blocks_throttle
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    ignoretag: 'True'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samples_per_second: '9600'
+    type: byte
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [288, 144.0]
+    rotation: 0
+    state: enabled
+- name: blocks_vector_source_x_0
+  id: blocks_vector_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: Test Data Source
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    repeat: 'True'
+    tags: ''
+    type: byte
+    vector: '[0, 0, 0]'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [56, 136.0]
+    rotation: 0
+    state: enabled
+- name: packet_protocols_fx25_decoder_0
+  id: packet_protocols_fx25_decoder
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: FX.25 Decoder
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [792, 152.0]
+    rotation: 0
+    state: enabled
+- name: packet_protocols_fx25_encoder_0
+  id: packet_protocols_fx25_encoder
+  parameters:
+    add_checksum: 'True'
+    affinity: ''
+    alias: ''
+    comment: FX.25 Encoder
+    fec_type: '2'
+    interleaver_depth: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [584, 136.0]
+    rotation: 0
+    state: enabled
+
+connections:
+- [blocks_vector_source_x_0, '0', blocks_throttle_0, '0']
+- [blocks_throttle_0, '0', packet_protocols_fx25_encoder_0, '0']
+- [packet_protocols_fx25_decoder_0, '0', blocks_null_sink_0, '0']
+- [packet_protocols_fx25_encoder_0, '0', packet_protocols_fx25_decoder_0, '0']
+
+metadata:
+  file_format: 1
+  grc_version: 3.10.12.0

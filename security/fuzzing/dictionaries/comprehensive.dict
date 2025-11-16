@@ -1,0 +1,161 @@
+# Comprehensive Protocol Dictionary
+# Combines AX.25, FX.25, IL2P, and KISS patterns
+
+# Protocol identifiers (first byte)
+"\x00"
+"\x01"
+"\x02"
+"\x03"
+
+# AX.25 specific patterns
+"\x03"
+"\x01"
+"\x0F"
+"\x63"
+"\x83"
+"\x93"
+"\xF0"
+"\x01"
+"\x06"
+"\x07"
+"\x08"
+
+# FX.25 specific patterns
+"\x55"
+"\xF1\x5E\x48"
+"\x00"
+"\x01"
+"\x02"
+"\x03"
+
+# IL2P specific patterns
+"\xF1\x5E\x48"
+"\x00"
+"\x01"
+"\x00"
+"\x01"
+"\x02"
+"\x03"
+
+# KISS specific patterns
+"\xC0"
+"\xDB"
+"\xDB\xDC"
+"\xDB\xDD"
+"\x00"
+"\x01"
+"\x02"
+"\x03"
+"\x04"
+"\x05"
+
+# Common frame delimiters
+"\x7E"
+"\x7D"
+"\x5E"
+"\x5D"
+
+# Checksum/CRC patterns
+"\x00\x00"
+"\xFF\xFF"
+"\x55\xAA"
+"\xAA\x55"
+
+# Address patterns
+"\x00"
+"\x01"
+"\x0F"
+"\x00"
+"\x01"
+"\x02"
+"\x03"
+
+# Control field variations
+"\x00"
+"\x01"
+"\x10"
+"\x11"
+
+# Sequence numbers
+"\x00"
+"\x01"
+"\x7F"
+"\x80"
+"\xFF"
+
+# Payload lengths
+"\x00"
+"\x01"
+"\x1F"
+"\x20"
+"\xFF"
+
+# Frame flags
+"\x00"
+"\x01"
+"\x02"
+"\x04"
+"\x08"
+"\x10"
+"\x20"
+"\x40"
+"\x80"
+
+# Priority levels
+"\x00"
+"\x01"
+"\x02"
+"\x03"
+
+# Common callsigns
+"W1ABC"
+"K1XYZ"
+"VE3DEF"
+"G4GHI"
+"JA1JKL"
+"VK2MNO"
+"DL3PQR"
+"F4STU"
+"HB9VWX"
+"OH2YZ"
+
+# Data patterns
+"\x00"
+"\xFF"
+"\x55"
+"\xAA"
+"\x01"
+"\x80"
+"\x7F"
+"\xFE"
+
+# Reed-Solomon parameters
+"\x00"
+"\x01"
+"\x02"
+"\x03"
+
+# Scrambling seeds
+"\x00"
+"\x01"
+"\x7F"
+"\x80"
+"\xFF"
+
+# Hardware types
+"\x00"
+"\x01"
+"\x02"
+"\x03"
+"\x04"
+"\x05"
+"\x06"
+"\x07"
+"\x08"
+"\x09"
+"\x0A"
+"\x0B"
+"\x0C"
+"\x0D"
+"\x0E"
+"\x0F"

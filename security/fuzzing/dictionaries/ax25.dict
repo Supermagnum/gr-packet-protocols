@@ -1,0 +1,50 @@
+# AX.25 Protocol Dictionary
+# Frame Control Fields
+"\x03"  # UI frame
+"\x01"  # SABM
+"\x0F"  # DM
+"\x63"  # I frame
+"\x83"  # S frame
+"\x93"  # U frame
+
+# Address SSID values
+"\x00"  # SSID 0
+"\x01"  # SSID 1
+"\x0F"  # SSID 15 (max)
+
+# PID values
+"\xF0"  # No layer 3
+"\x01"  # ISO 8208
+"\x06"  # Compressed TCP/IP
+"\x07"  # Uncompressed TCP/IP
+"\x08"  # Segmentation fragment
+
+# Control field variations
+"\x00"  # N(R)=0, N(S)=0
+"\x01"  # N(R)=0, N(S)=1
+"\x10"  # N(R)=1, N(S)=0
+"\x11"  # N(R)=1, N(S)=1
+
+# FCS patterns
+"\x00\x00"  # Zero FCS
+"\xFF\xFF"  # All ones FCS
+"\x55\xAA"  # Alternating pattern
+
+# Common callsigns
+"W1ABC"
+"K1XYZ"
+"VE3DEF"
+"G4GHI"
+"JA1JKL"
+"VK2MNO"
+"DL3PQR"
+"F4STU"
+"HB9VWX"
+"OH2YZ"
+
+# Special characters
+"\x7E"  # Flag
+"\x7D"  # Escape
+"\x5E"  # Escaped flag
+"\x5D"  # Escaped escape
+

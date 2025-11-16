@@ -1,0 +1,77 @@
+# IL2P Protocol Dictionary
+# Sync word patterns
+"\xF1\x5E\x48"  # Standard IL2P sync
+"\x0E\xA1\xB7"  # Inverted sync
+"\x48\x5E\xF1"  # Reversed sync
+"\x5E\xF1\x48"  # Rotated sync
+
+# Header versions
+"\x00"  # Version 0
+"\x01"  # Version 1
+"\x02"  # Version 2
+"\xFF"  # Version 255
+
+# Frame types
+"\x00"  # Data frame
+"\x01"  # Control frame
+"\x02"  # Management frame
+"\x03"  # Test frame
+"\x04"  # Beacon frame
+"\x05"  # Discovery frame
+
+# Sequence numbers
+"\x00"  # Sequence 0
+"\x01"  # Sequence 1
+"\x7F"  # Sequence 127
+"\x80"  # Sequence 128
+"\xFF"  # Sequence 255
+
+# Payload lengths
+"\x00"  # 0 bytes
+"\x01"  # 1 byte
+"\x1F"  # 31 bytes
+"\x20"  # 32 bytes
+"\xFF"  # 255 bytes
+
+# Checksum patterns
+"\x00\x00"  # Zero checksum
+"\xFF\xFF"  # All ones checksum
+"\x55\xAA"  # Alternating checksum
+"\xAA\x55"  # Reverse alternating
+
+# Address types
+"\x00"  # Individual address
+"\x01"  # Group address
+"\x02"  # Broadcast address
+"\x03"  # Multicast address
+
+# Priority levels
+"\x00"  # Priority 0 (lowest)
+"\x01"  # Priority 1
+"\x02"  # Priority 2
+"\x03"  # Priority 3 (highest)
+
+# Scrambling seeds
+"\x00"  # Seed 0
+"\x01"  # Seed 1
+"\x7F"  # Seed 127
+"\x80"  # Seed 128
+"\xFF"  # Seed 255
+
+# Reed-Solomon parameters
+"\x00"  # RS(255,223)
+"\x01"  # RS(255,239)
+"\x02"  # RS(255,247)
+"\x03"  # RS(255,251)
+
+# Frame flags
+"\x00"  # No flags
+"\x01"  # Fragmented
+"\x02"  # Last fragment
+"\x04"  # Acknowledgment required
+"\x08"  # Encryption enabled
+"\x10"  # Compression enabled
+"\x20"  # Priority frame
+"\x40"  # Test frame
+"\x80"  # Management frame
+
