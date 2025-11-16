@@ -98,7 +98,11 @@ if not _loaded:
         pass
 
 # Clean up internal variables to avoid polluting the namespace
-del _loaded, _current_dir, _so_files, _spec, _mod, _name, _base_path, _python_version, _pattern
+_cleanup_vars = ['_loaded', '_current_dir', '_so_files', '_spec', '_mod', '_name', '_base_path', '_python_version', '_pattern']
+for _var in _cleanup_vars:
+    if _var in globals():
+        del globals()[_var]
+del _cleanup_vars, _var
 
 # import any pure python here
 #
