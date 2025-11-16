@@ -1,0 +1,551 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classgr_1_1packet__protocols_1_1fx25__encoder__impl" kind="class" language="C++" prot="public">
+    <compoundname>gr::packet_protocols::fx25_encoder_impl</compoundname>
+    <basecompoundref refid="classgr_1_1packet__protocols_1_1fx25__encoder" prot="public" virt="non-virtual">gr::packet_protocols::fx25_encoder</basecompoundref>
+    <includes refid="fx25__encoder__impl_8h" local="no">fx25_encoder_impl.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a98e554c2af36791fbf8c3cd6dc58de40" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::packet_protocols::fx25_encoder_impl::d_fec_type</definition>
+        <argsstring></argsstring>
+        <name>d_fec_type</name>
+        <qualifiedname>gr::packet_protocols::fx25_encoder_impl::d_fec_type</qualifiedname>
+        <briefdescription>
+<para>FEC type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="42" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a840b4c7faf237277ec233c08bb93ca9b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::packet_protocols::fx25_encoder_impl::d_interleaver_depth</definition>
+        <argsstring></argsstring>
+        <name>d_interleaver_depth</name>
+        <qualifiedname>gr::packet_protocols::fx25_encoder_impl::d_interleaver_depth</qualifiedname>
+        <briefdescription>
+<para>Interleaver depth. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="43" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a26c62bdd5549d129aaced6a8c4d42b3d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr::packet_protocols::fx25_encoder_impl::d_add_checksum</definition>
+        <argsstring></argsstring>
+        <name>d_add_checksum</name>
+        <qualifiedname>gr::packet_protocols::fx25_encoder_impl::d_add_checksum</qualifiedname>
+        <briefdescription>
+<para>Add checksum flag. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="44" column="10" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1aac20ddb6d24d03bc04742f270bee97e7" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; uint8_t &gt;</type>
+        <definition>std::vector&lt;uint8_t&gt; gr::packet_protocols::fx25_encoder_impl::d_frame_buffer</definition>
+        <argsstring></argsstring>
+        <name>d_frame_buffer</name>
+        <qualifiedname>gr::packet_protocols::fx25_encoder_impl::d_frame_buffer</qualifiedname>
+        <briefdescription>
+<para>Frame buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="45" column="17" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a541cfac6d2e3ed98c330a710e7ea3216" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t gr::packet_protocols::fx25_encoder_impl::d_frame_length</definition>
+        <argsstring></argsstring>
+        <name>d_frame_length</name>
+        <qualifiedname>gr::packet_protocols::fx25_encoder_impl::d_frame_length</qualifiedname>
+        <briefdescription>
+<para>Current frame length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="46" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a1ac81ed5cbca072b433d6744cb02f823" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t gr::packet_protocols::fx25_encoder_impl::d_bit_position</definition>
+        <argsstring></argsstring>
+        <name>d_bit_position</name>
+        <qualifiedname>gr::packet_protocols::fx25_encoder_impl::d_bit_position</qualifiedname>
+        <briefdescription>
+<para>Current bit position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="47" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a938974c1d5c8ff0d1921f38b5a140243" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t gr::packet_protocols::fx25_encoder_impl::d_byte_position</definition>
+        <argsstring></argsstring>
+        <name>d_byte_position</name>
+        <qualifiedname>gr::packet_protocols::fx25_encoder_impl::d_byte_position</qualifiedname>
+        <briefdescription>
+<para>Current byte position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="48" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a6fbf87fdb5f3a822152ed06bc9e13fa0" prot="private" static="no" mutable="no">
+        <type><ref refid="classReedSolomonEncoder" kindref="compound">ReedSolomonEncoder</ref> *</type>
+        <definition>ReedSolomonEncoder* gr::packet_protocols::fx25_encoder_impl::d_reed_solomon_encoder</definition>
+        <argsstring></argsstring>
+        <name>d_reed_solomon_encoder</name>
+        <qualifiedname>gr::packet_protocols::fx25_encoder_impl::d_reed_solomon_encoder</qualifiedname>
+        <briefdescription>
+<para>Reed-Solomon encoder. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="49" column="24" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a80349241d4aab2dd09b5fb4db463aa94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::packet_protocols::fx25_encoder_impl::fx25_encoder_impl</definition>
+        <argsstring>(int fec_type, int interleaver_depth, bool add_checksum)</argsstring>
+        <name>fx25_encoder_impl</name>
+        <qualifiedname>gr::packet_protocols::fx25_encoder_impl::fx25_encoder_impl</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>fec_type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>interleaver_depth</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>add_checksum</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fec_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FEC type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>interleaver_depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Interleaver depth </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>add_checksum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Add checksum flag </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="58" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1ab2b52e407c75ee2f6dbf912167e6367d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::packet_protocols::fx25_encoder_impl::~fx25_encoder_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~fx25_encoder_impl</name>
+        <qualifiedname>gr::packet_protocols::fx25_encoder_impl::~fx25_encoder_impl</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="63" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a429a0efb8aa4c5548758f3aa1a0959a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::packet_protocols::fx25_encoder_impl::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <qualifiedname>gr::packet_protocols::fx25_encoder_impl::work</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+<para>Main work function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>noutput_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of output items </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input items </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output items </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Number of items produced </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="72" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a88dfe8eec8bc20cef63e23bdde336250" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void gr::packet_protocols::fx25_encoder_impl::set_fec_type</definition>
+        <argsstring>(int fec_type)</argsstring>
+        <name>set_fec_type</name>
+        <qualifiedname>gr::packet_protocols::fx25_encoder_impl::set_fec_type</qualifiedname>
+        <reimplements refid="classgr_1_1packet__protocols_1_1fx25__encoder_1ab3f1d4c2b7d5d2d67b73ec3505f6fcb0">set_fec_type</reimplements>
+        <param>
+          <type>int</type>
+          <declname>fec_type</declname>
+        </param>
+        <briefdescription>
+<para>Set FEC type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fec_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FEC type value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="79" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a8fece3c9773bd3b28e5e4804e072fec1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void gr::packet_protocols::fx25_encoder_impl::set_interleaver_depth</definition>
+        <argsstring>(int depth)</argsstring>
+        <name>set_interleaver_depth</name>
+        <qualifiedname>gr::packet_protocols::fx25_encoder_impl::set_interleaver_depth</qualifiedname>
+        <reimplements refid="classgr_1_1packet__protocols_1_1fx25__encoder_1a0c42aa60e25a104ad99bc06903586d36">set_interleaver_depth</reimplements>
+        <param>
+          <type>int</type>
+          <declname>depth</declname>
+        </param>
+        <briefdescription>
+<para>Set interleaver depth. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Interleaver depth value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="85" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1ad2e4a311a6558ce997685162b8f00bd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void gr::packet_protocols::fx25_encoder_impl::set_add_checksum</definition>
+        <argsstring>(bool add_checksum)</argsstring>
+        <name>set_add_checksum</name>
+        <qualifiedname>gr::packet_protocols::fx25_encoder_impl::set_add_checksum</qualifiedname>
+        <reimplements refid="classgr_1_1packet__protocols_1_1fx25__encoder_1a5cecc0b913330fd71cd609bcba9e401e">set_add_checksum</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>add_checksum</declname>
+        </param>
+        <briefdescription>
+<para>Set add checksum flag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>add_checksum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Add checksum flag </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="91" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1ad818b4a28ef0d06bd5732f599b041c0c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::packet_protocols::fx25_encoder_impl::initialize_reed_solomon</definition>
+        <argsstring>()</argsstring>
+        <name>initialize_reed_solomon</name>
+        <qualifiedname>gr::packet_protocols::fx25_encoder_impl::initialize_reed_solomon</qualifiedname>
+        <briefdescription>
+<para>Initialize Reed-Solomon encoder. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="97" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1af68024f25d1b96bb4053fd2819e69298" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::packet_protocols::fx25_encoder_impl::build_fx25_frame</definition>
+        <argsstring>(char data_byte)</argsstring>
+        <name>build_fx25_frame</name>
+        <qualifiedname>gr::packet_protocols::fx25_encoder_impl::build_fx25_frame</qualifiedname>
+        <param>
+          <type>char</type>
+          <declname>data_byte</declname>
+        </param>
+        <briefdescription>
+<para>Build FX.25 frame. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data_byte</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input data byte </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="103" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a70b3e9099f2f05456ee92887ba6bc9cf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::packet_protocols::fx25_encoder_impl::add_fx25_header</definition>
+        <argsstring>()</argsstring>
+        <name>add_fx25_header</name>
+        <qualifiedname>gr::packet_protocols::fx25_encoder_impl::add_fx25_header</qualifiedname>
+        <briefdescription>
+<para>Add FX.25 header to frame. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="108" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a28e5e4f2a42c24a8023904dac6ffa5f0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; uint8_t &gt;</type>
+        <definition>std::vector&lt; uint8_t &gt; gr::packet_protocols::fx25_encoder_impl::apply_reed_solomon_fec</definition>
+        <argsstring>(const std::vector&lt; uint8_t &gt; &amp;data)</argsstring>
+        <name>apply_reed_solomon_fec</name>
+        <qualifiedname>gr::packet_protocols::fx25_encoder_impl::apply_reed_solomon_fec</qualifiedname>
+        <param>
+          <type>const std::vector&lt; uint8_t &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Apply Reed-Solomon FEC to data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FEC encoded data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="115" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a7736ac61bf21603661a396dad60f9f4b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; uint8_t &gt;</type>
+        <definition>std::vector&lt; uint8_t &gt; gr::packet_protocols::fx25_encoder_impl::interleave_data</definition>
+        <argsstring>(const std::vector&lt; uint8_t &gt; &amp;data)</argsstring>
+        <name>interleave_data</name>
+        <qualifiedname>gr::packet_protocols::fx25_encoder_impl::interleave_data</qualifiedname>
+        <param>
+          <type>const std::vector&lt; uint8_t &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Interleave data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Interleaved data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="122" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1af4e8d29b07f2b074e2b12d61480d2a01" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t gr::packet_protocols::fx25_encoder_impl::calculate_checksum</definition>
+        <argsstring>()</argsstring>
+        <name>calculate_checksum</name>
+        <qualifiedname>gr::packet_protocols::fx25_encoder_impl::calculate_checksum</qualifiedname>
+        <briefdescription>
+<para>Calculate checksum for frame. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Calculated checksum </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="128" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>FX.25 Encoder Implementation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implements FX.25 packet encoding using the real FX.25 protocol implementation from gr-m17. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>gr::packet_protocols::fx25_encoder</label>
+        <link refid="classgr_1_1packet__protocols_1_1fx25__encoder"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gr::packet_protocols::fx25_encoder_impl</label>
+        <link refid="classgr_1_1packet__protocols_1_1fx25__encoder__impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::sync_block</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>gr::packet_protocols::fx25_encoder</label>
+        <link refid="classgr_1_1packet__protocols_1_1fx25__encoder"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gr::packet_protocols::fx25_encoder_impl</label>
+        <link refid="classgr_1_1packet__protocols_1_1fx25__encoder__impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::sync_block</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="40" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" bodystart="40" bodyend="129"/>
+    <listofallmembers>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a70b3e9099f2f05456ee92887ba6bc9cf" prot="private" virt="non-virtual"><scope>gr::packet_protocols::fx25_encoder_impl</scope><name>add_fx25_header</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a28e5e4f2a42c24a8023904dac6ffa5f0" prot="private" virt="non-virtual"><scope>gr::packet_protocols::fx25_encoder_impl</scope><name>apply_reed_solomon_fec</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1af68024f25d1b96bb4053fd2819e69298" prot="private" virt="non-virtual"><scope>gr::packet_protocols::fx25_encoder_impl</scope><name>build_fx25_frame</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1af4e8d29b07f2b074e2b12d61480d2a01" prot="private" virt="non-virtual"><scope>gr::packet_protocols::fx25_encoder_impl</scope><name>calculate_checksum</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a26c62bdd5549d129aaced6a8c4d42b3d" prot="private" virt="non-virtual"><scope>gr::packet_protocols::fx25_encoder_impl</scope><name>d_add_checksum</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a1ac81ed5cbca072b433d6744cb02f823" prot="private" virt="non-virtual"><scope>gr::packet_protocols::fx25_encoder_impl</scope><name>d_bit_position</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a938974c1d5c8ff0d1921f38b5a140243" prot="private" virt="non-virtual"><scope>gr::packet_protocols::fx25_encoder_impl</scope><name>d_byte_position</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a98e554c2af36791fbf8c3cd6dc58de40" prot="private" virt="non-virtual"><scope>gr::packet_protocols::fx25_encoder_impl</scope><name>d_fec_type</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1aac20ddb6d24d03bc04742f270bee97e7" prot="private" virt="non-virtual"><scope>gr::packet_protocols::fx25_encoder_impl</scope><name>d_frame_buffer</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a541cfac6d2e3ed98c330a710e7ea3216" prot="private" virt="non-virtual"><scope>gr::packet_protocols::fx25_encoder_impl</scope><name>d_frame_length</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a840b4c7faf237277ec233c08bb93ca9b" prot="private" virt="non-virtual"><scope>gr::packet_protocols::fx25_encoder_impl</scope><name>d_interleaver_depth</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a6fbf87fdb5f3a822152ed06bc9e13fa0" prot="private" virt="non-virtual"><scope>gr::packet_protocols::fx25_encoder_impl</scope><name>d_reed_solomon_encoder</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a80349241d4aab2dd09b5fb4db463aa94" prot="public" virt="non-virtual"><scope>gr::packet_protocols::fx25_encoder_impl</scope><name>fx25_encoder_impl</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1ad818b4a28ef0d06bd5732f599b041c0c" prot="private" virt="non-virtual"><scope>gr::packet_protocols::fx25_encoder_impl</scope><name>initialize_reed_solomon</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a7736ac61bf21603661a396dad60f9f4b" prot="private" virt="non-virtual"><scope>gr::packet_protocols::fx25_encoder_impl</scope><name>interleave_data</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__encoder_1a9a776182bac82f8ff061777f568bff32" prot="public" virt="non-virtual"><scope>gr::packet_protocols::fx25_encoder_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1ad2e4a311a6558ce997685162b8f00bd0" prot="public" virt="virtual"><scope>gr::packet_protocols::fx25_encoder_impl</scope><name>set_add_checksum</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a88dfe8eec8bc20cef63e23bdde336250" prot="public" virt="virtual"><scope>gr::packet_protocols::fx25_encoder_impl</scope><name>set_fec_type</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a8fece3c9773bd3b28e5e4804e072fec1" prot="public" virt="virtual"><scope>gr::packet_protocols::fx25_encoder_impl</scope><name>set_interleaver_depth</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__encoder_1af5647a9fa91dcbecb6ec27fac4be5178" prot="public" virt="non-virtual"><scope>gr::packet_protocols::fx25_encoder_impl</scope><name>sptr</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a429a0efb8aa4c5548758f3aa1a0959a4" prot="public" virt="non-virtual"><scope>gr::packet_protocols::fx25_encoder_impl</scope><name>work</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1ab2b52e407c75ee2f6dbf912167e6367d" prot="public" virt="non-virtual"><scope>gr::packet_protocols::fx25_encoder_impl</scope><name>~fx25_encoder_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

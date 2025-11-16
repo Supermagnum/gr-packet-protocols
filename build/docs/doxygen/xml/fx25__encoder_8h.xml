@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="fx25__encoder_8h" kind="file" language="C++">
+    <compoundname>fx25_encoder.h</compoundname>
+    <includes refid="api_8h" local="no">gnuradio/packet_protocols/api.h</includes>
+    <includes refid="common_8h" local="no">gnuradio/packet_protocols/common.h</includes>
+    <includes local="no">gnuradio/sync_block.h</includes>
+    <includedby refid="fx25__encoder__impl_8h" local="no">fx25_encoder_impl.h</includedby>
+    <includedby refid="packet__protocols_8h" local="no">packet_protocols.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>gnuradio/packet_protocols/api.h</label>
+        <link refid="api_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>gnuradio/packet_protocols/common.h</label>
+        <link refid="common_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>fx25_encoder.h</label>
+        <link refid="fx25__encoder_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>cstdint</label>
+      </node>
+      <node id="3">
+        <label>gnuradio/attributes.h</label>
+      </node>
+      <node id="7">
+        <label>gnuradio/sync_block.h</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>fx25_encoder.h</label>
+        <link refid="fx25__encoder_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>packet_protocols.h</label>
+        <link refid="packet__protocols_8h"/>
+      </node>
+      <node id="2">
+        <label>fx25_encoder_impl.h</label>
+        <link refid="fx25__encoder__impl_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classgr_1_1packet__protocols_1_1fx25__encoder" prot="public">gr::packet_protocols::fx25_encoder</innerclass>
+    <innernamespace refid="namespacegr">gr</innernamespace>
+    <innernamespace refid="namespacegr_1_1packet__protocols">gr::packet_protocols</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_encoder.h"/>
+  </compounddef>
+</doxygen>

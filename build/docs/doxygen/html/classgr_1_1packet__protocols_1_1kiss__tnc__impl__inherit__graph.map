@@ -1,0 +1,7 @@
+<map id="gr::packet_protocols::kiss_tnc_impl" name="gr::packet_protocols::kiss_tnc_impl">
+<area shape="rect" id="Node000001" title="KISS TNC Implementation." alt="" coords="5,167,145,207"/>
+<area shape="rect" id="Node000002" href="$classgr_1_1packet__protocols_1_1kiss__tnc.html" title="KISS TNC Interface." alt="" coords="5,79,145,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,133,78,166,73,166,73,133"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="22,5,129,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="78,44,78,79,73,79,73,44"/>
+</map>

@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classgr_1_1packet__protocols_1_1ax25__encoder" kind="class" language="C++" prot="public">
+    <compoundname>gr::packet_protocols::ax25_encoder</compoundname>
+    <basecompoundref prot="public" virt="virtual">gr::sync_block</basecompoundref>
+    <derivedcompoundref refid="classgr_1_1packet__protocols_1_1ax25__encoder__impl" prot="public" virt="non-virtual">gr::packet_protocols::ax25_encoder_impl</derivedcompoundref>
+    <includes refid="ax25__encoder_8h" local="no">ax25_encoder.h</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgr_1_1packet__protocols_1_1ax25__encoder_1a05a3e72276d7c71a437f69df0991d09c" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classgr_1_1packet__protocols_1_1ax25__encoder" kindref="compound">ax25_encoder</ref> &gt;</type>
+        <definition>typedef std::shared_ptr&lt;ax25_encoder&gt; gr::packet_protocols::ax25_encoder::sptr</definition>
+        <argsstring></argsstring>
+        <name>sptr</name>
+        <qualifiedname>gr::packet_protocols::ax25_encoder::sptr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_encoder.h" line="37" column="29" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_encoder.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1ax25__encoder_1aa3d0304ef6dab69dd74fa8a3d83f1b74" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr_1_1packet__protocols_1_1ax25__encoder_1a05a3e72276d7c71a437f69df0991d09c" kindref="member">sptr</ref></type>
+        <definition>static sptr gr::packet_protocols::ax25_encoder::make</definition>
+        <argsstring>(const std::string &amp;dest_callsign, const std::string &amp;dest_ssid, const std::string &amp;src_callsign, const std::string &amp;src_ssid, const std::string &amp;digipeaters=&quot;&quot;, bool command_response=false, bool poll_final=false)</argsstring>
+        <name>make</name>
+        <qualifiedname>gr::packet_protocols::ax25_encoder::make</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>dest_callsign</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>dest_ssid</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>src_callsign</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>src_ssid</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>digipeaters</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>command_response</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>poll_final</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Return a shared_ptr to a new instance of <ref refid="classgr_1_1packet__protocols_1_1ax25__encoder" kindref="compound">packet_protocols::ax25_encoder</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>To avoid accidental use of raw pointers, <ref refid="classgr_1_1packet__protocols_1_1ax25__encoder" kindref="compound">packet_protocols::ax25_encoder</ref>&apos;s constructor is in a private implementation class. <ref refid="classgr_1_1packet__protocols_1_1ax25__encoder_1aa3d0304ef6dab69dd74fa8a3d83f1b74" kindref="member">packet_protocols::ax25_encoder::make</ref> is the public interface for creating new instances. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_encoder.h" line="47" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>AX.25 Encoder. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>gr::packet_protocols::ax25_encoder</label>
+        <link refid="classgr_1_1packet__protocols_1_1ax25__encoder"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::packet_protocols::ax25_encoder_impl</label>
+        <link refid="classgr_1_1packet__protocols_1_1ax25__encoder__impl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gr::sync_block</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>gr::packet_protocols::ax25_encoder</label>
+        <link refid="classgr_1_1packet__protocols_1_1ax25__encoder"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gr::sync_block</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_encoder.h" line="35" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_encoder.h" bodystart="35" bodyend="51"/>
+    <listofallmembers>
+      <member refid="classgr_1_1packet__protocols_1_1ax25__encoder_1aa3d0304ef6dab69dd74fa8a3d83f1b74" prot="public" virt="non-virtual"><scope>gr::packet_protocols::ax25_encoder</scope><name>make</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1ax25__encoder_1a05a3e72276d7c71a437f69df0991d09c" prot="public" virt="non-virtual"><scope>gr::packet_protocols::ax25_encoder</scope><name>sptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

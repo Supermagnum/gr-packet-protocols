@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_4d14b98837943b9a32b5839d2d1b200a" kind="dir">
+    <compoundname>packet_protocols</compoundname>
+    <innerdir refid="dir_a4ed1758c952f9b32bae05f9883adbf8">bindings</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/"/>
+  </compounddef>
+</doxygen>

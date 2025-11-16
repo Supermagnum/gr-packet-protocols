@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structil2p__frame__t" kind="struct" language="C++" prot="public">
+    <compoundname>il2p_frame_t</compoundname>
+    <includes refid="il2p__protocol_8h" local="no">il2p_protocol.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structil2p__frame__t_1a5c4d728d79a62970d92342d09bf70c1b" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t il2p_frame_t::preamble</definition>
+        <argsstring></argsstring>
+        <name>preamble</name>
+        <qualifiedname>il2p_frame_t::preamble</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="36" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structil2p__frame__t_1a50c4c1c544ab75464e134562cf4cc3d0" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t il2p_frame_t::sync_word[IL2P_SYNC_WORD_SIZE]</definition>
+        <argsstring>[IL2P_SYNC_WORD_SIZE]</argsstring>
+        <name>sync_word</name>
+        <qualifiedname>il2p_frame_t::sync_word</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="37" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structil2p__frame__t_1a90c6eab843a3942f54a6930202b3fb75" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t il2p_frame_t::header[IL2P_HEADER_SIZE]</definition>
+        <argsstring>[IL2P_HEADER_SIZE]</argsstring>
+        <name>header</name>
+        <qualifiedname>il2p_frame_t::header</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="38" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structil2p__frame__t_1a1b38a149c6db691d6fe9978228a9bb7f" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t il2p_frame_t::header_parity[IL2P_HEADER_PARITY]</definition>
+        <argsstring>[IL2P_HEADER_PARITY]</argsstring>
+        <name>header_parity</name>
+        <qualifiedname>il2p_frame_t::header_parity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="39" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structil2p__frame__t_1af41dda0ca48691ab0b3b7022c7459af7" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t il2p_frame_t::payload[IL2P_MAX_ENCODED_PAYLOAD_SIZE]</definition>
+        <argsstring>[IL2P_MAX_ENCODED_PAYLOAD_SIZE]</argsstring>
+        <name>payload</name>
+        <qualifiedname>il2p_frame_t::payload</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="40" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structil2p__frame__t_1a3ffe90ef615db7c2d72d09fccbb56da6" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t il2p_frame_t::payload_length</definition>
+        <argsstring></argsstring>
+        <name>payload_length</name>
+        <qualifiedname>il2p_frame_t::payload_length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="41" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structil2p__frame__t_1a348ede6383b006e7389da8ba323ce182" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t il2p_frame_t::payload_parity[IL2P_MAX_PARITY_SYMBOLS]</definition>
+        <argsstring>[IL2P_MAX_PARITY_SYMBOLS]</argsstring>
+        <name>payload_parity</name>
+        <qualifiedname>il2p_frame_t::payload_parity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="42" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structil2p__frame__t_1a3eec53cfcba6f82cf6bd94d2938df867" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t il2p_frame_t::parity_length</definition>
+        <argsstring></argsstring>
+        <name>parity_length</name>
+        <qualifiedname>il2p_frame_t::parity_length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="43" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="35" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="35" bodyend="44"/>
+    <listofallmembers>
+      <member refid="structil2p__frame__t_1a90c6eab843a3942f54a6930202b3fb75" prot="public" virt="non-virtual"><scope>il2p_frame_t</scope><name>header</name></member>
+      <member refid="structil2p__frame__t_1a1b38a149c6db691d6fe9978228a9bb7f" prot="public" virt="non-virtual"><scope>il2p_frame_t</scope><name>header_parity</name></member>
+      <member refid="structil2p__frame__t_1a3eec53cfcba6f82cf6bd94d2938df867" prot="public" virt="non-virtual"><scope>il2p_frame_t</scope><name>parity_length</name></member>
+      <member refid="structil2p__frame__t_1af41dda0ca48691ab0b3b7022c7459af7" prot="public" virt="non-virtual"><scope>il2p_frame_t</scope><name>payload</name></member>
+      <member refid="structil2p__frame__t_1a3ffe90ef615db7c2d72d09fccbb56da6" prot="public" virt="non-virtual"><scope>il2p_frame_t</scope><name>payload_length</name></member>
+      <member refid="structil2p__frame__t_1a348ede6383b006e7389da8ba323ce182" prot="public" virt="non-virtual"><scope>il2p_frame_t</scope><name>payload_parity</name></member>
+      <member refid="structil2p__frame__t_1a5c4d728d79a62970d92342d09bf70c1b" prot="public" virt="non-virtual"><scope>il2p_frame_t</scope><name>preamble</name></member>
+      <member refid="structil2p__frame__t_1a50c4c1c544ab75464e134562cf4cc3d0" prot="public" virt="non-virtual"><scope>il2p_frame_t</scope><name>sync_word</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

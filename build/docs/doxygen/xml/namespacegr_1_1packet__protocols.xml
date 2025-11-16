@@ -1,0 +1,327 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacegr_1_1packet__protocols" kind="namespace" language="C++">
+    <compoundname>gr::packet_protocols</compoundname>
+    <innerclass refid="classgr_1_1packet__protocols_1_1ax25__decoder" prot="public">gr::packet_protocols::ax25_decoder</innerclass>
+    <innerclass refid="classgr_1_1packet__protocols_1_1ax25__decoder__impl" prot="public">gr::packet_protocols::ax25_decoder_impl</innerclass>
+    <innerclass refid="classgr_1_1packet__protocols_1_1ax25__encoder" prot="public">gr::packet_protocols::ax25_encoder</innerclass>
+    <innerclass refid="classgr_1_1packet__protocols_1_1ax25__encoder__impl" prot="public">gr::packet_protocols::ax25_encoder_impl</innerclass>
+    <innerclass refid="classgr_1_1packet__protocols_1_1fx25__decoder" prot="public">gr::packet_protocols::fx25_decoder</innerclass>
+    <innerclass refid="classgr_1_1packet__protocols_1_1fx25__decoder__impl" prot="public">gr::packet_protocols::fx25_decoder_impl</innerclass>
+    <innerclass refid="classgr_1_1packet__protocols_1_1fx25__encoder" prot="public">gr::packet_protocols::fx25_encoder</innerclass>
+    <innerclass refid="classgr_1_1packet__protocols_1_1fx25__encoder__impl" prot="public">gr::packet_protocols::fx25_encoder_impl</innerclass>
+    <innerclass refid="classgr_1_1packet__protocols_1_1fx25__fec" prot="public">gr::packet_protocols::fx25_fec</innerclass>
+    <innerclass refid="classgr_1_1packet__protocols_1_1il2p__decoder" prot="public">gr::packet_protocols::il2p_decoder</innerclass>
+    <innerclass refid="classgr_1_1packet__protocols_1_1il2p__decoder__impl" prot="public">gr::packet_protocols::il2p_decoder_impl</innerclass>
+    <innerclass refid="classgr_1_1packet__protocols_1_1il2p__encoder" prot="public">gr::packet_protocols::il2p_encoder</innerclass>
+    <innerclass refid="classgr_1_1packet__protocols_1_1il2p__encoder__impl" prot="public">gr::packet_protocols::il2p_encoder_impl</innerclass>
+    <innerclass refid="classgr_1_1packet__protocols_1_1il2p__reed__solomon" prot="public">gr::packet_protocols::il2p_reed_solomon</innerclass>
+    <innerclass refid="classgr_1_1packet__protocols_1_1kiss__tnc" prot="public">gr::packet_protocols::kiss_tnc</innerclass>
+    <innerclass refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl" prot="public">gr::packet_protocols::kiss_tnc_impl</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacegr_1_1packet__protocols_1a673b3cba6ae8af0fa1fad2e9124816a5" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ax25_state_t</name>
+        <qualifiedname>gr::packet_protocols::ax25_state_t</qualifiedname>
+        <enumvalue id="namespacegr_1_1packet__protocols_1ad7afc6939b4bcb401c2a11e67508529ba2dd89299dbe9b977f3e8a3896185279a" prot="public">
+          <name>STATE_IDLE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1ad7afc6939b4bcb401c2a11e67508529baa85e73a39f53df1497ac4ad4f1388b63" prot="public">
+          <name>STATE_FLAG</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1ad7afc6939b4bcb401c2a11e67508529ba9015cfb269e4f50640823c0593490e8d" prot="public">
+          <name>STATE_DATA</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1ad7afc6939b4bcb401c2a11e67508529ba103a2774e59c0dd677729be7b57c48d7" prot="public">
+          <name>STATE_FRAME_COMPLETE</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h" line="33" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacegr_1_1packet__protocols_1a6d4d7e5c356f06dec658a90ac2acf3fd" prot="public" static="no" strong="no">
+        <type></type>
+        <name>fx25_state_t</name>
+        <qualifiedname>gr::packet_protocols::fx25_state_t</qualifiedname>
+        <enumvalue id="namespacegr_1_1packet__protocols_1ad7afc6939b4bcb401c2a11e67508529ba2dd89299dbe9b977f3e8a3896185279a" prot="public">
+          <name>STATE_IDLE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1ad7afc6939b4bcb401c2a11e67508529baa85e73a39f53df1497ac4ad4f1388b63" prot="public">
+          <name>STATE_FLAG</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1ad7afc6939b4bcb401c2a11e67508529ba9015cfb269e4f50640823c0593490e8d" prot="public">
+          <name>STATE_DATA</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1ad7afc6939b4bcb401c2a11e67508529ba103a2774e59c0dd677729be7b57c48d7" prot="public">
+          <name>STATE_FRAME_COMPLETE</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_decoder_impl.h" line="34" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_decoder_impl.h" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacegr_1_1packet__protocols_1ad7afc6939b4bcb401c2a11e67508529b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>il2p_state_t</name>
+        <qualifiedname>gr::packet_protocols::il2p_state_t</qualifiedname>
+        <enumvalue id="namespacegr_1_1packet__protocols_1ad7afc6939b4bcb401c2a11e67508529ba2dd89299dbe9b977f3e8a3896185279a" prot="public">
+          <name>STATE_IDLE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1ad7afc6939b4bcb401c2a11e67508529baa85e73a39f53df1497ac4ad4f1388b63" prot="public">
+          <name>STATE_FLAG</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1ad7afc6939b4bcb401c2a11e67508529ba9015cfb269e4f50640823c0593490e8d" prot="public">
+          <name>STATE_DATA</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1ad7afc6939b4bcb401c2a11e67508529ba103a2774e59c0dd677729be7b57c48d7" prot="public">
+          <name>STATE_FRAME_COMPLETE</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_decoder_impl.h" line="35" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_decoder_impl.h" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacegr_1_1packet__protocols_1a74ba379c9101bfd5982ad0872b3f00b4" prot="public" static="no" strong="no">
+        <type></type>
+        <name>kiss_state_t</name>
+        <qualifiedname>gr::packet_protocols::kiss_state_t</qualifiedname>
+        <enumvalue id="namespacegr_1_1packet__protocols_1a74ba379c9101bfd5982ad0872b3f00b4a1eaafd1fbece50a8ec8481bfc2f9836b" prot="public">
+          <name>KISS_STATE_IDLE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1a74ba379c9101bfd5982ad0872b3f00b4ae06e8a468f91d4e1606ead80c2042a48" prot="public">
+          <name>KISS_STATE_FRAME</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="34" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacegr_1_1packet__protocols_1a406cf0d2b9673efa3b0add69cca9d8ce" prot="public" static="no" strong="no">
+        <type></type>
+        <name>kiss_cmd_t</name>
+        <qualifiedname>gr::packet_protocols::kiss_cmd_t</qualifiedname>
+        <enumvalue id="namespacegr_1_1packet__protocols_1a406cf0d2b9673efa3b0add69cca9d8ceafe01d5bc58acb6e786b2c3c0f76fa300" prot="public">
+          <name>KISS_CMD_DATA</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1a406cf0d2b9673efa3b0add69cca9d8cea39c2658ed39e464910f044ce8c52326c" prot="public">
+          <name>KISS_CMD_TXDELAY</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1a406cf0d2b9673efa3b0add69cca9d8cea11c1254fc860621d8e49e9366126237a" prot="public">
+          <name>KISS_CMD_P</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1a406cf0d2b9673efa3b0add69cca9d8ceac16e368bcc06c2d6f83eecaabff842e3" prot="public">
+          <name>KISS_CMD_SLOTTIME</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1a406cf0d2b9673efa3b0add69cca9d8ceac66fc6ab5902dedccff4413ee0c876ba" prot="public">
+          <name>KISS_CMD_TXTAIL</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1a406cf0d2b9673efa3b0add69cca9d8ceafe15028f55db261f383f264c9ab26393" prot="public">
+          <name>KISS_CMD_FULLDUPLEX</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1a406cf0d2b9673efa3b0add69cca9d8ceab91153fc7a4dffc63532b3f2c53e8283" prot="public">
+          <name>KISS_CMD_SET_HARDWARE</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1a406cf0d2b9673efa3b0add69cca9d8ceac232ee00fd5857b457d49aab6593ed4b" prot="public">
+          <name>KISS_CMD_RETURN</name>
+          <initializer>= 15</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="37" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="37" bodyend="46"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacegr_1_1packet__protocols_1a804e8801b3122d0061ec17dd9087a9af" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t gr::packet_protocols::KISS_FEND</definition>
+        <argsstring></argsstring>
+        <name>KISS_FEND</name>
+        <qualifiedname>gr::packet_protocols::KISS_FEND</qualifiedname>
+        <initializer>= 0xC0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="49" column="15" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1packet__protocols_1ad023d26674233ebd2a9bcaee360c85b4" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t gr::packet_protocols::KISS_FESC</definition>
+        <argsstring></argsstring>
+        <name>KISS_FESC</name>
+        <qualifiedname>gr::packet_protocols::KISS_FESC</qualifiedname>
+        <initializer>= 0xDB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="50" column="15" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1packet__protocols_1a268439f51f03ac827dd4d18152bb5970" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t gr::packet_protocols::KISS_TFEND</definition>
+        <argsstring></argsstring>
+        <name>KISS_TFEND</name>
+        <qualifiedname>gr::packet_protocols::KISS_TFEND</qualifiedname>
+        <initializer>= 0xDC</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="51" column="15" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegr_1_1packet__protocols_1a877c0a35bbc92ebd1e59c7fa1215703e" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t gr::packet_protocols::KISS_TFESC</definition>
+        <argsstring></argsstring>
+        <name>KISS_TFESC</name>
+        <qualifiedname>gr::packet_protocols::KISS_TFESC</qualifiedname>
+        <initializer>= 0xDD</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="52" column="15" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_decoder.h" line="29" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structfx25__frame__t" kind="struct" language="C++" prot="public">
+    <compoundname>fx25_frame_t</compoundname>
+    <includes refid="fx25__protocol_8h" local="no">fx25_protocol.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfx25__frame__t_1a61de9579f9a7c03ab1baa09a7ff255b8" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t fx25_frame_t::preamble[FX25_PREAMBLE_LEN]</definition>
+        <argsstring>[FX25_PREAMBLE_LEN]</argsstring>
+        <name>preamble</name>
+        <qualifiedname>fx25_frame_t::preamble</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="62" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfx25__frame__t_1aa7457d21490fb57b0b760463169afb44" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t fx25_frame_t::sync_word[FX25_SYNC_WORD_LEN]</definition>
+        <argsstring>[FX25_SYNC_WORD_LEN]</argsstring>
+        <name>sync_word</name>
+        <qualifiedname>fx25_frame_t::sync_word</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="63" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfx25__frame__t_1a68d42fe067fc793dbd6ae6636169af9c" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t fx25_frame_t::header[FX25_HEADER_LEN]</definition>
+        <argsstring>[FX25_HEADER_LEN]</argsstring>
+        <name>header</name>
+        <qualifiedname>fx25_frame_t::header</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="64" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfx25__frame__t_1ae2bec72e3c14502e6c4452f885a86909" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t fx25_frame_t::data[FX25_MAX_FRAME_SIZE]</definition>
+        <argsstring>[FX25_MAX_FRAME_SIZE]</argsstring>
+        <name>data</name>
+        <qualifiedname>fx25_frame_t::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="65" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfx25__frame__t_1a74b8479e16c7a22d61e13474cbbbe20f" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t fx25_frame_t::data_length</definition>
+        <argsstring></argsstring>
+        <name>data_length</name>
+        <qualifiedname>fx25_frame_t::data_length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="66" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfx25__frame__t_1a6636f5fad7d71427f0b66db9f6347bb6" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t fx25_frame_t::parity[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>parity</name>
+        <qualifiedname>fx25_frame_t::parity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="67" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfx25__frame__t_1a93a5ef5bd52fe9516d06afc2095190e2" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t fx25_frame_t::parity_length</definition>
+        <argsstring></argsstring>
+        <name>parity_length</name>
+        <qualifiedname>fx25_frame_t::parity_length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="68" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfx25__frame__t_1acc2742e1c6a2db19a3cc79cc11075c7a" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t fx25_frame_t::crc[FX25_CRC_LEN]</definition>
+        <argsstring>[FX25_CRC_LEN]</argsstring>
+        <name>crc</name>
+        <qualifiedname>fx25_frame_t::crc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="69" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="61" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="61" bodyend="70"/>
+    <listofallmembers>
+      <member refid="structfx25__frame__t_1acc2742e1c6a2db19a3cc79cc11075c7a" prot="public" virt="non-virtual"><scope>fx25_frame_t</scope><name>crc</name></member>
+      <member refid="structfx25__frame__t_1ae2bec72e3c14502e6c4452f885a86909" prot="public" virt="non-virtual"><scope>fx25_frame_t</scope><name>data</name></member>
+      <member refid="structfx25__frame__t_1a74b8479e16c7a22d61e13474cbbbe20f" prot="public" virt="non-virtual"><scope>fx25_frame_t</scope><name>data_length</name></member>
+      <member refid="structfx25__frame__t_1a68d42fe067fc793dbd6ae6636169af9c" prot="public" virt="non-virtual"><scope>fx25_frame_t</scope><name>header</name></member>
+      <member refid="structfx25__frame__t_1a6636f5fad7d71427f0b66db9f6347bb6" prot="public" virt="non-virtual"><scope>fx25_frame_t</scope><name>parity</name></member>
+      <member refid="structfx25__frame__t_1a93a5ef5bd52fe9516d06afc2095190e2" prot="public" virt="non-virtual"><scope>fx25_frame_t</scope><name>parity_length</name></member>
+      <member refid="structfx25__frame__t_1a61de9579f9a7c03ab1baa09a7ff255b8" prot="public" virt="non-virtual"><scope>fx25_frame_t</scope><name>preamble</name></member>
+      <member refid="structfx25__frame__t_1aa7457d21490fb57b0b760463169afb44" prot="public" virt="non-virtual"><scope>fx25_frame_t</scope><name>sync_word</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

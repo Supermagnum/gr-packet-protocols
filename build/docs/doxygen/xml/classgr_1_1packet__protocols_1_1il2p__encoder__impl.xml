@@ -1,0 +1,626 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classgr_1_1packet__protocols_1_1il2p__encoder__impl" kind="class" language="C++" prot="public">
+    <compoundname>gr::packet_protocols::il2p_encoder_impl</compoundname>
+    <basecompoundref refid="classgr_1_1packet__protocols_1_1il2p__encoder" prot="public" virt="non-virtual">gr::packet_protocols::il2p_encoder</basecompoundref>
+    <includes refid="il2p__encoder__impl_8h" local="no">il2p_encoder_impl.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a846cd19c0705349e926e2d9b1755969b" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gr::packet_protocols::il2p_encoder_impl::d_dest_callsign</definition>
+        <argsstring></argsstring>
+        <name>d_dest_callsign</name>
+        <qualifiedname>gr::packet_protocols::il2p_encoder_impl::d_dest_callsign</qualifiedname>
+        <briefdescription>
+<para>Destination callsign. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="43" column="17" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1af565e7b564bc4f5ad9d19c6edbf9a8c3" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gr::packet_protocols::il2p_encoder_impl::d_dest_ssid</definition>
+        <argsstring></argsstring>
+        <name>d_dest_ssid</name>
+        <qualifiedname>gr::packet_protocols::il2p_encoder_impl::d_dest_ssid</qualifiedname>
+        <briefdescription>
+<para>Destination SSID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="44" column="17" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1abe4819434d8ea0a68d13d2d6258a2abc" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gr::packet_protocols::il2p_encoder_impl::d_src_callsign</definition>
+        <argsstring></argsstring>
+        <name>d_src_callsign</name>
+        <qualifiedname>gr::packet_protocols::il2p_encoder_impl::d_src_callsign</qualifiedname>
+        <briefdescription>
+<para>Source callsign. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="45" column="17" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a39faa88dde238e9a58cbddb8ca900d35" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gr::packet_protocols::il2p_encoder_impl::d_src_ssid</definition>
+        <argsstring></argsstring>
+        <name>d_src_ssid</name>
+        <qualifiedname>gr::packet_protocols::il2p_encoder_impl::d_src_ssid</qualifiedname>
+        <briefdescription>
+<para>Source SSID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="46" column="17" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a3e9bbf0da87f3ee54fa99fcfb2348be6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::packet_protocols::il2p_encoder_impl::d_fec_type</definition>
+        <argsstring></argsstring>
+        <name>d_fec_type</name>
+        <qualifiedname>gr::packet_protocols::il2p_encoder_impl::d_fec_type</qualifiedname>
+        <briefdescription>
+<para>FEC type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="47" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1aa48a8955da2f8ebbc5989eb1a62d16b8" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr::packet_protocols::il2p_encoder_impl::d_add_checksum</definition>
+        <argsstring></argsstring>
+        <name>d_add_checksum</name>
+        <qualifiedname>gr::packet_protocols::il2p_encoder_impl::d_add_checksum</qualifiedname>
+        <briefdescription>
+<para>Add checksum flag. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="48" column="10" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a942805dadb9ab15e6bea39637c618652" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; uint8_t &gt;</type>
+        <definition>std::vector&lt;uint8_t&gt; gr::packet_protocols::il2p_encoder_impl::d_frame_buffer</definition>
+        <argsstring></argsstring>
+        <name>d_frame_buffer</name>
+        <qualifiedname>gr::packet_protocols::il2p_encoder_impl::d_frame_buffer</qualifiedname>
+        <briefdescription>
+<para>Frame buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="49" column="17" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a9af445b55490da3f340540a00b9a1832" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t gr::packet_protocols::il2p_encoder_impl::d_frame_length</definition>
+        <argsstring></argsstring>
+        <name>d_frame_length</name>
+        <qualifiedname>gr::packet_protocols::il2p_encoder_impl::d_frame_length</qualifiedname>
+        <briefdescription>
+<para>Current frame length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="50" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a1a18018ad18299a798e901c2513af116" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t gr::packet_protocols::il2p_encoder_impl::d_bit_position</definition>
+        <argsstring></argsstring>
+        <name>d_bit_position</name>
+        <qualifiedname>gr::packet_protocols::il2p_encoder_impl::d_bit_position</qualifiedname>
+        <briefdescription>
+<para>Current bit position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="51" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1aa9fa3a81e52a49ba5fc5cd81c12a35a3" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t gr::packet_protocols::il2p_encoder_impl::d_byte_position</definition>
+        <argsstring></argsstring>
+        <name>d_byte_position</name>
+        <qualifiedname>gr::packet_protocols::il2p_encoder_impl::d_byte_position</qualifiedname>
+        <briefdescription>
+<para>Current byte position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="52" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a03e2e0dee38710e2ecc26cc4572d6321" prot="private" static="no" mutable="no">
+        <type><ref refid="classReedSolomonEncoder" kindref="compound">ReedSolomonEncoder</ref> *</type>
+        <definition>ReedSolomonEncoder* gr::packet_protocols::il2p_encoder_impl::d_reed_solomon_encoder</definition>
+        <argsstring></argsstring>
+        <name>d_reed_solomon_encoder</name>
+        <qualifiedname>gr::packet_protocols::il2p_encoder_impl::d_reed_solomon_encoder</qualifiedname>
+        <briefdescription>
+<para>Reed-Solomon encoder. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="53" column="24" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a287e3ec43865bf1140bd657e93c033d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::packet_protocols::il2p_encoder_impl::il2p_encoder_impl</definition>
+        <argsstring>(const std::string &amp;dest_callsign, const std::string &amp;dest_ssid, const std::string &amp;src_callsign, const std::string &amp;src_ssid, int fec_type, bool add_checksum)</argsstring>
+        <name>il2p_encoder_impl</name>
+        <qualifiedname>gr::packet_protocols::il2p_encoder_impl::il2p_encoder_impl</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>dest_callsign</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>dest_ssid</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>src_callsign</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>src_ssid</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fec_type</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>add_checksum</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dest_callsign</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination callsign </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dest_ssid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination SSID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src_callsign</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source callsign </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src_ssid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source SSID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fec_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FEC type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>add_checksum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Add checksum flag </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="65" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a33d072243f817d9aba0bf1ad7820540a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::packet_protocols::il2p_encoder_impl::~il2p_encoder_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~il2p_encoder_impl</name>
+        <qualifiedname>gr::packet_protocols::il2p_encoder_impl::~il2p_encoder_impl</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="72" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1ac91c74f19871963f70f4296ee0c2bbbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::packet_protocols::il2p_encoder_impl::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <qualifiedname>gr::packet_protocols::il2p_encoder_impl::work</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+<para>Main work function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>noutput_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of output items </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input items </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output items </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Number of items produced </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="81" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a63dc8fe61fdd7680dfb35e0f92ba0d52" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void gr::packet_protocols::il2p_encoder_impl::set_fec_type</definition>
+        <argsstring>(int fec_type)</argsstring>
+        <name>set_fec_type</name>
+        <qualifiedname>gr::packet_protocols::il2p_encoder_impl::set_fec_type</qualifiedname>
+        <reimplements refid="classgr_1_1packet__protocols_1_1il2p__encoder_1a02e9199982b202b1aa7d529927b2ff6b">set_fec_type</reimplements>
+        <param>
+          <type>int</type>
+          <declname>fec_type</declname>
+        </param>
+        <briefdescription>
+<para>Set FEC type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fec_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FEC type value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="88" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a15cdd4978ba5e421a1fda67d817bbca1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void gr::packet_protocols::il2p_encoder_impl::set_add_checksum</definition>
+        <argsstring>(bool add_checksum)</argsstring>
+        <name>set_add_checksum</name>
+        <qualifiedname>gr::packet_protocols::il2p_encoder_impl::set_add_checksum</qualifiedname>
+        <reimplements refid="classgr_1_1packet__protocols_1_1il2p__encoder_1aec69c6a739ce05f446abbad04cf0dd11">set_add_checksum</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>add_checksum</declname>
+        </param>
+        <briefdescription>
+<para>Set add checksum flag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>add_checksum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Add checksum flag </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="94" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a49907e6c5c723e6c3a8d8baee0c16028" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::packet_protocols::il2p_encoder_impl::initialize_reed_solomon</definition>
+        <argsstring>()</argsstring>
+        <name>initialize_reed_solomon</name>
+        <qualifiedname>gr::packet_protocols::il2p_encoder_impl::initialize_reed_solomon</qualifiedname>
+        <briefdescription>
+<para>Initialize Reed-Solomon encoder. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="100" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1ae22a1189f226a81bf042e26e3ef82073" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::packet_protocols::il2p_encoder_impl::build_il2p_frame</definition>
+        <argsstring>(char data_byte)</argsstring>
+        <name>build_il2p_frame</name>
+        <qualifiedname>gr::packet_protocols::il2p_encoder_impl::build_il2p_frame</qualifiedname>
+        <param>
+          <type>char</type>
+          <declname>data_byte</declname>
+        </param>
+        <briefdescription>
+<para>Build IL2P frame. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data_byte</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input data byte </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="106" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1aa97221fba604eeacc4bc828afeb33d18" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::packet_protocols::il2p_encoder_impl::add_il2p_header</definition>
+        <argsstring>()</argsstring>
+        <name>add_il2p_header</name>
+        <qualifiedname>gr::packet_protocols::il2p_encoder_impl::add_il2p_header</qualifiedname>
+        <briefdescription>
+<para>Add IL2P header to frame. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="111" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a81c1c146c35712b770877e7953343720" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::packet_protocols::il2p_encoder_impl::add_address</definition>
+        <argsstring>(const std::string &amp;callsign, const std::string &amp;ssid, bool is_last)</argsstring>
+        <name>add_address</name>
+        <qualifiedname>gr::packet_protocols::il2p_encoder_impl::add_address</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>callsign</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>ssid</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>is_last</declname>
+        </param>
+        <briefdescription>
+<para>Add address to frame. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>callsign</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Callsign </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ssid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SSID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>is_last</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Is last address flag </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="119" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a471de8ceb29262e764b2d09aec1e0e20" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; uint8_t &gt;</type>
+        <definition>std::vector&lt; uint8_t &gt; gr::packet_protocols::il2p_encoder_impl::apply_reed_solomon_fec</definition>
+        <argsstring>(const std::vector&lt; uint8_t &gt; &amp;data)</argsstring>
+        <name>apply_reed_solomon_fec</name>
+        <qualifiedname>gr::packet_protocols::il2p_encoder_impl::apply_reed_solomon_fec</qualifiedname>
+        <param>
+          <type>const std::vector&lt; uint8_t &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Apply Reed-Solomon FEC to data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FEC encoded data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="126" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a7037d9fc1dd25f5a25cc817f203830a6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t gr::packet_protocols::il2p_encoder_impl::calculate_checksum</definition>
+        <argsstring>()</argsstring>
+        <name>calculate_checksum</name>
+        <qualifiedname>gr::packet_protocols::il2p_encoder_impl::calculate_checksum</qualifiedname>
+        <briefdescription>
+<para>Calculate checksum for frame. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Calculated checksum </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="132" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>IL2P Encoder Implementation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implements IL2P packet encoding using the real IL2P protocol implementation from gr-m17. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>gr::packet_protocols::il2p_encoder</label>
+        <link refid="classgr_1_1packet__protocols_1_1il2p__encoder"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gr::packet_protocols::il2p_encoder_impl</label>
+        <link refid="classgr_1_1packet__protocols_1_1il2p__encoder__impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::sync_block</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>gr::packet_protocols::il2p_encoder</label>
+        <link refid="classgr_1_1packet__protocols_1_1il2p__encoder"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gr::packet_protocols::il2p_encoder_impl</label>
+        <link refid="classgr_1_1packet__protocols_1_1il2p__encoder__impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::sync_block</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="41" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" bodystart="41" bodyend="133"/>
+    <listofallmembers>
+      <member refid="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a81c1c146c35712b770877e7953343720" prot="private" virt="non-virtual"><scope>gr::packet_protocols::il2p_encoder_impl</scope><name>add_address</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1aa97221fba604eeacc4bc828afeb33d18" prot="private" virt="non-virtual"><scope>gr::packet_protocols::il2p_encoder_impl</scope><name>add_il2p_header</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a471de8ceb29262e764b2d09aec1e0e20" prot="private" virt="non-virtual"><scope>gr::packet_protocols::il2p_encoder_impl</scope><name>apply_reed_solomon_fec</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1ae22a1189f226a81bf042e26e3ef82073" prot="private" virt="non-virtual"><scope>gr::packet_protocols::il2p_encoder_impl</scope><name>build_il2p_frame</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a7037d9fc1dd25f5a25cc817f203830a6" prot="private" virt="non-virtual"><scope>gr::packet_protocols::il2p_encoder_impl</scope><name>calculate_checksum</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1aa48a8955da2f8ebbc5989eb1a62d16b8" prot="private" virt="non-virtual"><scope>gr::packet_protocols::il2p_encoder_impl</scope><name>d_add_checksum</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a1a18018ad18299a798e901c2513af116" prot="private" virt="non-virtual"><scope>gr::packet_protocols::il2p_encoder_impl</scope><name>d_bit_position</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1aa9fa3a81e52a49ba5fc5cd81c12a35a3" prot="private" virt="non-virtual"><scope>gr::packet_protocols::il2p_encoder_impl</scope><name>d_byte_position</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a846cd19c0705349e926e2d9b1755969b" prot="private" virt="non-virtual"><scope>gr::packet_protocols::il2p_encoder_impl</scope><name>d_dest_callsign</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1af565e7b564bc4f5ad9d19c6edbf9a8c3" prot="private" virt="non-virtual"><scope>gr::packet_protocols::il2p_encoder_impl</scope><name>d_dest_ssid</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a3e9bbf0da87f3ee54fa99fcfb2348be6" prot="private" virt="non-virtual"><scope>gr::packet_protocols::il2p_encoder_impl</scope><name>d_fec_type</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a942805dadb9ab15e6bea39637c618652" prot="private" virt="non-virtual"><scope>gr::packet_protocols::il2p_encoder_impl</scope><name>d_frame_buffer</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a9af445b55490da3f340540a00b9a1832" prot="private" virt="non-virtual"><scope>gr::packet_protocols::il2p_encoder_impl</scope><name>d_frame_length</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a03e2e0dee38710e2ecc26cc4572d6321" prot="private" virt="non-virtual"><scope>gr::packet_protocols::il2p_encoder_impl</scope><name>d_reed_solomon_encoder</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1abe4819434d8ea0a68d13d2d6258a2abc" prot="private" virt="non-virtual"><scope>gr::packet_protocols::il2p_encoder_impl</scope><name>d_src_callsign</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a39faa88dde238e9a58cbddb8ca900d35" prot="private" virt="non-virtual"><scope>gr::packet_protocols::il2p_encoder_impl</scope><name>d_src_ssid</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a287e3ec43865bf1140bd657e93c033d9" prot="public" virt="non-virtual"><scope>gr::packet_protocols::il2p_encoder_impl</scope><name>il2p_encoder_impl</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a49907e6c5c723e6c3a8d8baee0c16028" prot="private" virt="non-virtual"><scope>gr::packet_protocols::il2p_encoder_impl</scope><name>initialize_reed_solomon</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1il2p__encoder_1a0ab5d8758dbaa31e31f60260c14b0185" prot="public" virt="non-virtual"><scope>gr::packet_protocols::il2p_encoder_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a15cdd4978ba5e421a1fda67d817bbca1" prot="public" virt="virtual"><scope>gr::packet_protocols::il2p_encoder_impl</scope><name>set_add_checksum</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a63dc8fe61fdd7680dfb35e0f92ba0d52" prot="public" virt="virtual"><scope>gr::packet_protocols::il2p_encoder_impl</scope><name>set_fec_type</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1il2p__encoder_1a6e12da960201b2ae1cf130fdfb17cd75" prot="public" virt="non-virtual"><scope>gr::packet_protocols::il2p_encoder_impl</scope><name>sptr</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1ac91c74f19871963f70f4296ee0c2bbbf" prot="public" virt="non-virtual"><scope>gr::packet_protocols::il2p_encoder_impl</scope><name>work</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a33d072243f817d9aba0bf1ad7820540a" prot="public" virt="non-virtual"><scope>gr::packet_protocols::il2p_encoder_impl</scope><name>~il2p_encoder_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

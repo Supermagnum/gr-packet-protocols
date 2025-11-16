@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classgr_1_1packet__protocols_1_1fx25__decoder" kind="class" language="C++" prot="public">
+    <compoundname>gr::packet_protocols::fx25_decoder</compoundname>
+    <basecompoundref prot="public" virt="virtual">gr::sync_block</basecompoundref>
+    <derivedcompoundref refid="classgr_1_1packet__protocols_1_1fx25__decoder__impl" prot="public" virt="non-virtual">gr::packet_protocols::fx25_decoder_impl</derivedcompoundref>
+    <includes refid="fx25__decoder_8h" local="no">fx25_decoder.h</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgr_1_1packet__protocols_1_1fx25__decoder_1a855663899c4e84617d1e9bfd6f9c675a" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classgr_1_1packet__protocols_1_1fx25__decoder" kindref="compound">fx25_decoder</ref> &gt;</type>
+        <definition>typedef std::shared_ptr&lt;fx25_decoder&gt; gr::packet_protocols::fx25_decoder::sptr</definition>
+        <argsstring></argsstring>
+        <name>sptr</name>
+        <qualifiedname>gr::packet_protocols::fx25_decoder::sptr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_decoder.h" line="37" column="29" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_decoder.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__decoder_1a61f9ca874df8e16a8ea326e3e60a4551" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr_1_1packet__protocols_1_1fx25__decoder_1a855663899c4e84617d1e9bfd6f9c675a" kindref="member">sptr</ref></type>
+        <definition>static sptr gr::packet_protocols::fx25_decoder::make</definition>
+        <argsstring>()</argsstring>
+        <name>make</name>
+        <qualifiedname>gr::packet_protocols::fx25_decoder::make</qualifiedname>
+        <briefdescription>
+<para>Return a shared_ptr to a new instance of <ref refid="classgr_1_1packet__protocols_1_1fx25__decoder" kindref="compound">packet_protocols::fx25_decoder</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_decoder.h" line="42" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>FX.25 Decoder with Forward Error Correction. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>gr::packet_protocols::fx25_decoder</label>
+        <link refid="classgr_1_1packet__protocols_1_1fx25__decoder"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::packet_protocols::fx25_decoder_impl</label>
+        <link refid="classgr_1_1packet__protocols_1_1fx25__decoder__impl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gr::sync_block</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>gr::packet_protocols::fx25_decoder</label>
+        <link refid="classgr_1_1packet__protocols_1_1fx25__decoder"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gr::sync_block</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_decoder.h" line="35" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_decoder.h" bodystart="35" bodyend="43"/>
+    <listofallmembers>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__decoder_1a61f9ca874df8e16a8ea326e3e60a4551" prot="public" virt="non-virtual"><scope>gr::packet_protocols::fx25_decoder</scope><name>make</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__decoder_1a855663899c4e84617d1e9bfd6f9c675a" prot="public" virt="non-virtual"><scope>gr::packet_protocols::fx25_decoder</scope><name>sptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

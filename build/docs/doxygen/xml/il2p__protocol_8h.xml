@@ -1,0 +1,596 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="il2p__protocol_8h" kind="file" language="C++">
+    <compoundname>il2p_protocol.h</compoundname>
+    <includes local="no">stdbool.h</includes>
+    <includes local="no">stddef.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includedby refid="il2p__decoder__impl_8h" local="no">il2p_decoder_impl.h</includedby>
+    <includedby refid="il2p__encoder__impl_8h" local="no">il2p_encoder_impl.h</includedby>
+    <includedby refid="packet__protocols_8h" local="no">packet_protocols.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>il2p_protocol.h</label>
+        <link refid="il2p__protocol_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>stddef.h</label>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>il2p_protocol.h</label>
+        <link refid="il2p__protocol_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>packet_protocols.h</label>
+        <link refid="packet__protocols_8h"/>
+      </node>
+      <node id="2">
+        <label>il2p_decoder_impl.h</label>
+        <link refid="il2p__decoder__impl_8h"/>
+      </node>
+      <node id="3">
+        <label>il2p_encoder_impl.h</label>
+        <link refid="il2p__encoder__impl_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structil2p__frame__t" prot="public">il2p_frame_t</innerclass>
+    <innerclass refid="structil2p__context__t" prot="public">il2p_context_t</innerclass>
+    <innerclass refid="structil2p__header__t" prot="public">il2p_header_t</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="il2p__protocol_8h_1ab56d2a98c83ef626b6bea93ec4cdf26e" prot="public" static="no">
+        <name>IL2P_PREAMBLE</name>
+        <initializer>0x55</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="21" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="il2p__protocol_8h_1a949e2591db7a867a5a8c484f7e1abd78" prot="public" static="no">
+        <name>IL2P_SYNC_WORD</name>
+        <initializer>0xF15E48</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="22" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="il2p__protocol_8h_1a5603f6e6c21e95aaad7acb6eb18c9a40" prot="public" static="no">
+        <name>IL2P_SYNC_WORD_SIZE</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="23" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="il2p__protocol_8h_1a6cd46ad63c83b80b0632398a4db4015b" prot="public" static="no">
+        <name>IL2P_HEADER_SIZE</name>
+        <initializer>13</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="24" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="il2p__protocol_8h_1a5e0e6a0e0a4c1a75b0c6405267cb2bca" prot="public" static="no">
+        <name>IL2P_HEADER_PARITY</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="25" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="il2p__protocol_8h_1a9875fcae3aab87784e47c2fc5807c946" prot="public" static="no">
+        <name>IL2P_MAX_PAYLOAD_SIZE</name>
+        <initializer>1023</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="26" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="il2p__protocol_8h_1afddfd849c5bab0336c3bb56c8fb941a1" prot="public" static="no">
+        <name>IL2P_MAX_PAYLOAD_BLOCKS</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="27" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="il2p__protocol_8h_1a7d6796ab951dd9cb3e781011012717a3" prot="public" static="no">
+        <name>IL2P_MAX_PARITY_SYMBOLS</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="28" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="il2p__protocol_8h_1a04d57b68131a485de27d3279422d1745" prot="public" static="no">
+        <name>IL2P_MAX_ENCODED_PAYLOAD_SIZE</name>
+        <initializer>    (<ref refid="il2p__protocol_8h_1a9875fcae3aab87784e47c2fc5807c946" kindref="member">IL2P_MAX_PAYLOAD_SIZE</ref> + <ref refid="il2p__protocol_8h_1afddfd849c5bab0336c3bb56c8fb941a1" kindref="member">IL2P_MAX_PAYLOAD_BLOCKS</ref> * <ref refid="il2p__protocol_8h_1a7d6796ab951dd9cb3e781011012717a3" kindref="member">IL2P_MAX_PARITY_SYMBOLS</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="29" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="29" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="define" id="il2p__protocol_8h_1a29b2801c24a91caf87556b96ad154957" prot="public" static="no">
+        <name>IL2P_MAX_PACKET_SIZE</name>
+        <initializer>    (<ref refid="il2p__protocol_8h_1a5603f6e6c21e95aaad7acb6eb18c9a40" kindref="member">IL2P_SYNC_WORD_SIZE</ref> + <ref refid="il2p__protocol_8h_1a6cd46ad63c83b80b0632398a4db4015b" kindref="member">IL2P_HEADER_SIZE</ref> + <ref refid="il2p__protocol_8h_1a5e0e6a0e0a4c1a75b0c6405267cb2bca" kindref="member">IL2P_HEADER_PARITY</ref> + <ref refid="il2p__protocol_8h_1a04d57b68131a485de27d3279422d1745" kindref="member">IL2P_MAX_ENCODED_PAYLOAD_SIZE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="31" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="31" bodyend="32"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="il2p__protocol_8h_1a129d36da5ca700aef63dda39e5d21ca7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int il2p_init</definition>
+        <argsstring>(il2p_context_t *ctx)</argsstring>
+        <name>il2p_init</name>
+        <param>
+          <type><ref refid="structil2p__context__t" kindref="compound">il2p_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="69" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="69" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="il2p__protocol_8h_1a24ef4fca73dd4b48dc31e24e32ba88f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void il2p_cleanup</definition>
+        <argsstring>(il2p_context_t *ctx)</argsstring>
+        <name>il2p_cleanup</name>
+        <param>
+          <type><ref refid="structil2p__context__t" kindref="compound">il2p_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="70" column="6" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="70" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="il2p__protocol_8h_1a0c98f99a5c013760a156c230aeb60f76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int il2p_encode_frame</definition>
+        <argsstring>(il2p_context_t *ctx, const uint8_t *data, uint16_t length, il2p_frame_t *frame)</argsstring>
+        <name>il2p_encode_frame</name>
+        <param>
+          <type><ref refid="structil2p__context__t" kindref="compound">il2p_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type><ref refid="structil2p__frame__t" kindref="compound">il2p_frame_t</ref> *</type>
+          <declname>frame</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="75" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="75" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="il2p__protocol_8h_1ac8b4acebb41669e41522e9d7c5bc7624" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int il2p_decode_frame</definition>
+        <argsstring>(il2p_context_t *ctx, const il2p_frame_t *frame, uint8_t *data, uint16_t *length)</argsstring>
+        <name>il2p_decode_frame</name>
+        <param>
+          <type><ref refid="structil2p__context__t" kindref="compound">il2p_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structil2p__frame__t" kindref="compound">il2p_frame_t</ref> *</type>
+          <declname>frame</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="77" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="77" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="il2p__protocol_8h_1a75e17f7fa93f8626775fb6559c563e8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int il2p_detect_frame</definition>
+        <argsstring>(const uint8_t *data, uint16_t length)</argsstring>
+        <name>il2p_detect_frame</name>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="79" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="79" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="il2p__protocol_8h_1a990085ebf4fc7e918296e4f2ace1f1d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int il2p_extract_frame</definition>
+        <argsstring>(const uint8_t *data, uint16_t length, il2p_frame_t *frame)</argsstring>
+        <name>il2p_extract_frame</name>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type><ref refid="structil2p__frame__t" kindref="compound">il2p_frame_t</ref> *</type>
+          <declname>frame</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="80" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="80" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="il2p__protocol_8h_1a5f3287c52ef93d525329fa7f1d41e1c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int il2p_encode_header</definition>
+        <argsstring>(il2p_context_t *ctx, const il2p_header_t *header, uint8_t *encoded)</argsstring>
+        <name>il2p_encode_header</name>
+        <param>
+          <type><ref refid="structil2p__context__t" kindref="compound">il2p_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structil2p__header__t" kindref="compound">il2p_header_t</ref> *</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>encoded</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="83" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="83" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="il2p__protocol_8h_1a7813249c6367566336e1f127299abac8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int il2p_decode_header</definition>
+        <argsstring>(il2p_context_t *ctx, const uint8_t *encoded, il2p_header_t *header)</argsstring>
+        <name>il2p_decode_header</name>
+        <param>
+          <type><ref refid="structil2p__context__t" kindref="compound">il2p_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>encoded</declname>
+        </param>
+        <param>
+          <type><ref refid="structil2p__header__t" kindref="compound">il2p_header_t</ref> *</type>
+          <declname>header</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="84" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="84" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="il2p__protocol_8h_1a198ac2536460a8155234678500544877" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t il2p_calculate_header_checksum</definition>
+        <argsstring>(const il2p_header_t *header)</argsstring>
+        <name>il2p_calculate_header_checksum</name>
+        <param>
+          <type>const <ref refid="structil2p__header__t" kindref="compound">il2p_header_t</ref> *</type>
+          <declname>header</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="85" column="9" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="85" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="il2p__protocol_8h_1a0d532923c31d7b0d01d8a2895edfbdc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int il2p_encode_payload</definition>
+        <argsstring>(il2p_context_t *ctx, const uint8_t *data, uint16_t length, uint8_t *encoded, uint16_t *encoded_length)</argsstring>
+        <name>il2p_encode_payload</name>
+        <param>
+          <type><ref refid="structil2p__context__t" kindref="compound">il2p_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>encoded</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>encoded_length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="88" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="88" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="il2p__protocol_8h_1a452b34224ebdaf77a55a946431c57ae0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int il2p_decode_payload</definition>
+        <argsstring>(il2p_context_t *ctx, const uint8_t *encoded, uint16_t encoded_length, uint8_t *data, uint16_t *length)</argsstring>
+        <name>il2p_decode_payload</name>
+        <param>
+          <type><ref refid="structil2p__context__t" kindref="compound">il2p_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>encoded</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>encoded_length</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="90" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="90" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="il2p__protocol_8h_1a37ba7c369bed59eaba49ffc4eb325eef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void il2p_scramble_data</definition>
+        <argsstring>(uint8_t *data, uint16_t length)</argsstring>
+        <name>il2p_scramble_data</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="94" column="6" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="94" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="il2p__protocol_8h_1ae9752169e680cd3c5569708316f6eb0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void il2p_descramble_data</definition>
+        <argsstring>(uint8_t *data, uint16_t length)</argsstring>
+        <name>il2p_descramble_data</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="95" column="6" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="95" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="il2p__protocol_8h_1ab7ac6eb91258a5521547be915f062198" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct il2p_rs *</type>
+        <definition>struct il2p_rs * il2p_find_rs</definition>
+        <argsstring>(int nparity)</argsstring>
+        <name>il2p_find_rs</name>
+        <param>
+          <type>int</type>
+          <declname>nparity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="98" column="15" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="98" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="il2p__protocol_8h_1af1dd2f9650a52932c8ea1738a687ccaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int il2p_encode_rs</definition>
+        <argsstring>(uint8_t *tx_data, int data_size, int num_parity, uint8_t *parity_out)</argsstring>
+        <name>il2p_encode_rs</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>tx_data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>data_size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>num_parity</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>parity_out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="99" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="99" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="il2p__protocol_8h_1ac189ce9f6e95d88d389c1662aad6947b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int il2p_decode_rs</definition>
+        <argsstring>(uint8_t *rec_block, int data_size, int num_parity, uint8_t *out)</argsstring>
+        <name>il2p_decode_rs</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>rec_block</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>data_size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>num_parity</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="100" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="100" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="il2p__protocol_8h_1a3e1ef8fd6cc96e80f4e4a9ffa923cff4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void il2p_get_stats</definition>
+        <argsstring>(const il2p_context_t *ctx, uint32_t *encoded, uint32_t *decoded, uint32_t *errors)</argsstring>
+        <name>il2p_get_stats</name>
+        <param>
+          <type>const <ref refid="structil2p__context__t" kindref="compound">il2p_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>encoded</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>decoded</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>errors</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="103" column="6" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="103" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h"/>
+  </compounddef>
+</doxygen>

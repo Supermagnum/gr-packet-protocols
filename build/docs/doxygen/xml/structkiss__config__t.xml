@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structkiss__config__t" kind="struct" language="C++" prot="public">
+    <compoundname>kiss_config_t</compoundname>
+    <includes refid="kiss__protocol_8h" local="no">kiss_protocol.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structkiss__config__t_1a2dae732c0755fb3b66a97cd05621b34b" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t kiss_config_t::tx_delay</definition>
+        <argsstring></argsstring>
+        <name>tx_delay</name>
+        <qualifiedname>kiss_config_t::tx_delay</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="50" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkiss__config__t_1ae2aa1ffc40ebd29729960f034385d86b" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t kiss_config_t::persistence</definition>
+        <argsstring></argsstring>
+        <name>persistence</name>
+        <qualifiedname>kiss_config_t::persistence</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="51" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkiss__config__t_1a9d336c6a0c38f59c26fd337bf84f24f1" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t kiss_config_t::slot_time</definition>
+        <argsstring></argsstring>
+        <name>slot_time</name>
+        <qualifiedname>kiss_config_t::slot_time</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="52" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkiss__config__t_1adf098a0d62227e05cc7bef24f1ae8369" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t kiss_config_t::tx_tail</definition>
+        <argsstring></argsstring>
+        <name>tx_tail</name>
+        <qualifiedname>kiss_config_t::tx_tail</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="53" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkiss__config__t_1aef05c7d7c35a421115431eceb5c0482a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool kiss_config_t::full_duplex</definition>
+        <argsstring></argsstring>
+        <name>full_duplex</name>
+        <qualifiedname>kiss_config_t::full_duplex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="54" column="10" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkiss__config__t_1a4a2db35e32752406063e2106af517e9b" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t kiss_config_t::hardware_id</definition>
+        <argsstring></argsstring>
+        <name>hardware_id</name>
+        <qualifiedname>kiss_config_t::hardware_id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="55" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="49" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="49" bodyend="56"/>
+    <listofallmembers>
+      <member refid="structkiss__config__t_1aef05c7d7c35a421115431eceb5c0482a" prot="public" virt="non-virtual"><scope>kiss_config_t</scope><name>full_duplex</name></member>
+      <member refid="structkiss__config__t_1a4a2db35e32752406063e2106af517e9b" prot="public" virt="non-virtual"><scope>kiss_config_t</scope><name>hardware_id</name></member>
+      <member refid="structkiss__config__t_1ae2aa1ffc40ebd29729960f034385d86b" prot="public" virt="non-virtual"><scope>kiss_config_t</scope><name>persistence</name></member>
+      <member refid="structkiss__config__t_1a9d336c6a0c38f59c26fd337bf84f24f1" prot="public" virt="non-virtual"><scope>kiss_config_t</scope><name>slot_time</name></member>
+      <member refid="structkiss__config__t_1a2dae732c0755fb3b66a97cd05621b34b" prot="public" virt="non-virtual"><scope>kiss_config_t</scope><name>tx_delay</name></member>
+      <member refid="structkiss__config__t_1adf098a0d62227e05cc7bef24f1ae8369" prot="public" virt="non-virtual"><scope>kiss_config_t</scope><name>tx_tail</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

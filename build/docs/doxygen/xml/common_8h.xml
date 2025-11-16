@@ -1,0 +1,342 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="common_8h" kind="file" language="C++">
+    <compoundname>common.h</compoundname>
+    <includes local="no">vector</includes>
+    <includes local="no">cstdint</includes>
+    <includedby refid="fx25__decoder__impl_8h" local="no">fx25_decoder_impl.h</includedby>
+    <includedby refid="fx25__encoder_8h" local="no">fx25_encoder.h</includedby>
+    <includedby refid="fx25__encoder__impl_8h" local="no">fx25_encoder_impl.h</includedby>
+    <includedby refid="fx25__fec_8h" local="no">fx25_fec.h</includedby>
+    <includedby refid="il2p__decoder__impl_8h" local="no">il2p_decoder_impl.h</includedby>
+    <includedby refid="il2p__encoder_8h" local="no">il2p_encoder.h</includedby>
+    <includedby refid="il2p__encoder__impl_8h" local="no">il2p_encoder_impl.h</includedby>
+    <includedby refid="il2p__reed__solomon_8h" local="no">il2p_reed_solomon.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>common.h</label>
+        <link refid="common_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>cstdint</label>
+      </node>
+      <node id="2">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>common.h</label>
+        <link refid="common_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>fx25_encoder.h</label>
+        <link refid="fx25__encoder_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>fx25_fec.h</label>
+        <link refid="fx25__fec_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>il2p_encoder.h</label>
+        <link refid="il2p__encoder_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>il2p_reed_solomon.h</label>
+        <link refid="il2p__reed__solomon_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>packet_protocols.h</label>
+        <link refid="packet__protocols_8h"/>
+      </node>
+      <node id="2">
+        <label>fx25_decoder_impl.h</label>
+        <link refid="fx25__decoder__impl_8h"/>
+      </node>
+      <node id="4">
+        <label>fx25_encoder_impl.h</label>
+        <link refid="fx25__encoder__impl_8h"/>
+      </node>
+      <node id="7">
+        <label>il2p_decoder_impl.h</label>
+        <link refid="il2p__decoder__impl_8h"/>
+      </node>
+      <node id="9">
+        <label>il2p_encoder_impl.h</label>
+        <link refid="il2p__encoder__impl_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classReedSolomonEncoder" prot="public">ReedSolomonEncoder</innerclass>
+    <innerclass refid="classReedSolomonDecoder" prot="public">ReedSolomonDecoder</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="common_8h_1ad57eab26b84aad1e6eefaeae95b94288" prot="public" static="no">
+        <name>AX25_FLAG</name>
+        <initializer>0x7E</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="29" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="common_8h_1a174f5104f8207936fb343524cafa770e" prot="public" static="no">
+        <name>AX25_FRAME_MIN_SIZE</name>
+        <initializer>18</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="30" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="common_8h_1a74d053aab8b606176da81dd45269048d" prot="public" static="no">
+        <name>KISS_FEND</name>
+        <initializer>0xC0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="33" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="common_8h_1ab1839993a4d69d57c3d49a083e6d1db1" prot="public" static="no">
+        <name>KISS_FESC</name>
+        <initializer>0xDB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="34" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="common_8h_1a07e5a24794fa636684284448bf7ad50d" prot="public" static="no">
+        <name>KISS_TFEND</name>
+        <initializer>0xDC</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="35" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="common_8h_1aca6e7d608b48682f454fb7289f3b6fbd" prot="public" static="no">
+        <name>KISS_TFESC</name>
+        <initializer>0xDD</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="36" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="common_8h_1ade8dc88eb2285ff22bdc6fdd1c362db6" prot="public" static="no">
+        <name>KISS_CMD_DATA</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="38" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="common_8h_1aa59211db071b5c0678f7dfdb5f0dfe2c" prot="public" static="no">
+        <name>KISS_CMD_TXDELAY</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="39" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="common_8h_1ac131721f9f036414ef4f2278b735edf9" prot="public" static="no">
+        <name>KISS_CMD_P</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="40" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="common_8h_1aeed2dba4c1279fa9e05a919e91966cc2" prot="public" static="no">
+        <name>KISS_CMD_SLOTTIME</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="41" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="common_8h_1a0fd31747515a1425d1aed194597ab5df" prot="public" static="no">
+        <name>KISS_CMD_TXTAIL</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="42" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="common_8h_1a57a1917e473f86db30cce54ac6902c2c" prot="public" static="no">
+        <name>KISS_CMD_FULLDUPLEX</name>
+        <initializer>0x05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="43" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="common_8h_1ae63f325d34e4ed5de956d0ef977386b3" prot="public" static="no">
+        <name>KISS_CMD_SET_HARDWARE</name>
+        <initializer>0x06</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="44" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="common_8h_1a1b7e26482334b823621a2b7490f8919e" prot="public" static="no">
+        <name>KISS_CMD_RETURN</name>
+        <initializer>0xFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="45" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="common_8h_1a3220257f66a693ba8989b78b1a8148b3" prot="public" static="no">
+        <name>FX25_FEC_RS_12_8</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="48" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="common_8h_1ac6bcaa79ae740104938e80891b067760" prot="public" static="no">
+        <name>FX25_FEC_RS_16_12</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="49" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="common_8h_1a3573b1f7835c4875024b4c6de0eada57" prot="public" static="no">
+        <name>FX25_FEC_RS_20_16</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="50" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="common_8h_1a8160cd69447490eabd7c1071bf5862d7" prot="public" static="no">
+        <name>FX25_FEC_RS_24_20</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="51" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="common_8h_1a1a0b86eb5d2303b0e174522ab58cea73" prot="public" static="no">
+        <name>IL2P_FEC_RS_255_223</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="54" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="common_8h_1a88c302cfc4e73adaa0d5d80a0997d609" prot="public" static="no">
+        <name>IL2P_FEC_RS_255_239</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="55" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="common_8h_1abf892cff54c2ba4c3fe5b2a8d338af74" prot="public" static="no">
+        <name>IL2P_FEC_RS_255_247</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="56" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h"/>
+  </compounddef>
+</doxygen>

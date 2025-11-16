@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classgr_1_1packet__protocols_1_1fx25__fec" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>gr::packet_protocols::fx25_fec</compoundname>
+    <basecompoundref prot="public" virt="virtual">gr::sync_block</basecompoundref>
+    <includes refid="fx25__fec_8h" local="no">fx25_fec.h</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgr_1_1packet__protocols_1_1fx25__fec_1a11f36d428dd8389f3d6fc74f08916adc" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classgr_1_1packet__protocols_1_1fx25__fec" kindref="compound">fx25_fec</ref> &gt;</type>
+        <definition>typedef std::shared_ptr&lt;fx25_fec&gt; gr::packet_protocols::fx25_fec::sptr</definition>
+        <argsstring></argsstring>
+        <name>sptr</name>
+        <qualifiedname>gr::packet_protocols::fx25_fec::sptr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_fec.h" line="38" column="29" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_fec.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__fec_1a725a21e7415cae48d89435997ee74bc2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr_1_1packet__protocols_1_1fx25__fec_1a11f36d428dd8389f3d6fc74f08916adc" kindref="member">sptr</ref></type>
+        <definition>static sptr gr::packet_protocols::fx25_fec::make</definition>
+        <argsstring>(int fec_type=FX25_FEC_RS_16_12, int interleaver_depth=1, bool encode_mode=true)</argsstring>
+        <name>make</name>
+        <qualifiedname>gr::packet_protocols::fx25_fec::make</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>fec_type</declname>
+          <defval><ref refid="common_8h_1ac6bcaa79ae740104938e80891b067760" kindref="member">FX25_FEC_RS_16_12</ref></defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>interleaver_depth</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>encode_mode</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Return a shared_ptr to a new instance of <ref refid="classgr_1_1packet__protocols_1_1fx25__fec" kindref="compound">packet_protocols::fx25_fec</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_fec.h" line="43" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__fec_1aa5450f76b4d8c65f89a8d4ed0e9fb2cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void gr::packet_protocols::fx25_fec::set_fec_type</definition>
+        <argsstring>(int fec_type)=0</argsstring>
+        <name>set_fec_type</name>
+        <qualifiedname>gr::packet_protocols::fx25_fec::set_fec_type</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>fec_type</declname>
+        </param>
+        <briefdescription>
+<para>Set FEC type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_fec.h" line="49" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__fec_1a24f7700fc1c1d2cbb260bd2e1cdad2ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void gr::packet_protocols::fx25_fec::set_interleaver_depth</definition>
+        <argsstring>(int depth)=0</argsstring>
+        <name>set_interleaver_depth</name>
+        <qualifiedname>gr::packet_protocols::fx25_fec::set_interleaver_depth</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>depth</declname>
+        </param>
+        <briefdescription>
+<para>Set interleaver depth. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_fec.h" line="54" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__fec_1a916e3277c9045a6b36619783cd8cd09a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void gr::packet_protocols::fx25_fec::set_encode_mode</definition>
+        <argsstring>(bool encode_mode)=0</argsstring>
+        <name>set_encode_mode</name>
+        <qualifiedname>gr::packet_protocols::fx25_fec::set_encode_mode</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>encode_mode</declname>
+        </param>
+        <briefdescription>
+<para>Set encode mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_fec.h" line="59" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>FX.25 Forward Error Correction. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>gr::packet_protocols::fx25_fec</label>
+        <link refid="classgr_1_1packet__protocols_1_1fx25__fec"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gr::sync_block</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>gr::packet_protocols::fx25_fec</label>
+        <link refid="classgr_1_1packet__protocols_1_1fx25__fec"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gr::sync_block</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_fec.h" line="36" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_fec.h" bodystart="36" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__fec_1a725a21e7415cae48d89435997ee74bc2" prot="public" virt="non-virtual"><scope>gr::packet_protocols::fx25_fec</scope><name>make</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__fec_1a916e3277c9045a6b36619783cd8cd09a" prot="public" virt="pure-virtual"><scope>gr::packet_protocols::fx25_fec</scope><name>set_encode_mode</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__fec_1aa5450f76b4d8c65f89a8d4ed0e9fb2cd" prot="public" virt="pure-virtual"><scope>gr::packet_protocols::fx25_fec</scope><name>set_fec_type</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__fec_1a24f7700fc1c1d2cbb260bd2e1cdad2ad" prot="public" virt="pure-virtual"><scope>gr::packet_protocols::fx25_fec</scope><name>set_interleaver_depth</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1fx25__fec_1a11f36d428dd8389f3d6fc74f08916adc" prot="public" virt="non-virtual"><scope>gr::packet_protocols::fx25_fec</scope><name>sptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structfx25__rs" kind="struct" language="C++" prot="public">
+    <compoundname>fx25_rs</compoundname>
+    <includes refid="fx25__protocol_8h" local="no">fx25_protocol.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfx25__rs_1a7372c13d827b0d60b7e0172a7222a6b3" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int fx25_rs::mm</definition>
+        <argsstring></argsstring>
+        <name>mm</name>
+        <qualifiedname>fx25_rs::mm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="39" column="18" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfx25__rs_1adbff0c764e4e9004df8b06883e810a97" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int fx25_rs::nn</definition>
+        <argsstring></argsstring>
+        <name>nn</name>
+        <qualifiedname>fx25_rs::nn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="40" column="18" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfx25__rs_1ac664b95c0e5d65b7bda4ed15e7ef5720" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* fx25_rs::alpha_to</definition>
+        <argsstring></argsstring>
+        <name>alpha_to</name>
+        <qualifiedname>fx25_rs::alpha_to</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="41" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfx25__rs_1aa41cae0c0acc0938ae44c308890278dc" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* fx25_rs::index_of</definition>
+        <argsstring></argsstring>
+        <name>index_of</name>
+        <qualifiedname>fx25_rs::index_of</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="42" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfx25__rs_1a3b50aaebc65a71aa82d3618ef3890a16" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* fx25_rs::genpoly</definition>
+        <argsstring></argsstring>
+        <name>genpoly</name>
+        <qualifiedname>fx25_rs::genpoly</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="43" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfx25__rs_1ab01305712fb4e624b66e8a7bcefaaa6f" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int fx25_rs::nroots</definition>
+        <argsstring></argsstring>
+        <name>nroots</name>
+        <qualifiedname>fx25_rs::nroots</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="44" column="18" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfx25__rs_1aa84ec72b90bfedf2842c3999d16f8636" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char fx25_rs::fcr</definition>
+        <argsstring></argsstring>
+        <name>fcr</name>
+        <qualifiedname>fx25_rs::fcr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="45" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfx25__rs_1a9e925a58b8c3f7dc3551661b39f51782" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char fx25_rs::prim</definition>
+        <argsstring></argsstring>
+        <name>prim</name>
+        <qualifiedname>fx25_rs::prim</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="46" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfx25__rs_1ae21bd79aa55a6292f0e77e414b0d1d80" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char fx25_rs::iprim</definition>
+        <argsstring></argsstring>
+        <name>iprim</name>
+        <qualifiedname>fx25_rs::iprim</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="47" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="38" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="38" bodyend="48"/>
+    <listofallmembers>
+      <member refid="structfx25__rs_1ac664b95c0e5d65b7bda4ed15e7ef5720" prot="public" virt="non-virtual"><scope>fx25_rs</scope><name>alpha_to</name></member>
+      <member refid="structfx25__rs_1aa84ec72b90bfedf2842c3999d16f8636" prot="public" virt="non-virtual"><scope>fx25_rs</scope><name>fcr</name></member>
+      <member refid="structfx25__rs_1a3b50aaebc65a71aa82d3618ef3890a16" prot="public" virt="non-virtual"><scope>fx25_rs</scope><name>genpoly</name></member>
+      <member refid="structfx25__rs_1aa41cae0c0acc0938ae44c308890278dc" prot="public" virt="non-virtual"><scope>fx25_rs</scope><name>index_of</name></member>
+      <member refid="structfx25__rs_1ae21bd79aa55a6292f0e77e414b0d1d80" prot="public" virt="non-virtual"><scope>fx25_rs</scope><name>iprim</name></member>
+      <member refid="structfx25__rs_1a7372c13d827b0d60b7e0172a7222a6b3" prot="public" virt="non-virtual"><scope>fx25_rs</scope><name>mm</name></member>
+      <member refid="structfx25__rs_1adbff0c764e4e9004df8b06883e810a97" prot="public" virt="non-virtual"><scope>fx25_rs</scope><name>nn</name></member>
+      <member refid="structfx25__rs_1ab01305712fb4e624b66e8a7bcefaaa6f" prot="public" virt="non-virtual"><scope>fx25_rs</scope><name>nroots</name></member>
+      <member refid="structfx25__rs_1a9e925a58b8c3f7dc3551661b39f51782" prot="public" virt="non-virtual"><scope>fx25_rs</scope><name>prim</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

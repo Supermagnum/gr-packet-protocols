@@ -1,0 +1,11 @@
+This is the packet_protocols-write-a-block package meant as a guide to building
+out-of-tree packages. To use the packet_protocols blocks, the Python namespaces
+is in 'packet_protocols', which is imported as:
+
+    import packet_protocols
+
+See the Doxygen documentation for details about the blocks available
+in this package. A quick listing of the details can be found in Python
+after importing by using:
+
+    help(packet_protocols)

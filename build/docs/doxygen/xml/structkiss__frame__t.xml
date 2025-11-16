@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structkiss__frame__t" kind="struct" language="C++" prot="public">
+    <compoundname>kiss_frame_t</compoundname>
+    <includes refid="kiss__protocol_8h" local="no">kiss_protocol.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structkiss__frame__t_1a97bf01d7ac73076efe4325de81dbbb6f" prot="public" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t* kiss_frame_t::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <qualifiedname>kiss_frame_t::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="38" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkiss__frame__t_1a37a482169c6019ec8a3ccbd1c993dcee" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t kiss_frame_t::length</definition>
+        <argsstring></argsstring>
+        <name>length</name>
+        <qualifiedname>kiss_frame_t::length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="39" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkiss__frame__t_1a91930678cc04929577b62c55b292a6be" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t kiss_frame_t::command</definition>
+        <argsstring></argsstring>
+        <name>command</name>
+        <qualifiedname>kiss_frame_t::command</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="40" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkiss__frame__t_1aeeff1de72842533dd962cdc03ee52934" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t kiss_frame_t::port</definition>
+        <argsstring></argsstring>
+        <name>port</name>
+        <qualifiedname>kiss_frame_t::port</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="41" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkiss__frame__t_1a8a4106110b07b62048aac44b6bc4c584" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool kiss_frame_t::escaped</definition>
+        <argsstring></argsstring>
+        <name>escaped</name>
+        <qualifiedname>kiss_frame_t::escaped</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="42" column="10" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="37" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="37" bodyend="43"/>
+    <listofallmembers>
+      <member refid="structkiss__frame__t_1a91930678cc04929577b62c55b292a6be" prot="public" virt="non-virtual"><scope>kiss_frame_t</scope><name>command</name></member>
+      <member refid="structkiss__frame__t_1a97bf01d7ac73076efe4325de81dbbb6f" prot="public" virt="non-virtual"><scope>kiss_frame_t</scope><name>data</name></member>
+      <member refid="structkiss__frame__t_1a8a4106110b07b62048aac44b6bc4c584" prot="public" virt="non-virtual"><scope>kiss_frame_t</scope><name>escaped</name></member>
+      <member refid="structkiss__frame__t_1a37a482169c6019ec8a3ccbd1c993dcee" prot="public" virt="non-virtual"><scope>kiss_frame_t</scope><name>length</name></member>
+      <member refid="structkiss__frame__t_1aeeff1de72842533dd962cdc03ee52934" prot="public" virt="non-virtual"><scope>kiss_frame_t</scope><name>port</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

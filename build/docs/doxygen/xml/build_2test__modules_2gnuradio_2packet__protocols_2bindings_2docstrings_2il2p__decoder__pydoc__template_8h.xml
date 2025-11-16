@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2il2p__decoder__pydoc__template_8h" kind="file" language="C++">
+    <compoundname>build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_decoder_pydoc_template.h</compoundname>
+    <includes local="yes">pydoc_macros.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>il2p_decoder_pydoc_template.h</label>
+        <link refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2il2p__decoder__pydoc__template_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pydoc_macros.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2il2p__decoder__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" prot="public" static="no">
+        <name>D</name>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="build_2python_2packet__protocols_2bindings_2pydoc__macros_8h_1a4e578031ec998eaeb933d5caa6a7d28a" kindref="member">DOC</ref>(gr, packet_protocols, __VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_decoder_pydoc_template.h" line="10" column="10" bodyfile="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_decoder_pydoc_template.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2il2p__decoder__pydoc__template_8h_1a0e24c8e2dcd6db0c470858f5610c4f31" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* __doc_gr_packet_protocols_il2p_decoder</definition>
+        <argsstring></argsstring>
+        <name>__doc_gr_packet_protocols_il2p_decoder</name>
+        <initializer>= R&quot;doc()doc&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_decoder_pydoc_template.h" line="18" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_decoder_pydoc_template.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2il2p__decoder__pydoc__template_8h_1a20c31c8c0ff3f103d057343429069a43" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* __doc_gr_packet_protocols_il2p_decoder_il2p_decoder_0</definition>
+        <argsstring></argsstring>
+        <name>__doc_gr_packet_protocols_il2p_decoder_il2p_decoder_0</name>
+        <initializer>= R&quot;doc()doc&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_decoder_pydoc_template.h" line="21" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_decoder_pydoc_template.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2il2p__decoder__pydoc__template_8h_1a46e9f1924e27f26de118c7813f41f6bd" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* __doc_gr_packet_protocols_il2p_decoder_make</definition>
+        <argsstring></argsstring>
+        <name>__doc_gr_packet_protocols_il2p_decoder_make</name>
+        <initializer>= R&quot;doc()doc&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_decoder_pydoc_template.h" line="24" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_decoder_pydoc_template.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_decoder_pydoc_template.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,7 @@
+<map id="gr::packet_protocols::ax25_encoder" name="gr::packet_protocols::ax25_encoder">
+<area shape="rect" id="Node000001" title="AX.25 Encoder." alt="" coords="7,79,147,119"/>
+<area shape="rect" id="Node000003" href="$classgr_1_1packet__protocols_1_1ax25__encoder__impl.html" title="AX.25 Encoder Implementation." alt="" coords="5,167,148,207"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="79,133,79,166,74,166,74,133"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="23,5,130,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,44,79,79,74,79,74,44"/>
+</map>

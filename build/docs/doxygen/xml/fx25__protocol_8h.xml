@@ -1,0 +1,575 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="fx25__protocol_8h" kind="file" language="C++">
+    <compoundname>fx25_protocol.h</compoundname>
+    <includes local="no">stdbool.h</includes>
+    <includes local="no">stddef.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includedby refid="fx25__decoder__impl_8h" local="no">fx25_decoder_impl.h</includedby>
+    <includedby refid="fx25__encoder__impl_8h" local="no">fx25_encoder_impl.h</includedby>
+    <includedby refid="packet__protocols_8h" local="no">packet_protocols.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>fx25_protocol.h</label>
+        <link refid="fx25__protocol_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>stddef.h</label>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>fx25_protocol.h</label>
+        <link refid="fx25__protocol_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>packet_protocols.h</label>
+        <link refid="packet__protocols_8h"/>
+      </node>
+      <node id="2">
+        <label>fx25_decoder_impl.h</label>
+        <link refid="fx25__decoder__impl_8h"/>
+      </node>
+      <node id="3">
+        <label>fx25_encoder_impl.h</label>
+        <link refid="fx25__encoder__impl_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structfx25__rs" prot="public">fx25_rs</innerclass>
+    <innerclass refid="structfx25__context__t" prot="public">fx25_context_t</innerclass>
+    <innerclass refid="structfx25__frame__t" prot="public">fx25_frame_t</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="fx25__protocol_8h_1a37ea46cdb80a327691e00868c9f8bddf" prot="public" static="no">
+        <name>FX25_MAX_FRAME_SIZE</name>
+        <initializer>1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="21" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fx25__protocol_8h_1ab0bbce8c1668067eefbf0313b9afd653" prot="public" static="no">
+        <name>FX25_RS_255_239</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="22" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fx25__protocol_8h_1a3cdc1124030c83f4b324e8313765e9b9" prot="public" static="no">
+        <name>FX25_RS_255_223</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="23" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fx25__protocol_8h_1a373f11ab727f9fc3213c7cc3ac787a2e" prot="public" static="no">
+        <name>FX25_RS_255_191</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="24" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fx25__protocol_8h_1a8f83c0435e2f3076b2e7e754e1e712ad" prot="public" static="no">
+        <name>FX25_RS_255_159</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="25" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fx25__protocol_8h_1a3606c5448b6da1ddea810b8cfc33e1d8" prot="public" static="no">
+        <name>FX25_RS_255_127</name>
+        <initializer>0x05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="26" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fx25__protocol_8h_1afe529731b024169ef6ebb37386314ba9" prot="public" static="no">
+        <name>FX25_RS_255_95</name>
+        <initializer>0x06</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="27" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fx25__protocol_8h_1a2f02abd04171890aa95c38a7b7b29be8" prot="public" static="no">
+        <name>FX25_RS_255_63</name>
+        <initializer>0x07</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="28" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fx25__protocol_8h_1a954b0d05137919a0f598e0996ee233b1" prot="public" static="no">
+        <name>FX25_RS_255_31</name>
+        <initializer>0x08</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="29" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fx25__protocol_8h_1a8b08e3330e3e29dec4d7c88ff927297e" prot="public" static="no">
+        <name>FX25_PREAMBLE_LEN</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="32" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fx25__protocol_8h_1abbd1b81e4334b28eb4d7f2c8660fb50b" prot="public" static="no">
+        <name>FX25_SYNC_WORD_LEN</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="33" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fx25__protocol_8h_1a967a28bb7d3a20dcc6644d1a61a472fc" prot="public" static="no">
+        <name>FX25_HEADER_LEN</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="34" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fx25__protocol_8h_1ac9f3c155afd997074d11e2e1f8cb14d4" prot="public" static="no">
+        <name>FX25_CRC_LEN</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="35" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="fx25__protocol_8h_1aa87f197c33db905e77654cc3b8691749" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fx25_init</definition>
+        <argsstring>(fx25_context_t *ctx, uint8_t rs_type)</argsstring>
+        <name>fx25_init</name>
+        <param>
+          <type><ref refid="structfx25__context__t" kindref="compound">fx25_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>rs_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="75" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" declline="75" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="fx25__protocol_8h_1a340c22e0ed04bfd511f2b07614cc407b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx25_cleanup</definition>
+        <argsstring>(fx25_context_t *ctx)</argsstring>
+        <name>fx25_cleanup</name>
+        <param>
+          <type><ref refid="structfx25__context__t" kindref="compound">fx25_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="76" column="6" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" declline="76" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="fx25__protocol_8h_1a418ac45edc085e000065e68c05bfeb2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structfx25__rs" kindref="compound">fx25_rs</ref> *</type>
+        <definition>struct fx25_rs * fx25_rs_init</definition>
+        <argsstring>(int symsize, int genpoly, int fcs, int prim, int nroots)</argsstring>
+        <name>fx25_rs_init</name>
+        <param>
+          <type>int</type>
+          <declname>symsize</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>genpoly</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fcs</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>prim</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nroots</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="79" column="15" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" declline="79" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="fx25__protocol_8h_1ac9b91344e98b26d5fe2fe7dc74c4e20e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx25_rs_free</definition>
+        <argsstring>(struct fx25_rs *rs)</argsstring>
+        <name>fx25_rs_free</name>
+        <param>
+          <type>struct <ref refid="structfx25__rs" kindref="compound">fx25_rs</ref> *</type>
+          <declname>rs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="80" column="6" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" declline="80" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="fx25__protocol_8h_1ae1dad23ce45082c93990b0236fdd1d09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fx25_rs_encode</definition>
+        <argsstring>(struct fx25_rs *rs, uint8_t *data, int data_len, uint8_t *parity)</argsstring>
+        <name>fx25_rs_encode</name>
+        <param>
+          <type>struct <ref refid="structfx25__rs" kindref="compound">fx25_rs</ref> *</type>
+          <declname>rs</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>data_len</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>parity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="81" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" declline="81" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="fx25__protocol_8h_1a496a6dab7ccec75c1316b081cdba0a11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fx25_rs_decode</definition>
+        <argsstring>(struct fx25_rs *rs, uint8_t *data, int data_len, uint8_t *parity, int nroots)</argsstring>
+        <name>fx25_rs_decode</name>
+        <param>
+          <type>struct <ref refid="structfx25__rs" kindref="compound">fx25_rs</ref> *</type>
+          <declname>rs</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>data_len</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>parity</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nroots</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="82" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" declline="82" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="fx25__protocol_8h_1a45faf88ca41442701c1fdedece022bfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fx25_encode_frame</definition>
+        <argsstring>(fx25_context_t *ctx, const uint8_t *ax25_data, uint16_t ax25_length, fx25_frame_t *fx25_frame)</argsstring>
+        <name>fx25_encode_frame</name>
+        <param>
+          <type><ref refid="structfx25__context__t" kindref="compound">fx25_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>ax25_data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>ax25_length</declname>
+        </param>
+        <param>
+          <type><ref refid="structfx25__frame__t" kindref="compound">fx25_frame_t</ref> *</type>
+          <declname>fx25_frame</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="85" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" declline="85" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="fx25__protocol_8h_1a053f875267826f949158e4f0e961cee1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fx25_decode_frame</definition>
+        <argsstring>(fx25_context_t *ctx, const fx25_frame_t *fx25_frame, uint8_t *ax25_data, uint16_t *ax25_length)</argsstring>
+        <name>fx25_decode_frame</name>
+        <param>
+          <type><ref refid="structfx25__context__t" kindref="compound">fx25_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structfx25__frame__t" kindref="compound">fx25_frame_t</ref> *</type>
+          <declname>fx25_frame</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>ax25_data</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>ax25_length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="87" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" declline="87" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="fx25__protocol_8h_1a89395bdcc0411c290dc372510756652c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fx25_detect_frame</definition>
+        <argsstring>(const uint8_t *data, uint16_t length)</argsstring>
+        <name>fx25_detect_frame</name>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="89" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" declline="89" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="fx25__protocol_8h_1a8bd37c049f3ccea5cd35a886adaf0a1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fx25_extract_frame</definition>
+        <argsstring>(const uint8_t *data, uint16_t length, fx25_frame_t *frame)</argsstring>
+        <name>fx25_extract_frame</name>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type><ref refid="structfx25__frame__t" kindref="compound">fx25_frame_t</ref> *</type>
+          <declname>frame</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="90" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" declline="90" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="fx25__protocol_8h_1a5b4165a2e161f375af23a993d9ac9288" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t fx25_calculate_crc</definition>
+        <argsstring>(const uint8_t *data, uint16_t length)</argsstring>
+        <name>fx25_calculate_crc</name>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="93" column="10" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" declline="93" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="fx25__protocol_8h_1a1baf91585dbfc0801ff010b57623f7b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool fx25_verify_crc</definition>
+        <argsstring>(const uint8_t *data, uint16_t length, uint16_t crc)</argsstring>
+        <name>fx25_verify_crc</name>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>crc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="94" column="6" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" declline="94" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="fx25__protocol_8h_1a63ea891fe263110f00ceffb623f3774a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx25_generate_preamble</definition>
+        <argsstring>(uint8_t *preamble)</argsstring>
+        <name>fx25_generate_preamble</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>preamble</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="95" column="6" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" declline="95" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="fx25__protocol_8h_1a1622386a009f8af1b90be1ea5101232d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool fx25_verify_sync_word</definition>
+        <argsstring>(const uint8_t *sync_word)</argsstring>
+        <name>fx25_verify_sync_word</name>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>sync_word</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="96" column="6" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" declline="96" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="fx25__protocol_8h_1a6d41ff17ca4abc535b8f0ebd63223a4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fx25_get_stats</definition>
+        <argsstring>(const fx25_context_t *ctx, uint32_t *encoded, uint32_t *decoded, uint32_t *errors)</argsstring>
+        <name>fx25_get_stats</name>
+        <param>
+          <type>const <ref refid="structfx25__context__t" kindref="compound">fx25_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>encoded</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>decoded</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>errors</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="99" column="6" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" declline="99" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_71b98d1dd9e700b513575718a71638aa" kind="dir">
+    <compoundname>packet_protocols</compoundname>
+    <innerdir refid="dir_b9e121d8f30b2f8d0d69a03f5752afc8">bindings</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/"/>
+  </compounddef>
+</doxygen>

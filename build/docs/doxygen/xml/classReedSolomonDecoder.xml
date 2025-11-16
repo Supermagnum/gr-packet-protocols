@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classReedSolomonDecoder" kind="class" language="C++" prot="public">
+    <compoundname>ReedSolomonDecoder</compoundname>
+    <includes refid="common_8h" local="no">common.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classReedSolomonDecoder_1a6960e0598bb64edad5cb3386d0141cb7" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ReedSolomonDecoder::d_n</definition>
+        <argsstring></argsstring>
+        <name>d_n</name>
+        <qualifiedname>ReedSolomonDecoder::d_n</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="113" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classReedSolomonDecoder_1a66a90309bfb8f932f834a15ad24f38e9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ReedSolomonDecoder::d_k</definition>
+        <argsstring></argsstring>
+        <name>d_k</name>
+        <qualifiedname>ReedSolomonDecoder::d_k</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="113" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classReedSolomonDecoder_1a57fbdada68dde17b32b9bae146ed6171" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ReedSolomonDecoder::ReedSolomonDecoder</definition>
+        <argsstring>(int n, int k)</argsstring>
+        <name>ReedSolomonDecoder</name>
+        <qualifiedname>ReedSolomonDecoder::ReedSolomonDecoder</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="91" column="5" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="91" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classReedSolomonDecoder_1adfada08e27231757fbc89da7d0dd28ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ReedSolomonDecoder::~ReedSolomonDecoder</definition>
+        <argsstring>()=default</argsstring>
+        <name>~ReedSolomonDecoder</name>
+        <qualifiedname>ReedSolomonDecoder::~ReedSolomonDecoder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="92" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classReedSolomonDecoder_1a55496251dfd9cd470535812721e3a2a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; uint8_t &gt;</type>
+        <definition>std::vector&lt; uint8_t &gt; ReedSolomonDecoder::decode</definition>
+        <argsstring>(const std::vector&lt; uint8_t &gt; &amp;data)</argsstring>
+        <name>decode</name>
+        <qualifiedname>ReedSolomonDecoder::decode</qualifiedname>
+        <param>
+          <type>const std::vector&lt; uint8_t &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="94" column="17" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="94" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classReedSolomonDecoder_1a82159e0bd1c0c2acd0692c2010c0ae3b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ReedSolomonDecoder::get_code_length</definition>
+        <argsstring>() const</argsstring>
+        <name>get_code_length</name>
+        <qualifiedname>ReedSolomonDecoder::get_code_length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="105" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="105" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classReedSolomonDecoder_1ab17f6f991cbee7662df9744b18c39802" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ReedSolomonDecoder::get_data_length</definition>
+        <argsstring>() const</argsstring>
+        <name>get_data_length</name>
+        <qualifiedname>ReedSolomonDecoder::get_data_length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="108" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="108" bodyend="110"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="89" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="89" bodyend="114"/>
+    <listofallmembers>
+      <member refid="classReedSolomonDecoder_1a66a90309bfb8f932f834a15ad24f38e9" prot="private" virt="non-virtual"><scope>ReedSolomonDecoder</scope><name>d_k</name></member>
+      <member refid="classReedSolomonDecoder_1a6960e0598bb64edad5cb3386d0141cb7" prot="private" virt="non-virtual"><scope>ReedSolomonDecoder</scope><name>d_n</name></member>
+      <member refid="classReedSolomonDecoder_1a55496251dfd9cd470535812721e3a2a4" prot="public" virt="non-virtual"><scope>ReedSolomonDecoder</scope><name>decode</name></member>
+      <member refid="classReedSolomonDecoder_1a82159e0bd1c0c2acd0692c2010c0ae3b" prot="public" virt="non-virtual"><scope>ReedSolomonDecoder</scope><name>get_code_length</name></member>
+      <member refid="classReedSolomonDecoder_1ab17f6f991cbee7662df9744b18c39802" prot="public" virt="non-virtual"><scope>ReedSolomonDecoder</scope><name>get_data_length</name></member>
+      <member refid="classReedSolomonDecoder_1a57fbdada68dde17b32b9bae146ed6171" prot="public" virt="non-virtual"><scope>ReedSolomonDecoder</scope><name>ReedSolomonDecoder</name></member>
+      <member refid="classReedSolomonDecoder_1adfada08e27231757fbc89da7d0dd28ed" prot="public" virt="non-virtual"><scope>ReedSolomonDecoder</scope><name>~ReedSolomonDecoder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

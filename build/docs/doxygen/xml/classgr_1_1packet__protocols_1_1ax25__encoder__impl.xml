@@ -1,0 +1,455 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classgr_1_1packet__protocols_1_1ax25__encoder__impl" kind="class" language="C++" prot="public">
+    <compoundname>gr::packet_protocols::ax25_encoder_impl</compoundname>
+    <basecompoundref refid="classgr_1_1packet__protocols_1_1ax25__encoder" prot="public" virt="non-virtual">gr::packet_protocols::ax25_encoder</basecompoundref>
+    <includes refid="ax25__encoder__impl_8h" local="no">ax25_encoder_impl.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1a2abdc901c602bab5fae6220a8837b473" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gr::packet_protocols::ax25_encoder_impl::d_dest_callsign</definition>
+        <argsstring></argsstring>
+        <name>d_dest_callsign</name>
+        <qualifiedname>gr::packet_protocols::ax25_encoder_impl::d_dest_callsign</qualifiedname>
+        <briefdescription>
+<para>Destination callsign. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" line="41" column="17" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1a067b32d5ad4afd8e0823037ecb825ffc" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gr::packet_protocols::ax25_encoder_impl::d_dest_ssid</definition>
+        <argsstring></argsstring>
+        <name>d_dest_ssid</name>
+        <qualifiedname>gr::packet_protocols::ax25_encoder_impl::d_dest_ssid</qualifiedname>
+        <briefdescription>
+<para>Destination SSID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" line="42" column="17" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1ab43b28dd84d11cf5764903b590b71b93" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gr::packet_protocols::ax25_encoder_impl::d_src_callsign</definition>
+        <argsstring></argsstring>
+        <name>d_src_callsign</name>
+        <qualifiedname>gr::packet_protocols::ax25_encoder_impl::d_src_callsign</qualifiedname>
+        <briefdescription>
+<para>Source callsign. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" line="43" column="17" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1a2a3a36fd70c8d2d65b815f61668885ba" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gr::packet_protocols::ax25_encoder_impl::d_src_ssid</definition>
+        <argsstring></argsstring>
+        <name>d_src_ssid</name>
+        <qualifiedname>gr::packet_protocols::ax25_encoder_impl::d_src_ssid</qualifiedname>
+        <briefdescription>
+<para>Source SSID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" line="44" column="17" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1aa49a271b7e4ce92080d32a619838da3f" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gr::packet_protocols::ax25_encoder_impl::d_digipeaters</definition>
+        <argsstring></argsstring>
+        <name>d_digipeaters</name>
+        <qualifiedname>gr::packet_protocols::ax25_encoder_impl::d_digipeaters</qualifiedname>
+        <briefdescription>
+<para>Digipeater list. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" line="45" column="17" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1a779ea7409a528bfb718022977df6ada0" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr::packet_protocols::ax25_encoder_impl::d_command_response</definition>
+        <argsstring></argsstring>
+        <name>d_command_response</name>
+        <qualifiedname>gr::packet_protocols::ax25_encoder_impl::d_command_response</qualifiedname>
+        <briefdescription>
+<para>Command/Response flag. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" line="46" column="10" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1a14c58033b8f182a67d3a176cdc6d76af" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr::packet_protocols::ax25_encoder_impl::d_poll_final</definition>
+        <argsstring></argsstring>
+        <name>d_poll_final</name>
+        <qualifiedname>gr::packet_protocols::ax25_encoder_impl::d_poll_final</qualifiedname>
+        <briefdescription>
+<para>Poll/Final flag. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" line="47" column="10" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1ac9c4b1ddadebef02952aacf28cfcd267" prot="private" static="no" mutable="no">
+        <type><ref refid="structax25__tnc__t" kindref="compound">ax25_tnc_t</ref></type>
+        <definition>ax25_tnc_t gr::packet_protocols::ax25_encoder_impl::d_tnc</definition>
+        <argsstring></argsstring>
+        <name>d_tnc</name>
+        <qualifiedname>gr::packet_protocols::ax25_encoder_impl::d_tnc</qualifiedname>
+        <briefdescription>
+<para>AX.25 TNC context. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" line="49" column="16" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1aa0b18152b132983b4a21cbaec172ed88" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; uint8_t &gt;</type>
+        <definition>std::vector&lt;uint8_t&gt; gr::packet_protocols::ax25_encoder_impl::d_frame_buffer</definition>
+        <argsstring></argsstring>
+        <name>d_frame_buffer</name>
+        <qualifiedname>gr::packet_protocols::ax25_encoder_impl::d_frame_buffer</qualifiedname>
+        <briefdescription>
+<para>Frame buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" line="50" column="17" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1ab78422460c678ca0abb7cc7d054e84b1" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t gr::packet_protocols::ax25_encoder_impl::d_frame_length</definition>
+        <argsstring></argsstring>
+        <name>d_frame_length</name>
+        <qualifiedname>gr::packet_protocols::ax25_encoder_impl::d_frame_length</qualifiedname>
+        <briefdescription>
+<para>Current frame length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" line="51" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1ad44d86675068457f3052f86169f68b5c" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t gr::packet_protocols::ax25_encoder_impl::d_bit_position</definition>
+        <argsstring></argsstring>
+        <name>d_bit_position</name>
+        <qualifiedname>gr::packet_protocols::ax25_encoder_impl::d_bit_position</qualifiedname>
+        <briefdescription>
+<para>Current bit position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" line="52" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1addfc7fa26794f7a76c78fe6c10c25abd" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t gr::packet_protocols::ax25_encoder_impl::d_byte_position</definition>
+        <argsstring></argsstring>
+        <name>d_byte_position</name>
+        <qualifiedname>gr::packet_protocols::ax25_encoder_impl::d_byte_position</qualifiedname>
+        <briefdescription>
+<para>Current byte position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" line="53" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1afd6b1161a5f82fc9e1b9885a4d2685e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::packet_protocols::ax25_encoder_impl::ax25_encoder_impl</definition>
+        <argsstring>(const std::string &amp;dest_callsign, const std::string &amp;dest_ssid, const std::string &amp;src_callsign, const std::string &amp;src_ssid, const std::string &amp;digipeaters, bool command_response, bool poll_final)</argsstring>
+        <name>ax25_encoder_impl</name>
+        <qualifiedname>gr::packet_protocols::ax25_encoder_impl::ax25_encoder_impl</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>dest_callsign</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>dest_ssid</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>src_callsign</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>src_ssid</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>digipeaters</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>command_response</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>poll_final</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dest_callsign</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination callsign </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dest_ssid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination SSID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src_callsign</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source callsign </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src_ssid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source SSID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>digipeaters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Digipeater list (comma-separated) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>command_response</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command/Response flag </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>poll_final</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Poll/Final flag </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" line="66" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1adc8b2b86a8fb1e9a91fa5678bb9c1b44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::packet_protocols::ax25_encoder_impl::~ax25_encoder_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~ax25_encoder_impl</name>
+        <qualifiedname>gr::packet_protocols::ax25_encoder_impl::~ax25_encoder_impl</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" line="73" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1ae2aefecc96e2cd1c73ca53bd99ee8ee9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::packet_protocols::ax25_encoder_impl::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <qualifiedname>gr::packet_protocols::ax25_encoder_impl::work</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+<para>Main work function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>noutput_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of output items </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input items </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output items </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Number of items produced </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" line="82" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1ae1d1667bfacec9645d248aaa5ab946af" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::packet_protocols::ax25_encoder_impl::build_ax25_frame</definition>
+        <argsstring>(char data_byte)</argsstring>
+        <name>build_ax25_frame</name>
+        <qualifiedname>gr::packet_protocols::ax25_encoder_impl::build_ax25_frame</qualifiedname>
+        <param>
+          <type>char</type>
+          <declname>data_byte</declname>
+        </param>
+        <briefdescription>
+<para>Build AX.25 frame from input data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data_byte</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input data byte </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" line="90" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>AX.25 Encoder Implementation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implements AX.25 packet encoding using the real AX.25 protocol implementation from gr-m17. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>gr::packet_protocols::ax25_encoder</label>
+        <link refid="classgr_1_1packet__protocols_1_1ax25__encoder"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gr::packet_protocols::ax25_encoder_impl</label>
+        <link refid="classgr_1_1packet__protocols_1_1ax25__encoder__impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::sync_block</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>gr::packet_protocols::ax25_encoder</label>
+        <link refid="classgr_1_1packet__protocols_1_1ax25__encoder"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gr::packet_protocols::ax25_encoder_impl</label>
+        <link refid="classgr_1_1packet__protocols_1_1ax25__encoder__impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::sync_block</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" line="39" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.h" bodystart="39" bodyend="91"/>
+    <listofallmembers>
+      <member refid="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1afd6b1161a5f82fc9e1b9885a4d2685e6" prot="public" virt="non-virtual"><scope>gr::packet_protocols::ax25_encoder_impl</scope><name>ax25_encoder_impl</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1ae1d1667bfacec9645d248aaa5ab946af" prot="private" virt="non-virtual"><scope>gr::packet_protocols::ax25_encoder_impl</scope><name>build_ax25_frame</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1ad44d86675068457f3052f86169f68b5c" prot="private" virt="non-virtual"><scope>gr::packet_protocols::ax25_encoder_impl</scope><name>d_bit_position</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1addfc7fa26794f7a76c78fe6c10c25abd" prot="private" virt="non-virtual"><scope>gr::packet_protocols::ax25_encoder_impl</scope><name>d_byte_position</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1a779ea7409a528bfb718022977df6ada0" prot="private" virt="non-virtual"><scope>gr::packet_protocols::ax25_encoder_impl</scope><name>d_command_response</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1a2abdc901c602bab5fae6220a8837b473" prot="private" virt="non-virtual"><scope>gr::packet_protocols::ax25_encoder_impl</scope><name>d_dest_callsign</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1a067b32d5ad4afd8e0823037ecb825ffc" prot="private" virt="non-virtual"><scope>gr::packet_protocols::ax25_encoder_impl</scope><name>d_dest_ssid</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1aa49a271b7e4ce92080d32a619838da3f" prot="private" virt="non-virtual"><scope>gr::packet_protocols::ax25_encoder_impl</scope><name>d_digipeaters</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1aa0b18152b132983b4a21cbaec172ed88" prot="private" virt="non-virtual"><scope>gr::packet_protocols::ax25_encoder_impl</scope><name>d_frame_buffer</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1ab78422460c678ca0abb7cc7d054e84b1" prot="private" virt="non-virtual"><scope>gr::packet_protocols::ax25_encoder_impl</scope><name>d_frame_length</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1a14c58033b8f182a67d3a176cdc6d76af" prot="private" virt="non-virtual"><scope>gr::packet_protocols::ax25_encoder_impl</scope><name>d_poll_final</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1ab43b28dd84d11cf5764903b590b71b93" prot="private" virt="non-virtual"><scope>gr::packet_protocols::ax25_encoder_impl</scope><name>d_src_callsign</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1a2a3a36fd70c8d2d65b815f61668885ba" prot="private" virt="non-virtual"><scope>gr::packet_protocols::ax25_encoder_impl</scope><name>d_src_ssid</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1ac9c4b1ddadebef02952aacf28cfcd267" prot="private" virt="non-virtual"><scope>gr::packet_protocols::ax25_encoder_impl</scope><name>d_tnc</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1ax25__encoder_1aa3d0304ef6dab69dd74fa8a3d83f1b74" prot="public" virt="non-virtual"><scope>gr::packet_protocols::ax25_encoder_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1ax25__encoder_1a05a3e72276d7c71a437f69df0991d09c" prot="public" virt="non-virtual"><scope>gr::packet_protocols::ax25_encoder_impl</scope><name>sptr</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1ae2aefecc96e2cd1c73ca53bd99ee8ee9" prot="public" virt="non-virtual"><scope>gr::packet_protocols::ax25_encoder_impl</scope><name>work</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1ax25__encoder__impl_1adc8b2b86a8fb1e9a91fa5678bb9c1b44" prot="public" virt="non-virtual"><scope>gr::packet_protocols::ax25_encoder_impl</scope><name>~ax25_encoder_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

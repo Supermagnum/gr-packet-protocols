@@ -1,0 +1,625 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="kiss__protocol_8h" kind="file" language="C++">
+    <compoundname>kiss_protocol.h</compoundname>
+    <includes local="no">stdbool.h</includes>
+    <includes local="no">stddef.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includedby refid="packet__protocols_8h" local="no">packet_protocols.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>kiss_protocol.h</label>
+        <link refid="kiss__protocol_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>stddef.h</label>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>kiss_protocol.h</label>
+        <link refid="kiss__protocol_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>packet_protocols.h</label>
+        <link refid="packet__protocols_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structkiss__frame__t" prot="public">kiss_frame_t</innerclass>
+    <innerclass refid="structkiss__config__t" prot="public">kiss_config_t</innerclass>
+    <innerclass refid="structkiss__tnc__t" prot="public">kiss_tnc_t</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="kiss__protocol_8h_1a74d053aab8b606176da81dd45269048d" prot="public" static="no">
+        <name>KISS_FEND</name>
+        <initializer>0xC0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="21" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="kiss__protocol_8h_1ab1839993a4d69d57c3d49a083e6d1db1" prot="public" static="no">
+        <name>KISS_FESC</name>
+        <initializer>0xDB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="22" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="kiss__protocol_8h_1a07e5a24794fa636684284448bf7ad50d" prot="public" static="no">
+        <name>KISS_TFEND</name>
+        <initializer>0xDC</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="23" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="kiss__protocol_8h_1aca6e7d608b48682f454fb7289f3b6fbd" prot="public" static="no">
+        <name>KISS_TFESC</name>
+        <initializer>0xDD</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="24" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="kiss__protocol_8h_1ade8dc88eb2285ff22bdc6fdd1c362db6" prot="public" static="no">
+        <name>KISS_CMD_DATA</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="27" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="kiss__protocol_8h_1aa59211db071b5c0678f7dfdb5f0dfe2c" prot="public" static="no">
+        <name>KISS_CMD_TXDELAY</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="28" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="kiss__protocol_8h_1ac131721f9f036414ef4f2278b735edf9" prot="public" static="no">
+        <name>KISS_CMD_P</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="29" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="kiss__protocol_8h_1aeed2dba4c1279fa9e05a919e91966cc2" prot="public" static="no">
+        <name>KISS_CMD_SLOTTIME</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="30" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="kiss__protocol_8h_1a0fd31747515a1425d1aed194597ab5df" prot="public" static="no">
+        <name>KISS_CMD_TXTAIL</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="31" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="kiss__protocol_8h_1a211a0462efca0cfaeb61047b5f84ca93" prot="public" static="no">
+        <name>KISS_CMD_FULLDUP</name>
+        <initializer>0x05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="32" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="kiss__protocol_8h_1a8818036f4408aa4ea74f5d71887c46fc" prot="public" static="no">
+        <name>KISS_CMD_SETHARD</name>
+        <initializer>0x06</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="33" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="kiss__protocol_8h_1a1b7e26482334b823621a2b7490f8919e" prot="public" static="no">
+        <name>KISS_CMD_RETURN</name>
+        <initializer>0xFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="34" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="kiss__protocol_8h_1af5bdedf061460227cd6761d73404b4d1" prot="public" static="no" strong="no">
+        <type></type>
+        <name>kiss_state_t</name>
+        <enumvalue id="kiss__protocol_8h_1af5bdedf061460227cd6761d73404b4d1a7a480f5639c71f44c7c11e3aefb4bcb3" prot="public">
+          <name>KISS_STATE_IDLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="kiss__protocol_8h_1af5bdedf061460227cd6761d73404b4d1a4716ea01df42956567575cb8973d545e" prot="public">
+          <name>KISS_STATE_FEND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="kiss__protocol_8h_1af5bdedf061460227cd6761d73404b4d1a3ab065ef6212b139e4cf01873358940b" prot="public">
+          <name>KISS_STATE_DATA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="kiss__protocol_8h_1af5bdedf061460227cd6761d73404b4d1a10e094131affb922e91205cd6a8c425a" prot="public">
+          <name>KISS_STATE_ESCAPE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="46" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="kiss__protocol_8h_1a2905c3dcb400a6c2ba2a4f71976c7a7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int kiss_init</definition>
+        <argsstring>(kiss_tnc_t *tnc)</argsstring>
+        <name>kiss_init</name>
+        <param>
+          <type><ref refid="structkiss__tnc__t" kindref="compound">kiss_tnc_t</ref> *</type>
+          <declname>tnc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="71" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" declline="71" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="kiss__protocol_8h_1ad5e56a29339a5bfca3d5faf496550932" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int kiss_cleanup</definition>
+        <argsstring>(kiss_tnc_t *tnc)</argsstring>
+        <name>kiss_cleanup</name>
+        <param>
+          <type><ref refid="structkiss__tnc__t" kindref="compound">kiss_tnc_t</ref> *</type>
+          <declname>tnc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="72" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" declline="72" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="kiss__protocol_8h_1a09df29ad9019116dc3463df11c3ef88f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int kiss_set_config</definition>
+        <argsstring>(kiss_tnc_t *tnc, const kiss_config_t *config)</argsstring>
+        <name>kiss_set_config</name>
+        <param>
+          <type><ref refid="structkiss__tnc__t" kindref="compound">kiss_tnc_t</ref> *</type>
+          <declname>tnc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structkiss__config__t" kindref="compound">kiss_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="73" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" declline="73" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="kiss__protocol_8h_1a0279970cfcb845c3782a93c40d9983be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int kiss_get_config</definition>
+        <argsstring>(const kiss_tnc_t *tnc, kiss_config_t *config)</argsstring>
+        <name>kiss_get_config</name>
+        <param>
+          <type>const <ref refid="structkiss__tnc__t" kindref="compound">kiss_tnc_t</ref> *</type>
+          <declname>tnc</declname>
+        </param>
+        <param>
+          <type><ref refid="structkiss__config__t" kindref="compound">kiss_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="74" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" declline="74" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="kiss__protocol_8h_1adc6a46495433c9f955c5459f74d6c84d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int kiss_send_frame</definition>
+        <argsstring>(kiss_tnc_t *tnc, const uint8_t *data, uint16_t length, uint8_t port)</argsstring>
+        <name>kiss_send_frame</name>
+        <param>
+          <type><ref refid="structkiss__tnc__t" kindref="compound">kiss_tnc_t</ref> *</type>
+          <declname>tnc</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="77" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" declline="77" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="kiss__protocol_8h_1ab8469379efcc28c9a1e07ee0dd3a3582" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int kiss_receive_frame</definition>
+        <argsstring>(kiss_tnc_t *tnc, uint8_t *data, uint16_t *length, uint8_t *port)</argsstring>
+        <name>kiss_receive_frame</name>
+        <param>
+          <type><ref refid="structkiss__tnc__t" kindref="compound">kiss_tnc_t</ref> *</type>
+          <declname>tnc</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="78" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" declline="78" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="kiss__protocol_8h_1a79598439c043b291190eb7d73fe09b17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int kiss_process_byte</definition>
+        <argsstring>(kiss_tnc_t *tnc, uint8_t byte)</argsstring>
+        <name>kiss_process_byte</name>
+        <param>
+          <type><ref refid="structkiss__tnc__t" kindref="compound">kiss_tnc_t</ref> *</type>
+          <declname>tnc</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>byte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="79" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" declline="79" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="kiss__protocol_8h_1a0f04adff0b26df9e6f9a8735a45418fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int kiss_frame_ready</definition>
+        <argsstring>(const kiss_tnc_t *tnc)</argsstring>
+        <name>kiss_frame_ready</name>
+        <param>
+          <type>const <ref refid="structkiss__tnc__t" kindref="compound">kiss_tnc_t</ref> *</type>
+          <declname>tnc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="80" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" declline="80" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="kiss__protocol_8h_1a00270e0d6ef5a402701d97620ca42766" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int kiss_serial_send</definition>
+        <argsstring>(kiss_tnc_t *tnc, const uint8_t *data, uint16_t length)</argsstring>
+        <name>kiss_serial_send</name>
+        <param>
+          <type><ref refid="structkiss__tnc__t" kindref="compound">kiss_tnc_t</ref> *</type>
+          <declname>tnc</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="83" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" declline="83" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="kiss__protocol_8h_1a57dfa09ef55c3367aaa73209bfdca42a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int kiss_serial_receive</definition>
+        <argsstring>(kiss_tnc_t *tnc, uint8_t *data, uint16_t *length)</argsstring>
+        <name>kiss_serial_receive</name>
+        <param>
+          <type><ref refid="structkiss__tnc__t" kindref="compound">kiss_tnc_t</ref> *</type>
+          <declname>tnc</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="84" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" declline="84" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="kiss__protocol_8h_1a4f1e54c7be1c2789fb3aa06484e2158f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int kiss_tcp_send</definition>
+        <argsstring>(kiss_tnc_t *tnc, const uint8_t *data, uint16_t length)</argsstring>
+        <name>kiss_tcp_send</name>
+        <param>
+          <type><ref refid="structkiss__tnc__t" kindref="compound">kiss_tnc_t</ref> *</type>
+          <declname>tnc</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="87" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" declline="87" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="kiss__protocol_8h_1a500aad0f6bd4a5571f2814c74c2d643e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int kiss_tcp_receive</definition>
+        <argsstring>(kiss_tnc_t *tnc, uint8_t *data, uint16_t *length)</argsstring>
+        <name>kiss_tcp_receive</name>
+        <param>
+          <type><ref refid="structkiss__tnc__t" kindref="compound">kiss_tnc_t</ref> *</type>
+          <declname>tnc</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="88" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" declline="88" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="kiss__protocol_8h_1af3d3c14c040dd0dfeaf812c9d7f5c28b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int kiss_bt_send</definition>
+        <argsstring>(kiss_tnc_t *tnc, const uint8_t *data, uint16_t length)</argsstring>
+        <name>kiss_bt_send</name>
+        <param>
+          <type><ref refid="structkiss__tnc__t" kindref="compound">kiss_tnc_t</ref> *</type>
+          <declname>tnc</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="91" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" declline="91" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="kiss__protocol_8h_1a13042520d851b98e53039bda9f905dd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int kiss_bt_receive</definition>
+        <argsstring>(kiss_tnc_t *tnc, uint8_t *data, uint16_t *length)</argsstring>
+        <name>kiss_bt_receive</name>
+        <param>
+          <type><ref refid="structkiss__tnc__t" kindref="compound">kiss_tnc_t</ref> *</type>
+          <declname>tnc</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="92" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" declline="92" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="kiss__protocol_8h_1af7cee4f013d4b38c9d9443a811e4acd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int kiss_escape_data</definition>
+        <argsstring>(const uint8_t *input, uint16_t input_len, uint8_t *output, uint16_t *output_len)</argsstring>
+        <name>kiss_escape_data</name>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>input_len</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>output_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="95" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" declline="95" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="kiss__protocol_8h_1a44840248b766a1393c5923add9a983fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int kiss_unescape_data</definition>
+        <argsstring>(const uint8_t *input, uint16_t input_len, uint8_t *output, uint16_t *output_len)</argsstring>
+        <name>kiss_unescape_data</name>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>input_len</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>output_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="97" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" declline="97" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="kiss__protocol_8h_1ae5f8466135cf2b15d19ea2d8ffdca1ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int kiss_validate_frame</definition>
+        <argsstring>(const kiss_frame_t *frame)</argsstring>
+        <name>kiss_validate_frame</name>
+        <param>
+          <type>const <ref refid="structkiss__frame__t" kindref="compound">kiss_frame_t</ref> *</type>
+          <declname>frame</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="99" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" declline="99" declcolumn="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h"/>
+  </compounddef>
+</doxygen>

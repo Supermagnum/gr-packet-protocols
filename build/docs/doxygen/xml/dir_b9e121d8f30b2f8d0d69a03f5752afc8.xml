@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_b9e121d8f30b2f8d0d69a03f5752afc8" kind="dir">
+    <compoundname>bindings</compoundname>
+    <innerfile refid="build_2python_2packet__protocols_2bindings_2pydoc__macros_8h">build/python/packet_protocols/bindings/pydoc_macros.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings/"/>
+  </compounddef>
+</doxygen>

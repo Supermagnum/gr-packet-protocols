@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structil2p__header__t" kind="struct" language="C++" prot="public">
+    <compoundname>il2p_header_t</compoundname>
+    <includes refid="il2p__protocol_8h" local="no">il2p_protocol.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structil2p__header__t_1aef39a5cc74d0130b680143745dd99e1b" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t il2p_header_t::version</definition>
+        <argsstring></argsstring>
+        <name>version</name>
+        <qualifiedname>il2p_header_t::version</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="57" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structil2p__header__t_1a7540dc4389fc16b5d4b0595853fe137d" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t il2p_header_t::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>il2p_header_t::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="58" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structil2p__header__t_1ab9da1700f565039e711499afa2f93b46" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t il2p_header_t::sequence</definition>
+        <argsstring></argsstring>
+        <name>sequence</name>
+        <qualifiedname>il2p_header_t::sequence</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="59" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structil2p__header__t_1ab3fe718c98a05c41bf5ed8f4bd0116a4" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t il2p_header_t::source[6]</definition>
+        <argsstring>[6]</argsstring>
+        <name>source</name>
+        <qualifiedname>il2p_header_t::source</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="60" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structil2p__header__t_1a36e3d92fc8f311dff2dba17508dd0d01" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t il2p_header_t::destination[6]</definition>
+        <argsstring>[6]</argsstring>
+        <name>destination</name>
+        <qualifiedname>il2p_header_t::destination</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="61" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structil2p__header__t_1a9b6c947f5dc319881380b59d6a06e570" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t il2p_header_t::payload_length</definition>
+        <argsstring></argsstring>
+        <name>payload_length</name>
+        <qualifiedname>il2p_header_t::payload_length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="62" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structil2p__header__t_1aed0a78b9bc8b283191c64be40b86202d" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t il2p_header_t::checksum</definition>
+        <argsstring></argsstring>
+        <name>checksum</name>
+        <qualifiedname>il2p_header_t::checksum</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="63" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="56" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="56" bodyend="64"/>
+    <listofallmembers>
+      <member refid="structil2p__header__t_1aed0a78b9bc8b283191c64be40b86202d" prot="public" virt="non-virtual"><scope>il2p_header_t</scope><name>checksum</name></member>
+      <member refid="structil2p__header__t_1a36e3d92fc8f311dff2dba17508dd0d01" prot="public" virt="non-virtual"><scope>il2p_header_t</scope><name>destination</name></member>
+      <member refid="structil2p__header__t_1a9b6c947f5dc319881380b59d6a06e570" prot="public" virt="non-virtual"><scope>il2p_header_t</scope><name>payload_length</name></member>
+      <member refid="structil2p__header__t_1ab9da1700f565039e711499afa2f93b46" prot="public" virt="non-virtual"><scope>il2p_header_t</scope><name>sequence</name></member>
+      <member refid="structil2p__header__t_1ab3fe718c98a05c41bf5ed8f4bd0116a4" prot="public" virt="non-virtual"><scope>il2p_header_t</scope><name>source</name></member>
+      <member refid="structil2p__header__t_1a7540dc4389fc16b5d4b0595853fe137d" prot="public" virt="non-virtual"><scope>il2p_header_t</scope><name>type</name></member>
+      <member refid="structil2p__header__t_1aef39a5cc74d0130b680143745dd99e1b" prot="public" virt="non-virtual"><scope>il2p_header_t</scope><name>version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

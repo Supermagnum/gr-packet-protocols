@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structax25__config__t" kind="struct" language="C++" prot="public">
+    <compoundname>ax25_config_t</compoundname>
+    <includes refid="ax25__protocol_8h" local="no">ax25_protocol.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structax25__config__t_1abbbee4904359348f216d7faefb04f9d0" prot="public" static="no" mutable="no">
+        <type><ref refid="structax25__address__t" kindref="compound">ax25_address_t</ref></type>
+        <definition>ax25_address_t ax25_config_t::my_address</definition>
+        <argsstring></argsstring>
+        <name>my_address</name>
+        <qualifiedname>ax25_config_t::my_address</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" line="93" column="20" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structax25__config__t_1a673045519d247d14e9a66f7a244774df" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t ax25_config_t::tx_delay</definition>
+        <argsstring></argsstring>
+        <name>tx_delay</name>
+        <qualifiedname>ax25_config_t::tx_delay</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" line="94" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structax25__config__t_1a6559b326e2b3749f08b1e36b3088a845" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ax25_config_t::persistence</definition>
+        <argsstring></argsstring>
+        <name>persistence</name>
+        <qualifiedname>ax25_config_t::persistence</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" line="95" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structax25__config__t_1a0d98fff2a08a11a15078c2f26f95f363" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t ax25_config_t::slot_time</definition>
+        <argsstring></argsstring>
+        <name>slot_time</name>
+        <qualifiedname>ax25_config_t::slot_time</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" line="96" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structax25__config__t_1ad0d5c4ecfa7216e1229e191dccbbdafd" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ax25_config_t::tx_tail</definition>
+        <argsstring></argsstring>
+        <name>tx_tail</name>
+        <qualifiedname>ax25_config_t::tx_tail</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" line="97" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structax25__config__t_1a39c9e89f62fd17aa19bb7aee949945b8" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ax25_config_t::full_duplex</definition>
+        <argsstring></argsstring>
+        <name>full_duplex</name>
+        <qualifiedname>ax25_config_t::full_duplex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" line="98" column="10" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structax25__config__t_1ae8b6ec42239960b4a4d77cb7dc1621ea" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ax25_config_t::max_frame_length</definition>
+        <argsstring></argsstring>
+        <name>max_frame_length</name>
+        <qualifiedname>ax25_config_t::max_frame_length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" line="99" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structax25__config__t_1a3508e3a2a23265b6075645eac263b23a" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ax25_config_t::window_size</definition>
+        <argsstring></argsstring>
+        <name>window_size</name>
+        <qualifiedname>ax25_config_t::window_size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" line="100" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structax25__config__t_1a120ad7d17a2bc7c868239a806bd88a4c" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ax25_config_t::t1_timeout</definition>
+        <argsstring></argsstring>
+        <name>t1_timeout</name>
+        <qualifiedname>ax25_config_t::t1_timeout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" line="101" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structax25__config__t_1abb9973464fb82dbe07589653494eb430" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ax25_config_t::t2_timeout</definition>
+        <argsstring></argsstring>
+        <name>t2_timeout</name>
+        <qualifiedname>ax25_config_t::t2_timeout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" line="102" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structax25__config__t_1ad84ef3b22757edb3265dd38dabf57885" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ax25_config_t::t3_timeout</definition>
+        <argsstring></argsstring>
+        <name>t3_timeout</name>
+        <qualifiedname>ax25_config_t::t3_timeout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" line="103" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structax25__config__t_1a4580944d43c4076ac4fb25f565c430e8" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ax25_config_t::max_retries</definition>
+        <argsstring></argsstring>
+        <name>max_retries</name>
+        <qualifiedname>ax25_config_t::max_retries</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" line="104" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>ax25_address_t</label>
+        <link refid="structax25__address__t"/>
+      </node>
+      <node id="1">
+        <label>ax25_config_t</label>
+        <link refid="structax25__config__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>my_address</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" line="92" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" bodystart="92" bodyend="105"/>
+    <listofallmembers>
+      <member refid="structax25__config__t_1a39c9e89f62fd17aa19bb7aee949945b8" prot="public" virt="non-virtual"><scope>ax25_config_t</scope><name>full_duplex</name></member>
+      <member refid="structax25__config__t_1ae8b6ec42239960b4a4d77cb7dc1621ea" prot="public" virt="non-virtual"><scope>ax25_config_t</scope><name>max_frame_length</name></member>
+      <member refid="structax25__config__t_1a4580944d43c4076ac4fb25f565c430e8" prot="public" virt="non-virtual"><scope>ax25_config_t</scope><name>max_retries</name></member>
+      <member refid="structax25__config__t_1abbbee4904359348f216d7faefb04f9d0" prot="public" virt="non-virtual"><scope>ax25_config_t</scope><name>my_address</name></member>
+      <member refid="structax25__config__t_1a6559b326e2b3749f08b1e36b3088a845" prot="public" virt="non-virtual"><scope>ax25_config_t</scope><name>persistence</name></member>
+      <member refid="structax25__config__t_1a0d98fff2a08a11a15078c2f26f95f363" prot="public" virt="non-virtual"><scope>ax25_config_t</scope><name>slot_time</name></member>
+      <member refid="structax25__config__t_1a120ad7d17a2bc7c868239a806bd88a4c" prot="public" virt="non-virtual"><scope>ax25_config_t</scope><name>t1_timeout</name></member>
+      <member refid="structax25__config__t_1abb9973464fb82dbe07589653494eb430" prot="public" virt="non-virtual"><scope>ax25_config_t</scope><name>t2_timeout</name></member>
+      <member refid="structax25__config__t_1ad84ef3b22757edb3265dd38dabf57885" prot="public" virt="non-virtual"><scope>ax25_config_t</scope><name>t3_timeout</name></member>
+      <member refid="structax25__config__t_1a673045519d247d14e9a66f7a244774df" prot="public" virt="non-virtual"><scope>ax25_config_t</scope><name>tx_delay</name></member>
+      <member refid="structax25__config__t_1ad0d5c4ecfa7216e1229e191dccbbdafd" prot="public" virt="non-virtual"><scope>ax25_config_t</scope><name>tx_tail</name></member>
+      <member refid="structax25__config__t_1a3508e3a2a23265b6075645eac263b23a" prot="public" virt="non-virtual"><scope>ax25_config_t</scope><name>window_size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

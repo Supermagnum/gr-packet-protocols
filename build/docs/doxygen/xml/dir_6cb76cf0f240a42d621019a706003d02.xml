@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_6cb76cf0f240a42d621019a706003d02" kind="dir">
+    <compoundname>packet_protocols</compoundname>
+    <innerfile refid="api_8h">api.h</innerfile>
+    <innerfile refid="ax25__decoder_8h">ax25_decoder.h</innerfile>
+    <innerfile refid="ax25__encoder_8h">ax25_encoder.h</innerfile>
+    <innerfile refid="ax25__protocol_8h">ax25_protocol.h</innerfile>
+    <innerfile refid="common_8h">common.h</innerfile>
+    <innerfile refid="fx25__decoder_8h">fx25_decoder.h</innerfile>
+    <innerfile refid="fx25__encoder_8h">fx25_encoder.h</innerfile>
+    <innerfile refid="fx25__fec_8h">fx25_fec.h</innerfile>
+    <innerfile refid="fx25__protocol_8h">fx25_protocol.h</innerfile>
+    <innerfile refid="il2p__decoder_8h">il2p_decoder.h</innerfile>
+    <innerfile refid="il2p__encoder_8h">il2p_encoder.h</innerfile>
+    <innerfile refid="il2p__protocol_8h">il2p_protocol.h</innerfile>
+    <innerfile refid="il2p__reed__solomon_8h">il2p_reed_solomon.h</innerfile>
+    <innerfile refid="kiss__protocol_8h">kiss_protocol.h</innerfile>
+    <innerfile refid="kiss__tnc_8h">kiss_tnc.h</innerfile>
+    <innerfile refid="packet__protocols_8h">packet_protocols.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/"/>
+  </compounddef>
+</doxygen>

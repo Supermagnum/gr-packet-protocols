@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structax25__frame__t" kind="struct" language="C++" prot="public">
+    <compoundname>ax25_frame_t</compoundname>
+    <includes refid="ax25__protocol_8h" local="no">ax25_protocol.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structax25__frame__t_1a7d85a987408abe87c3cb911980549ed1" prot="public" static="no" mutable="no">
+        <type><ref refid="structax25__address__t" kindref="compound">ax25_address_t</ref></type>
+        <definition>ax25_address_t ax25_frame_t::addresses[AX25_MAX_ADDRS]</definition>
+        <argsstring>[AX25_MAX_ADDRS]</argsstring>
+        <name>addresses</name>
+        <qualifiedname>ax25_frame_t::addresses</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" line="61" column="20" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structax25__frame__t_1a34ea93b2cc715a3afa787c134c69f215" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ax25_frame_t::num_addresses</definition>
+        <argsstring></argsstring>
+        <name>num_addresses</name>
+        <qualifiedname>ax25_frame_t::num_addresses</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" line="62" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structax25__frame__t_1ab5b5595de1f9a1a0f7edd404f4f3d8b7" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ax25_frame_t::control</definition>
+        <argsstring></argsstring>
+        <name>control</name>
+        <qualifiedname>ax25_frame_t::control</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" line="63" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structax25__frame__t_1a38667c178035919d84fc6a7a77686952" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ax25_frame_t::pid</definition>
+        <argsstring></argsstring>
+        <name>pid</name>
+        <qualifiedname>ax25_frame_t::pid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" line="64" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structax25__frame__t_1add3499d89a909f77f467e31bafd0d03a" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ax25_frame_t::info[AX25_MAX_INFO]</definition>
+        <argsstring>[AX25_MAX_INFO]</argsstring>
+        <name>info</name>
+        <qualifiedname>ax25_frame_t::info</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" line="65" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structax25__frame__t_1aeadd8b8c29bba71ae15fe3cb1c515df2" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t ax25_frame_t::info_length</definition>
+        <argsstring></argsstring>
+        <name>info_length</name>
+        <qualifiedname>ax25_frame_t::info_length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" line="66" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structax25__frame__t_1a14d9bff495bb008ab54e8843a4fb9ab1" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t ax25_frame_t::fcs</definition>
+        <argsstring></argsstring>
+        <name>fcs</name>
+        <qualifiedname>ax25_frame_t::fcs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" line="67" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structax25__frame__t_1a6d8288a8d6df31c8587ce5ac8422f16c" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ax25_frame_t::valid</definition>
+        <argsstring></argsstring>
+        <name>valid</name>
+        <qualifiedname>ax25_frame_t::valid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" line="68" column="10" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>ax25_address_t</label>
+        <link refid="structax25__address__t"/>
+      </node>
+      <node id="1">
+        <label>ax25_frame_t</label>
+        <link refid="structax25__frame__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>addresses</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" line="60" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_protocol.h" bodystart="60" bodyend="69"/>
+    <listofallmembers>
+      <member refid="structax25__frame__t_1a7d85a987408abe87c3cb911980549ed1" prot="public" virt="non-virtual"><scope>ax25_frame_t</scope><name>addresses</name></member>
+      <member refid="structax25__frame__t_1ab5b5595de1f9a1a0f7edd404f4f3d8b7" prot="public" virt="non-virtual"><scope>ax25_frame_t</scope><name>control</name></member>
+      <member refid="structax25__frame__t_1a14d9bff495bb008ab54e8843a4fb9ab1" prot="public" virt="non-virtual"><scope>ax25_frame_t</scope><name>fcs</name></member>
+      <member refid="structax25__frame__t_1add3499d89a909f77f467e31bafd0d03a" prot="public" virt="non-virtual"><scope>ax25_frame_t</scope><name>info</name></member>
+      <member refid="structax25__frame__t_1aeadd8b8c29bba71ae15fe3cb1c515df2" prot="public" virt="non-virtual"><scope>ax25_frame_t</scope><name>info_length</name></member>
+      <member refid="structax25__frame__t_1a34ea93b2cc715a3afa787c134c69f215" prot="public" virt="non-virtual"><scope>ax25_frame_t</scope><name>num_addresses</name></member>
+      <member refid="structax25__frame__t_1a38667c178035919d84fc6a7a77686952" prot="public" virt="non-virtual"><scope>ax25_frame_t</scope><name>pid</name></member>
+      <member refid="structax25__frame__t_1a6d8288a8d6df31c8587ce5ac8422f16c" prot="public" virt="non-virtual"><scope>ax25_frame_t</scope><name>valid</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

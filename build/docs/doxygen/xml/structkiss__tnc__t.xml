@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structkiss__tnc__t" kind="struct" language="C++" prot="public">
+    <compoundname>kiss_tnc_t</compoundname>
+    <includes refid="kiss__protocol_8h" local="no">kiss_protocol.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structkiss__tnc__t_1acee015632d3ba228caa59e84aaf77d64" prot="public" static="no" mutable="no">
+        <type><ref refid="kiss__protocol_8h_1af5bdedf061460227cd6761d73404b4d1" kindref="member">kiss_state_t</ref></type>
+        <definition>kiss_state_t kiss_tnc_t::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <qualifiedname>kiss_tnc_t::state</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="60" column="18" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkiss__tnc__t_1abd60950186f0f5ae1e37ae057667a0c1" prot="public" static="no" mutable="no">
+        <type><ref refid="structkiss__config__t" kindref="compound">kiss_config_t</ref></type>
+        <definition>kiss_config_t kiss_tnc_t::config</definition>
+        <argsstring></argsstring>
+        <name>config</name>
+        <qualifiedname>kiss_tnc_t::config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="61" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkiss__tnc__t_1a36f34709b04b0ad8c16acc1b9c8b107a" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t kiss_tnc_t::buffer[1024]</definition>
+        <argsstring>[1024]</argsstring>
+        <name>buffer</name>
+        <qualifiedname>kiss_tnc_t::buffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="62" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkiss__tnc__t_1ad4853459a3d3803d4cdc04d6b2fcc094" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t kiss_tnc_t::buffer_pos</definition>
+        <argsstring></argsstring>
+        <name>buffer_pos</name>
+        <qualifiedname>kiss_tnc_t::buffer_pos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="63" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkiss__tnc__t_1a10ae83d5138db403e35ebaf0a6982040" prot="public" static="no" mutable="no">
+        <type><ref refid="structkiss__frame__t" kindref="compound">kiss_frame_t</ref></type>
+        <definition>kiss_frame_t kiss_tnc_t::current_frame</definition>
+        <argsstring></argsstring>
+        <name>current_frame</name>
+        <qualifiedname>kiss_tnc_t::current_frame</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="64" column="18" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkiss__tnc__t_1a44193e82c1fda8e49ab89949f45168f1" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool kiss_tnc_t::frame_ready</definition>
+        <argsstring></argsstring>
+        <name>frame_ready</name>
+        <qualifiedname>kiss_tnc_t::frame_ready</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="65" column="10" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkiss__tnc__t_1ab71b4d7f01479c037a672e6c07017f5c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int kiss_tnc_t::serial_fd</definition>
+        <argsstring></argsstring>
+        <name>serial_fd</name>
+        <qualifiedname>kiss_tnc_t::serial_fd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="66" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkiss__tnc__t_1aa63899d3b7eac8d0de0c870cd045f3ef" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int kiss_tnc_t::tcp_socket</definition>
+        <argsstring></argsstring>
+        <name>tcp_socket</name>
+        <qualifiedname>kiss_tnc_t::tcp_socket</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="67" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>kiss_config_t</label>
+        <link refid="structkiss__config__t"/>
+      </node>
+      <node id="3">
+        <label>kiss_frame_t</label>
+        <link refid="structkiss__frame__t"/>
+      </node>
+      <node id="1">
+        <label>kiss_tnc_t</label>
+        <link refid="structkiss__tnc__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>config</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>current_frame</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="59" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="59" bodyend="68"/>
+    <listofallmembers>
+      <member refid="structkiss__tnc__t_1a36f34709b04b0ad8c16acc1b9c8b107a" prot="public" virt="non-virtual"><scope>kiss_tnc_t</scope><name>buffer</name></member>
+      <member refid="structkiss__tnc__t_1ad4853459a3d3803d4cdc04d6b2fcc094" prot="public" virt="non-virtual"><scope>kiss_tnc_t</scope><name>buffer_pos</name></member>
+      <member refid="structkiss__tnc__t_1abd60950186f0f5ae1e37ae057667a0c1" prot="public" virt="non-virtual"><scope>kiss_tnc_t</scope><name>config</name></member>
+      <member refid="structkiss__tnc__t_1a10ae83d5138db403e35ebaf0a6982040" prot="public" virt="non-virtual"><scope>kiss_tnc_t</scope><name>current_frame</name></member>
+      <member refid="structkiss__tnc__t_1a44193e82c1fda8e49ab89949f45168f1" prot="public" virt="non-virtual"><scope>kiss_tnc_t</scope><name>frame_ready</name></member>
+      <member refid="structkiss__tnc__t_1ab71b4d7f01479c037a672e6c07017f5c" prot="public" virt="non-virtual"><scope>kiss_tnc_t</scope><name>serial_fd</name></member>
+      <member refid="structkiss__tnc__t_1acee015632d3ba228caa59e84aaf77d64" prot="public" virt="non-virtual"><scope>kiss_tnc_t</scope><name>state</name></member>
+      <member refid="structkiss__tnc__t_1aa63899d3b7eac8d0de0c870cd045f3ef" prot="public" virt="non-virtual"><scope>kiss_tnc_t</scope><name>tcp_socket</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,26 @@
+var common_8h =
+[
+    [ "ReedSolomonEncoder", "classReedSolomonEncoder.html", "classReedSolomonEncoder" ],
+    [ "ReedSolomonDecoder", "classReedSolomonDecoder.html", "classReedSolomonDecoder" ],
+    [ "AX25_FLAG", "common_8h.html#ad57eab26b84aad1e6eefaeae95b94288", null ],
+    [ "AX25_FRAME_MIN_SIZE", "common_8h.html#a174f5104f8207936fb343524cafa770e", null ],
+    [ "FX25_FEC_RS_12_8", "common_8h.html#a3220257f66a693ba8989b78b1a8148b3", null ],
+    [ "FX25_FEC_RS_16_12", "common_8h.html#ac6bcaa79ae740104938e80891b067760", null ],
+    [ "FX25_FEC_RS_20_16", "common_8h.html#a3573b1f7835c4875024b4c6de0eada57", null ],
+    [ "FX25_FEC_RS_24_20", "common_8h.html#a8160cd69447490eabd7c1071bf5862d7", null ],
+    [ "IL2P_FEC_RS_255_223", "common_8h.html#a1a0b86eb5d2303b0e174522ab58cea73", null ],
+    [ "IL2P_FEC_RS_255_239", "common_8h.html#a88c302cfc4e73adaa0d5d80a0997d609", null ],
+    [ "IL2P_FEC_RS_255_247", "common_8h.html#abf892cff54c2ba4c3fe5b2a8d338af74", null ],
+    [ "KISS_CMD_DATA", "common_8h.html#ade8dc88eb2285ff22bdc6fdd1c362db6", null ],
+    [ "KISS_CMD_FULLDUPLEX", "common_8h.html#a57a1917e473f86db30cce54ac6902c2c", null ],
+    [ "KISS_CMD_P", "common_8h.html#ac131721f9f036414ef4f2278b735edf9", null ],
+    [ "KISS_CMD_RETURN", "common_8h.html#a1b7e26482334b823621a2b7490f8919e", null ],
+    [ "KISS_CMD_SET_HARDWARE", "common_8h.html#ae63f325d34e4ed5de956d0ef977386b3", null ],
+    [ "KISS_CMD_SLOTTIME", "common_8h.html#aeed2dba4c1279fa9e05a919e91966cc2", null ],
+    [ "KISS_CMD_TXDELAY", "common_8h.html#aa59211db071b5c0678f7dfdb5f0dfe2c", null ],
+    [ "KISS_CMD_TXTAIL", "common_8h.html#a0fd31747515a1425d1aed194597ab5df", null ],
+    [ "KISS_FEND", "common_8h.html#a74d053aab8b606176da81dd45269048d", null ],
+    [ "KISS_FESC", "common_8h.html#ab1839993a4d69d57c3d49a083e6d1db1", null ],
+    [ "KISS_TFEND", "common_8h.html#a07e5a24794fa636684284448bf7ad50d", null ],
+    [ "KISS_TFESC", "common_8h.html#aca6e7d608b48682f454fb7289f3b6fbd", null ]
+];

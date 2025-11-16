@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="python_2packet__protocols_2bindings_2docstrings_2fx25__encoder__pydoc__template_8h" kind="file" language="C++">
+    <compoundname>python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h</compoundname>
+    <includes local="yes">pydoc_macros.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>fx25_encoder_pydoc_template.h</label>
+        <link refid="python_2packet__protocols_2bindings_2docstrings_2fx25__encoder__pydoc__template_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pydoc_macros.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="python_2packet__protocols_2bindings_2docstrings_2fx25__encoder__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" prot="public" static="no">
+        <name>D</name>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="build_2python_2packet__protocols_2bindings_2pydoc__macros_8h_1a4e578031ec998eaeb933d5caa6a7d28a" kindref="member">DOC</ref>(gr, packet_protocols, __VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" line="10" column="10" bodyfile="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="python_2packet__protocols_2bindings_2docstrings_2fx25__encoder__pydoc__template_8h_1afd8d9d697aa9bd0b01dbf29921d8ec47" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* __doc_gr_packet_protocols_fx25_encoder</definition>
+        <argsstring></argsstring>
+        <name>__doc_gr_packet_protocols_fx25_encoder</name>
+        <initializer>= R&quot;doc()doc&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" line="18" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="python_2packet__protocols_2bindings_2docstrings_2fx25__encoder__pydoc__template_8h_1a605cff763f15489ec078a35e90ebbf32" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* __doc_gr_packet_protocols_fx25_encoder_fx25_encoder_0</definition>
+        <argsstring></argsstring>
+        <name>__doc_gr_packet_protocols_fx25_encoder_fx25_encoder_0</name>
+        <initializer>= R&quot;doc()doc&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" line="21" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="python_2packet__protocols_2bindings_2docstrings_2fx25__encoder__pydoc__template_8h_1a730f2909e314b9df1694604f1543b126" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* __doc_gr_packet_protocols_fx25_encoder_fx25_encoder_1</definition>
+        <argsstring></argsstring>
+        <name>__doc_gr_packet_protocols_fx25_encoder_fx25_encoder_1</name>
+        <initializer>= R&quot;doc()doc&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" line="24" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="python_2packet__protocols_2bindings_2docstrings_2fx25__encoder__pydoc__template_8h_1a0d83610b020af4b41deb37146ed78bc7" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* __doc_gr_packet_protocols_fx25_encoder_make</definition>
+        <argsstring></argsstring>
+        <name>__doc_gr_packet_protocols_fx25_encoder_make</name>
+        <initializer>= R&quot;doc()doc&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" line="27" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="python_2packet__protocols_2bindings_2docstrings_2fx25__encoder__pydoc__template_8h_1a55445be6d2e011cec269aa216efce690" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* __doc_gr_packet_protocols_fx25_encoder_set_fec_type</definition>
+        <argsstring></argsstring>
+        <name>__doc_gr_packet_protocols_fx25_encoder_set_fec_type</name>
+        <initializer>= R&quot;doc()doc&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" line="30" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="python_2packet__protocols_2bindings_2docstrings_2fx25__encoder__pydoc__template_8h_1a43ab77318de127c6327de16839c8daa6" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* __doc_gr_packet_protocols_fx25_encoder_set_interleaver_depth</definition>
+        <argsstring></argsstring>
+        <name>__doc_gr_packet_protocols_fx25_encoder_set_interleaver_depth</name>
+        <initializer>=
+    R&quot;doc()doc&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" line="33" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="python_2packet__protocols_2bindings_2docstrings_2fx25__encoder__pydoc__template_8h_1a2e7a9d601c112177c9d05b1e6def37e7" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* __doc_gr_packet_protocols_fx25_encoder_set_add_checksum</definition>
+        <argsstring></argsstring>
+        <name>__doc_gr_packet_protocols_fx25_encoder_set_add_checksum</name>
+        <initializer>= R&quot;doc()doc&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" line="37" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h"/>
+  </compounddef>
+</doxygen>
