@@ -10,6 +10,11 @@ if(NOT PC_GNURADIO_FOUND)
     find_package(Gnuradio "3.10" REQUIRED)
 endif()
 
+# Ensure GNURADIO_LIBRARIES is set
+if(NOT GNURADIO_LIBRARIES AND PC_GNURADIO_FOUND)
+    set(GNURADIO_LIBRARIES ${PC_GNURADIO_LIBRARIES})
+endif()
+
 # Use GNU Radio installation paths
 # These paths are relative to CMAKE_INSTALL_PREFIX
 # For system-wide installation, use CMAKE_INSTALL_PREFIX=/usr
@@ -17,7 +22,29 @@ endif()
 set(GR_LIBRARY_DIR "${CMAKE_INSTALL_PREFIX}/lib/x86_64-linux-gnu")
 set(GR_INCLUDE_DIR "${CMAKE_INSTALL_PREFIX}/include")
 set(GR_PKG_DATA_DIR "${CMAKE_INSTALL_PREFIX}/share/gnuradio")
-set(GR_PYTHON_DIR "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages")
+
+# Detect Python version and set correct installation path
+find_package(Python3 COMPONENTS Interpreter QUIET)
+if(Python3_FOUND)
+    execute_process(
+        COMMAND ${Python3_EXECUTABLE} -c "import sysconfig; print(sysconfig.get_path('platlib'))"
+        OUTPUT_VARIABLE PYTHON_SITE_PACKAGES
+        OUTPUT_STRIP_TRAILING_WHITESPACE
+        ERROR_QUIET
+    )
+    # Extract the path relative to install prefix
+    string(REPLACE "${CMAKE_INSTALL_PREFIX}" "" PYTHON_SITE_PACKAGES "${PYTHON_SITE_PACKAGES}")
+    string(STRIP "${PYTHON_SITE_PACKAGES}" PYTHON_SITE_PACKAGES)
+    if(PYTHON_SITE_PACKAGES)
+        set(GR_PYTHON_DIR "${CMAKE_INSTALL_PREFIX}${PYTHON_SITE_PACKAGES}")
+    else()
+        # Fallback to default path
+        set(GR_PYTHON_DIR "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages")
+    endif()
+else()
+    # Fallback to default path
+    set(GR_PYTHON_DIR "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages")
+endif()
 
 # Set the version
 set(GR_PACKET_PROTOCOLS_VERSION_MAJOR 1)
@@ -120,7 +147,9 @@ install(DIRECTORY docs/
     FILES_MATCHING PATTERN "*.md"
 )
 
-# Python bindings
+# Python bindings - enabled by default
+option(ENABLE_PYTHON "Enable Python bindings" ON)
+
 if(ENABLE_PYTHON)
     find_package(Python3 COMPONENTS Interpreter Development)
     find_package(pybind11)
@@ -144,7 +173,7 @@ endif()
 # Testing
 if(ENABLE_TESTING)
     enable_testing()
-    # add_subdirectory(tests)  # Commented out - tests directory doesn't exist
+    add_subdirectory(tests)
 endif()
 
 # Documentation

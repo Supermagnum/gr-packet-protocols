@@ -23,10 +23,6 @@
 #include <pybind11/stl.h>
 #include <pybind11/functional.h>
 
-#include <gnuradio/sync_block.h>
-#include <gnuradio/block.h>
-#include <gnuradio/basic_block.h>
-
 #include <gnuradio/packet_protocols/ax25_encoder.h>
 #include <gnuradio/packet_protocols/ax25_decoder.h>
 #include <gnuradio/packet_protocols/fx25_encoder.h>
@@ -41,13 +37,10 @@ namespace py = pybind11;
 PYBIND11_MODULE(packet_protocols_python, m) {
     m.doc() = "gr-packet-protocols Python bindings";
 
-    // Bind AX.25 Encoder
+    // AX.25 Encoder - register class (hidden), then module-level function
     py::class_<gr::packet_protocols::ax25_encoder,
-               gr::sync_block,
-               gr::block,
-               gr::basic_block,
                std::shared_ptr<gr::packet_protocols::ax25_encoder>>(
-        m, "ax25_encoder");
+        m, "_ax25_encoder_impl");
 
     m.def("ax25_encoder",
           &gr::packet_protocols::ax25_encoder::make,
@@ -60,25 +53,19 @@ PYBIND11_MODULE(packet_protocols_python, m) {
           py::arg("poll_final") = false,
           "Create an AX.25 encoder block");
 
-    // Bind AX.25 Decoder
+    // AX.25 Decoder - register class (hidden), then module-level function
     py::class_<gr::packet_protocols::ax25_decoder,
-               gr::sync_block,
-               gr::block,
-               gr::basic_block,
                std::shared_ptr<gr::packet_protocols::ax25_decoder>>(
-        m, "ax25_decoder");
+        m, "_ax25_decoder_impl");
 
     m.def("ax25_decoder",
           &gr::packet_protocols::ax25_decoder::make,
           "Create an AX.25 decoder block");
 
-    // Bind FX.25 Encoder
-    py::class_<gr::packet_protocols::fx25_encoder,
-               gr::sync_block,
-               gr::block,
-               gr::basic_block,
-               std::shared_ptr<gr::packet_protocols::fx25_encoder>>(
-        m, "fx25_encoder")
+    // FX.25 Encoder - class with methods, then module-level function
+    auto fx25_encoder_class = py::class_<gr::packet_protocols::fx25_encoder,
+                                         std::shared_ptr<gr::packet_protocols::fx25_encoder>>(
+        m, "_fx25_encoder_impl")
         .def("set_fec_type", &gr::packet_protocols::fx25_encoder::set_fec_type)
         .def("set_interleaver_depth", &gr::packet_protocols::fx25_encoder::set_interleaver_depth)
         .def("set_add_checksum", &gr::packet_protocols::fx25_encoder::set_add_checksum);
@@ -88,27 +75,22 @@ PYBIND11_MODULE(packet_protocols_python, m) {
           py::arg("fec_type") = FX25_FEC_RS_16_12,
           py::arg("interleaver_depth") = 1,
           py::arg("add_checksum") = true,
+          py::return_value_policy::reference_internal,
           "Create an FX.25 encoder block");
 
-    // Bind FX.25 Decoder
+    // FX.25 Decoder - register class (hidden), then module-level function
     py::class_<gr::packet_protocols::fx25_decoder,
-               gr::sync_block,
-               gr::block,
-               gr::basic_block,
                std::shared_ptr<gr::packet_protocols::fx25_decoder>>(
-        m, "fx25_decoder");
+        m, "_fx25_decoder_impl");
 
     m.def("fx25_decoder",
           &gr::packet_protocols::fx25_decoder::make,
           "Create an FX.25 decoder block");
 
-    // Bind IL2P Encoder
-    py::class_<gr::packet_protocols::il2p_encoder,
-               gr::sync_block,
-               gr::block,
-               gr::basic_block,
-               std::shared_ptr<gr::packet_protocols::il2p_encoder>>(
-        m, "il2p_encoder")
+    // IL2P Encoder - class with methods, then module-level function
+    auto il2p_encoder_class = py::class_<gr::packet_protocols::il2p_encoder,
+                                          std::shared_ptr<gr::packet_protocols::il2p_encoder>>(
+        m, "_il2p_encoder_impl")
         .def("set_fec_type", &gr::packet_protocols::il2p_encoder::set_fec_type)
         .def("set_add_checksum", &gr::packet_protocols::il2p_encoder::set_add_checksum);
 
@@ -120,27 +102,22 @@ PYBIND11_MODULE(packet_protocols_python, m) {
           py::arg("src_ssid"),
           py::arg("fec_type") = IL2P_FEC_RS_255_223,
           py::arg("add_checksum") = true,
+          py::return_value_policy::reference_internal,
           "Create an IL2P encoder block");
 
-    // Bind IL2P Decoder
+    // IL2P Decoder - register class (hidden), then module-level function
     py::class_<gr::packet_protocols::il2p_decoder,
-               gr::sync_block,
-               gr::block,
-               gr::basic_block,
                std::shared_ptr<gr::packet_protocols::il2p_decoder>>(
-        m, "il2p_decoder");
+        m, "_il2p_decoder_impl");
 
     m.def("il2p_decoder",
           &gr::packet_protocols::il2p_decoder::make,
           "Create an IL2P decoder block");
 
-    // Bind KISS TNC
-    py::class_<gr::packet_protocols::kiss_tnc,
-               gr::sync_block,
-               gr::block,
-               gr::basic_block,
-               std::shared_ptr<gr::packet_protocols::kiss_tnc>>(
-        m, "kiss_tnc")
+    // KISS TNC - class with methods, then module-level function
+    auto kiss_tnc_class = py::class_<gr::packet_protocols::kiss_tnc,
+                                     std::shared_ptr<gr::packet_protocols::kiss_tnc>>(
+        m, "_kiss_tnc_impl")
         .def("set_tx_delay", &gr::packet_protocols::kiss_tnc::set_tx_delay)
         .def("set_persistence", &gr::packet_protocols::kiss_tnc::set_persistence)
         .def("set_slot_time", &gr::packet_protocols::kiss_tnc::set_slot_time)
@@ -152,6 +129,6 @@ PYBIND11_MODULE(packet_protocols_python, m) {
           py::arg("device"),
           py::arg("baud_rate") = 9600,
           py::arg("hardware_flow_control") = false,
+          py::return_value_policy::reference_internal,
           "Create a KISS TNC block");
 }
-
