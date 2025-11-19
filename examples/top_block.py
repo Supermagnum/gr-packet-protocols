@@ -5,9 +5,9 @@
 # SPDX-License-Identifier: GPL-3.0
 #
 # GNU Radio Python Flow Graph
-# Title: FX.25 FEC Example
+# Title: AX.25 KISS Example
 # Author: gr-packet-protocols
-# Description: Example flowgraph demonstrating FX.25 Forward Error Correction
+# Description: Example flowgraph demonstrating AX.25 packet encoding with KISS TNC interface
 # GNU Radio version: 3.10.12.0
 
 from PyQt5 import Qt
@@ -30,9 +30,9 @@ import threading
 class top_block(gr.top_block, Qt.QWidget):
 
     def __init__(self):
-        gr.top_block.__init__(self, "FX.25 FEC Example", catch_exceptions=True)
+        gr.top_block.__init__(self, "AX.25 KISS Example", catch_exceptions=True)
         Qt.QWidget.__init__(self)
-        self.setWindowTitle("FX.25 FEC Example")
+        self.setWindowTitle("AX.25 KISS Example")
         qtgui.util.check_set_qss()
         try:
             self.setWindowIcon(Qt.QIcon.fromTheme('gnuradio-grc'))
@@ -64,8 +64,8 @@ class top_block(gr.top_block, Qt.QWidget):
         # Blocks
         ##################################################
 
-        self.packet_protocols_fx25_encoder_0 = packet_protocols.fx25_encoder(2, 1, True)
-        self.packet_protocols_fx25_decoder_0 = packet_protocols.fx25_decoder()
+        self.packet_protocols_kiss_tnc_0 = packet_protocols.kiss_tnc('/dev/null', 9600, False)
+        self.packet_protocols_ax25_encoder_0 = packet_protocols.ax25_encoder('N0CALL', '0', 'N0CALL', '0', '', False, False)
         self.blocks_vector_source_x_0 = blocks.vector_source_b([0, 0, 0], True, 1, )
         self.blocks_throttle_0 = blocks.throttle(gr.sizeof_char*1, 9600,True)
         self.blocks_null_sink_0 = blocks.null_sink(gr.sizeof_char*1)
@@ -74,10 +74,10 @@ class top_block(gr.top_block, Qt.QWidget):
         ##################################################
         # Connections
         ##################################################
-        self.connect((self.blocks_throttle_0, 0), (self.packet_protocols_fx25_encoder_0, 0))
+        self.connect((self.blocks_throttle_0, 0), (self.packet_protocols_ax25_encoder_0, 0))
         self.connect((self.blocks_vector_source_x_0, 0), (self.blocks_throttle_0, 0))
-        self.connect((self.packet_protocols_fx25_decoder_0, 0), (self.blocks_null_sink_0, 0))
-        self.connect((self.packet_protocols_fx25_encoder_0, 0), (self.packet_protocols_fx25_decoder_0, 0))
+        self.connect((self.packet_protocols_ax25_encoder_0, 0), (self.packet_protocols_kiss_tnc_0, 0))
+        self.connect((self.packet_protocols_kiss_tnc_0, 0), (self.blocks_null_sink_0, 0))
 
 
     def closeEvent(self, event):
