@@ -27,6 +27,12 @@ security/
 │   └── reports/                # Fuzzing results
 ├── FUZZING_FRAMEWORK.md        # Fuzzing documentation
 ├── SECURITY_AUDIT_GUIDE.md     # Security audit guide
+├── SCAPY_ATTACK_VECTORS.md     # Scapy attack vectors analysis
+├── scapy_tests/                # Scapy-based security tests
+│   ├── test_scapy_attack_vectors.py
+│   ├── test_protocol_parsers.py
+│   ├── run_scapy_tests.sh
+│   └── README.md
 └── README.md                   # This file
 ```
 
@@ -125,6 +131,8 @@ Each protocol has a dedicated corpus generation script:
 
 - **FUZZING_FRAMEWORK.md** - Comprehensive fuzzing framework documentation
 - **SECURITY_AUDIT_GUIDE.md** - Security audit procedures and guidelines
+- **SCAPY_ATTACK_VECTORS.md** - Analysis of attack vectors related to Scapy packet manipulation
+- **scapy_tests/** - Scapy-based security testing suite (see [scapy_tests/README.md](scapy_tests/README.md))
 
 ## Best Practices
 
