@@ -162,7 +162,7 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 
 ## Security Testing
 
-This module has undergone comprehensive security testing using dictionary-guided fuzzing:
+This module has undergone comprehensive security testing using dictionary-guided fuzzing and Scapy-based attack simulations:
 
 - **Coverage**: 2,033 points discovered (+141% improvement)
 - **Features**: 1,853 features tested (+44% improvement)
@@ -170,7 +170,13 @@ This module has undergone comprehensive security testing using dictionary-guided
 - **Vulnerabilities**: 0 crashes found (robust implementations)
 - **Approach**: Protocol-specific dictionary patterns
 
-For detailed results, see [Fuzzing Results Report](fuzzing-results.md).
+For detailed results, see [Fuzzing Results Report](fuzzing-results.md).  
+Scapy attack vector tests and parser stress tests live in `security/scapy_tests/` (see [security/scapy_tests/README.md](security/scapy_tests/README.md)) and can be executed via:
+
+```bash
+cd security/scapy_tests
+./run_scapy_tests.sh
+```
 
 ## Support
 

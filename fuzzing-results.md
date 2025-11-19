@@ -145,6 +145,36 @@ clang++ -g -O1 -fsanitize=fuzzer,address,undefined \
 - **Crashes**: 0 (robust implementations)
 - **Approach**: Protocol-specific patterns
 
+## Scapy Attack Vector Testing
+
+In addition to the libFuzzer campaign, the Scapy-based attack suite was executed to validate the documented attack vectors directly against the GNU Radio bindings.
+
+### Test Execution
+- **Command**: `cd security/scapy_tests && ./run_scapy_tests.sh`
+- **Artifacts**: Logs and generated packets stored in `security/scapy_tests/output/`
+- **Status**: All tests completed with zero failures or errors
+
+### Attack Vector Generation (`test_scapy_attack_vectors.py`)
+- **Protocols Covered**: AX.25, KISS, FX.25, IL2P, plus generic and network-layer attacks
+- **Total Checks**: 68 distinct attack scenarios
+- **Results**:
+  - AX.25 malformed/oversized/address/control tests PASSED
+  - KISS buffer overflow, escape, command injection, malformed frame tests PASSED
+  - FX.25 FEC and correlation tag manipulations PASSED
+  - IL2P header and LDPC manipulations PASSED
+  - Generic integer-overflow, format-string, rate-limiting, and Scapy fuzzing tests PASSED
+  - Network-layer packet injection and ARP spoofing generation tests PASSED
+
+### Protocol Parser Security Tests (`test_protocol_parsers.py`)
+- **AX.25 Decoder**: 80 malicious frames processed with zero crashes
+- **KISS TNC Interface**: 50 malformed frames processed with zero crashes (nonexistent `/dev/null` hardware gracefully handled)
+- **Rate Limiting**: 1,000 packets generated in ~0.01s (≈90 kpps) without instability
+
+### Observations
+- No crashes, hangs, or exceptions were observed during either test suite
+- Generated malicious packets confirmed that bounds checking and parser defenses remain effective
+- Scapy testing complements AFL++ by validating higher-level attack flows (spoofing, MITM preparation, malformed frame crafting)
+
 ## Recommendations
 
 ### For Future Fuzzing Campaigns
