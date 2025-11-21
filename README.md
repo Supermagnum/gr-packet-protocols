@@ -116,9 +116,57 @@ tnc = pp.kiss_tnc(
 
 Example flowgraphs are provided in the `examples/` directory:
 
-- `ax25_kiss_example.grc`: AX.25 with KISS TNC interface
+- `ax25_kiss_example.grc`: AX.25 with KISS TNC interface and PTT control
 - `fx25_fec_example.grc`: FX.25 forward error correction
 - `il2p_example.grc`: IL2P protocol demonstration
+
+### PTT Control
+
+The KISS TNC block includes built-in PTT (Push To Talk) control for packet radio transmitters. PTT control can be configured to use either the DTR or RTS line of the serial port.
+
+**Using PTT Control in GNU Radio Companion:**
+
+1. Add a KISS TNC block to your flowgraph
+2. Configure the block parameters (device, baud rate, etc.)
+3. After generating the flowgraph, modify the generated Python code to enable PTT:
+   ```python
+   self.packet_protocols_kiss_tnc_0.set_ptt_enabled(True)
+   self.packet_protocols_kiss_tnc_0.set_ptt_use_dtr(False)  # Use RTS (default)
+   ```
+4. The block will automatically key the transmitter before sending data and unkey after transmission
+
+**Using PTT Control in Python:**
+
+```python
+import gnuradio.packet_protocols as pp
+
+# Create KISS TNC with PTT control
+tnc = pp.kiss_tnc(
+    device="/dev/ttyUSB0",
+    baud_rate=9600
+)
+
+# Enable PTT control
+tnc.set_ptt_enabled(True)
+
+# Use DTR for PTT (optional, default is RTS)
+tnc.set_ptt_use_dtr(False)  # Use RTS (default)
+
+# Manually control PTT if needed
+tnc.set_ptt(True)   # Key transmitter
+tnc.set_ptt(False)  # Unkey transmitter
+
+# Check PTT state
+is_keyed = tnc.get_ptt()
+```
+
+**PTT Timing:**
+
+The KISS TNC block respects the configured TX delay and TX tail parameters:
+- **TX Delay**: Time to wait after keying PTT before transmitting (in 10ms units)
+- **TX Tail**: Time to wait after transmission before unkeying PTT (in 10ms units)
+
+These parameters can be set using `set_tx_delay()` and `set_tx_tail()` methods.
 
 ## Protocol Details
 
@@ -127,6 +175,7 @@ Example flowgraphs are provided in the `examples/` directory:
 - Supports both connected and unconnected modes
 - KISS interface for hardware TNCs
 - Full address and control field handling
+- Built-in PTT (Push To Talk) control via serial port DTR/RTS lines
 
 ### FX.25
 - Extends AX.25 with forward error correction

@@ -40,3 +40,15 @@ static const char* __doc_gr_packet_protocols_kiss_tnc_set_tx_tail = R"doc()doc";
 
 
 static const char* __doc_gr_packet_protocols_kiss_tnc_set_full_duplex = R"doc()doc";
+
+
+static const char* __doc_gr_packet_protocols_kiss_tnc_set_ptt = R"doc()doc";
+
+
+static const char* __doc_gr_packet_protocols_kiss_tnc_get_ptt = R"doc()doc";
+
+
+static const char* __doc_gr_packet_protocols_kiss_tnc_set_ptt_enabled = R"doc()doc";
+
+
+static const char* __doc_gr_packet_protocols_kiss_tnc_set_ptt_use_dtr = R"doc()doc";

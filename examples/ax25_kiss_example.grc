@@ -7,7 +7,8 @@ options:
     comment: AX.25 KISS TNC Example
     copyright: ''
     description: Example flowgraph demonstrating AX.25 packet encoding with KISS TNC
-      interface
+      interface and PTT control. Enable PTT control in the KISS TNC block parameters
+      to automatically key/unkey the transmitter during transmission.
     gen_cmake: 'On'
     gen_linking: dynamic
     generate_options: qt_gui
@@ -119,11 +120,13 @@ blocks:
     affinity: ''
     alias: ''
     baud_rate: '9600'
-    comment: KISS TNC Interface
+    comment: KISS TNC Interface with PTT Control
     device: /dev/null
     hardware_flow_control: 'False'
     maxoutbuf: '0'
     minoutbuf: '0'
+    ptt_enabled: 'False'
+    ptt_use_dtr: 'False'
   states:
     bus_sink: false
     bus_source: false

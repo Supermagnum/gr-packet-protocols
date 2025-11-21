@@ -79,6 +79,11 @@ class kiss_tnc_impl : public kiss_tnc {
     uint8_t d_hardware_type; //!< Hardware type
     bool d_kiss_mode;        //!< KISS mode flag
 
+    // PTT control
+    bool d_ptt_enabled;      //!< PTT control enabled
+    bool d_ptt_state;        //!< Current PTT state (true = keyed)
+    bool d_use_dtr_for_ptt;  //!< Use DTR for PTT (false = use RTS)
+
   public:
     /*!
      * \brief Constructor
@@ -133,6 +138,30 @@ class kiss_tnc_impl : public kiss_tnc {
      */
     void set_full_duplex(bool full_duplex) override;
 
+    /*!
+     * \brief Set PTT state
+     * \param ptt_state PTT state (true = keyed, false = unkeyed)
+     */
+    void set_ptt(bool ptt_state) override;
+
+    /*!
+     * \brief Get PTT state
+     * \return Current PTT state
+     */
+    bool get_ptt() const override;
+
+    /*!
+     * \brief Enable/disable PTT control
+     * \param enabled Enable PTT control
+     */
+    void set_ptt_enabled(bool enabled) override;
+
+    /*!
+     * \brief Set PTT control method
+     * \param use_dtr Use DTR for PTT (false = use RTS)
+     */
+    void set_ptt_use_dtr(bool use_dtr) override;
+
   private:
     /*!
      * \brief Open serial port
@@ -153,6 +182,12 @@ class kiss_tnc_impl : public kiss_tnc {
      * \param length Data length
      */
     void send_kiss_frame(uint8_t command, uint8_t port, const uint8_t* data, int length);
+
+    /*!
+     * \brief Control PTT line (DTR or RTS)
+     * \param state PTT state (true = keyed, false = unkeyed)
+     */
+    void control_ptt_line(bool state);
 };
 
 } // namespace packet_protocols

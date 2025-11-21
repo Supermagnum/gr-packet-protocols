@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(kiss_tnc.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(3490e80f76c1541221efc9c6901e78e0)                     */
+/* BINDTOOL_HEADER_FILE_HASH(28b3f3b2d5cee9e3353a4cd8e695af0f)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -74,6 +74,29 @@ void bind_kiss_tnc(py::module& m)
              &kiss_tnc::set_full_duplex,
              py::arg("full_duplex"),
              D(kiss_tnc, set_full_duplex))
+
+
+        .def("set_ptt",
+             &kiss_tnc::set_ptt,
+             py::arg("ptt_state"),
+             D(kiss_tnc, set_ptt))
+
+
+        .def("get_ptt",
+             &kiss_tnc::get_ptt,
+             D(kiss_tnc, get_ptt))
+
+
+        .def("set_ptt_enabled",
+             &kiss_tnc::set_ptt_enabled,
+             py::arg("enabled"),
+             D(kiss_tnc, set_ptt_enabled))
+
+
+        .def("set_ptt_use_dtr",
+             &kiss_tnc::set_ptt_use_dtr,
+             py::arg("use_dtr"),
+             D(kiss_tnc, set_ptt_use_dtr))
 
         ;
 }

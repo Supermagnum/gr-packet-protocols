@@ -43,7 +43,8 @@ kiss_tnc_impl::kiss_tnc_impl(const std::string& device, int baud_rate, bool hard
                      gr::io_signature::make(1, 1, sizeof(char))),
       d_device(device), d_baud_rate(baud_rate), d_hardware_flow_control(hardware_flow_control),
       d_serial_fd(-1), d_kiss_state(KISS_STATE_IDLE), d_escape_next(false), d_frame_buffer(1024),
-      d_frame_length(0), d_ones_count(0) {
+      d_frame_length(0), d_ones_count(0), d_ptt_enabled(false), d_ptt_state(false),
+      d_use_dtr_for_ptt(false) {
     // Initialize serial port
     if (!open_serial_port()) {
         throw std::runtime_error("Failed to open serial port: " + device);
@@ -200,13 +201,29 @@ void kiss_tnc_impl::process_kiss_frame() {
     }
 
     uint8_t command = d_frame_buffer[0] & 0x0F;
-    uint8_t port = (d_frame_buffer[0] >> 4) & 0x0F;
+    (void)((d_frame_buffer[0] >> 4) & 0x0F); // port - reserved for future use
 
     switch (command) {
     case KISS_CMD_DATA:
         // Data frame - send to serial port
         if (d_serial_fd >= 0) {
-            write(d_serial_fd, &d_frame_buffer[1], d_frame_length - 1);
+            // Key PTT before transmission if enabled
+            if (d_ptt_enabled && !d_ptt_state) {
+                set_ptt(true);
+                // Apply TX delay (in 10ms units)
+                if (d_tx_delay > 0) {
+                    usleep(d_tx_delay * 10000);
+                }
+            }
+            (void)write(d_serial_fd, &d_frame_buffer[1], d_frame_length - 1);
+            // Unkey PTT after transmission if enabled
+            if (d_ptt_enabled && d_ptt_state) {
+                // Apply TX tail (in 10ms units)
+                if (d_tx_tail > 0) {
+                    usleep(d_tx_tail * 10000);
+                }
+                set_ptt(false);
+            }
         }
         break;
 
@@ -286,7 +303,7 @@ void kiss_tnc_impl::send_kiss_frame(uint8_t command, uint8_t port, const uint8_t
     frame.push_back(KISS_FEND);
 
     // Send frame
-    write(d_serial_fd, frame.data(), frame.size());
+    (void)write(d_serial_fd, frame.data(), frame.size());
 }
 
 void kiss_tnc_impl::set_tx_delay(int delay) {
@@ -317,6 +334,62 @@ void kiss_tnc_impl::set_full_duplex(bool full_duplex) {
     d_full_duplex = full_duplex;
     uint8_t cmd_data = full_duplex ? 1 : 0;
     send_kiss_frame(KISS_CMD_FULLDUPLEX, 0, &cmd_data, 1);
+}
+
+void kiss_tnc_impl::set_ptt(bool ptt_state) {
+    d_ptt_state = ptt_state;
+    control_ptt_line(ptt_state);
+}
+
+bool kiss_tnc_impl::get_ptt() const {
+    return d_ptt_state;
+}
+
+void kiss_tnc_impl::set_ptt_enabled(bool enabled) {
+    d_ptt_enabled = enabled;
+    if (!enabled && d_ptt_state) {
+        // Unkey PTT if disabling
+        set_ptt(false);
+    }
+}
+
+void kiss_tnc_impl::set_ptt_use_dtr(bool use_dtr) {
+    bool old_state = d_ptt_state;
+    d_use_dtr_for_ptt = use_dtr;
+    // Re-apply current PTT state with new method
+    if (d_ptt_enabled) {
+        d_ptt_state = false; // Reset to force update
+        set_ptt(old_state);
+    }
+}
+
+void kiss_tnc_impl::control_ptt_line(bool state) {
+    if (d_serial_fd < 0) {
+        return;
+    }
+
+    int status;
+    if (ioctl(d_serial_fd, TIOCMGET, &status) < 0) {
+        return;
+    }
+
+    if (d_use_dtr_for_ptt) {
+        // Use DTR for PTT
+        if (state) {
+            status |= TIOCM_DTR;  // Key PTT (assert DTR)
+        } else {
+            status &= ~TIOCM_DTR;  // Unkey PTT (deassert DTR)
+        }
+    } else {
+        // Use RTS for PTT
+        if (state) {
+            status |= TIOCM_RTS;  // Key PTT (assert RTS)
+        } else {
+            status &= ~TIOCM_RTS;  // Unkey PTT (deassert RTS)
+        }
+    }
+
+    ioctl(d_serial_fd, TIOCMSET, &status);
 }
 
 } /* namespace packet_protocols */

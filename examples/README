@@ -1,3 +1,32 @@
-It is considered good practice to add examples in here to demonstrate the
-functionality of your OOT module. Python scripts, GRC flow graphs or other
-code can go here.
+Example flowgraphs demonstrating the functionality of gr-packet-protocols.
+
+## Available Examples
+
+- **ax25_kiss_example.grc**: Demonstrates AX.25 packet encoding with KISS TNC interface
+  - Shows basic packet encoding and transmission
+  - Includes PTT control configuration options
+  - Configure the KISS TNC block to enable PTT control for hardware transmitters
+
+- **fx25_fec_example.grc**: Demonstrates FX.25 forward error correction encoding
+
+- **il2p_example.grc**: Demonstrates IL2P protocol encoding and decoding
+
+## PTT Control
+
+The `ax25_kiss_example.grc` flowgraph includes PTT (Push To Talk) control functionality
+through the KISS TNC block. To use PTT control:
+
+1. Open the flowgraph in GNU Radio Companion
+2. Select the KISS TNC block
+3. Enable "Enable PTT Control" in the block parameters
+4. Select "Use DTR for PTT" if your hardware uses DTR line (default uses RTS)
+5. Configure your serial device path (e.g., `/dev/ttyUSB0`)
+
+The KISS TNC block will automatically:
+- Key the transmitter (assert DTR/RTS) before sending data
+- Apply TX delay timing
+- Unkey the transmitter (deassert DTR/RTS) after transmission
+- Apply TX tail timing
+
+PTT timing is controlled by the TX delay and TX tail parameters, which can be
+set programmatically or via KISS protocol commands.

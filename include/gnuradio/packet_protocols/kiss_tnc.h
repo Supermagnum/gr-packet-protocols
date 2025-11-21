@@ -66,6 +66,30 @@ class PACKET_PROTOCOLS_API kiss_tnc : virtual public gr::sync_block {
      * \brief Set full duplex mode
      */
     virtual void set_full_duplex(bool full_duplex) = 0;
+
+    /*!
+     * \brief Set PTT state
+     * \param ptt_state PTT state (true = keyed, false = unkeyed)
+     */
+    virtual void set_ptt(bool ptt_state) = 0;
+
+    /*!
+     * \brief Get PTT state
+     * \return Current PTT state
+     */
+    virtual bool get_ptt() const = 0;
+
+    /*!
+     * \brief Enable/disable PTT control
+     * \param enabled Enable PTT control
+     */
+    virtual void set_ptt_enabled(bool enabled) = 0;
+
+    /*!
+     * \brief Set PTT control method
+     * \param use_dtr Use DTR for PTT (false = use RTS)
+     */
+    virtual void set_ptt_use_dtr(bool use_dtr) = 0;
 };
 
 } // namespace packet_protocols
