@@ -30,3 +30,23 @@ The KISS TNC block will automatically:
 
 PTT timing is controlled by the TX delay and TX tail parameters, which can be
 set programmatically or via KISS protocol commands.
+
+## Alternative PTT Control Methods
+
+For different hardware configurations, alternative PTT control methods are available:
+
+1. **SDR Hardware Blocks**: When using Software Defined Radio transmitters
+   (gr-osmosdr, gr-uhd), PTT is typically controlled through the SDR driver's
+   GPIO interface or automatically by the driver. See the main README.md for
+   detailed examples.
+
+2. **Custom GPIO Control**: For hardware TNCs requiring direct GPIO control
+   (Raspberry Pi, BeagleBone, custom hardware), custom blocks can be created
+   using Python GPIO libraries or Linux sysfs GPIO interface. See README.md
+   for implementation examples.
+
+3. **Message-Based Control**: For precise timing control, message passing can
+   be used to coordinate PTT with specific packet transmission events.
+
+Refer to the main README.md "Alternative PTT Control Methods" section for
+complete documentation and code examples.

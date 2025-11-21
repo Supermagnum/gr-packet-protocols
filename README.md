@@ -168,6 +168,202 @@ The KISS TNC block respects the configured TX delay and TX tail parameters:
 
 These parameters can be set using `set_tx_delay()` and `set_tx_tail()` methods.
 
+### Alternative PTT Control Methods
+
+In GNU Radio packet radio applications, PTT control can be implemented using several methods depending on your hardware setup:
+
+#### 1. Hardware-Specific Blocks (SDR Transmitters)
+
+For Software Defined Radio (SDR) transmitters, PTT is typically controlled through hardware-specific blocks:
+
+**gr-osmosdr (Osmocom SDR):**
+
+```python
+from gnuradio import osmosdr
+
+# Create osmocom source/sink
+sdr = osmosdr.sink(args="numchan=1")
+
+# PTT control is typically handled automatically by the driver
+# Some devices support GPIO pins for PTT control
+# Check your device documentation for specific GPIO pin numbers
+
+# Example for HackRF with GPIO PTT
+sdr.set_gpio(0x01)  # Set GPIO pin 0 for PTT (device-specific)
+```
+
+**gr-uhd (Ettus USRP):**
+
+```python
+from gnuradio import uhd
+
+# Create USRP sink
+usrp_sink = uhd.usrp_sink(
+    device_args="",
+    stream_args=uhd.stream_args('fc32', 'sc16')
+)
+
+# USRP devices typically control PTT via front panel or API
+# For GPIO-based PTT control:
+usrp_sink.set_gpio_attr("RXA", "CTRL", 0x01, 0x01)  # Set GPIO for PTT
+```
+
+**Integration with Packet Protocols:**
+
+When using SDR hardware, connect your packet encoder output directly to the SDR sink. PTT control should be coordinated with the data stream using tagged streams or message passing:
+
+```python
+from gnuradio import blocks, packet_protocols, osmosdr
+
+# Create packet encoder
+encoder = packet_protocols.ax25_encoder(...)
+
+# Create SDR sink
+sdr = osmosdr.sink(args="...")
+
+# Use tagged stream to coordinate PTT with packet transmission
+# The SDR driver handles PTT automatically based on data presence
+blocks.connect(encoder, sdr)
+```
+
+#### 2. Custom GPIO Control Blocks for Hardware TNCs
+
+For hardware TNCs that require GPIO-based PTT control (e.g., Raspberry Pi GPIO, BeagleBone, or custom hardware), you can create custom blocks or use existing GPIO libraries:
+
+**Using Python Blocks for GPIO Control:**
+
+```python
+from gnuradio import gr, blocks
+import RPi.GPIO as GPIO  # For Raspberry Pi
+
+class gpio_ptt_block(gr.sync_block):
+    def __init__(self, gpio_pin=18):
+        gr.sync_block.__init__(
+            self,
+            name="GPIO PTT Control",
+            in_sig=[gr.sizeof_char],
+            out_sig=[gr.sizeof_char]
+        )
+        self.gpio_pin = gpio_pin
+        GPIO.setmode(GPIO.BCM)
+        GPIO.setup(gpio_pin, GPIO.OUT)
+        GPIO.output(gpio_pin, GPIO.LOW)  # Start unkeyed
+        self.ptt_state = False
+        
+    def work(self, input_items, output_items):
+        # Key PTT when data is present
+        if len(input_items[0]) > 0 and not self.ptt_state:
+            GPIO.output(self.gpio_pin, GPIO.HIGH)
+            self.ptt_state = True
+            
+        # Copy input to output
+        output_items[0][:] = input_items[0][:]
+        
+        # Unkey PTT after delay (implement timing logic)
+        # This is simplified - real implementation needs proper timing
+        
+        return len(output_items[0])
+        
+    def stop(self):
+        GPIO.output(self.gpio_pin, GPIO.LOW)
+        GPIO.cleanup()
+        return True
+```
+
+**Using Message-Based PTT Control:**
+
+For more precise timing control, use message passing to coordinate PTT with packet transmission:
+
+```python
+from gnuradio import gr, blocks
+import time
+
+class message_ptt_block(gr.basic_block):
+    def __init__(self, gpio_pin=18):
+        gr.basic_block.__init__(
+            self,
+            name="Message PTT Control",
+            in_sig=None,
+            out_sig=None
+        )
+        self.gpio_pin = gpio_pin
+        self.message_port_register_in(pmt.intern("packet"))
+        self.set_msg_handler(pmt.intern("packet"), self.handle_packet)
+        # Initialize GPIO...
+        
+    def handle_packet(self, msg):
+        # Key PTT
+        GPIO.output(self.gpio_pin, GPIO.HIGH)
+        time.sleep(0.01)  # TX delay
+        
+        # Send packet notification to encoder
+        # (implementation depends on your flowgraph)
+        
+        # Unkey PTT after transmission
+        time.sleep(packet_duration)
+        GPIO.output(self.gpio_pin, GPIO.LOW)
+```
+
+**Using Linux GPIO (sysfs) for Generic Hardware:**
+
+For systems with Linux GPIO support (sysfs or libgpiod):
+
+```python
+import os
+
+class sysfs_gpio_ptt:
+    def __init__(self, gpio_number):
+        self.gpio_number = gpio_number
+        self.gpio_path = f"/sys/class/gpio/gpio{gpio_number}"
+        
+        # Export GPIO if not already exported
+        if not os.path.exists(self.gpio_path):
+            with open("/sys/class/gpio/export", "w") as f:
+                f.write(str(gpio_number))
+        
+        # Set direction to output
+        with open(f"{self.gpio_path}/direction", "w") as f:
+            f.write("out")
+            
+    def set_ptt(self, state):
+        with open(f"{self.gpio_path}/value", "w") as f:
+            f.write("1" if state else "0")
+```
+
+**Integration Example:**
+
+```python
+from gnuradio import gr, blocks, packet_protocols
+
+class top_block(gr.top_block):
+    def __init__(self):
+        gr.top_block.__init__(self)
+        
+        # Create packet encoder
+        encoder = packet_protocols.ax25_encoder(...)
+        
+        # Create GPIO PTT control block
+        gpio_ptt = gpio_ptt_block(gpio_pin=18)
+        
+        # Create data source
+        source = blocks.vector_source_b([...])
+        
+        # Connect: source -> encoder -> gpio_ptt -> sink
+        self.connect(source, encoder, gpio_ptt, blocks.null_sink(gr.sizeof_char))
+```
+
+#### 3. Choosing the Right PTT Control Method
+
+- **Built-in KISS TNC PTT**: Use when connecting to hardware TNCs via serial port (DTR/RTS lines). Simplest option for traditional TNC hardware.
+
+- **SDR Hardware Blocks**: Use when transmitting directly with SDR hardware (HackRF, USRP, RTL-SDR with upconverter). PTT is typically handled by the driver or via GPIO pins.
+
+- **Custom GPIO Blocks**: Use when you need direct GPIO control for custom hardware, Raspberry Pi projects, or when the built-in serial port PTT doesn't meet your needs.
+
+- **Message-Based Control**: Use when you need precise timing control and want to coordinate PTT with specific packet events rather than continuous data streams.
+
+For detailed documentation on all PTT control methods, including complete code examples and hardware-specific guidance, see [docs/PTT_CONTROL.md](docs/PTT_CONTROL.md).
+
 ## Protocol Details
 
 ### AX.25
