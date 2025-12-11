@@ -20,4 +20,5 @@ except ModuleNotFoundError:
     pass
 
 # import any pure python here
-#
+from .adaptive_modulator import adaptive_modulator
+from .modulation_switch import modulation_switch

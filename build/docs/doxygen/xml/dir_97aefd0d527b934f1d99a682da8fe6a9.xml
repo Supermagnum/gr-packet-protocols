@@ -2,6 +2,8 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir">
     <compoundname>lib</compoundname>
+    <innerfile refid="adaptive__modulator__impl_8h">adaptive_modulator_impl.h</innerfile>
+    <innerfile refid="adaptive__rate__control__impl_8h">adaptive_rate_control_impl.h</innerfile>
     <innerfile refid="ax25__decoder__impl_8h">ax25_decoder_impl.h</innerfile>
     <innerfile refid="ax25__encoder__impl_8h">ax25_encoder_impl.h</innerfile>
     <innerfile refid="fx25__decoder__impl_8h">fx25_decoder_impl.h</innerfile>
@@ -9,10 +11,12 @@
     <innerfile refid="il2p__decoder__impl_8h">il2p_decoder_impl.h</innerfile>
     <innerfile refid="il2p__encoder__impl_8h">il2p_encoder_impl.h</innerfile>
     <innerfile refid="kiss__tnc__impl_8h">kiss_tnc_impl.h</innerfile>
+    <innerfile refid="link__quality__monitor__impl_8h">link_quality_monitor_impl.h</innerfile>
+    <innerfile refid="modulation__negotiation__impl_8h">modulation_negotiation_impl.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/haaken/github-projects/gr-packet_protocols/lib/"/>
+    <location file="/home/haaken/github-projects/gr-packet-protocols/lib/"/>
   </compounddef>
 </doxygen>

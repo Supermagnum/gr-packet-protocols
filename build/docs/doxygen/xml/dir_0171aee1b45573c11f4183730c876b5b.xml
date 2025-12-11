@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="dir_0171aee1b45573c11f4183730c876b5b" kind="dir">
     <compoundname>docstrings</compoundname>
+    <innerfile refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h">build/test_modules/gnuradio/packet_protocols/bindings/docstrings/adaptive_rate_control_pydoc_template.h</innerfile>
     <innerfile refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2ax25__decoder__pydoc__template_8h">build/test_modules/gnuradio/packet_protocols/bindings/docstrings/ax25_decoder_pydoc_template.h</innerfile>
     <innerfile refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2ax25__encoder__pydoc__template_8h">build/test_modules/gnuradio/packet_protocols/bindings/docstrings/ax25_encoder_pydoc_template.h</innerfile>
     <innerfile refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2fx25__decoder__pydoc__template_8h">build/test_modules/gnuradio/packet_protocols/bindings/docstrings/fx25_decoder_pydoc_template.h</innerfile>
@@ -9,10 +10,12 @@
     <innerfile refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2il2p__decoder__pydoc__template_8h">build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_decoder_pydoc_template.h</innerfile>
     <innerfile refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2il2p__encoder__pydoc__template_8h">build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h</innerfile>
     <innerfile refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h">build/test_modules/gnuradio/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h</innerfile>
+    <innerfile refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h">build/test_modules/gnuradio/packet_protocols/bindings/docstrings/link_quality_monitor_pydoc_template.h</innerfile>
+    <innerfile refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h">build/test_modules/gnuradio/packet_protocols/bindings/docstrings/modulation_negotiation_pydoc_template.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/"/>
+    <location file="/home/haaken/github-projects/gr-packet-protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/"/>
   </compounddef>
 </doxygen>

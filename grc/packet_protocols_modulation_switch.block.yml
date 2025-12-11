@@ -1,0 +1,39 @@
+id: packet_protocols_modulation_switch
+label: Modulation Switch
+category: '[Packet Protocols]'
+flags: [python]
+
+parameters:
+-   id: num_inputs
+    label: Number of Inputs
+    dtype: int
+    default: '4'
+    range: [2, 16]
+    comment: 'Number of modulation mode inputs'
+-   id: selected_input
+    label: Selected Input Index
+    dtype: int
+    default: '0'
+    range: [0, 15]
+    comment: 'Index of the input to route to output (0-based)'
+
+inputs:
+-   domain: stream
+    dtype: complex
+    multiplicity: ${ num_inputs }
+
+outputs:
+-   domain: stream
+    dtype: complex
+
+templates:
+    imports: |-
+        from gnuradio import gr, blocks
+    make: |-
+        # Use GNU Radio's selector block for switching
+        # Note: modulation_switch Python class is for programmatic use with adaptive_rate_control
+        # For GRC, we use blocks.selector which provides the same functionality
+        blocks.selector(gr.sizeof_gr_complex*1, ${selected_input}, 0)
+
+file_format: 1
+

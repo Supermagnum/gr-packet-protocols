@@ -63,6 +63,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_reed_solomon.h"/>
+    <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_reed_solomon.h"/>
   </compounddef>
 </doxygen>

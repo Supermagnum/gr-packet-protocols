@@ -2,6 +2,10 @@ var annotated_dup =
 [
     [ "gr", "namespacegr.html", [
       [ "packet_protocols", "namespacegr_1_1packet__protocols.html", [
+        [ "adaptive_modulator", "classgr_1_1packet__protocols_1_1adaptive__modulator.html", "classgr_1_1packet__protocols_1_1adaptive__modulator" ],
+        [ "adaptive_modulator_impl", "classgr_1_1packet__protocols_1_1adaptive__modulator__impl.html", "classgr_1_1packet__protocols_1_1adaptive__modulator__impl" ],
+        [ "adaptive_rate_control", "classgr_1_1packet__protocols_1_1adaptive__rate__control.html", "classgr_1_1packet__protocols_1_1adaptive__rate__control" ],
+        [ "adaptive_rate_control_impl", "classgr_1_1packet__protocols_1_1adaptive__rate__control__impl.html", "classgr_1_1packet__protocols_1_1adaptive__rate__control__impl" ],
         [ "ax25_decoder", "classgr_1_1packet__protocols_1_1ax25__decoder.html", "classgr_1_1packet__protocols_1_1ax25__decoder" ],
         [ "ax25_decoder_impl", "classgr_1_1packet__protocols_1_1ax25__decoder__impl.html", "classgr_1_1packet__protocols_1_1ax25__decoder__impl" ],
         [ "ax25_encoder", "classgr_1_1packet__protocols_1_1ax25__encoder.html", "classgr_1_1packet__protocols_1_1ax25__encoder" ],
@@ -17,7 +21,13 @@ var annotated_dup =
         [ "il2p_encoder_impl", "classgr_1_1packet__protocols_1_1il2p__encoder__impl.html", "classgr_1_1packet__protocols_1_1il2p__encoder__impl" ],
         [ "il2p_reed_solomon", "classgr_1_1packet__protocols_1_1il2p__reed__solomon.html", "classgr_1_1packet__protocols_1_1il2p__reed__solomon" ],
         [ "kiss_tnc", "classgr_1_1packet__protocols_1_1kiss__tnc.html", "classgr_1_1packet__protocols_1_1kiss__tnc" ],
-        [ "kiss_tnc_impl", "classgr_1_1packet__protocols_1_1kiss__tnc__impl.html", "classgr_1_1packet__protocols_1_1kiss__tnc__impl" ]
+        [ "kiss_tnc_impl", "classgr_1_1packet__protocols_1_1kiss__tnc__impl.html", "classgr_1_1packet__protocols_1_1kiss__tnc__impl" ],
+        [ "link_quality_monitor", "classgr_1_1packet__protocols_1_1link__quality__monitor.html", "classgr_1_1packet__protocols_1_1link__quality__monitor" ],
+        [ "link_quality_monitor_impl", "classgr_1_1packet__protocols_1_1link__quality__monitor__impl.html", "classgr_1_1packet__protocols_1_1link__quality__monitor__impl" ],
+        [ "modulation_negotiation", "classgr_1_1packet__protocols_1_1modulation__negotiation.html", "classgr_1_1packet__protocols_1_1modulation__negotiation" ],
+        [ "modulation_negotiation_impl", "classgr_1_1packet__protocols_1_1modulation__negotiation__impl.html", "classgr_1_1packet__protocols_1_1modulation__negotiation__impl" ],
+        [ "negotiation_msg_t", "structgr_1_1packet__protocols_1_1negotiation__msg__t.html", "structgr_1_1packet__protocols_1_1negotiation__msg__t" ],
+        [ "rate_thresholds_t", "structgr_1_1packet__protocols_1_1rate__thresholds__t.html", "structgr_1_1packet__protocols_1_1rate__thresholds__t" ]
       ] ]
     ] ],
     [ "ax25_address_t", "structax25__address__t.html", "structax25__address__t" ],

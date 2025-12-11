@@ -25,7 +25,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" line="10" column="10" bodyfile="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" bodystart="10" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" line="10" column="10" bodyfile="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" bodystart="10" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="var">
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" line="18" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" bodystart="18" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" line="18" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" bodystart="18" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="python_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h_1a7d4d3b7764b487c3c953e686fec392c0" prot="public" static="yes" mutable="no">
         <type>const char *</type>
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" line="21" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" bodystart="21" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" line="21" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="python_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h_1abfa219a8a02767d3095fef687a5d0df0" prot="public" static="yes" mutable="no">
         <type>const char *</type>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" line="24" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" bodystart="24" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" line="24" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" bodystart="24" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="python_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h_1a6849b9a602a5832d1a0fd78f17a997b6" prot="public" static="yes" mutable="no">
         <type>const char *</type>
@@ -83,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" line="27" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" bodystart="27" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" line="27" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" bodystart="27" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="python_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h_1a1212a45ffa8e701fbd7e743a3d3ad459" prot="public" static="yes" mutable="no">
         <type>const char *</type>
@@ -97,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" line="30" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" bodystart="30" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" line="30" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="python_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h_1a4ecf309a01fe5245489e9000dddf5368" prot="public" static="yes" mutable="no">
         <type>const char *</type>
@@ -111,7 +111,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" line="33" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" bodystart="33" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" line="33" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="python_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h_1a38ffed02de8820cb65d2559fbe09d0c7" prot="public" static="yes" mutable="no">
         <type>const char *</type>
@@ -125,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" line="36" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" bodystart="36" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" line="36" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="python_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h_1a1db27cd4f2146747a5862880c98215b0" prot="public" static="yes" mutable="no">
         <type>const char *</type>
@@ -139,7 +139,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" line="39" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" bodystart="39" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" line="39" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="python_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h_1a9c5c4f4b8973ced33a1a9eb2719c0deb" prot="public" static="yes" mutable="no">
         <type>const char *</type>
@@ -153,13 +153,69 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" line="42" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" bodystart="42" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" line="42" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="python_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h_1aa5863a5b767476bcb42069db6b29f68a" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* __doc_gr_packet_protocols_kiss_tnc_set_ptt</definition>
+        <argsstring></argsstring>
+        <name>__doc_gr_packet_protocols_kiss_tnc_set_ptt</name>
+        <initializer>= R&quot;doc()doc&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" line="45" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="python_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h_1aaef7e8015723a2653bda2ceb7812c5d5" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* __doc_gr_packet_protocols_kiss_tnc_get_ptt</definition>
+        <argsstring></argsstring>
+        <name>__doc_gr_packet_protocols_kiss_tnc_get_ptt</name>
+        <initializer>= R&quot;doc()doc&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" line="48" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="python_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h_1aa4307a8853ac91067b5c06018f4df102" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* __doc_gr_packet_protocols_kiss_tnc_set_ptt_enabled</definition>
+        <argsstring></argsstring>
+        <name>__doc_gr_packet_protocols_kiss_tnc_set_ptt_enabled</name>
+        <initializer>= R&quot;doc()doc&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" line="51" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="python_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h_1ab1c27ec9b0fcd73f8ceffbaa8bb2a7ed" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* __doc_gr_packet_protocols_kiss_tnc_set_ptt_use_dtr</definition>
+        <argsstring></argsstring>
+        <name>__doc_gr_packet_protocols_kiss_tnc_set_ptt_use_dtr</name>
+        <initializer>= R&quot;doc()doc&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" line="54" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h" bodystart="54" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h"/>
+    <location file="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h"/>
   </compounddef>
 </doxygen>

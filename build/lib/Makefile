@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/haaken/github-projects/gr-packet_protocols
+CMAKE_SOURCE_DIR = /home/haaken/github-projects/gr-packet-protocols
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/haaken/github-projects/gr-packet_protocols/build
+CMAKE_BINARY_DIR = /home/haaken/github-projects/gr-packet-protocols/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/haaken/github-projects/gr-packet_protocols/build/CMakeFiles /home/haaken/github-projects/gr-packet_protocols/build/lib//CMakeFiles/progress.marks
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/haaken/github-projects/gr-packet_protocols/build/CMakeFiles 0
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles /home/haaken/github-projects/gr-packet-protocols/build/lib//CMakeFiles/progress.marks
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/clean
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/clean
 .PHONY : clean
 
 # The main clean target
@@ -158,22 +158,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lib/CMakeFiles/gnuradio-packet_protocols.dir/rule:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/gnuradio-packet_protocols.dir/rule
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/gnuradio-packet_protocols.dir/rule
 .PHONY : lib/CMakeFiles/gnuradio-packet_protocols.dir/rule
 
 # Convenience name for target.
@@ -182,15 +182,39 @@ gnuradio-packet_protocols: lib/CMakeFiles/gnuradio-packet_protocols.dir/rule
 
 # fast build rule for target.
 gnuradio-packet_protocols/fast:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/build
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/build
 .PHONY : gnuradio-packet_protocols/fast
+
+adaptive_rate_control_impl.o: adaptive_rate_control_impl.cc.o
+.PHONY : adaptive_rate_control_impl.o
+
+# target to build an object file
+adaptive_rate_control_impl.cc.o:
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/adaptive_rate_control_impl.cc.o
+.PHONY : adaptive_rate_control_impl.cc.o
+
+adaptive_rate_control_impl.i: adaptive_rate_control_impl.cc.i
+.PHONY : adaptive_rate_control_impl.i
+
+# target to preprocess a source file
+adaptive_rate_control_impl.cc.i:
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/adaptive_rate_control_impl.cc.i
+.PHONY : adaptive_rate_control_impl.cc.i
+
+adaptive_rate_control_impl.s: adaptive_rate_control_impl.cc.s
+.PHONY : adaptive_rate_control_impl.s
+
+# target to generate assembly for a file
+adaptive_rate_control_impl.cc.s:
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/adaptive_rate_control_impl.cc.s
+.PHONY : adaptive_rate_control_impl.cc.s
 
 ax25_decoder_impl.o: ax25_decoder_impl.cc.o
 .PHONY : ax25_decoder_impl.o
 
 # target to build an object file
 ax25_decoder_impl.cc.o:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_decoder_impl.cc.o
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_decoder_impl.cc.o
 .PHONY : ax25_decoder_impl.cc.o
 
 ax25_decoder_impl.i: ax25_decoder_impl.cc.i
@@ -198,7 +222,7 @@ ax25_decoder_impl.i: ax25_decoder_impl.cc.i
 
 # target to preprocess a source file
 ax25_decoder_impl.cc.i:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_decoder_impl.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_decoder_impl.cc.i
 .PHONY : ax25_decoder_impl.cc.i
 
 ax25_decoder_impl.s: ax25_decoder_impl.cc.s
@@ -206,7 +230,7 @@ ax25_decoder_impl.s: ax25_decoder_impl.cc.s
 
 # target to generate assembly for a file
 ax25_decoder_impl.cc.s:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_decoder_impl.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_decoder_impl.cc.s
 .PHONY : ax25_decoder_impl.cc.s
 
 ax25_encoder_impl.o: ax25_encoder_impl.cc.o
@@ -214,7 +238,7 @@ ax25_encoder_impl.o: ax25_encoder_impl.cc.o
 
 # target to build an object file
 ax25_encoder_impl.cc.o:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_encoder_impl.cc.o
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_encoder_impl.cc.o
 .PHONY : ax25_encoder_impl.cc.o
 
 ax25_encoder_impl.i: ax25_encoder_impl.cc.i
@@ -222,7 +246,7 @@ ax25_encoder_impl.i: ax25_encoder_impl.cc.i
 
 # target to preprocess a source file
 ax25_encoder_impl.cc.i:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_encoder_impl.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_encoder_impl.cc.i
 .PHONY : ax25_encoder_impl.cc.i
 
 ax25_encoder_impl.s: ax25_encoder_impl.cc.s
@@ -230,15 +254,39 @@ ax25_encoder_impl.s: ax25_encoder_impl.cc.s
 
 # target to generate assembly for a file
 ax25_encoder_impl.cc.s:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_encoder_impl.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_encoder_impl.cc.s
 .PHONY : ax25_encoder_impl.cc.s
+
+ax25_protocol.o: ax25_protocol.c.o
+.PHONY : ax25_protocol.o
+
+# target to build an object file
+ax25_protocol.c.o:
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_protocol.c.o
+.PHONY : ax25_protocol.c.o
+
+ax25_protocol.i: ax25_protocol.c.i
+.PHONY : ax25_protocol.i
+
+# target to preprocess a source file
+ax25_protocol.c.i:
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_protocol.c.i
+.PHONY : ax25_protocol.c.i
+
+ax25_protocol.s: ax25_protocol.c.s
+.PHONY : ax25_protocol.s
+
+# target to generate assembly for a file
+ax25_protocol.c.s:
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_protocol.c.s
+.PHONY : ax25_protocol.c.s
 
 fx25_decoder_impl.o: fx25_decoder_impl.cc.o
 .PHONY : fx25_decoder_impl.o
 
 # target to build an object file
 fx25_decoder_impl.cc.o:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_decoder_impl.cc.o
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_decoder_impl.cc.o
 .PHONY : fx25_decoder_impl.cc.o
 
 fx25_decoder_impl.i: fx25_decoder_impl.cc.i
@@ -246,7 +294,7 @@ fx25_decoder_impl.i: fx25_decoder_impl.cc.i
 
 # target to preprocess a source file
 fx25_decoder_impl.cc.i:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_decoder_impl.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_decoder_impl.cc.i
 .PHONY : fx25_decoder_impl.cc.i
 
 fx25_decoder_impl.s: fx25_decoder_impl.cc.s
@@ -254,7 +302,7 @@ fx25_decoder_impl.s: fx25_decoder_impl.cc.s
 
 # target to generate assembly for a file
 fx25_decoder_impl.cc.s:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_decoder_impl.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_decoder_impl.cc.s
 .PHONY : fx25_decoder_impl.cc.s
 
 fx25_encoder_impl.o: fx25_encoder_impl.cc.o
@@ -262,7 +310,7 @@ fx25_encoder_impl.o: fx25_encoder_impl.cc.o
 
 # target to build an object file
 fx25_encoder_impl.cc.o:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.o
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.o
 .PHONY : fx25_encoder_impl.cc.o
 
 fx25_encoder_impl.i: fx25_encoder_impl.cc.i
@@ -270,7 +318,7 @@ fx25_encoder_impl.i: fx25_encoder_impl.cc.i
 
 # target to preprocess a source file
 fx25_encoder_impl.cc.i:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.i
 .PHONY : fx25_encoder_impl.cc.i
 
 fx25_encoder_impl.s: fx25_encoder_impl.cc.s
@@ -278,7 +326,7 @@ fx25_encoder_impl.s: fx25_encoder_impl.cc.s
 
 # target to generate assembly for a file
 fx25_encoder_impl.cc.s:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.s
 .PHONY : fx25_encoder_impl.cc.s
 
 il2p_decoder_impl.o: il2p_decoder_impl.cc.o
@@ -286,7 +334,7 @@ il2p_decoder_impl.o: il2p_decoder_impl.cc.o
 
 # target to build an object file
 il2p_decoder_impl.cc.o:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_decoder_impl.cc.o
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_decoder_impl.cc.o
 .PHONY : il2p_decoder_impl.cc.o
 
 il2p_decoder_impl.i: il2p_decoder_impl.cc.i
@@ -294,7 +342,7 @@ il2p_decoder_impl.i: il2p_decoder_impl.cc.i
 
 # target to preprocess a source file
 il2p_decoder_impl.cc.i:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_decoder_impl.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_decoder_impl.cc.i
 .PHONY : il2p_decoder_impl.cc.i
 
 il2p_decoder_impl.s: il2p_decoder_impl.cc.s
@@ -302,7 +350,7 @@ il2p_decoder_impl.s: il2p_decoder_impl.cc.s
 
 # target to generate assembly for a file
 il2p_decoder_impl.cc.s:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_decoder_impl.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_decoder_impl.cc.s
 .PHONY : il2p_decoder_impl.cc.s
 
 il2p_encoder_impl.o: il2p_encoder_impl.cc.o
@@ -310,7 +358,7 @@ il2p_encoder_impl.o: il2p_encoder_impl.cc.o
 
 # target to build an object file
 il2p_encoder_impl.cc.o:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_encoder_impl.cc.o
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_encoder_impl.cc.o
 .PHONY : il2p_encoder_impl.cc.o
 
 il2p_encoder_impl.i: il2p_encoder_impl.cc.i
@@ -318,7 +366,7 @@ il2p_encoder_impl.i: il2p_encoder_impl.cc.i
 
 # target to preprocess a source file
 il2p_encoder_impl.cc.i:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_encoder_impl.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_encoder_impl.cc.i
 .PHONY : il2p_encoder_impl.cc.i
 
 il2p_encoder_impl.s: il2p_encoder_impl.cc.s
@@ -326,7 +374,7 @@ il2p_encoder_impl.s: il2p_encoder_impl.cc.s
 
 # target to generate assembly for a file
 il2p_encoder_impl.cc.s:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_encoder_impl.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_encoder_impl.cc.s
 .PHONY : il2p_encoder_impl.cc.s
 
 kiss_tnc_impl.o: kiss_tnc_impl.cc.o
@@ -334,7 +382,7 @@ kiss_tnc_impl.o: kiss_tnc_impl.cc.o
 
 # target to build an object file
 kiss_tnc_impl.cc.o:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.o
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.o
 .PHONY : kiss_tnc_impl.cc.o
 
 kiss_tnc_impl.i: kiss_tnc_impl.cc.i
@@ -342,7 +390,7 @@ kiss_tnc_impl.i: kiss_tnc_impl.cc.i
 
 # target to preprocess a source file
 kiss_tnc_impl.cc.i:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.i
 .PHONY : kiss_tnc_impl.cc.i
 
 kiss_tnc_impl.s: kiss_tnc_impl.cc.s
@@ -350,8 +398,56 @@ kiss_tnc_impl.s: kiss_tnc_impl.cc.s
 
 # target to generate assembly for a file
 kiss_tnc_impl.cc.s:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.s
 .PHONY : kiss_tnc_impl.cc.s
+
+link_quality_monitor_impl.o: link_quality_monitor_impl.cc.o
+.PHONY : link_quality_monitor_impl.o
+
+# target to build an object file
+link_quality_monitor_impl.cc.o:
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/link_quality_monitor_impl.cc.o
+.PHONY : link_quality_monitor_impl.cc.o
+
+link_quality_monitor_impl.i: link_quality_monitor_impl.cc.i
+.PHONY : link_quality_monitor_impl.i
+
+# target to preprocess a source file
+link_quality_monitor_impl.cc.i:
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/link_quality_monitor_impl.cc.i
+.PHONY : link_quality_monitor_impl.cc.i
+
+link_quality_monitor_impl.s: link_quality_monitor_impl.cc.s
+.PHONY : link_quality_monitor_impl.s
+
+# target to generate assembly for a file
+link_quality_monitor_impl.cc.s:
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/link_quality_monitor_impl.cc.s
+.PHONY : link_quality_monitor_impl.cc.s
+
+modulation_negotiation_impl.o: modulation_negotiation_impl.cc.o
+.PHONY : modulation_negotiation_impl.o
+
+# target to build an object file
+modulation_negotiation_impl.cc.o:
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/modulation_negotiation_impl.cc.o
+.PHONY : modulation_negotiation_impl.cc.o
+
+modulation_negotiation_impl.i: modulation_negotiation_impl.cc.i
+.PHONY : modulation_negotiation_impl.i
+
+# target to preprocess a source file
+modulation_negotiation_impl.cc.i:
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/modulation_negotiation_impl.cc.i
+.PHONY : modulation_negotiation_impl.cc.i
+
+modulation_negotiation_impl.s: modulation_negotiation_impl.cc.s
+.PHONY : modulation_negotiation_impl.s
+
+# target to generate assembly for a file
+modulation_negotiation_impl.cc.s:
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/modulation_negotiation_impl.cc.s
+.PHONY : modulation_negotiation_impl.cc.s
 
 # Help Target
 help:
@@ -367,12 +463,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... gnuradio-packet_protocols"
+	@echo "... adaptive_rate_control_impl.o"
+	@echo "... adaptive_rate_control_impl.i"
+	@echo "... adaptive_rate_control_impl.s"
 	@echo "... ax25_decoder_impl.o"
 	@echo "... ax25_decoder_impl.i"
 	@echo "... ax25_decoder_impl.s"
 	@echo "... ax25_encoder_impl.o"
 	@echo "... ax25_encoder_impl.i"
 	@echo "... ax25_encoder_impl.s"
+	@echo "... ax25_protocol.o"
+	@echo "... ax25_protocol.i"
+	@echo "... ax25_protocol.s"
 	@echo "... fx25_decoder_impl.o"
 	@echo "... fx25_decoder_impl.i"
 	@echo "... fx25_decoder_impl.s"
@@ -388,6 +490,12 @@ help:
 	@echo "... kiss_tnc_impl.o"
 	@echo "... kiss_tnc_impl.i"
 	@echo "... kiss_tnc_impl.s"
+	@echo "... link_quality_monitor_impl.o"
+	@echo "... link_quality_monitor_impl.i"
+	@echo "... link_quality_monitor_impl.s"
+	@echo "... modulation_negotiation_impl.o"
+	@echo "... modulation_negotiation_impl.i"
+	@echo "... modulation_negotiation_impl.s"
 .PHONY : help
 
 
@@ -399,6 +507,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

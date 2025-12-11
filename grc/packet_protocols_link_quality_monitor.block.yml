@@ -1,0 +1,33 @@
+id: packet_protocols_link_quality_monitor
+label: Link Quality Monitor
+category: '[Packet Protocols]'
+flags: [python, cpp]
+
+parameters:
+-   id: alpha
+    label: Smoothing Factor (Alpha)
+    dtype: float
+    default: '0.1'
+    range: [0.0, 1.0]
+-   id: update_period
+    label: Update Period (samples)
+    dtype: int
+    default: '1000'
+    range: [1, 1000000]
+
+inputs:
+-   domain: stream
+    dtype: byte
+
+outputs:
+-   domain: stream
+    dtype: byte
+
+templates:
+    imports: |-
+        from gnuradio import packet_protocols
+    make: |-
+        packet_protocols.link_quality_monitor(${alpha}, ${update_period})
+
+file_format: 1
+

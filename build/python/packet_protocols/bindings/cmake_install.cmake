@@ -1,8 +1,8 @@
-# Install script for directory: /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings
+# Install script for directory: /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,26 +43,26 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "pythonapi" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/gnuradio/packet_protocols/packet_protocols_python.cpython-312-x86_64-linux-gnu.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/gnuradio/packet_protocols/packet_protocols_python.cpython-312-x86_64-linux-gnu.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/dist-packages/gnuradio/packet_protocols/packet_protocols_python.cpython-312-x86_64-linux-gnu.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/dist-packages/gnuradio/packet_protocols/packet_protocols_python.cpython-312-x86_64-linux-gnu.so")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/gnuradio/packet_protocols/packet_protocols_python.cpython-312-x86_64-linux-gnu.so"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/dist-packages/gnuradio/packet_protocols/packet_protocols_python.cpython-312-x86_64-linux-gnu.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/gnuradio/packet_protocols" TYPE MODULE FILES "/home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings/packet_protocols_python.cpython-312-x86_64-linux-gnu.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/gnuradio/packet_protocols/packet_protocols_python.cpython-312-x86_64-linux-gnu.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/gnuradio/packet_protocols/packet_protocols_python.cpython-312-x86_64-linux-gnu.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.12/dist-packages/gnuradio/packet_protocols" TYPE MODULE FILES "/home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings/packet_protocols_python.cpython-312-x86_64-linux-gnu.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/dist-packages/gnuradio/packet_protocols/packet_protocols_python.cpython-312-x86_64-linux-gnu.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/dist-packages/gnuradio/packet_protocols/packet_protocols_python.cpython-312-x86_64-linux-gnu.so")
     file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/gnuradio/packet_protocols/packet_protocols_python.cpython-312-x86_64-linux-gnu.so"
-         OLD_RPATH "/home/haaken/github-projects/gr-packet_protocols/build/lib:"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/dist-packages/gnuradio/packet_protocols/packet_protocols_python.cpython-312-x86_64-linux-gnu.so"
+         OLD_RPATH "/home/haaken/github-projects/gr-packet-protocols/build/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/gnuradio/packet_protocols/packet_protocols_python.cpython-312-x86_64-linux-gnu.so")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/dist-packages/gnuradio/packet_protocols/packet_protocols_python.cpython-312-x86_64-linux-gnu.so")
     endif()
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "pythonapi" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/install-cxx-module-bmi-Release.cmake" OPTIONAL)
+  include("/home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/install-cxx-module-bmi-Release.cmake" OPTIONAL)
 endif()
 

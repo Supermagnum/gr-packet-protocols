@@ -58,3 +58,15 @@ static const char* __doc_gr_packet_protocols_kiss_tnc_set_tx_tail = R"doc(Set TX
 
 
 static const char* __doc_gr_packet_protocols_kiss_tnc_set_full_duplex = R"doc(Set full duplex mode.)doc";
+
+
+static const char* __doc_gr_packet_protocols_kiss_tnc_set_ptt = R"doc(Set PTT state.)doc";
+
+
+static const char* __doc_gr_packet_protocols_kiss_tnc_get_ptt = R"doc(Get PTT state.)doc";
+
+
+static const char* __doc_gr_packet_protocols_kiss_tnc_set_ptt_enabled = R"doc(Enable/disable PTT control.)doc";
+
+
+static const char* __doc_gr_packet_protocols_kiss_tnc_set_ptt_use_dtr = R"doc(Set PTT control method.)doc";

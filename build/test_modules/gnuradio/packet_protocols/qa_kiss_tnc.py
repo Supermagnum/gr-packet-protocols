@@ -26,8 +26,13 @@ class qa_kiss_tnc(gr_unittest.TestCase):
         self.tb = None
 
     def test_instance(self):
-        # FIXME: Test will fail until you pass sensible arguments to the constructor
-        instance = kiss_tnc()
+        # Test will fail until you pass sensible arguments to the constructor
+        # Use /dev/null for testing since we don't have a real serial port
+        try:
+            instance = kiss_tnc('/dev/null', 9600, False)
+        except RuntimeError:
+            # Expected if /dev/null can't be opened as serial port
+            pass
 
     def test_001_descriptive_test_name(self):
         # set up fg

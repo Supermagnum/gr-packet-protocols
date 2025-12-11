@@ -7,6 +7,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_decoder.h" line="28" column="1"/>
+    <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/adaptive_modulator.h" line="29" column="1"/>
   </compounddef>
 </doxygen>

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/haaken/github-projects/gr-packet_protocols
+CMAKE_SOURCE_DIR = /home/haaken/github-projects/gr-packet-protocols
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/haaken/github-projects/gr-packet_protocols/build
+CMAKE_BINARY_DIR = /home/haaken/github-projects/gr-packet-protocols/build
 
 # Include any dependencies generated for this target.
 include python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/depend.make
@@ -70,116 +70,158 @@ include python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/
 include python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/flags.make
 
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_encoder_python.cc.o: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/flags.make
-python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_encoder_python.cc.o: /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/ax25_encoder_python.cc
+python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_encoder_python.cc.o: /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/ax25_encoder_python.cc
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_encoder_python.cc.o: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet_protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_encoder_python.cc.o"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_encoder_python.cc.o -MF CMakeFiles/packet_protocols_python.dir/ax25_encoder_python.cc.o.d -o CMakeFiles/packet_protocols_python.dir/ax25_encoder_python.cc.o -c /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/ax25_encoder_python.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_encoder_python.cc.o"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_encoder_python.cc.o -MF CMakeFiles/packet_protocols_python.dir/ax25_encoder_python.cc.o.d -o CMakeFiles/packet_protocols_python.dir/ax25_encoder_python.cc.o -c /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/ax25_encoder_python.cc
 
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_encoder_python.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/packet_protocols_python.dir/ax25_encoder_python.cc.i"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/ax25_encoder_python.cc > CMakeFiles/packet_protocols_python.dir/ax25_encoder_python.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/ax25_encoder_python.cc > CMakeFiles/packet_protocols_python.dir/ax25_encoder_python.cc.i
 
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_encoder_python.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/packet_protocols_python.dir/ax25_encoder_python.cc.s"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/ax25_encoder_python.cc -o CMakeFiles/packet_protocols_python.dir/ax25_encoder_python.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/ax25_encoder_python.cc -o CMakeFiles/packet_protocols_python.dir/ax25_encoder_python.cc.s
 
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_decoder_python.cc.o: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/flags.make
-python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_decoder_python.cc.o: /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/ax25_decoder_python.cc
+python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_decoder_python.cc.o: /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/ax25_decoder_python.cc
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_decoder_python.cc.o: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet_protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_decoder_python.cc.o"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_decoder_python.cc.o -MF CMakeFiles/packet_protocols_python.dir/ax25_decoder_python.cc.o.d -o CMakeFiles/packet_protocols_python.dir/ax25_decoder_python.cc.o -c /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/ax25_decoder_python.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_decoder_python.cc.o"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_decoder_python.cc.o -MF CMakeFiles/packet_protocols_python.dir/ax25_decoder_python.cc.o.d -o CMakeFiles/packet_protocols_python.dir/ax25_decoder_python.cc.o -c /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/ax25_decoder_python.cc
 
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_decoder_python.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/packet_protocols_python.dir/ax25_decoder_python.cc.i"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/ax25_decoder_python.cc > CMakeFiles/packet_protocols_python.dir/ax25_decoder_python.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/ax25_decoder_python.cc > CMakeFiles/packet_protocols_python.dir/ax25_decoder_python.cc.i
 
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_decoder_python.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/packet_protocols_python.dir/ax25_decoder_python.cc.s"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/ax25_decoder_python.cc -o CMakeFiles/packet_protocols_python.dir/ax25_decoder_python.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/ax25_decoder_python.cc -o CMakeFiles/packet_protocols_python.dir/ax25_decoder_python.cc.s
 
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_encoder_python.cc.o: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/flags.make
-python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_encoder_python.cc.o: /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/fx25_encoder_python.cc
+python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_encoder_python.cc.o: /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/fx25_encoder_python.cc
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_encoder_python.cc.o: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet_protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_encoder_python.cc.o"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_encoder_python.cc.o -MF CMakeFiles/packet_protocols_python.dir/fx25_encoder_python.cc.o.d -o CMakeFiles/packet_protocols_python.dir/fx25_encoder_python.cc.o -c /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/fx25_encoder_python.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_encoder_python.cc.o"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_encoder_python.cc.o -MF CMakeFiles/packet_protocols_python.dir/fx25_encoder_python.cc.o.d -o CMakeFiles/packet_protocols_python.dir/fx25_encoder_python.cc.o -c /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/fx25_encoder_python.cc
 
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_encoder_python.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/packet_protocols_python.dir/fx25_encoder_python.cc.i"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/fx25_encoder_python.cc > CMakeFiles/packet_protocols_python.dir/fx25_encoder_python.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/fx25_encoder_python.cc > CMakeFiles/packet_protocols_python.dir/fx25_encoder_python.cc.i
 
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_encoder_python.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/packet_protocols_python.dir/fx25_encoder_python.cc.s"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/fx25_encoder_python.cc -o CMakeFiles/packet_protocols_python.dir/fx25_encoder_python.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/fx25_encoder_python.cc -o CMakeFiles/packet_protocols_python.dir/fx25_encoder_python.cc.s
 
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_decoder_python.cc.o: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/flags.make
-python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_decoder_python.cc.o: /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/fx25_decoder_python.cc
+python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_decoder_python.cc.o: /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/fx25_decoder_python.cc
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_decoder_python.cc.o: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet_protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_decoder_python.cc.o"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_decoder_python.cc.o -MF CMakeFiles/packet_protocols_python.dir/fx25_decoder_python.cc.o.d -o CMakeFiles/packet_protocols_python.dir/fx25_decoder_python.cc.o -c /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/fx25_decoder_python.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_decoder_python.cc.o"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_decoder_python.cc.o -MF CMakeFiles/packet_protocols_python.dir/fx25_decoder_python.cc.o.d -o CMakeFiles/packet_protocols_python.dir/fx25_decoder_python.cc.o -c /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/fx25_decoder_python.cc
 
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_decoder_python.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/packet_protocols_python.dir/fx25_decoder_python.cc.i"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/fx25_decoder_python.cc > CMakeFiles/packet_protocols_python.dir/fx25_decoder_python.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/fx25_decoder_python.cc > CMakeFiles/packet_protocols_python.dir/fx25_decoder_python.cc.i
 
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_decoder_python.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/packet_protocols_python.dir/fx25_decoder_python.cc.s"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/fx25_decoder_python.cc -o CMakeFiles/packet_protocols_python.dir/fx25_decoder_python.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/fx25_decoder_python.cc -o CMakeFiles/packet_protocols_python.dir/fx25_decoder_python.cc.s
 
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_encoder_python.cc.o: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/flags.make
-python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_encoder_python.cc.o: /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/il2p_encoder_python.cc
+python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_encoder_python.cc.o: /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/il2p_encoder_python.cc
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_encoder_python.cc.o: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet_protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_encoder_python.cc.o"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_encoder_python.cc.o -MF CMakeFiles/packet_protocols_python.dir/il2p_encoder_python.cc.o.d -o CMakeFiles/packet_protocols_python.dir/il2p_encoder_python.cc.o -c /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/il2p_encoder_python.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_encoder_python.cc.o"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_encoder_python.cc.o -MF CMakeFiles/packet_protocols_python.dir/il2p_encoder_python.cc.o.d -o CMakeFiles/packet_protocols_python.dir/il2p_encoder_python.cc.o -c /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/il2p_encoder_python.cc
 
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_encoder_python.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/packet_protocols_python.dir/il2p_encoder_python.cc.i"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/il2p_encoder_python.cc > CMakeFiles/packet_protocols_python.dir/il2p_encoder_python.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/il2p_encoder_python.cc > CMakeFiles/packet_protocols_python.dir/il2p_encoder_python.cc.i
 
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_encoder_python.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/packet_protocols_python.dir/il2p_encoder_python.cc.s"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/il2p_encoder_python.cc -o CMakeFiles/packet_protocols_python.dir/il2p_encoder_python.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/il2p_encoder_python.cc -o CMakeFiles/packet_protocols_python.dir/il2p_encoder_python.cc.s
 
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_decoder_python.cc.o: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/flags.make
-python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_decoder_python.cc.o: /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/il2p_decoder_python.cc
+python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_decoder_python.cc.o: /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/il2p_decoder_python.cc
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_decoder_python.cc.o: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet_protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_decoder_python.cc.o"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_decoder_python.cc.o -MF CMakeFiles/packet_protocols_python.dir/il2p_decoder_python.cc.o.d -o CMakeFiles/packet_protocols_python.dir/il2p_decoder_python.cc.o -c /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/il2p_decoder_python.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_decoder_python.cc.o"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_decoder_python.cc.o -MF CMakeFiles/packet_protocols_python.dir/il2p_decoder_python.cc.o.d -o CMakeFiles/packet_protocols_python.dir/il2p_decoder_python.cc.o -c /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/il2p_decoder_python.cc
 
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_decoder_python.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/packet_protocols_python.dir/il2p_decoder_python.cc.i"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/il2p_decoder_python.cc > CMakeFiles/packet_protocols_python.dir/il2p_decoder_python.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/il2p_decoder_python.cc > CMakeFiles/packet_protocols_python.dir/il2p_decoder_python.cc.i
 
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_decoder_python.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/packet_protocols_python.dir/il2p_decoder_python.cc.s"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/il2p_decoder_python.cc -o CMakeFiles/packet_protocols_python.dir/il2p_decoder_python.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/il2p_decoder_python.cc -o CMakeFiles/packet_protocols_python.dir/il2p_decoder_python.cc.s
 
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/kiss_tnc_python.cc.o: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/flags.make
-python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/kiss_tnc_python.cc.o: /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/kiss_tnc_python.cc
+python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/kiss_tnc_python.cc.o: /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/kiss_tnc_python.cc
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/kiss_tnc_python.cc.o: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet_protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/kiss_tnc_python.cc.o"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/kiss_tnc_python.cc.o -MF CMakeFiles/packet_protocols_python.dir/kiss_tnc_python.cc.o.d -o CMakeFiles/packet_protocols_python.dir/kiss_tnc_python.cc.o -c /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/kiss_tnc_python.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/kiss_tnc_python.cc.o"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/kiss_tnc_python.cc.o -MF CMakeFiles/packet_protocols_python.dir/kiss_tnc_python.cc.o.d -o CMakeFiles/packet_protocols_python.dir/kiss_tnc_python.cc.o -c /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/kiss_tnc_python.cc
 
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/kiss_tnc_python.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/packet_protocols_python.dir/kiss_tnc_python.cc.i"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/kiss_tnc_python.cc > CMakeFiles/packet_protocols_python.dir/kiss_tnc_python.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/kiss_tnc_python.cc > CMakeFiles/packet_protocols_python.dir/kiss_tnc_python.cc.i
 
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/kiss_tnc_python.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/packet_protocols_python.dir/kiss_tnc_python.cc.s"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/kiss_tnc_python.cc -o CMakeFiles/packet_protocols_python.dir/kiss_tnc_python.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/kiss_tnc_python.cc -o CMakeFiles/packet_protocols_python.dir/kiss_tnc_python.cc.s
+
+python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/link_quality_monitor_python.cc.o: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/flags.make
+python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/link_quality_monitor_python.cc.o: /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/link_quality_monitor_python.cc
+python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/link_quality_monitor_python.cc.o: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/link_quality_monitor_python.cc.o"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/link_quality_monitor_python.cc.o -MF CMakeFiles/packet_protocols_python.dir/link_quality_monitor_python.cc.o.d -o CMakeFiles/packet_protocols_python.dir/link_quality_monitor_python.cc.o -c /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/link_quality_monitor_python.cc
+
+python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/link_quality_monitor_python.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/packet_protocols_python.dir/link_quality_monitor_python.cc.i"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/link_quality_monitor_python.cc > CMakeFiles/packet_protocols_python.dir/link_quality_monitor_python.cc.i
+
+python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/link_quality_monitor_python.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/packet_protocols_python.dir/link_quality_monitor_python.cc.s"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/link_quality_monitor_python.cc -o CMakeFiles/packet_protocols_python.dir/link_quality_monitor_python.cc.s
+
+python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/adaptive_rate_control_python.cc.o: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/flags.make
+python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/adaptive_rate_control_python.cc.o: /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/adaptive_rate_control_python.cc
+python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/adaptive_rate_control_python.cc.o: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/adaptive_rate_control_python.cc.o"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/adaptive_rate_control_python.cc.o -MF CMakeFiles/packet_protocols_python.dir/adaptive_rate_control_python.cc.o.d -o CMakeFiles/packet_protocols_python.dir/adaptive_rate_control_python.cc.o -c /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/adaptive_rate_control_python.cc
+
+python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/adaptive_rate_control_python.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/packet_protocols_python.dir/adaptive_rate_control_python.cc.i"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/adaptive_rate_control_python.cc > CMakeFiles/packet_protocols_python.dir/adaptive_rate_control_python.cc.i
+
+python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/adaptive_rate_control_python.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/packet_protocols_python.dir/adaptive_rate_control_python.cc.s"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/adaptive_rate_control_python.cc -o CMakeFiles/packet_protocols_python.dir/adaptive_rate_control_python.cc.s
+
+python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/modulation_negotiation_python.cc.o: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/flags.make
+python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/modulation_negotiation_python.cc.o: /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/modulation_negotiation_python.cc
+python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/modulation_negotiation_python.cc.o: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/modulation_negotiation_python.cc.o"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/modulation_negotiation_python.cc.o -MF CMakeFiles/packet_protocols_python.dir/modulation_negotiation_python.cc.o.d -o CMakeFiles/packet_protocols_python.dir/modulation_negotiation_python.cc.o -c /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/modulation_negotiation_python.cc
+
+python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/modulation_negotiation_python.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/packet_protocols_python.dir/modulation_negotiation_python.cc.i"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/modulation_negotiation_python.cc > CMakeFiles/packet_protocols_python.dir/modulation_negotiation_python.cc.i
+
+python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/modulation_negotiation_python.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/packet_protocols_python.dir/modulation_negotiation_python.cc.s"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/modulation_negotiation_python.cc -o CMakeFiles/packet_protocols_python.dir/modulation_negotiation_python.cc.s
 
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/python_bindings.cc.o: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/flags.make
-python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/python_bindings.cc.o: /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/python_bindings.cc
+python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/python_bindings.cc.o: /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/python_bindings.cc
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/python_bindings.cc.o: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet_protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/python_bindings.cc.o"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/python_bindings.cc.o -MF CMakeFiles/packet_protocols_python.dir/python_bindings.cc.o.d -o CMakeFiles/packet_protocols_python.dir/python_bindings.cc.o -c /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/python_bindings.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/python_bindings.cc.o"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/python_bindings.cc.o -MF CMakeFiles/packet_protocols_python.dir/python_bindings.cc.o.d -o CMakeFiles/packet_protocols_python.dir/python_bindings.cc.o -c /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/python_bindings.cc
 
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/python_bindings.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/packet_protocols_python.dir/python_bindings.cc.i"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/python_bindings.cc > CMakeFiles/packet_protocols_python.dir/python_bindings.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/python_bindings.cc > CMakeFiles/packet_protocols_python.dir/python_bindings.cc.i
 
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/python_bindings.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/packet_protocols_python.dir/python_bindings.cc.s"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/python_bindings.cc -o CMakeFiles/packet_protocols_python.dir/python_bindings.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/python_bindings.cc -o CMakeFiles/packet_protocols_python.dir/python_bindings.cc.s
 
 # Object files for target packet_protocols_python
 packet_protocols_python_OBJECTS = \
@@ -190,6 +232,9 @@ packet_protocols_python_OBJECTS = \
 "CMakeFiles/packet_protocols_python.dir/il2p_encoder_python.cc.o" \
 "CMakeFiles/packet_protocols_python.dir/il2p_decoder_python.cc.o" \
 "CMakeFiles/packet_protocols_python.dir/kiss_tnc_python.cc.o" \
+"CMakeFiles/packet_protocols_python.dir/link_quality_monitor_python.cc.o" \
+"CMakeFiles/packet_protocols_python.dir/adaptive_rate_control_python.cc.o" \
+"CMakeFiles/packet_protocols_python.dir/modulation_negotiation_python.cc.o" \
 "CMakeFiles/packet_protocols_python.dir/python_bindings.cc.o"
 
 # External object files for target packet_protocols_python
@@ -202,6 +247,9 @@ python/packet_protocols/bindings/packet_protocols_python.cpython-312-x86_64-linu
 python/packet_protocols/bindings/packet_protocols_python.cpython-312-x86_64-linux-gnu.so: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_encoder_python.cc.o
 python/packet_protocols/bindings/packet_protocols_python.cpython-312-x86_64-linux-gnu.so: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_decoder_python.cc.o
 python/packet_protocols/bindings/packet_protocols_python.cpython-312-x86_64-linux-gnu.so: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/kiss_tnc_python.cc.o
+python/packet_protocols/bindings/packet_protocols_python.cpython-312-x86_64-linux-gnu.so: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/link_quality_monitor_python.cc.o
+python/packet_protocols/bindings/packet_protocols_python.cpython-312-x86_64-linux-gnu.so: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/adaptive_rate_control_python.cc.o
+python/packet_protocols/bindings/packet_protocols_python.cpython-312-x86_64-linux-gnu.so: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/modulation_negotiation_python.cc.o
 python/packet_protocols/bindings/packet_protocols_python.cpython-312-x86_64-linux-gnu.so: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/python_bindings.cc.o
 python/packet_protocols/bindings/packet_protocols_python.cpython-312-x86_64-linux-gnu.so: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make
 python/packet_protocols/bindings/packet_protocols_python.cpython-312-x86_64-linux-gnu.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.83.0
@@ -220,20 +268,20 @@ python/packet_protocols/bindings/packet_protocols_python.cpython-312-x86_64-linu
 python/packet_protocols/bindings/packet_protocols_python.cpython-312-x86_64-linux-gnu.so: /usr/lib/x86_64-linux-gnu/libgmpxx.so
 python/packet_protocols/bindings/packet_protocols_python.cpython-312-x86_64-linux-gnu.so: /usr/lib/x86_64-linux-gnu/libgmp.so
 python/packet_protocols/bindings/packet_protocols_python.cpython-312-x86_64-linux-gnu.so: python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/haaken/github-projects/gr-packet_protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX shared module packet_protocols_python.cpython-312-x86_64-linux-gnu.so"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/packet_protocols_python.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && /usr/bin/strip /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings/packet_protocols_python.cpython-312-x86_64-linux-gnu.so
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && /usr/bin/cmake -E copy /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings/packet_protocols_python.cpython-312-x86_64-linux-gnu.so /home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX shared module packet_protocols_python.cpython-312-x86_64-linux-gnu.so"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/packet_protocols_python.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/strip /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings/packet_protocols_python.cpython-312-x86_64-linux-gnu.so
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/cmake -E copy /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings/packet_protocols_python.cpython-312-x86_64-linux-gnu.so /home/haaken/github-projects/gr-packet-protocols/build/test_modules/gnuradio/packet_protocols/
 
 # Rule to build all files generated by this target.
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build: python/packet_protocols/bindings/packet_protocols_python.cpython-312-x86_64-linux-gnu.so
 .PHONY : python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build
 
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/clean:
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && $(CMAKE_COMMAND) -P CMakeFiles/packet_protocols_python.dir/cmake_clean.cmake
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && $(CMAKE_COMMAND) -P CMakeFiles/packet_protocols_python.dir/cmake_clean.cmake
 .PHONY : python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/clean
 
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/depend:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/haaken/github-projects/gr-packet_protocols /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings /home/haaken/github-projects/gr-packet_protocols/build /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/haaken/github-projects/gr-packet-protocols /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings /home/haaken/github-projects/gr-packet-protocols/build /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/depend
 

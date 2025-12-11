@@ -1,10 +1,10 @@
-Start testing: Nov 16 14:27 CET
+Start testing: Dec 11 21:26 CET
 ----------------------------------------------------------
-1/7 Testing: qa_ax25_encoder
-1/7 Test: qa_ax25_encoder
+1/9 Testing: qa_ax25_encoder
+1/9 Test: qa_ax25_encoder
 Command: "/usr/bin/sh" "qa_ax25_encoder_test.sh"
-Directory: /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols
-"qa_ax25_encoder" start time: Nov 16 14:27 CET
+Directory: /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols
+"qa_ax25_encoder" start time: Dec 11 21:26 CET
 Output:
 ----------------------------------------------------------
 ..
@@ -13,18 +13,18 @@ Ran 2 tests in 0.001s
 
 OK
 <end of output>
-Test time =   0.10 sec
+Test time =   0.15 sec
 ----------------------------------------------------------
 Test Passed.
-"qa_ax25_encoder" end time: Nov 16 14:27 CET
+"qa_ax25_encoder" end time: Dec 11 21:26 CET
 "qa_ax25_encoder" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/7 Testing: qa_ax25_decoder
-2/7 Test: qa_ax25_decoder
+2/9 Testing: qa_ax25_decoder
+2/9 Test: qa_ax25_decoder
 Command: "/usr/bin/sh" "qa_ax25_decoder_test.sh"
-Directory: /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols
-"qa_ax25_decoder" start time: Nov 16 14:27 CET
+Directory: /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols
+"qa_ax25_decoder" start time: Dec 11 21:26 CET
 Output:
 ----------------------------------------------------------
 ..
@@ -33,18 +33,18 @@ Ran 2 tests in 0.001s
 
 OK
 <end of output>
-Test time =   0.10 sec
+Test time =   0.13 sec
 ----------------------------------------------------------
 Test Passed.
-"qa_ax25_decoder" end time: Nov 16 14:27 CET
+"qa_ax25_decoder" end time: Dec 11 21:26 CET
 "qa_ax25_decoder" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-3/7 Testing: qa_fx25_encoder
-3/7 Test: qa_fx25_encoder
+3/9 Testing: qa_fx25_encoder
+3/9 Test: qa_fx25_encoder
 Command: "/usr/bin/sh" "qa_fx25_encoder_test.sh"
-Directory: /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols
-"qa_fx25_encoder" start time: Nov 16 14:27 CET
+Directory: /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols
+"qa_fx25_encoder" start time: Dec 11 21:26 CET
 Output:
 ----------------------------------------------------------
 ..
@@ -53,38 +53,38 @@ Ran 2 tests in 0.001s
 
 OK
 <end of output>
-Test time =   0.11 sec
+Test time =   0.14 sec
 ----------------------------------------------------------
 Test Passed.
-"qa_fx25_encoder" end time: Nov 16 14:27 CET
+"qa_fx25_encoder" end time: Dec 11 21:26 CET
 "qa_fx25_encoder" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-4/7 Testing: qa_fx25_decoder
-4/7 Test: qa_fx25_decoder
+4/9 Testing: qa_fx25_decoder
+4/9 Test: qa_fx25_decoder
 Command: "/usr/bin/sh" "qa_fx25_decoder_test.sh"
-Directory: /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols
-"qa_fx25_decoder" start time: Nov 16 14:27 CET
+Directory: /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols
+"qa_fx25_decoder" start time: Dec 11 21:26 CET
 Output:
 ----------------------------------------------------------
 ..
 ----------------------------------------------------------------------
-Ran 2 tests in 0.001s
+Ran 2 tests in 0.002s
 
 OK
 <end of output>
-Test time =   0.10 sec
+Test time =   0.16 sec
 ----------------------------------------------------------
 Test Passed.
-"qa_fx25_decoder" end time: Nov 16 14:27 CET
+"qa_fx25_decoder" end time: Dec 11 21:26 CET
 "qa_fx25_decoder" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-5/7 Testing: qa_il2p_encoder
-5/7 Test: qa_il2p_encoder
+5/9 Testing: qa_il2p_encoder
+5/9 Test: qa_il2p_encoder
 Command: "/usr/bin/sh" "qa_il2p_encoder_test.sh"
-Directory: /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols
-"qa_il2p_encoder" start time: Nov 16 14:27 CET
+Directory: /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols
+"qa_il2p_encoder" start time: Dec 11 21:26 CET
 Output:
 ----------------------------------------------------------
 ..
@@ -93,18 +93,18 @@ Ran 2 tests in 0.001s
 
 OK
 <end of output>
-Test time =   0.10 sec
+Test time =   0.14 sec
 ----------------------------------------------------------
 Test Passed.
-"qa_il2p_encoder" end time: Nov 16 14:27 CET
+"qa_il2p_encoder" end time: Dec 11 21:26 CET
 "qa_il2p_encoder" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-6/7 Testing: qa_il2p_decoder
-6/7 Test: qa_il2p_decoder
+6/9 Testing: qa_il2p_decoder
+6/9 Test: qa_il2p_decoder
 Command: "/usr/bin/sh" "qa_il2p_decoder_test.sh"
-Directory: /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols
-"qa_il2p_decoder" start time: Nov 16 14:27 CET
+Directory: /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols
+"qa_il2p_decoder" start time: Dec 11 21:26 CET
 Output:
 ----------------------------------------------------------
 ..
@@ -113,18 +113,18 @@ Ran 2 tests in 0.001s
 
 OK
 <end of output>
-Test time =   0.11 sec
+Test time =   0.13 sec
 ----------------------------------------------------------
 Test Passed.
-"qa_il2p_decoder" end time: Nov 16 14:27 CET
+"qa_il2p_decoder" end time: Dec 11 21:26 CET
 "qa_il2p_decoder" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-7/7 Testing: qa_kiss_tnc
-7/7 Test: qa_kiss_tnc
+7/9 Testing: qa_kiss_tnc
+7/9 Test: qa_kiss_tnc
 Command: "/usr/bin/sh" "qa_kiss_tnc_test.sh"
-Directory: /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols
-"qa_kiss_tnc" start time: Nov 16 14:27 CET
+Directory: /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols
+"qa_kiss_tnc" start time: Dec 11 21:26 CET
 Output:
 ----------------------------------------------------------
 ..
@@ -133,11 +133,51 @@ Ran 2 tests in 0.001s
 
 OK
 <end of output>
-Test time =   0.11 sec
+Test time =   0.14 sec
 ----------------------------------------------------------
 Test Passed.
-"qa_kiss_tnc" end time: Nov 16 14:27 CET
+"qa_kiss_tnc" end time: Dec 11 21:26 CET
 "qa_kiss_tnc" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Nov 16 14:27 CET
+8/9 Testing: qa_link_quality_monitor
+8/9 Test: qa_link_quality_monitor
+Command: "/usr/bin/sh" "qa_link_quality_monitor_test.sh"
+Directory: /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols
+"qa_link_quality_monitor" start time: Dec 11 21:26 CET
+Output:
+----------------------------------------------------------
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 0.004s
+
+OK
+<end of output>
+Test time =   0.14 sec
+----------------------------------------------------------
+Test Passed.
+"qa_link_quality_monitor" end time: Dec 11 21:26 CET
+"qa_link_quality_monitor" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/9 Testing: qa_adaptive_rate_control
+9/9 Test: qa_adaptive_rate_control
+Command: "/usr/bin/sh" "qa_adaptive_rate_control_test.sh"
+Directory: /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols
+"qa_adaptive_rate_control" start time: Dec 11 21:26 CET
+Output:
+----------------------------------------------------------
+.........
+----------------------------------------------------------------------
+Ran 9 tests in 0.005s
+
+OK
+<end of output>
+Test time =   0.13 sec
+----------------------------------------------------------
+Test Passed.
+"qa_adaptive_rate_control" end time: Dec 11 21:26 CET
+"qa_adaptive_rate_control" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Dec 11 21:26 CET

@@ -1,3 +1,47 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$structil2p__header__t.html" title=" " alt="" coords="5,5,104,31"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,365,112,390"/>
+<area shape="rect" id="Node000001" href="$classgr_1_1packet__protocols_1_1adaptive__rate__control.html" title="Adaptive Rate Control." alt="" coords="164,5,319,45"/>
+<area shape="poly" id="edge3_Node000000_Node000001" title=" " alt="" coords="58,351,64,291,79,213,92,171,109,130,131,91,158,55,173,43,176,47,162,59,135,94,114,132,97,173,85,214,69,292,64,351"/>
+<area shape="rect" id="Node000003" href="$classgr_1_1packet__protocols_1_1ax25__decoder.html" title="AX.25 Decoder." alt="" coords="171,69,311,109"/>
+<area shape="poly" id="edge5_Node000000_Node000003" title=" " alt="" coords="61,350,70,302,88,240,116,176,135,146,158,119,174,107,177,112,162,123,140,149,121,179,93,242,75,303,66,351"/>
+<area shape="rect" id="Node000005" href="$classgr_1_1packet__protocols_1_1ax25__encoder.html" title="AX.25 Encoder." alt="" coords="171,133,311,173"/>
+<area shape="poly" id="edge7_Node000000_Node000005" title=" " alt="" coords="65,351,77,314,97,269,123,224,158,183,175,171,178,176,162,187,128,227,101,272,82,316,70,352"/>
+<area shape="rect" id="Node000007" href="$classgr_1_1packet__protocols_1_1fx25__decoder.html" title="FX.25 Decoder with Forward Error Correction." alt="" coords="171,197,311,237"/>
+<area shape="poly" id="edge9_Node000000_Node000007" title=" " alt="" coords="71,351,107,300,131,272,158,247,178,235,181,240,162,251,135,275,111,303,76,354"/>
+<area shape="rect" id="Node000009" href="$classgr_1_1packet__protocols_1_1fx25__encoder.html" title="FX.25 Encoder with Forward Error Correction." alt="" coords="171,261,311,301"/>
+<area shape="poly" id="edge11_Node000000_Node000009" title=" " alt="" coords="88,354,159,311,184,299,187,304,161,316,90,359"/>
+<area shape="rect" id="Node000011" href="$classgr_1_1packet__protocols_1_1fx25__fec.html" title="FX.25 Forward Error Correction." alt="" coords="171,325,311,365"/>
+<area shape="poly" id="edge13_Node000000_Node000011" title=" " alt="" coords="125,363,171,355,172,360,126,368"/>
+<area shape="rect" id="Node000012" href="$classgr_1_1packet__protocols_1_1il2p__decoder.html" title="IL2P (Improved Layer 2 Protocol) Decoder." alt="" coords="171,389,311,429"/>
+<area shape="poly" id="edge14_Node000000_Node000012" title=" " alt="" coords="126,386,172,394,171,400,125,392"/>
+<area shape="rect" id="Node000014" href="$classgr_1_1packet__protocols_1_1il2p__encoder.html" title="IL2P (Improved Layer 2 Protocol) Encoder." alt="" coords="171,453,311,493"/>
+<area shape="poly" id="edge16_Node000000_Node000014" title=" " alt="" coords="90,396,161,439,187,451,184,456,159,444,88,400"/>
+<area shape="rect" id="Node000016" href="$classgr_1_1packet__protocols_1_1il2p__reed__solomon.html" title="IL2P Reed&#45;Solomon Forward Error Correction." alt="" coords="171,517,311,557"/>
+<area shape="poly" id="edge18_Node000000_Node000016" title=" " alt="" coords="76,400,111,452,135,479,162,503,181,515,178,520,158,507,131,483,107,455,71,403"/>
+<area shape="rect" id="Node000017" href="$classgr_1_1packet__protocols_1_1kiss__tnc.html" title="KISS TNC Interface." alt="" coords="171,581,311,621"/>
+<area shape="poly" id="edge19_Node000000_Node000017" title=" " alt="" coords="70,402,82,439,101,483,128,528,162,567,178,579,175,583,158,571,123,531,97,485,77,441,65,404"/>
+<area shape="rect" id="Node000019" href="$classgr_1_1packet__protocols_1_1link__quality__monitor.html" title="Link Quality Monitor." alt="" coords="169,645,314,685"/>
+<area shape="poly" id="edge21_Node000000_Node000019" title=" " alt="" coords="66,404,75,452,93,513,121,576,140,605,162,631,177,643,174,647,158,635,135,608,116,578,88,514,70,453,61,405"/>
+<area shape="rect" id="Node000021" href="$classgr_1_1packet__protocols_1_1modulation__negotiation.html" title="Modulation Negotiation Handler." alt="" coords="160,709,323,749"/>
+<area shape="poly" id="edge23_Node000000_Node000021" title=" " alt="" coords="64,404,69,463,85,540,97,582,114,623,135,661,162,695,176,707,173,711,158,699,131,664,109,625,92,584,79,542,64,463,58,404"/>
+<area shape="rect" id="Node000002" href="$classgr_1_1packet__protocols_1_1adaptive__rate__control__impl.html" title=" " alt="" coords="375,5,561,45"/>
+<area shape="poly" id="edge4_Node000001_Node000002" title=" " alt="" coords="333,23,375,23,375,28,333,28"/>
+<area shape="rect" id="Node000004" href="$classgr_1_1packet__protocols_1_1ax25__decoder__impl.html" title="AX.25 Decoder Implementation." alt="" coords="397,69,539,109"/>
+<area shape="poly" id="edge6_Node000003_Node000004" title=" " alt="" coords="325,87,396,87,396,92,325,92"/>
+<area shape="rect" id="Node000006" href="$classgr_1_1packet__protocols_1_1ax25__encoder__impl.html" title="AX.25 Encoder Implementation." alt="" coords="397,133,539,173"/>
+<area shape="poly" id="edge8_Node000005_Node000006" title=" " alt="" coords="325,151,396,151,396,156,325,156"/>
+<area shape="rect" id="Node000008" href="$classgr_1_1packet__protocols_1_1fx25__decoder__impl.html" title="FX.25 Decoder Implementation." alt="" coords="398,197,538,237"/>
+<area shape="poly" id="edge10_Node000007_Node000008" title=" " alt="" coords="325,215,398,215,398,220,325,220"/>
+<area shape="rect" id="Node000010" href="$classgr_1_1packet__protocols_1_1fx25__encoder__impl.html" title="FX.25 Encoder Implementation." alt="" coords="398,261,538,301"/>
+<area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="325,279,398,279,398,284,325,284"/>
+<area shape="rect" id="Node000013" href="$classgr_1_1packet__protocols_1_1il2p__decoder__impl.html" title=" " alt="" coords="398,389,538,429"/>
+<area shape="poly" id="edge15_Node000012_Node000013" title=" " alt="" coords="325,407,398,407,398,412,325,412"/>
+<area shape="rect" id="Node000015" href="$classgr_1_1packet__protocols_1_1il2p__encoder__impl.html" title="IL2P Encoder Implementation." alt="" coords="398,453,538,493"/>
+<area shape="poly" id="edge17_Node000014_Node000015" title=" " alt="" coords="325,471,398,471,398,476,325,476"/>
+<area shape="rect" id="Node000018" href="$classgr_1_1packet__protocols_1_1kiss__tnc__impl.html" title="KISS TNC Implementation." alt="" coords="398,581,538,621"/>
+<area shape="poly" id="edge20_Node000017_Node000018" title=" " alt="" coords="325,599,398,599,398,604,325,604"/>
+<area shape="rect" id="Node000020" href="$classgr_1_1packet__protocols_1_1link__quality__monitor__impl.html" title=" " alt="" coords="380,645,556,685"/>
+<area shape="poly" id="edge22_Node000019_Node000020" title=" " alt="" coords="328,663,380,663,380,668,328,668"/>
+<area shape="rect" id="Node000022" href="$classgr_1_1packet__protocols_1_1modulation__negotiation__impl.html" title=" " alt="" coords="371,709,565,749"/>
+<area shape="poly" id="edge24_Node000021_Node000022" title=" " alt="" coords="336,727,371,727,371,732,336,732"/>
 </map>

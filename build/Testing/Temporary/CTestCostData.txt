@@ -1,8 +1,10 @@
-qa_ax25_encoder 1 0.102724
-qa_ax25_decoder 2 0.0513386
-qa_fx25_encoder 2 0.0534162
-qa_fx25_decoder 2 0.0498506
-qa_il2p_encoder 1 0.10496
-qa_il2p_decoder 2 0.0528009
-qa_kiss_tnc 1 0.105685
+qa_ax25_encoder 28 0.00528445
+qa_ax25_decoder 28 0.00462378
+qa_fx25_encoder 28 0.0048983
+qa_fx25_decoder 28 0.00565447
+qa_il2p_encoder 27 0.00535522
+qa_il2p_decoder 28 0.00481081
+qa_kiss_tnc 27 0.00529792
+qa_link_quality_monitor 12 0.0115865
+qa_adaptive_rate_control 16 0.00831909
 ---

@@ -1,5 +1,5 @@
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_encoder_python.cc.o: \
- /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/ax25_encoder_python.cc \
+ /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/ax25_encoder_python.cc \
  /usr/include/stdc-predef.h /usr/include/pybind11/complex.h \
  /usr/include/pybind11/pybind11.h /usr/include/pybind11/detail/class.h \
  /usr/include/pybind11/attr.h /usr/include/pybind11/detail/common.h \
@@ -386,8 +386,8 @@ python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_enc
  /usr/include/c++/13/bits/mask_array.h \
  /usr/include/c++/13/bits/indirect_array.h /usr/include/c++/13/variant \
  /usr/include/c++/13/bits/parse_numbers.h \
- /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/../../../include/gnuradio/packet_protocols/ax25_encoder.h \
- /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/../../../include/gnuradio/packet_protocols/api.h \
+ /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/../../../include/gnuradio/packet_protocols/ax25_encoder.h \
+ /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/../../../include/gnuradio/packet_protocols/api.h \
  /usr/include/gnuradio/attributes.h /usr/include/gnuradio/sync_block.h \
  /usr/include/gnuradio/api.h /usr/include/gnuradio/block.h \
  /usr/include/gnuradio/basic_block.h /usr/include/gnuradio/io_signature.h \
@@ -1152,5 +1152,5 @@ python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_enc
  /usr/include/gmpxx.h /usr/include/c++/13/cfloat \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \
  /usr/include/x86_64-linux-gnu/gmp.h \
- /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings/ax25_encoder_pydoc.h \
- /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings/pydoc_macros.h
+ /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings/ax25_encoder_pydoc.h \
+ /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings/pydoc_macros.h

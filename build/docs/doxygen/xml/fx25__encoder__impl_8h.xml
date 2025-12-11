@@ -82,6 +82,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h"/>
+    <location file="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h"/>
   </compounddef>
 </doxygen>

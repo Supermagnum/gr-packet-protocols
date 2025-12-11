@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/haaken/github-projects/gr-packet_protocols
+CMAKE_SOURCE_DIR = /home/haaken/github-projects/gr-packet-protocols
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/haaken/github-projects/gr-packet_protocols/build
+CMAKE_BINARY_DIR = /home/haaken/github-projects/gr-packet-protocols/build
 
 # Utility rule file for copy_module_for_tests.
 
@@ -67,7 +67,7 @@ include python/packet_protocols/CMakeFiles/copy_module_for_tests.dir/compiler_de
 include python/packet_protocols/CMakeFiles/copy_module_for_tests.dir/progress.make
 
 python/packet_protocols/CMakeFiles/copy_module_for_tests:
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols && /usr/bin/cmake -E copy_directory /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols /home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols && /usr/bin/cmake -E copy_directory /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols /home/haaken/github-projects/gr-packet-protocols/build/test_modules/gnuradio/packet_protocols/
 
 copy_module_for_tests: python/packet_protocols/CMakeFiles/copy_module_for_tests
 copy_module_for_tests: python/packet_protocols/CMakeFiles/copy_module_for_tests.dir/build.make
@@ -78,10 +78,10 @@ python/packet_protocols/CMakeFiles/copy_module_for_tests.dir/build: copy_module_
 .PHONY : python/packet_protocols/CMakeFiles/copy_module_for_tests.dir/build
 
 python/packet_protocols/CMakeFiles/copy_module_for_tests.dir/clean:
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols && $(CMAKE_COMMAND) -P CMakeFiles/copy_module_for_tests.dir/cmake_clean.cmake
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols && $(CMAKE_COMMAND) -P CMakeFiles/copy_module_for_tests.dir/cmake_clean.cmake
 .PHONY : python/packet_protocols/CMakeFiles/copy_module_for_tests.dir/clean
 
 python/packet_protocols/CMakeFiles/copy_module_for_tests.dir/depend:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/haaken/github-projects/gr-packet_protocols /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols /home/haaken/github-projects/gr-packet_protocols/build /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/CMakeFiles/copy_module_for_tests.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/haaken/github-projects/gr-packet-protocols /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols /home/haaken/github-projects/gr-packet-protocols/build /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/CMakeFiles/copy_module_for_tests.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : python/packet_protocols/CMakeFiles/copy_module_for_tests.dir/depend
 

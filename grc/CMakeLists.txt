@@ -13,4 +13,10 @@ install(FILES
     packet_protocols_fx25_decoder.block.yml
     packet_protocols_il2p_encoder.block.yml
     packet_protocols_il2p_decoder.block.yml
-    packet_protocols_kiss_tnc.block.yml DESTINATION share/gnuradio/grc/blocks)
+    packet_protocols_kiss_tnc.block.yml
+    packet_protocols_link_quality_monitor.block.yml
+    packet_protocols_adaptive_rate_control.block.yml
+    packet_protocols_modulation_negotiation.block.yml
+    packet_protocols_adaptive_modulator.block.yml
+    packet_protocols_modulation_switch.block.yml
+    DESTINATION share/gnuradio/grc/blocks)

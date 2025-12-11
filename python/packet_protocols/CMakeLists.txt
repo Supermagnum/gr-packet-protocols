@@ -19,7 +19,11 @@ add_subdirectory(bindings)
 ########################################################################
 # Install python sources
 ########################################################################
-gr_python_install(FILES __init__.py DESTINATION ${GR_PYTHON_DIR}/gnuradio/packet_protocols)
+gr_python_install(FILES 
+    __init__.py
+    adaptive_modulator.py
+    modulation_switch.py
+    DESTINATION ${GR_PYTHON_DIR}/gnuradio/packet_protocols)
 
 ########################################################################
 # Handle the unit tests
@@ -41,3 +45,5 @@ GR_ADD_TEST(qa_fx25_decoder ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_
 GR_ADD_TEST(qa_il2p_encoder ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_il2p_encoder.py)
 GR_ADD_TEST(qa_il2p_decoder ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_il2p_decoder.py)
 GR_ADD_TEST(qa_kiss_tnc ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_kiss_tnc.py)
+GR_ADD_TEST(qa_link_quality_monitor ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_link_quality_monitor.py)
+GR_ADD_TEST(qa_adaptive_rate_control ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_adaptive_rate_control.py)

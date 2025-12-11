@@ -25,7 +25,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/fx25_decoder_pydoc_template.h" line="10" column="10" bodyfile="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/fx25_decoder_pydoc_template.h" bodystart="10" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/fx25_decoder_pydoc_template.h" line="10" column="10" bodyfile="/home/haaken/github-projects/gr-packet-protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/fx25_decoder_pydoc_template.h" bodystart="10" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="var">
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/fx25_decoder_pydoc_template.h" line="18" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/fx25_decoder_pydoc_template.h" bodystart="18" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/fx25_decoder_pydoc_template.h" line="18" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/fx25_decoder_pydoc_template.h" bodystart="18" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2fx25__decoder__pydoc__template_8h_1a3c21e0a0061d5280743b9e9590382ec3" prot="public" static="yes" mutable="no">
         <type>const char *</type>
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/fx25_decoder_pydoc_template.h" line="21" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/fx25_decoder_pydoc_template.h" bodystart="21" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/fx25_decoder_pydoc_template.h" line="21" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/fx25_decoder_pydoc_template.h" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2fx25__decoder__pydoc__template_8h_1a647d7effe879a4a1279e78b78787f459" prot="public" static="yes" mutable="no">
         <type>const char *</type>
@@ -69,13 +69,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/fx25_decoder_pydoc_template.h" line="24" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/fx25_decoder_pydoc_template.h" bodystart="24" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/fx25_decoder_pydoc_template.h" line="24" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/fx25_decoder_pydoc_template.h" bodystart="24" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/fx25_decoder_pydoc_template.h"/>
+    <location file="/home/haaken/github-projects/gr-packet-protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/fx25_decoder_pydoc_template.h"/>
   </compounddef>
 </doxygen>

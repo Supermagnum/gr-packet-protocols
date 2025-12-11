@@ -1,8 +1,8 @@
-# Install script for directory: /home/haaken/github-projects/gr-packet_protocols/lib
+# Install script for directory: /home/haaken/github-projects/gr-packet-protocols/lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -55,8 +55,8 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/x86_64-linux-gnu" TYPE SHARED_LIBRARY FILES
-    "/home/haaken/github-projects/gr-packet_protocols/build/lib/libgnuradio-packet_protocols.so.1.0.0.0"
-    "/home/haaken/github-projects/gr-packet_protocols/build/lib/libgnuradio-packet_protocols.so.1.0.0"
+    "/home/haaken/github-projects/gr-packet-protocols/build/lib/libgnuradio-packet_protocols.so.1.0.0.0"
+    "/home/haaken/github-projects/gr-packet-protocols/build/lib/libgnuradio-packet_protocols.so.1.0.0"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/x86_64-linux-gnu/libgnuradio-packet_protocols.so.1.0.0.0"
@@ -72,14 +72,14 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/x86_64-linux-gnu" TYPE SHARED_LIBRARY FILES "/home/haaken/github-projects/gr-packet_protocols/build/lib/libgnuradio-packet_protocols.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/x86_64-linux-gnu" TYPE SHARED_LIBRARY FILES "/home/haaken/github-projects/gr-packet-protocols/build/lib/libgnuradio-packet_protocols.so")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-packet_protocols/gnuradio-packet_protocolsTargets.cmake")
     file(DIFFERENT _cmake_export_file_changed FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-packet_protocols/gnuradio-packet_protocolsTargets.cmake"
-         "/home/haaken/github-projects/gr-packet_protocols/build/lib/CMakeFiles/Export/cd664ed97d8dc18e8f937fd80f30ddba/gnuradio-packet_protocolsTargets.cmake")
+         "/home/haaken/github-projects/gr-packet-protocols/build/lib/CMakeFiles/Export/cd664ed97d8dc18e8f937fd80f30ddba/gnuradio-packet_protocolsTargets.cmake")
     if(_cmake_export_file_changed)
       file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-packet_protocols/gnuradio-packet_protocolsTargets-*.cmake")
       if(_cmake_old_config_files)
@@ -92,13 +92,13 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
     unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-packet_protocols" TYPE FILE FILES "/home/haaken/github-projects/gr-packet_protocols/build/lib/CMakeFiles/Export/cd664ed97d8dc18e8f937fd80f30ddba/gnuradio-packet_protocolsTargets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-packet_protocols" TYPE FILE FILES "/home/haaken/github-projects/gr-packet-protocols/build/lib/CMakeFiles/Export/cd664ed97d8dc18e8f937fd80f30ddba/gnuradio-packet_protocolsTargets.cmake")
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-packet_protocols" TYPE FILE FILES "/home/haaken/github-projects/gr-packet_protocols/build/lib/CMakeFiles/Export/cd664ed97d8dc18e8f937fd80f30ddba/gnuradio-packet_protocolsTargets-release.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-packet_protocols" TYPE FILE FILES "/home/haaken/github-projects/gr-packet-protocols/build/lib/CMakeFiles/Export/cd664ed97d8dc18e8f937fd80f30ddba/gnuradio-packet_protocolsTargets-release.cmake")
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-packet_protocols" TYPE FILE FILES "/home/haaken/github-projects/gr-packet_protocols/build/lib/cmake/Modules/gnuradio-packet_protocolsConfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-packet_protocols" TYPE FILE FILES "/home/haaken/github-projects/gr-packet-protocols/build/lib/cmake/Modules/gnuradio-packet_protocolsConfig.cmake")
 endif()
 

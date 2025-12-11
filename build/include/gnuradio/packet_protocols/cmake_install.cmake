@@ -1,8 +1,8 @@
-# Install script for directory: /home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols
+# Install script for directory: /home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,14 +44,14 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gnuradio/packet_protocols" TYPE FILE FILES
-    "/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/api.h"
-    "/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_encoder.h"
-    "/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_decoder.h"
-    "/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_encoder.h"
-    "/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_decoder.h"
-    "/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_encoder.h"
-    "/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_decoder.h"
-    "/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_tnc.h"
+    "/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/api.h"
+    "/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/ax25_encoder.h"
+    "/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/ax25_decoder.h"
+    "/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/fx25_encoder.h"
+    "/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/fx25_decoder.h"
+    "/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_encoder.h"
+    "/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_decoder.h"
+    "/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/kiss_tnc.h"
     )
 endif()
 

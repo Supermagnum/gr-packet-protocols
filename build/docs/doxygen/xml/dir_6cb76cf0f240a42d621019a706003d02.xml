@@ -2,6 +2,8 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="dir_6cb76cf0f240a42d621019a706003d02" kind="dir">
     <compoundname>packet_protocols</compoundname>
+    <innerfile refid="adaptive__modulator_8h">adaptive_modulator.h</innerfile>
+    <innerfile refid="adaptive__rate__control_8h">adaptive_rate_control.h</innerfile>
     <innerfile refid="api_8h">api.h</innerfile>
     <innerfile refid="ax25__decoder_8h">ax25_decoder.h</innerfile>
     <innerfile refid="ax25__encoder_8h">ax25_encoder.h</innerfile>
@@ -17,11 +19,13 @@
     <innerfile refid="il2p__reed__solomon_8h">il2p_reed_solomon.h</innerfile>
     <innerfile refid="kiss__protocol_8h">kiss_protocol.h</innerfile>
     <innerfile refid="kiss__tnc_8h">kiss_tnc.h</innerfile>
+    <innerfile refid="link__quality__monitor_8h">link_quality_monitor.h</innerfile>
+    <innerfile refid="modulation__negotiation_8h">modulation_negotiation.h</innerfile>
     <innerfile refid="packet__protocols_8h">packet_protocols.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/"/>
+    <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/"/>
   </compounddef>
 </doxygen>

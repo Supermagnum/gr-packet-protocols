@@ -26,6 +26,13 @@ This is offering complete packet radio protocol support for GNU Radio applicatio
 - Enhanced reliability over noisy channels
 - Modern replacement for AX.25
 
+### Adaptive Features
+- **Link Quality Monitoring**: Real-time SNR, BER, and frame error rate monitoring
+- **Automatic Rate Adaptation**: Dynamically adjusts modulation mode based on channel quality
+- **Modulation Negotiation**: Protocol for negotiating modulation modes between stations
+- **Multi-Mode Support**: Supports 2FSK, 4FSK, 8FSK, 16FSK, BPSK, QPSK, 8PSK, 16-QAM, and 64-QAM
+- **Quality-Based Switching**: Intelligent mode selection based on SNR, BER, and link quality scores
+
 
 ## Installation
 
@@ -84,13 +91,21 @@ brew install gnuradio cmake
 
 The module provides blocks in the "Packet Protocols" category:
 
+**Core Protocol Blocks:**
 - **AX.25 Encoder**: Encodes data into AX.25 frames
 - **AX.25 Decoder**: Decodes AX.25 frames
-- **KISS TNC**: Interface to KISS-compatible TNCs
+- **KISS TNC**: Interface to KISS-compatible TNCs with PTT control
 - **FX.25 Encoder**: Encodes with forward error correction
 - **FX.25 Decoder**: Decodes with error correction
 - **IL2P Encoder**: Encodes using IL2P protocol
 - **IL2P Decoder**: Decodes IL2P frames
+
+**Adaptive Features Blocks:**
+- **Link Quality Monitor**: Monitors SNR, BER, and frame error rate
+- **Adaptive Rate Control**: Automatically adjusts modulation mode based on link quality
+- **Modulation Negotiation**: Handles modulation mode negotiation between stations
+- **Adaptive Modulator**: Python hierarchical block that switches between modulation modes automatically
+- **Modulation Switch**: Switches between multiple modulation inputs (uses GNU Radio's selector block in GRC)
 
 ### Python API
 
@@ -364,6 +379,126 @@ class top_block(gr.top_block):
 
 For detailed documentation on all PTT control methods, including complete code examples and hardware-specific guidance, see [docs/PTT_CONTROL.md](docs/PTT_CONTROL.md).
 
+## Adaptive Features
+
+The module includes advanced adaptive features for optimizing link performance:
+
+### Link Quality Monitoring
+
+Monitor real-time link quality metrics:
+
+```python
+from gnuradio import packet_protocols
+
+# Create link quality monitor
+quality_monitor = packet_protocols.link_quality_monitor(
+    alpha=0.1,        # Smoothing factor
+    update_period=1000  # Update every 1000 samples
+)
+
+# Update metrics from external sources (e.g., GNU Radio SNR estimator)
+quality_monitor.update_snr(15.5)  # SNR in dB
+quality_monitor.update_ber(0.001)  # Bit error rate
+
+# Get current metrics
+snr = quality_monitor.get_snr()
+ber = quality_monitor.get_ber()
+quality_score = quality_monitor.get_quality_score()  # 0.0-1.0
+```
+
+### Automatic Rate Adaptation
+
+Automatically adjust modulation mode based on link quality:
+
+```python
+from gnuradio import packet_protocols
+
+# Create adaptive rate controller
+rate_control = packet_protocols.adaptive_rate_control(
+    initial_mode=packet_protocols.modulation_mode_t.MODE_4FSK,
+    enable_adaptation=True,
+    hysteresis_db=2.0  # Prevent rapid switching
+)
+
+# Update quality (typically from link quality monitor)
+rate_control.update_quality(
+    snr_db=15.0,
+    ber=0.001,
+    quality_score=0.8
+)
+
+# Get current mode and data rate
+current_mode = rate_control.get_modulation_mode()
+data_rate = rate_control.get_data_rate()  # bits per second
+```
+
+### Modulation Negotiation
+
+Negotiate modulation modes between stations:
+
+```python
+from gnuradio import packet_protocols
+
+# Create modulation negotiator
+negotiator = packet_protocols.modulation_negotiation(
+    station_id="N0CALL",
+    supported_modes=[
+        packet_protocols.modulation_mode_t.MODE_2FSK,
+        packet_protocols.modulation_mode_t.MODE_4FSK,
+        packet_protocols.modulation_mode_t.MODE_8FSK
+    ],
+    negotiation_timeout_ms=5000
+)
+
+# Initiate negotiation with remote station
+negotiator.initiate_negotiation(
+    remote_station_id="N1CALL",
+    proposed_mode=packet_protocols.modulation_mode_t.MODE_4FSK
+)
+
+# Check negotiated mode
+if not negotiator.is_negotiating():
+    mode = negotiator.get_negotiated_mode()
+```
+
+### Supported Modulation Modes
+
+- **2FSK**: Binary FSK (1200 bps, most robust)
+- **4FSK**: 4-level FSK (2400 bps)
+- **8FSK**: 8-level FSK (3600 bps)
+- **16FSK**: 16-level FSK (4800 bps)
+- **BPSK**: Binary PSK (1200 bps)
+- **QPSK**: Quadrature PSK (2400 bps)
+- **8PSK**: 8-PSK (3600 bps)
+- **16-QAM**: 16-QAM (4800 bps)
+- **64-QAM**: 64-QAM (9600 bps, highest rate)
+
+### Integration with GNU Radio Blocks
+
+The adaptive features integrate with existing GNU Radio modulation blocks. The system includes:
+
+- **`adaptive_modulator` block**: Python hierarchical block that automatically switches between modulation modes
+- **`modulation_switch` block**: Helper block for programmatic use with adaptive_rate_control (uses GNU Radio's selector in GRC)
+- **Complete integration examples**: Working flowgraphs with all components connected
+- **Step-by-step guides**: Detailed documentation for hooking everything up
+- **GNU Radio Companion blocks**: All blocks are available in GRC with full parameter configuration
+
+**Documentation:**
+- **[GRC Blocks Guide](docs/GRC_BLOCKS.md)** - Complete list of all GNU Radio Companion blocks
+- **[Quick Start Guide](docs/QUICK_START_ADAPTIVE.md)** - Get started in 5 minutes
+- **[Complete Integration Guide](docs/COMPLETE_INTEGRATION_GUIDE.md)** - Step-by-step hookup instructions
+- **[Adaptive Features Guide](docs/ADAPTIVE_FEATURES.md)** - Feature overview and GNU Radio block integration
+- **[Modulation Control Guide](docs/MODULATION_CONTROL.md)** - Mode control details
+- **[PTT Control Guide](docs/PTT_CONTROL.md)** - PTT control documentation
+
+**Examples:**
+- **[Adaptive Modulation Example](examples/adaptive_modulation_example.py)** - Complete working example with all components
+
+The system integrates with:
+- GNU Radio's `probe_mpsk_snr_est_c` for SNR estimation
+- GNU Radio's FSK, PSK, and QAM modulation blocks
+- Custom `modulation_switch` block for automatic mode switching
+
 ## Protocol Details
 
 ### AX.25
@@ -443,6 +578,18 @@ sudo ldconfig
 This will remove all installed files. If you don't have the build directory, see the [Installation Guide](docs/installation.md) for manual removal instructions.
 
 ## Changelog
+
+### Version 1.1.0
+- Added adaptive modulation features:
+  - Link Quality Monitor block
+  - Adaptive Rate Control block
+  - Modulation Negotiation block
+  - Adaptive Modulator hierarchical block
+  - Modulation Switch block
+- Added PTT (Push To Talk) control to KISS TNC block
+- All blocks available in GNU Radio Companion
+- Comprehensive documentation and examples
+- Unit tests for all adaptive blocks
 
 ### Version 1.0.0
 - Initial release

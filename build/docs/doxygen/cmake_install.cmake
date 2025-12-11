@@ -1,8 +1,8 @@
-# Install script for directory: /home/haaken/github-projects/gr-packet_protocols/docs/doxygen
+# Install script for directory: /home/haaken/github-projects/gr-packet-protocols/docs/doxygen
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,8 +44,8 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/doc/gr-packet_protocols" TYPE DIRECTORY FILES
-    "/home/haaken/github-projects/gr-packet_protocols/build/docs/doxygen/xml"
-    "/home/haaken/github-projects/gr-packet_protocols/build/docs/doxygen/html"
+    "/home/haaken/github-projects/gr-packet-protocols/build/docs/doxygen/xml"
+    "/home/haaken/github-projects/gr-packet-protocols/build/docs/doxygen/html"
     )
 endif()
 

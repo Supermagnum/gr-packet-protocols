@@ -31,7 +31,11 @@ list(APPEND packet_protocols_python_files
     fx25_decoder_python.cc
     il2p_encoder_python.cc
     il2p_decoder_python.cc
-    kiss_tnc_python.cc python_bindings.cc)
+    kiss_tnc_python.cc
+    link_quality_monitor_python.cc
+    adaptive_rate_control_python.cc
+    modulation_negotiation_python.cc
+    python_bindings.cc)
 
 gr_pybind_make_oot(packet_protocols ../../.. gr::packet_protocols "${packet_protocols_python_files}")
 

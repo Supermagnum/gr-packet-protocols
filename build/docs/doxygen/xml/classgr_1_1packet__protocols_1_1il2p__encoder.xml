@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_encoder.h" line="38" column="29" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_encoder.h" bodystart="38" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_encoder.h" line="38" column="29" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_encoder.h" bodystart="38" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_encoder.h" line="43" column="17"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_encoder.h" line="43" column="17"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -83,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_encoder.h" line="50" column="18"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_encoder.h" line="50" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1il2p__encoder_1aec69c6a739ce05f446abbad04cf0dd11" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -103,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_encoder.h" line="55" column="18"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_encoder.h" line="55" column="18"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -139,7 +139,7 @@
         <label>gr::sync_block</label>
       </node>
     </collaborationgraph>
-    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_encoder.h" line="36" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_encoder.h" bodystart="36" bodyend="56"/>
+    <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_encoder.h" line="36" column="1" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_encoder.h" bodystart="36" bodyend="56"/>
     <listofallmembers>
       <member refid="classgr_1_1packet__protocols_1_1il2p__encoder_1a0ab5d8758dbaa31e31f60260c14b0185" prot="public" virt="non-virtual"><scope>gr::packet_protocols::il2p_encoder</scope><name>make</name></member>
       <member refid="classgr_1_1packet__protocols_1_1il2p__encoder_1aec69c6a739ce05f446abbad04cf0dd11" prot="public" virt="pure-virtual"><scope>gr::packet_protocols::il2p_encoder</scope><name>set_add_checksum</name></member>

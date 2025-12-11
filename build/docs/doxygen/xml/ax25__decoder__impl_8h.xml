@@ -66,6 +66,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h"/>
+    <location file="/home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.h"/>
   </compounddef>
 </doxygen>

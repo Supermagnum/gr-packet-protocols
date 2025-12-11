@@ -28,6 +28,9 @@ namespace py = pybind11;
     void bind_il2p_encoder(py::module& m);
     void bind_il2p_decoder(py::module& m);
     void bind_kiss_tnc(py::module& m);
+    void bind_link_quality_monitor(py::module& m);
+    void bind_adaptive_rate_control(py::module& m);
+    void bind_modulation_negotiation(py::module& m);
 // ) END BINDING_FUNCTION_PROTOTYPES
 
 
@@ -63,5 +66,8 @@ PYBIND11_MODULE(packet_protocols_python, m)
     bind_il2p_encoder(m);
     bind_il2p_decoder(m);
     bind_kiss_tnc(m);
+    bind_link_quality_monitor(m);
+    bind_adaptive_rate_control(m);
+    bind_modulation_negotiation(m);
     // ) END BINDING_FUNCTION_CALLS
 }

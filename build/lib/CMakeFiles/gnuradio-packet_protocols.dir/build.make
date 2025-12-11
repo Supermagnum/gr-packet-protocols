@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/haaken/github-projects/gr-packet_protocols
+CMAKE_SOURCE_DIR = /home/haaken/github-projects/gr-packet-protocols
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/haaken/github-projects/gr-packet_protocols/build
+CMAKE_BINARY_DIR = /home/haaken/github-projects/gr-packet-protocols/build
 
 # Include any dependencies generated for this target.
 include lib/CMakeFiles/gnuradio-packet_protocols.dir/depend.make
@@ -69,117 +69,178 @@ include lib/CMakeFiles/gnuradio-packet_protocols.dir/progress.make
 # Include the compile flags for this target's objects.
 include lib/CMakeFiles/gnuradio-packet_protocols.dir/flags.make
 
+lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_protocol.c.o: lib/CMakeFiles/gnuradio-packet_protocols.dir/flags.make
+lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_protocol.c.o: /home/haaken/github-projects/gr-packet-protocols/lib/ax25_protocol.c
+lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_protocol.c.o: lib/CMakeFiles/gnuradio-packet_protocols.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_protocol.c.o"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_protocol.c.o -MF CMakeFiles/gnuradio-packet_protocols.dir/ax25_protocol.c.o.d -o CMakeFiles/gnuradio-packet_protocols.dir/ax25_protocol.c.o -c /home/haaken/github-projects/gr-packet-protocols/lib/ax25_protocol.c
+
+lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_protocol.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/gnuradio-packet_protocols.dir/ax25_protocol.c.i"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/haaken/github-projects/gr-packet-protocols/lib/ax25_protocol.c > CMakeFiles/gnuradio-packet_protocols.dir/ax25_protocol.c.i
+
+lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_protocol.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/gnuradio-packet_protocols.dir/ax25_protocol.c.s"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/haaken/github-projects/gr-packet-protocols/lib/ax25_protocol.c -o CMakeFiles/gnuradio-packet_protocols.dir/ax25_protocol.c.s
+
 lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_encoder_impl.cc.o: lib/CMakeFiles/gnuradio-packet_protocols.dir/flags.make
-lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_encoder_impl.cc.o: /home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.cc
+lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_encoder_impl.cc.o: /home/haaken/github-projects/gr-packet-protocols/lib/ax25_encoder_impl.cc
 lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_encoder_impl.cc.o: lib/CMakeFiles/gnuradio-packet_protocols.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet_protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_encoder_impl.cc.o"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_encoder_impl.cc.o -MF CMakeFiles/gnuradio-packet_protocols.dir/ax25_encoder_impl.cc.o.d -o CMakeFiles/gnuradio-packet_protocols.dir/ax25_encoder_impl.cc.o -c /home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_encoder_impl.cc.o"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_encoder_impl.cc.o -MF CMakeFiles/gnuradio-packet_protocols.dir/ax25_encoder_impl.cc.o.d -o CMakeFiles/gnuradio-packet_protocols.dir/ax25_encoder_impl.cc.o -c /home/haaken/github-projects/gr-packet-protocols/lib/ax25_encoder_impl.cc
 
 lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_encoder_impl.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gnuradio-packet_protocols.dir/ax25_encoder_impl.cc.i"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.cc > CMakeFiles/gnuradio-packet_protocols.dir/ax25_encoder_impl.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet-protocols/lib/ax25_encoder_impl.cc > CMakeFiles/gnuradio-packet_protocols.dir/ax25_encoder_impl.cc.i
 
 lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_encoder_impl.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gnuradio-packet_protocols.dir/ax25_encoder_impl.cc.s"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet_protocols/lib/ax25_encoder_impl.cc -o CMakeFiles/gnuradio-packet_protocols.dir/ax25_encoder_impl.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet-protocols/lib/ax25_encoder_impl.cc -o CMakeFiles/gnuradio-packet_protocols.dir/ax25_encoder_impl.cc.s
 
 lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_decoder_impl.cc.o: lib/CMakeFiles/gnuradio-packet_protocols.dir/flags.make
-lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_decoder_impl.cc.o: /home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.cc
+lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_decoder_impl.cc.o: /home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.cc
 lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_decoder_impl.cc.o: lib/CMakeFiles/gnuradio-packet_protocols.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet_protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_decoder_impl.cc.o"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_decoder_impl.cc.o -MF CMakeFiles/gnuradio-packet_protocols.dir/ax25_decoder_impl.cc.o.d -o CMakeFiles/gnuradio-packet_protocols.dir/ax25_decoder_impl.cc.o -c /home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_decoder_impl.cc.o"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_decoder_impl.cc.o -MF CMakeFiles/gnuradio-packet_protocols.dir/ax25_decoder_impl.cc.o.d -o CMakeFiles/gnuradio-packet_protocols.dir/ax25_decoder_impl.cc.o -c /home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.cc
 
 lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_decoder_impl.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gnuradio-packet_protocols.dir/ax25_decoder_impl.cc.i"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.cc > CMakeFiles/gnuradio-packet_protocols.dir/ax25_decoder_impl.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.cc > CMakeFiles/gnuradio-packet_protocols.dir/ax25_decoder_impl.cc.i
 
 lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_decoder_impl.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gnuradio-packet_protocols.dir/ax25_decoder_impl.cc.s"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.cc -o CMakeFiles/gnuradio-packet_protocols.dir/ax25_decoder_impl.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.cc -o CMakeFiles/gnuradio-packet_protocols.dir/ax25_decoder_impl.cc.s
 
 lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.o: lib/CMakeFiles/gnuradio-packet_protocols.dir/flags.make
-lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.o: /home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.cc
+lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.o: /home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.cc
 lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.o: lib/CMakeFiles/gnuradio-packet_protocols.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet_protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.o"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.o -MF CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.o.d -o CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.o -c /home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.o"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.o -MF CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.o.d -o CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.o -c /home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.cc
 
 lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.i"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.cc > CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.cc > CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.i
 
 lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.s"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.cc -o CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.cc -o CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.s
 
 lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_decoder_impl.cc.o: lib/CMakeFiles/gnuradio-packet_protocols.dir/flags.make
-lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_decoder_impl.cc.o: /home/haaken/github-projects/gr-packet_protocols/lib/fx25_decoder_impl.cc
+lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_decoder_impl.cc.o: /home/haaken/github-projects/gr-packet-protocols/lib/fx25_decoder_impl.cc
 lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_decoder_impl.cc.o: lib/CMakeFiles/gnuradio-packet_protocols.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet_protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_decoder_impl.cc.o"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_decoder_impl.cc.o -MF CMakeFiles/gnuradio-packet_protocols.dir/fx25_decoder_impl.cc.o.d -o CMakeFiles/gnuradio-packet_protocols.dir/fx25_decoder_impl.cc.o -c /home/haaken/github-projects/gr-packet_protocols/lib/fx25_decoder_impl.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_decoder_impl.cc.o"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_decoder_impl.cc.o -MF CMakeFiles/gnuradio-packet_protocols.dir/fx25_decoder_impl.cc.o.d -o CMakeFiles/gnuradio-packet_protocols.dir/fx25_decoder_impl.cc.o -c /home/haaken/github-projects/gr-packet-protocols/lib/fx25_decoder_impl.cc
 
 lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_decoder_impl.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gnuradio-packet_protocols.dir/fx25_decoder_impl.cc.i"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet_protocols/lib/fx25_decoder_impl.cc > CMakeFiles/gnuradio-packet_protocols.dir/fx25_decoder_impl.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet-protocols/lib/fx25_decoder_impl.cc > CMakeFiles/gnuradio-packet_protocols.dir/fx25_decoder_impl.cc.i
 
 lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_decoder_impl.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gnuradio-packet_protocols.dir/fx25_decoder_impl.cc.s"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet_protocols/lib/fx25_decoder_impl.cc -o CMakeFiles/gnuradio-packet_protocols.dir/fx25_decoder_impl.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet-protocols/lib/fx25_decoder_impl.cc -o CMakeFiles/gnuradio-packet_protocols.dir/fx25_decoder_impl.cc.s
 
 lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_encoder_impl.cc.o: lib/CMakeFiles/gnuradio-packet_protocols.dir/flags.make
-lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_encoder_impl.cc.o: /home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.cc
+lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_encoder_impl.cc.o: /home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.cc
 lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_encoder_impl.cc.o: lib/CMakeFiles/gnuradio-packet_protocols.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet_protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_encoder_impl.cc.o"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_encoder_impl.cc.o -MF CMakeFiles/gnuradio-packet_protocols.dir/il2p_encoder_impl.cc.o.d -o CMakeFiles/gnuradio-packet_protocols.dir/il2p_encoder_impl.cc.o -c /home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_encoder_impl.cc.o"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_encoder_impl.cc.o -MF CMakeFiles/gnuradio-packet_protocols.dir/il2p_encoder_impl.cc.o.d -o CMakeFiles/gnuradio-packet_protocols.dir/il2p_encoder_impl.cc.o -c /home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.cc
 
 lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_encoder_impl.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gnuradio-packet_protocols.dir/il2p_encoder_impl.cc.i"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.cc > CMakeFiles/gnuradio-packet_protocols.dir/il2p_encoder_impl.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.cc > CMakeFiles/gnuradio-packet_protocols.dir/il2p_encoder_impl.cc.i
 
 lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_encoder_impl.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gnuradio-packet_protocols.dir/il2p_encoder_impl.cc.s"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.cc -o CMakeFiles/gnuradio-packet_protocols.dir/il2p_encoder_impl.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.cc -o CMakeFiles/gnuradio-packet_protocols.dir/il2p_encoder_impl.cc.s
 
 lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_decoder_impl.cc.o: lib/CMakeFiles/gnuradio-packet_protocols.dir/flags.make
-lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_decoder_impl.cc.o: /home/haaken/github-projects/gr-packet_protocols/lib/il2p_decoder_impl.cc
+lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_decoder_impl.cc.o: /home/haaken/github-projects/gr-packet-protocols/lib/il2p_decoder_impl.cc
 lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_decoder_impl.cc.o: lib/CMakeFiles/gnuradio-packet_protocols.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet_protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_decoder_impl.cc.o"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_decoder_impl.cc.o -MF CMakeFiles/gnuradio-packet_protocols.dir/il2p_decoder_impl.cc.o.d -o CMakeFiles/gnuradio-packet_protocols.dir/il2p_decoder_impl.cc.o -c /home/haaken/github-projects/gr-packet_protocols/lib/il2p_decoder_impl.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_decoder_impl.cc.o"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_decoder_impl.cc.o -MF CMakeFiles/gnuradio-packet_protocols.dir/il2p_decoder_impl.cc.o.d -o CMakeFiles/gnuradio-packet_protocols.dir/il2p_decoder_impl.cc.o -c /home/haaken/github-projects/gr-packet-protocols/lib/il2p_decoder_impl.cc
 
 lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_decoder_impl.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gnuradio-packet_protocols.dir/il2p_decoder_impl.cc.i"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet_protocols/lib/il2p_decoder_impl.cc > CMakeFiles/gnuradio-packet_protocols.dir/il2p_decoder_impl.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet-protocols/lib/il2p_decoder_impl.cc > CMakeFiles/gnuradio-packet_protocols.dir/il2p_decoder_impl.cc.i
 
 lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_decoder_impl.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gnuradio-packet_protocols.dir/il2p_decoder_impl.cc.s"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet_protocols/lib/il2p_decoder_impl.cc -o CMakeFiles/gnuradio-packet_protocols.dir/il2p_decoder_impl.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet-protocols/lib/il2p_decoder_impl.cc -o CMakeFiles/gnuradio-packet_protocols.dir/il2p_decoder_impl.cc.s
 
 lib/CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.o: lib/CMakeFiles/gnuradio-packet_protocols.dir/flags.make
-lib/CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.o: /home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.cc
+lib/CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.o: /home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.cc
 lib/CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.o: lib/CMakeFiles/gnuradio-packet_protocols.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet_protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object lib/CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.o"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.o -MF CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.o.d -o CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.o -c /home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object lib/CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.o"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.o -MF CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.o.d -o CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.o -c /home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.cc
 
 lib/CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.i"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.cc > CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.cc > CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.i
 
 lib/CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.s"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.cc -o CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.cc -o CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.s
+
+lib/CMakeFiles/gnuradio-packet_protocols.dir/link_quality_monitor_impl.cc.o: lib/CMakeFiles/gnuradio-packet_protocols.dir/flags.make
+lib/CMakeFiles/gnuradio-packet_protocols.dir/link_quality_monitor_impl.cc.o: /home/haaken/github-projects/gr-packet-protocols/lib/link_quality_monitor_impl.cc
+lib/CMakeFiles/gnuradio-packet_protocols.dir/link_quality_monitor_impl.cc.o: lib/CMakeFiles/gnuradio-packet_protocols.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object lib/CMakeFiles/gnuradio-packet_protocols.dir/link_quality_monitor_impl.cc.o"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-packet_protocols.dir/link_quality_monitor_impl.cc.o -MF CMakeFiles/gnuradio-packet_protocols.dir/link_quality_monitor_impl.cc.o.d -o CMakeFiles/gnuradio-packet_protocols.dir/link_quality_monitor_impl.cc.o -c /home/haaken/github-projects/gr-packet-protocols/lib/link_quality_monitor_impl.cc
+
+lib/CMakeFiles/gnuradio-packet_protocols.dir/link_quality_monitor_impl.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gnuradio-packet_protocols.dir/link_quality_monitor_impl.cc.i"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet-protocols/lib/link_quality_monitor_impl.cc > CMakeFiles/gnuradio-packet_protocols.dir/link_quality_monitor_impl.cc.i
+
+lib/CMakeFiles/gnuradio-packet_protocols.dir/link_quality_monitor_impl.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gnuradio-packet_protocols.dir/link_quality_monitor_impl.cc.s"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet-protocols/lib/link_quality_monitor_impl.cc -o CMakeFiles/gnuradio-packet_protocols.dir/link_quality_monitor_impl.cc.s
+
+lib/CMakeFiles/gnuradio-packet_protocols.dir/adaptive_rate_control_impl.cc.o: lib/CMakeFiles/gnuradio-packet_protocols.dir/flags.make
+lib/CMakeFiles/gnuradio-packet_protocols.dir/adaptive_rate_control_impl.cc.o: /home/haaken/github-projects/gr-packet-protocols/lib/adaptive_rate_control_impl.cc
+lib/CMakeFiles/gnuradio-packet_protocols.dir/adaptive_rate_control_impl.cc.o: lib/CMakeFiles/gnuradio-packet_protocols.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object lib/CMakeFiles/gnuradio-packet_protocols.dir/adaptive_rate_control_impl.cc.o"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-packet_protocols.dir/adaptive_rate_control_impl.cc.o -MF CMakeFiles/gnuradio-packet_protocols.dir/adaptive_rate_control_impl.cc.o.d -o CMakeFiles/gnuradio-packet_protocols.dir/adaptive_rate_control_impl.cc.o -c /home/haaken/github-projects/gr-packet-protocols/lib/adaptive_rate_control_impl.cc
+
+lib/CMakeFiles/gnuradio-packet_protocols.dir/adaptive_rate_control_impl.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gnuradio-packet_protocols.dir/adaptive_rate_control_impl.cc.i"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet-protocols/lib/adaptive_rate_control_impl.cc > CMakeFiles/gnuradio-packet_protocols.dir/adaptive_rate_control_impl.cc.i
+
+lib/CMakeFiles/gnuradio-packet_protocols.dir/adaptive_rate_control_impl.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gnuradio-packet_protocols.dir/adaptive_rate_control_impl.cc.s"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet-protocols/lib/adaptive_rate_control_impl.cc -o CMakeFiles/gnuradio-packet_protocols.dir/adaptive_rate_control_impl.cc.s
+
+lib/CMakeFiles/gnuradio-packet_protocols.dir/modulation_negotiation_impl.cc.o: lib/CMakeFiles/gnuradio-packet_protocols.dir/flags.make
+lib/CMakeFiles/gnuradio-packet_protocols.dir/modulation_negotiation_impl.cc.o: /home/haaken/github-projects/gr-packet-protocols/lib/modulation_negotiation_impl.cc
+lib/CMakeFiles/gnuradio-packet_protocols.dir/modulation_negotiation_impl.cc.o: lib/CMakeFiles/gnuradio-packet_protocols.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object lib/CMakeFiles/gnuradio-packet_protocols.dir/modulation_negotiation_impl.cc.o"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-packet_protocols.dir/modulation_negotiation_impl.cc.o -MF CMakeFiles/gnuradio-packet_protocols.dir/modulation_negotiation_impl.cc.o.d -o CMakeFiles/gnuradio-packet_protocols.dir/modulation_negotiation_impl.cc.o -c /home/haaken/github-projects/gr-packet-protocols/lib/modulation_negotiation_impl.cc
+
+lib/CMakeFiles/gnuradio-packet_protocols.dir/modulation_negotiation_impl.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gnuradio-packet_protocols.dir/modulation_negotiation_impl.cc.i"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet-protocols/lib/modulation_negotiation_impl.cc > CMakeFiles/gnuradio-packet_protocols.dir/modulation_negotiation_impl.cc.i
+
+lib/CMakeFiles/gnuradio-packet_protocols.dir/modulation_negotiation_impl.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gnuradio-packet_protocols.dir/modulation_negotiation_impl.cc.s"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet-protocols/lib/modulation_negotiation_impl.cc -o CMakeFiles/gnuradio-packet_protocols.dir/modulation_negotiation_impl.cc.s
 
 # Object files for target gnuradio-packet_protocols
 gnuradio__packet_protocols_OBJECTS = \
+"CMakeFiles/gnuradio-packet_protocols.dir/ax25_protocol.c.o" \
 "CMakeFiles/gnuradio-packet_protocols.dir/ax25_encoder_impl.cc.o" \
 "CMakeFiles/gnuradio-packet_protocols.dir/ax25_decoder_impl.cc.o" \
 "CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.o" \
 "CMakeFiles/gnuradio-packet_protocols.dir/fx25_decoder_impl.cc.o" \
 "CMakeFiles/gnuradio-packet_protocols.dir/il2p_encoder_impl.cc.o" \
 "CMakeFiles/gnuradio-packet_protocols.dir/il2p_decoder_impl.cc.o" \
-"CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.o"
+"CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.o" \
+"CMakeFiles/gnuradio-packet_protocols.dir/link_quality_monitor_impl.cc.o" \
+"CMakeFiles/gnuradio-packet_protocols.dir/adaptive_rate_control_impl.cc.o" \
+"CMakeFiles/gnuradio-packet_protocols.dir/modulation_negotiation_impl.cc.o"
 
 # External object files for target gnuradio-packet_protocols
 gnuradio__packet_protocols_EXTERNAL_OBJECTS =
 
+lib/libgnuradio-packet_protocols.so.1.0.0.0: lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_protocol.c.o
 lib/libgnuradio-packet_protocols.so.1.0.0.0: lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_encoder_impl.cc.o
 lib/libgnuradio-packet_protocols.so.1.0.0.0: lib/CMakeFiles/gnuradio-packet_protocols.dir/ax25_decoder_impl.cc.o
 lib/libgnuradio-packet_protocols.so.1.0.0.0: lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.o
@@ -187,6 +248,9 @@ lib/libgnuradio-packet_protocols.so.1.0.0.0: lib/CMakeFiles/gnuradio-packet_prot
 lib/libgnuradio-packet_protocols.so.1.0.0.0: lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_encoder_impl.cc.o
 lib/libgnuradio-packet_protocols.so.1.0.0.0: lib/CMakeFiles/gnuradio-packet_protocols.dir/il2p_decoder_impl.cc.o
 lib/libgnuradio-packet_protocols.so.1.0.0.0: lib/CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.o
+lib/libgnuradio-packet_protocols.so.1.0.0.0: lib/CMakeFiles/gnuradio-packet_protocols.dir/link_quality_monitor_impl.cc.o
+lib/libgnuradio-packet_protocols.so.1.0.0.0: lib/CMakeFiles/gnuradio-packet_protocols.dir/adaptive_rate_control_impl.cc.o
+lib/libgnuradio-packet_protocols.so.1.0.0.0: lib/CMakeFiles/gnuradio-packet_protocols.dir/modulation_negotiation_impl.cc.o
 lib/libgnuradio-packet_protocols.so.1.0.0.0: lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make
 lib/libgnuradio-packet_protocols.so.1.0.0.0: /usr/lib/x86_64-linux-gnu/libgnuradio-runtime.so.3.10.12.0
 lib/libgnuradio-packet_protocols.so.1.0.0.0: /usr/lib/x86_64-linux-gnu/libgnuradio-pmt.so.3.10.12.0
@@ -198,9 +262,9 @@ lib/libgnuradio-packet_protocols.so.1.0.0.0: /usr/lib/x86_64-linux-gnu/libfmt.so
 lib/libgnuradio-packet_protocols.so.1.0.0.0: /usr/lib/x86_64-linux-gnu/libgmpxx.so
 lib/libgnuradio-packet_protocols.so.1.0.0.0: /usr/lib/x86_64-linux-gnu/libgmp.so
 lib/libgnuradio-packet_protocols.so.1.0.0.0: lib/CMakeFiles/gnuradio-packet_protocols.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/haaken/github-projects/gr-packet_protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX shared library libgnuradio-packet_protocols.so"
-	cd /home/haaken/github-projects/gr-packet_protocols/build/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gnuradio-packet_protocols.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/haaken/github-projects/gr-packet_protocols/build/lib && $(CMAKE_COMMAND) -E cmake_symlink_library libgnuradio-packet_protocols.so.1.0.0.0 libgnuradio-packet_protocols.so.1.0.0 libgnuradio-packet_protocols.so
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX shared library libgnuradio-packet_protocols.so"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gnuradio-packet_protocols.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && $(CMAKE_COMMAND) -E cmake_symlink_library libgnuradio-packet_protocols.so.1.0.0.0 libgnuradio-packet_protocols.so.1.0.0 libgnuradio-packet_protocols.so
 
 lib/libgnuradio-packet_protocols.so.1.0.0: lib/libgnuradio-packet_protocols.so.1.0.0.0
 	@$(CMAKE_COMMAND) -E touch_nocreate lib/libgnuradio-packet_protocols.so.1.0.0
@@ -213,10 +277,10 @@ lib/CMakeFiles/gnuradio-packet_protocols.dir/build: lib/libgnuradio-packet_proto
 .PHONY : lib/CMakeFiles/gnuradio-packet_protocols.dir/build
 
 lib/CMakeFiles/gnuradio-packet_protocols.dir/clean:
-	cd /home/haaken/github-projects/gr-packet_protocols/build/lib && $(CMAKE_COMMAND) -P CMakeFiles/gnuradio-packet_protocols.dir/cmake_clean.cmake
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && $(CMAKE_COMMAND) -P CMakeFiles/gnuradio-packet_protocols.dir/cmake_clean.cmake
 .PHONY : lib/CMakeFiles/gnuradio-packet_protocols.dir/clean
 
 lib/CMakeFiles/gnuradio-packet_protocols.dir/depend:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/haaken/github-projects/gr-packet_protocols /home/haaken/github-projects/gr-packet_protocols/lib /home/haaken/github-projects/gr-packet_protocols/build /home/haaken/github-projects/gr-packet_protocols/build/lib /home/haaken/github-projects/gr-packet_protocols/build/lib/CMakeFiles/gnuradio-packet_protocols.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/haaken/github-projects/gr-packet-protocols /home/haaken/github-projects/gr-packet-protocols/lib /home/haaken/github-projects/gr-packet-protocols/build /home/haaken/github-projects/gr-packet-protocols/build/lib /home/haaken/github-projects/gr-packet-protocols/build/lib/CMakeFiles/gnuradio-packet_protocols.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : lib/CMakeFiles/gnuradio-packet_protocols.dir/depend
 

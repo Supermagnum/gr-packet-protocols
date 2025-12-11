@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="62" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="62" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="62" column="13" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="62" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structfx25__frame__t_1aa7457d21490fb57b0b760463169afb44" prot="public" static="no" mutable="no">
         <type>uint8_t</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="63" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="63" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="63" column="13" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="63" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structfx25__frame__t_1a68d42fe067fc793dbd6ae6636169af9c" prot="public" static="no" mutable="no">
         <type>uint8_t</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="64" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="64" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="64" column="13" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="64" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structfx25__frame__t_1ae2bec72e3c14502e6c4452f885a86909" prot="public" static="no" mutable="no">
         <type>uint8_t</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="65" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="65" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="65" column="13" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="65" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structfx25__frame__t_1a74b8479e16c7a22d61e13474cbbbe20f" prot="public" static="no" mutable="no">
         <type>uint16_t</type>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="66" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="66" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="66" column="14" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="66" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structfx25__frame__t_1a6636f5fad7d71427f0b66db9f6347bb6" prot="public" static="no" mutable="no">
         <type>uint8_t</type>
@@ -86,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="67" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="67" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="67" column="13" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="67" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structfx25__frame__t_1a93a5ef5bd52fe9516d06afc2095190e2" prot="public" static="no" mutable="no">
         <type>uint8_t</type>
@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="68" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="68" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="68" column="13" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="68" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structfx25__frame__t_1acc2742e1c6a2db19a3cc79cc11075c7a" prot="public" static="no" mutable="no">
         <type>uint8_t</type>
@@ -114,14 +114,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="69" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="69" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="69" column="13" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="69" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="61" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="61" bodyend="70"/>
+    <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/fx25_protocol.h" line="61" column="1" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/fx25_protocol.h" bodystart="61" bodyend="70"/>
     <listofallmembers>
       <member refid="structfx25__frame__t_1acc2742e1c6a2db19a3cc79cc11075c7a" prot="public" virt="non-virtual"><scope>fx25_frame_t</scope><name>crc</name></member>
       <member refid="structfx25__frame__t_1ae2bec72e3c14502e6c4452f885a86909" prot="public" virt="non-virtual"><scope>fx25_frame_t</scope><name>data</name></member>

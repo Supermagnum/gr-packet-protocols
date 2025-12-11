@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_encoder.h" line="37" column="29" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_encoder.h" bodystart="37" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/ax25_encoder.h" line="37" column="29" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/ax25_encoder.h" bodystart="37" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_encoder.h" line="47" column="17"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/ax25_encoder.h" line="47" column="17"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -103,7 +103,7 @@
         <label>gr::sync_block</label>
       </node>
     </collaborationgraph>
-    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_encoder.h" line="35" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_encoder.h" bodystart="35" bodyend="51"/>
+    <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/ax25_encoder.h" line="35" column="1" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/ax25_encoder.h" bodystart="35" bodyend="51"/>
     <listofallmembers>
       <member refid="classgr_1_1packet__protocols_1_1ax25__encoder_1aa3d0304ef6dab69dd74fa8a3d83f1b74" prot="public" virt="non-virtual"><scope>gr::packet_protocols::ax25_encoder</scope><name>make</name></member>
       <member refid="classgr_1_1packet__protocols_1_1ax25__encoder_1a05a3e72276d7c71a437f69df0991d09c" prot="public" virt="non-virtual"><scope>gr::packet_protocols::ax25_encoder</scope><name>sptr</name></member>

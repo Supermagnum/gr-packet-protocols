@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="86" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="86" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/common.h" line="86" column="9" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/common.h" bodystart="86" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classReedSolomonEncoder_1abac92b10eec2cafe4c2646d80513ef70" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="86" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="86" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/common.h" line="86" column="13" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/common.h" bodystart="86" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="61" column="5" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="61" bodyend="61"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/common.h" line="61" column="5" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/common.h" bodystart="61" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="classReedSolomonEncoder_1a8ec4812c4d2cc02b74880b0cb3ae93af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="62" column="5"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/common.h" line="62" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classReedSolomonEncoder_1ae041cd93ee33076d5587579b023ec3b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; uint8_t &gt;</type>
@@ -86,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="64" column="17" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="64" bodyend="73"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/common.h" line="64" column="17" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/common.h" bodystart="64" bodyend="73"/>
       </memberdef>
       <memberdef kind="function" id="classReedSolomonEncoder_1aec0d52811dbfeab2df4edc8384c93ed8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="75" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="75" bodyend="77"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/common.h" line="75" column="9" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/common.h" bodystart="75" bodyend="77"/>
       </memberdef>
       <memberdef kind="function" id="classReedSolomonEncoder_1a2e7ae9104a716fa088e0639a21ef7f1e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -114,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="78" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="78" bodyend="80"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/common.h" line="78" column="9" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/common.h" bodystart="78" bodyend="80"/>
       </memberdef>
       <memberdef kind="function" id="classReedSolomonEncoder_1a20da620cf7a081ab828edcb945950cc6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -128,14 +128,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="81" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="81" bodyend="83"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/common.h" line="81" column="9" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/common.h" bodystart="81" bodyend="83"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" line="59" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/common.h" bodystart="59" bodyend="87"/>
+    <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/common.h" line="59" column="1" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/common.h" bodystart="59" bodyend="87"/>
     <listofallmembers>
       <member refid="classReedSolomonEncoder_1abac92b10eec2cafe4c2646d80513ef70" prot="private" virt="non-virtual"><scope>ReedSolomonEncoder</scope><name>d_k</name></member>
       <member refid="classReedSolomonEncoder_1a686a25426d9b9464621f7cc131576ace" prot="private" virt="non-virtual"><scope>ReedSolomonEncoder</scope><name>d_n</name></member>

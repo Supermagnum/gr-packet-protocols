@@ -2,11 +2,21 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="dir_b9e121d8f30b2f8d0d69a03f5752afc8" kind="dir">
     <compoundname>bindings</compoundname>
+    <innerfile refid="adaptive__rate__control__pydoc_8h">adaptive_rate_control_pydoc.h</innerfile>
+    <innerfile refid="ax25__decoder__pydoc_8h">ax25_decoder_pydoc.h</innerfile>
+    <innerfile refid="ax25__encoder__pydoc_8h">ax25_encoder_pydoc.h</innerfile>
+    <innerfile refid="fx25__decoder__pydoc_8h">fx25_decoder_pydoc.h</innerfile>
+    <innerfile refid="fx25__encoder__pydoc_8h">fx25_encoder_pydoc.h</innerfile>
+    <innerfile refid="il2p__decoder__pydoc_8h">il2p_decoder_pydoc.h</innerfile>
+    <innerfile refid="il2p__encoder__pydoc_8h">il2p_encoder_pydoc.h</innerfile>
+    <innerfile refid="kiss__tnc__pydoc_8h">kiss_tnc_pydoc.h</innerfile>
+    <innerfile refid="link__quality__monitor__pydoc_8h">link_quality_monitor_pydoc.h</innerfile>
+    <innerfile refid="modulation__negotiation__pydoc_8h">modulation_negotiation_pydoc.h</innerfile>
     <innerfile refid="build_2python_2packet__protocols_2bindings_2pydoc__macros_8h">build/python/packet_protocols/bindings/pydoc_macros.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings/"/>
+    <location file="/home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings/"/>
   </compounddef>
 </doxygen>

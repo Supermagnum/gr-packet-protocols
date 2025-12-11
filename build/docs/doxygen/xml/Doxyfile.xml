@@ -121,8 +121,8 @@
   <option  id='WARN_LINE_FORMAT' default='yes' type='string'><value><![CDATA["at line $line of file $file"]]></value></option>
   <option  id='WARN_LOGFILE' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='INPUT' default='no' type='stringlist'>
-    <value><![CDATA[/home/haaken/github-projects/gr-packet_protocols]]></value>
-    <value><![CDATA[/home/haaken/github-projects/gr-packet_protocols/build]]></value>
+    <value><![CDATA[/home/haaken/github-projects/gr-packet-protocols]]></value>
+    <value><![CDATA[/home/haaken/github-projects/gr-packet-protocols/build]]></value>
   </option>
   <option  id='INPUT_ENCODING' default='yes' type='string'><value><![CDATA[UTF-8]]></value></option>
   <option  id='INPUT_FILE_ENCODING' default='yes' type='stringlist'>
@@ -133,11 +133,11 @@
   </option>
   <option  id='RECURSIVE' default='no' type='bool'><value>YES</value></option>
   <option  id='EXCLUDE' default='no' type='stringlist'>
-    <value><![CDATA[/home/haaken/github-projects/gr-packet_protocols/build/docs/doxygen/html]]></value>
-    <value><![CDATA[/home/haaken/github-projects/gr-packet_protocols/build/docs/doxygen/xml]]></value>
-    <value><![CDATA[/home/haaken/github-projects/gr-packet_protocols/build/docs/doxygen/other/doxypy.py]]></value>
-    <value><![CDATA[/home/haaken/github-projects/gr-packet_protocols/build/_CPack_Packages]]></value>
-    <value><![CDATA[/home/haaken/github-projects/gr-packet_protocols/cmake]]></value>
+    <value><![CDATA[/home/haaken/github-projects/gr-packet-protocols/build/docs/doxygen/html]]></value>
+    <value><![CDATA[/home/haaken/github-projects/gr-packet-protocols/build/docs/doxygen/xml]]></value>
+    <value><![CDATA[/home/haaken/github-projects/gr-packet-protocols/build/docs/doxygen/other/doxypy.py]]></value>
+    <value><![CDATA[/home/haaken/github-projects/gr-packet-protocols/build/_CPack_Packages]]></value>
+    <value><![CDATA[/home/haaken/github-projects/gr-packet-protocols/cmake]]></value>
   </option>
   <option  id='EXCLUDE_SYMLINKS' default='yes' type='bool'><value>NO</value></option>
   <option  id='EXCLUDE_PATTERNS' default='no' type='stringlist'>
@@ -180,7 +180,7 @@
   </option>
   <option  id='INPUT_FILTER' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='FILTER_PATTERNS' default='no' type='stringlist'>
-    <value><![CDATA[*.py=/home/haaken/github-projects/gr-packet_protocols/docs/doxygen/other/doxypy.py]]></value>
+    <value><![CDATA[*.py=/home/haaken/github-projects/gr-packet-protocols/docs/doxygen/other/doxypy.py]]></value>
   </option>
   <option  id='FILTER_SOURCE_FILES' default='yes' type='bool'><value>NO</value></option>
   <option  id='FILTER_SOURCE_PATTERNS' default='yes' type='stringlist'>

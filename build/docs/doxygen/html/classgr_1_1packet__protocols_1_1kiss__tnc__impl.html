@@ -92,6 +92,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acd5505dbc9b8c0bfe72943268c214ff5" id="r_acd5505dbc9b8c0bfe72943268c214ff5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgr_1_1packet__protocols_1_1kiss__tnc__impl.html#acd5505dbc9b8c0bfe72943268c214ff5">set_full_duplex</a> (bool full_duplex) override</td></tr>
 <tr class="memdesc:acd5505dbc9b8c0bfe72943268c214ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set full duplex mode.  <br /></td></tr>
 <tr class="separator:acd5505dbc9b8c0bfe72943268c214ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80d96fde047238482882ee3b7b8df699" id="r_a80d96fde047238482882ee3b7b8df699"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgr_1_1packet__protocols_1_1kiss__tnc__impl.html#a80d96fde047238482882ee3b7b8df699">set_ptt</a> (bool ptt_state) override</td></tr>
+<tr class="memdesc:a80d96fde047238482882ee3b7b8df699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set PTT state.  <br /></td></tr>
+<tr class="separator:a80d96fde047238482882ee3b7b8df699"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3813f35edbc3c8df7bc0e3cb1b03b704" id="r_a3813f35edbc3c8df7bc0e3cb1b03b704"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgr_1_1packet__protocols_1_1kiss__tnc__impl.html#a3813f35edbc3c8df7bc0e3cb1b03b704">get_ptt</a> () const override</td></tr>
+<tr class="memdesc:a3813f35edbc3c8df7bc0e3cb1b03b704"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get PTT state.  <br /></td></tr>
+<tr class="separator:a3813f35edbc3c8df7bc0e3cb1b03b704"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e0a5f4d17982a8bb9b226f527e21351" id="r_a2e0a5f4d17982a8bb9b226f527e21351"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgr_1_1packet__protocols_1_1kiss__tnc__impl.html#a2e0a5f4d17982a8bb9b226f527e21351">set_ptt_enabled</a> (bool enabled) override</td></tr>
+<tr class="memdesc:a2e0a5f4d17982a8bb9b226f527e21351"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable/disable PTT control.  <br /></td></tr>
+<tr class="separator:a2e0a5f4d17982a8bb9b226f527e21351"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a668833b13e93a6b56f3d6fb6e1e04d2a" id="r_a668833b13e93a6b56f3d6fb6e1e04d2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgr_1_1packet__protocols_1_1kiss__tnc__impl.html#a668833b13e93a6b56f3d6fb6e1e04d2a">set_ptt_use_dtr</a> (bool use_dtr) override</td></tr>
+<tr class="memdesc:a668833b13e93a6b56f3d6fb6e1e04d2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set PTT control method.  <br /></td></tr>
+<tr class="separator:a668833b13e93a6b56f3d6fb6e1e04d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -171,6 +183,36 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3813f35edbc3c8df7bc0e3cb1b03b704" name="a3813f35edbc3c8df7bc0e3cb1b03b704"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3813f35edbc3c8df7bc0e3cb1b03b704">&#9670;&#160;</a></span>get_ptt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool gr::packet_protocols::kiss_tnc_impl::get_ptt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get PTT state. </p>
+<dl class="section return"><dt>Returns</dt><dd>Current PTT state </dd></dl>
+
+<p>Implements <a class="el" href="classgr_1_1packet__protocols_1_1kiss__tnc.html#a1b64d9b1d0d18e5f403ebd2bb2cbf8b6">gr::packet_protocols::kiss_tnc</a>.</p>
+
+</div>
+</div>
 <a id="acd5505dbc9b8c0bfe72943268c214ff5" name="acd5505dbc9b8c0bfe72943268c214ff5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acd5505dbc9b8c0bfe72943268c214ff5">&#9670;&#160;</a></span>set_full_duplex()</h2>
 
@@ -240,6 +282,114 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 
 <p>Implements <a class="el" href="classgr_1_1packet__protocols_1_1kiss__tnc.html#a20e9640d91f0cefc3d39be591aadf723">gr::packet_protocols::kiss_tnc</a>.</p>
+
+</div>
+</div>
+<a id="a80d96fde047238482882ee3b7b8df699" name="a80d96fde047238482882ee3b7b8df699"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80d96fde047238482882ee3b7b8df699">&#9670;&#160;</a></span>set_ptt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gr::packet_protocols::kiss_tnc_impl::set_ptt </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>ptt_state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set PTT state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptt_state</td><td>PTT state (true = keyed, false = unkeyed) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classgr_1_1packet__protocols_1_1kiss__tnc.html#a57d995adb40d41e7e87d6b21d89d542c">gr::packet_protocols::kiss_tnc</a>.</p>
+
+</div>
+</div>
+<a id="a2e0a5f4d17982a8bb9b226f527e21351" name="a2e0a5f4d17982a8bb9b226f527e21351"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e0a5f4d17982a8bb9b226f527e21351">&#9670;&#160;</a></span>set_ptt_enabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gr::packet_protocols::kiss_tnc_impl::set_ptt_enabled </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enable/disable PTT control. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enabled</td><td>Enable PTT control </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classgr_1_1packet__protocols_1_1kiss__tnc.html#ae2e9fbcb0eb1dc057b0bbbe43aa8e085">gr::packet_protocols::kiss_tnc</a>.</p>
+
+</div>
+</div>
+<a id="a668833b13e93a6b56f3d6fb6e1e04d2a" name="a668833b13e93a6b56f3d6fb6e1e04d2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a668833b13e93a6b56f3d6fb6e1e04d2a">&#9670;&#160;</a></span>set_ptt_use_dtr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gr::packet_protocols::kiss_tnc_impl::set_ptt_use_dtr </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>use_dtr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set PTT control method. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">use_dtr</td><td>Use DTR for PTT (false = use RTS) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classgr_1_1packet__protocols_1_1kiss__tnc.html#a3a03ae18b2beb7591f0791e8e9086229">gr::packet_protocols::kiss_tnc</a>.</p>
 
 </div>
 </div>

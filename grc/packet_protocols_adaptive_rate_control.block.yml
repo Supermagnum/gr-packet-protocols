@@ -1,0 +1,42 @@
+id: packet_protocols_adaptive_rate_control
+label: Adaptive Rate Control
+category: '[Packet Protocols]'
+flags: [python, cpp]
+
+parameters:
+-   id: initial_mode
+    label: Initial Modulation Mode
+    dtype: enum
+    default: 'MODE_4FSK'
+    options: ['MODE_2FSK', 'MODE_4FSK', 'MODE_8FSK', 'MODE_16FSK', 'MODE_BPSK', 'MODE_QPSK', 'MODE_8PSK', 'MODE_QAM16', 'MODE_QAM64']
+    option_labels: ['2FSK', '4FSK', '8FSK', '16FSK', 'BPSK', 'QPSK', '8PSK', '16-QAM', '64-QAM']
+-   id: enable_adaptation
+    label: Enable Adaptation
+    dtype: bool
+    default: 'True'
+-   id: hysteresis_db
+    label: Hysteresis (dB)
+    dtype: float
+    default: '2.0'
+    range: [0.0, 10.0]
+
+inputs:
+-   domain: stream
+    dtype: byte
+
+outputs:
+-   domain: stream
+    dtype: byte
+
+templates:
+    imports: |-
+        from gnuradio import packet_protocols
+    make: |-
+        packet_protocols.adaptive_rate_control(
+            initial_mode=packet_protocols.modulation_mode_t.${initial_mode},
+            enable_adaptation=${enable_adaptation},
+            hysteresis_db=${hysteresis_db}
+        )
+
+file_format: 1
+

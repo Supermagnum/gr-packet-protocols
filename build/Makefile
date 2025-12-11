@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/haaken/github-projects/gr-packet_protocols
+CMAKE_SOURCE_DIR = /home/haaken/github-projects/gr-packet-protocols
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/haaken/github-projects/gr-packet_protocols/build
+CMAKE_BINARY_DIR = /home/haaken/github-projects/gr-packet-protocols/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/haaken/github-projects/gr-packet_protocols/build/CMakeFiles /home/haaken/github-projects/gr-packet_protocols/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles /home/haaken/github-projects/gr-packet-protocols/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/haaken/github-projects/gr-packet_protocols/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -211,17 +211,17 @@ doxygen_target/fast:
 .PHONY : doxygen_target/fast
 
 #=============================================================================
-# Target rules for targets named pygen_python_packet_protocols_a3b24addfa20afcf72c80339370e61f5
+# Target rules for targets named pygen_python_packet_protocols_0dded37ad97c88f88754f234d82aaf2a
 
 # Build rule for target.
-pygen_python_packet_protocols_a3b24addfa20afcf72c80339370e61f5: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pygen_python_packet_protocols_a3b24addfa20afcf72c80339370e61f5
-.PHONY : pygen_python_packet_protocols_a3b24addfa20afcf72c80339370e61f5
+pygen_python_packet_protocols_0dded37ad97c88f88754f234d82aaf2a: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pygen_python_packet_protocols_0dded37ad97c88f88754f234d82aaf2a
+.PHONY : pygen_python_packet_protocols_0dded37ad97c88f88754f234d82aaf2a
 
 # fast build rule for target.
-pygen_python_packet_protocols_a3b24addfa20afcf72c80339370e61f5/fast:
-	$(MAKE) $(MAKESILENT) -f python/packet_protocols/CMakeFiles/pygen_python_packet_protocols_a3b24addfa20afcf72c80339370e61f5.dir/build.make python/packet_protocols/CMakeFiles/pygen_python_packet_protocols_a3b24addfa20afcf72c80339370e61f5.dir/build
-.PHONY : pygen_python_packet_protocols_a3b24addfa20afcf72c80339370e61f5/fast
+pygen_python_packet_protocols_0dded37ad97c88f88754f234d82aaf2a/fast:
+	$(MAKE) $(MAKESILENT) -f python/packet_protocols/CMakeFiles/pygen_python_packet_protocols_0dded37ad97c88f88754f234d82aaf2a.dir/build.make python/packet_protocols/CMakeFiles/pygen_python_packet_protocols_0dded37ad97c88f88754f234d82aaf2a.dir/build
+.PHONY : pygen_python_packet_protocols_0dded37ad97c88f88754f234d82aaf2a/fast
 
 #=============================================================================
 # Target rules for targets named copy_module_for_tests
@@ -292,7 +292,7 @@ help:
 	@echo "... doxygen_target"
 	@echo "... extracted_docstrings"
 	@echo "... packet_protocols_docstrings"
-	@echo "... pygen_python_packet_protocols_a3b24addfa20afcf72c80339370e61f5"
+	@echo "... pygen_python_packet_protocols_0dded37ad97c88f88754f234d82aaf2a"
 	@echo "... uninstall"
 	@echo "... gnuradio-packet_protocols"
 	@echo "... packet_protocols_python"

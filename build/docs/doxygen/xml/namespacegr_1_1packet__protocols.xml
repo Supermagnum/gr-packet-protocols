@@ -2,6 +2,10 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="namespacegr_1_1packet__protocols" kind="namespace" language="C++">
     <compoundname>gr::packet_protocols</compoundname>
+    <innerclass refid="classgr_1_1packet__protocols_1_1adaptive__modulator" prot="public">gr::packet_protocols::adaptive_modulator</innerclass>
+    <innerclass refid="classgr_1_1packet__protocols_1_1adaptive__modulator__impl" prot="public">gr::packet_protocols::adaptive_modulator_impl</innerclass>
+    <innerclass refid="classgr_1_1packet__protocols_1_1adaptive__rate__control" prot="public">gr::packet_protocols::adaptive_rate_control</innerclass>
+    <innerclass refid="classgr_1_1packet__protocols_1_1adaptive__rate__control__impl" prot="public">gr::packet_protocols::adaptive_rate_control_impl</innerclass>
     <innerclass refid="classgr_1_1packet__protocols_1_1ax25__decoder" prot="public">gr::packet_protocols::ax25_decoder</innerclass>
     <innerclass refid="classgr_1_1packet__protocols_1_1ax25__decoder__impl" prot="public">gr::packet_protocols::ax25_decoder_impl</innerclass>
     <innerclass refid="classgr_1_1packet__protocols_1_1ax25__encoder" prot="public">gr::packet_protocols::ax25_encoder</innerclass>
@@ -18,7 +22,157 @@
     <innerclass refid="classgr_1_1packet__protocols_1_1il2p__reed__solomon" prot="public">gr::packet_protocols::il2p_reed_solomon</innerclass>
     <innerclass refid="classgr_1_1packet__protocols_1_1kiss__tnc" prot="public">gr::packet_protocols::kiss_tnc</innerclass>
     <innerclass refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl" prot="public">gr::packet_protocols::kiss_tnc_impl</innerclass>
+    <innerclass refid="classgr_1_1packet__protocols_1_1link__quality__monitor" prot="public">gr::packet_protocols::link_quality_monitor</innerclass>
+    <innerclass refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl" prot="public">gr::packet_protocols::link_quality_monitor_impl</innerclass>
+    <innerclass refid="classgr_1_1packet__protocols_1_1modulation__negotiation" prot="public">gr::packet_protocols::modulation_negotiation</innerclass>
+    <innerclass refid="classgr_1_1packet__protocols_1_1modulation__negotiation__impl" prot="public">gr::packet_protocols::modulation_negotiation_impl</innerclass>
+    <innerclass refid="structgr_1_1packet__protocols_1_1negotiation__msg__t" prot="public">gr::packet_protocols::negotiation_msg_t</innerclass>
+    <innerclass refid="structgr_1_1packet__protocols_1_1rate__thresholds__t" prot="public">gr::packet_protocols::rate_thresholds_t</innerclass>
     <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacegr_1_1packet__protocols_1a9e7a572c6db95031cfbe3d4aea31b647" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>modulation_mode_t</name>
+        <qualifiedname>gr::packet_protocols::modulation_mode_t</qualifiedname>
+        <enumvalue id="namespacegr_1_1packet__protocols_1a9e7a572c6db95031cfbe3d4aea31b647abbe937abcc0ff235716dcdaf1692aa7e" prot="public">
+          <name>MODE_2FSK</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1a9e7a572c6db95031cfbe3d4aea31b647a6b9c2acc09990bff4ae32ad28e5012ee" prot="public">
+          <name>MODE_4FSK</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1a9e7a572c6db95031cfbe3d4aea31b647a6dfac67d7e28b66d90b406b44ffc00df" prot="public">
+          <name>MODE_8FSK</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1a9e7a572c6db95031cfbe3d4aea31b647a2517d8bfbdf6bcbed9555feeb5f70209" prot="public">
+          <name>MODE_16FSK</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1a9e7a572c6db95031cfbe3d4aea31b647a39ff41bd8ee9b5942491639f7e8b6929" prot="public">
+          <name>MODE_BPSK</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1a9e7a572c6db95031cfbe3d4aea31b647a7012b106363135f234d176cf691c1147" prot="public">
+          <name>MODE_QPSK</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1a9e7a572c6db95031cfbe3d4aea31b647aabb1f479361c119aeface5e8f6b0cb45" prot="public">
+          <name>MODE_8PSK</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1a9e7a572c6db95031cfbe3d4aea31b647a01960aeec12346758c706793b010b9d0" prot="public">
+          <name>MODE_QAM16</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1a9e7a572c6db95031cfbe3d4aea31b647ab9aa4b3e526e0d3ebdc66c85b9dd4bee" prot="public">
+          <name>MODE_QAM64</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/adaptive_rate_control.h" line="32" column="1" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/adaptive_rate_control.h" bodystart="32" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacegr_1_1packet__protocols_1a42c9ff6d141ab0c325c83effb4054fd4" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>negotiation_msg_type_t</name>
+        <qualifiedname>gr::packet_protocols::negotiation_msg_type_t</qualifiedname>
+        <enumvalue id="namespacegr_1_1packet__protocols_1a42c9ff6d141ab0c325c83effb4054fd4ad95294ad603f50dc7d8f0b062c983c43" prot="public">
+          <name>NEG_REQ</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1a42c9ff6d141ab0c325c83effb4054fd4aa1d477e6a739c9578219c8365b69a2bb" prot="public">
+          <name>NEG_RESP</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1a42c9ff6d141ab0c325c83effb4054fd4a495eb183369ca653f21710ce5900d527" prot="public">
+          <name>NEG_ACK</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1a42c9ff6d141ab0c325c83effb4054fd4a46f06fd5999b2ec9c665493e4982ebb4" prot="public">
+          <name>NEG_REJECT</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1a42c9ff6d141ab0c325c83effb4054fd4a9906a8c86db61e3435806069da65522e" prot="public">
+          <name>MODE_CHANGE</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1packet__protocols_1a42c9ff6d141ab0c325c83effb4054fd4a94dde43ba704a55e69978f76b43625bb" prot="public">
+          <name>QUALITY_FEEDBACK</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/modulation_negotiation.h" line="35" column="1" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/modulation_negotiation.h" bodystart="35" bodyend="42"/>
+      </memberdef>
       <memberdef kind="enum" id="namespacegr_1_1packet__protocols_1a673b3cba6ae8af0fa1fad2e9124816a5" prot="public" static="no" strong="no">
         <type></type>
         <name>ax25_state_t</name>
@@ -61,7 +215,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h" line="33" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h" bodystart="33" bodyend="33"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.h" line="33" column="1" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.h" bodystart="33" bodyend="33"/>
       </memberdef>
       <memberdef kind="enum" id="namespacegr_1_1packet__protocols_1a6d4d7e5c356f06dec658a90ac2acf3fd" prot="public" static="no" strong="no">
         <type></type>
@@ -105,7 +259,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_decoder_impl.h" line="34" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_decoder_impl.h" bodystart="34" bodyend="34"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_decoder_impl.h" line="34" column="1" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_decoder_impl.h" bodystart="34" bodyend="34"/>
       </memberdef>
       <memberdef kind="enum" id="namespacegr_1_1packet__protocols_1ad7afc6939b4bcb401c2a11e67508529b" prot="public" static="no" strong="no">
         <type></type>
@@ -149,7 +303,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_decoder_impl.h" line="35" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_decoder_impl.h" bodystart="35" bodyend="35"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_decoder_impl.h" line="35" column="1" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_decoder_impl.h" bodystart="35" bodyend="35"/>
       </memberdef>
       <memberdef kind="enum" id="namespacegr_1_1packet__protocols_1a74ba379c9101bfd5982ad0872b3f00b4" prot="public" static="no" strong="no">
         <type></type>
@@ -177,7 +331,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="34" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="34" bodyend="34"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="34" column="1" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" bodystart="34" bodyend="34"/>
       </memberdef>
       <memberdef kind="enum" id="namespacegr_1_1packet__protocols_1a406cf0d2b9673efa3b0add69cca9d8ce" prot="public" static="no" strong="no">
         <type></type>
@@ -253,7 +407,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="37" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="37" bodyend="46"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="37" column="1" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" bodystart="37" bodyend="46"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="var">
@@ -270,7 +424,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="49" column="15" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="49" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="49" column="15" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacegr_1_1packet__protocols_1ad023d26674233ebd2a9bcaee360c85b4" prot="public" static="no" mutable="no">
         <type>const uint8_t</type>
@@ -285,7 +439,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="50" column="15" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="50" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="50" column="15" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" bodystart="50" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacegr_1_1packet__protocols_1a268439f51f03ac827dd4d18152bb5970" prot="public" static="no" mutable="no">
         <type>const uint8_t</type>
@@ -300,7 +454,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="51" column="15" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="51" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="51" column="15" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" bodystart="51" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacegr_1_1packet__protocols_1a877c0a35bbc92ebd1e59c7fa1215703e" prot="public" static="no" mutable="no">
         <type>const uint8_t</type>
@@ -315,13 +469,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="52" column="15" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="52" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="52" column="15" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" bodystart="52" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/ax25_decoder.h" line="29" column="1"/>
+    <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/adaptive_modulator.h" line="30" column="1"/>
   </compounddef>
 </doxygen>

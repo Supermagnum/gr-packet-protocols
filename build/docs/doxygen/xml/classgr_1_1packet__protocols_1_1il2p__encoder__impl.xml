@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="43" column="17" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" bodystart="43" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" line="43" column="17" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1af565e7b564bc4f5ad9d19c6edbf9a8c3" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="44" column="17" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" bodystart="44" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" line="44" column="17" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1abe4819434d8ea0a68d13d2d6258a2abc" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="45" column="17" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" bodystart="45" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" line="45" column="17" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" bodystart="45" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a39faa88dde238e9a58cbddb8ca900d35" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -63,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="46" column="17" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" bodystart="46" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" line="46" column="17" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a3e9bbf0da87f3ee54fa99fcfb2348be6" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -78,7 +78,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="47" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" bodystart="47" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" line="47" column="9" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1aa48a8955da2f8ebbc5989eb1a62d16b8" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="48" column="10" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" bodystart="48" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" line="48" column="10" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a942805dadb9ab15e6bea39637c618652" prot="private" static="no" mutable="no">
         <type>std::vector&lt; uint8_t &gt;</type>
@@ -108,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="49" column="17" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" bodystart="49" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" line="49" column="17" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a9af445b55490da3f340540a00b9a1832" prot="private" static="no" mutable="no">
         <type>uint16_t</type>
@@ -123,7 +123,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="50" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" bodystart="50" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" line="50" column="14" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" bodystart="50" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a1a18018ad18299a798e901c2513af116" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -138,7 +138,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="51" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" bodystart="51" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" line="51" column="13" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" bodystart="51" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1aa9fa3a81e52a49ba5fc5cd81c12a35a3" prot="private" static="no" mutable="no">
         <type>uint16_t</type>
@@ -153,7 +153,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="52" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" bodystart="52" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" line="52" column="14" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" bodystart="52" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a03e2e0dee38710e2ecc26cc4572d6321" prot="private" static="no" mutable="no">
         <type><ref refid="classReedSolomonEncoder" kindref="compound">ReedSolomonEncoder</ref> *</type>
@@ -168,7 +168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="53" column="24" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" bodystart="53" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" line="53" column="24" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" bodystart="53" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -259,7 +259,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="65" column="5"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" line="65" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a33d072243f817d9aba0bf1ad7820540a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -274,7 +274,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="72" column="5"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" line="72" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1ac91c74f19871963f70f4296ee0c2bbbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -329,7 +329,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="81" column="9"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" line="81" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a63dc8fe61fdd7680dfb35e0f92ba0d52" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -359,7 +359,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="88" column="10"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" line="88" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a15cdd4978ba5e421a1fda67d817bbca1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -389,7 +389,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="94" column="10"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" line="94" column="10"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -406,7 +406,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="100" column="10"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" line="100" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1ae22a1189f226a81bf042e26e3ef82073" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -435,7 +435,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="106" column="10"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" line="106" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1aa97221fba604eeacc4bc828afeb33d18" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -450,7 +450,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="111" column="10"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" line="111" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a81c1c146c35712b770877e7953343720" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -503,7 +503,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="119" column="10"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" line="119" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a471de8ceb29262e764b2d09aec1e0e20" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::vector&lt; uint8_t &gt;</type>
@@ -534,7 +534,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="126" column="17"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" line="126" column="17"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a7037d9fc1dd25f5a25cc817f203830a6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
@@ -552,7 +552,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="132" column="14"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" line="132" column="14"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -595,7 +595,7 @@
         <label>gr::sync_block</label>
       </node>
     </collaborationgraph>
-    <location file="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" line="41" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/il2p_encoder_impl.h" bodystart="41" bodyend="133"/>
+    <location file="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" line="41" column="1" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/il2p_encoder_impl.h" bodystart="41" bodyend="133"/>
     <listofallmembers>
       <member refid="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1a81c1c146c35712b770877e7953343720" prot="private" virt="non-virtual"><scope>gr::packet_protocols::il2p_encoder_impl</scope><name>add_address</name></member>
       <member refid="classgr_1_1packet__protocols_1_1il2p__encoder__impl_1aa97221fba604eeacc4bc828afeb33d18" prot="private" virt="non-virtual"><scope>gr::packet_protocols::il2p_encoder_impl</scope><name>add_il2p_header</name></member>

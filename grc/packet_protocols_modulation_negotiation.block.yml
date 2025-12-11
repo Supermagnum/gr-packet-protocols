@@ -1,0 +1,54 @@
+id: packet_protocols_modulation_negotiation
+label: Modulation Negotiation
+category: '[Packet Protocols]'
+flags: [python, cpp]
+
+parameters:
+-   id: station_id
+    label: Station ID (Callsign)
+    dtype: string
+    default: 'N0CALL'
+-   id: supported_modes
+    label: Supported Modes
+    dtype: string
+    default: 'MODE_2FSK,MODE_4FSK,MODE_8FSK'
+    comment: 'Comma-separated list: MODE_2FSK,MODE_4FSK,MODE_8FSK,MODE_16FSK,MODE_BPSK,MODE_QPSK,MODE_8PSK,MODE_QAM16,MODE_QAM64'
+-   id: negotiation_timeout_ms
+    label: Negotiation Timeout (ms)
+    dtype: int
+    default: '5000'
+    range: [1000, 60000]
+
+inputs:
+-   domain: stream
+    dtype: byte
+
+outputs:
+-   domain: stream
+    dtype: byte
+
+templates:
+    imports: |-
+        from gnuradio import packet_protocols
+    make: |-
+        # Parse supported modes from comma-separated string
+        mode_map = {
+            'MODE_2FSK': packet_protocols.modulation_mode_t.MODE_2FSK,
+            'MODE_4FSK': packet_protocols.modulation_mode_t.MODE_4FSK,
+            'MODE_8FSK': packet_protocols.modulation_mode_t.MODE_8FSK,
+            'MODE_16FSK': packet_protocols.modulation_mode_t.MODE_16FSK,
+            'MODE_BPSK': packet_protocols.modulation_mode_t.MODE_BPSK,
+            'MODE_QPSK': packet_protocols.modulation_mode_t.MODE_QPSK,
+            'MODE_8PSK': packet_protocols.modulation_mode_t.MODE_8PSK,
+            'MODE_QAM16': packet_protocols.modulation_mode_t.MODE_QAM16,
+            'MODE_QAM64': packet_protocols.modulation_mode_t.MODE_QAM64,
+        }
+        supported_modes_list = [mode_map[m.strip()] for m in '${supported_modes}'.split(',') if m.strip() in mode_map]
+        packet_protocols.modulation_negotiation(
+            '${station_id}',
+            supported_modes_list,
+            ${negotiation_timeout_ms}
+        )
+
+file_format: 1
+

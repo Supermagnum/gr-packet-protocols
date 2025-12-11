@@ -25,7 +25,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" line="10" column="10" bodyfile="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" bodystart="10" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" line="10" column="10" bodyfile="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" bodystart="10" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="var">
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" line="18" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" bodystart="18" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" line="18" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" bodystart="18" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="python_2packet__protocols_2bindings_2docstrings_2fx25__encoder__pydoc__template_8h_1a605cff763f15489ec078a35e90ebbf32" prot="public" static="yes" mutable="no">
         <type>const char *</type>
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" line="21" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" bodystart="21" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" line="21" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="python_2packet__protocols_2bindings_2docstrings_2fx25__encoder__pydoc__template_8h_1a730f2909e314b9df1694604f1543b126" prot="public" static="yes" mutable="no">
         <type>const char *</type>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" line="24" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" bodystart="24" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" line="24" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" bodystart="24" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="python_2packet__protocols_2bindings_2docstrings_2fx25__encoder__pydoc__template_8h_1a0d83610b020af4b41deb37146ed78bc7" prot="public" static="yes" mutable="no">
         <type>const char *</type>
@@ -83,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" line="27" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" bodystart="27" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" line="27" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" bodystart="27" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="python_2packet__protocols_2bindings_2docstrings_2fx25__encoder__pydoc__template_8h_1a55445be6d2e011cec269aa216efce690" prot="public" static="yes" mutable="no">
         <type>const char *</type>
@@ -97,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" line="30" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" bodystart="30" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" line="30" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="python_2packet__protocols_2bindings_2docstrings_2fx25__encoder__pydoc__template_8h_1a43ab77318de127c6327de16839c8daa6" prot="public" static="yes" mutable="no">
         <type>const char *</type>
@@ -112,7 +112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" line="33" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" bodystart="33" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" line="33" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="python_2packet__protocols_2bindings_2docstrings_2fx25__encoder__pydoc__template_8h_1a2e7a9d601c112177c9d05b1e6def37e7" prot="public" static="yes" mutable="no">
         <type>const char *</type>
@@ -126,13 +126,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" line="37" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" bodystart="37" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" line="37" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h" bodystart="37" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h"/>
+    <location file="/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings/fx25_encoder_pydoc_template.h"/>
   </compounddef>
 </doxygen>

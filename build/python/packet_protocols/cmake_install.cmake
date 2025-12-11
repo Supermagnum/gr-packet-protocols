@@ -1,8 +1,8 @@
-# Install script for directory: /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols
+# Install script for directory: /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,10 +44,14 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings/cmake_install.cmake")
+  include("/home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/gnuradio/packet_protocols" TYPE FILE FILES "/home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/__init__.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.12/dist-packages/gnuradio/packet_protocols" TYPE FILE FILES
+    "/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/__init__.py"
+    "/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/adaptive_modulator.py"
+    "/home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/modulation_switch.py"
+    )
 endif()
 

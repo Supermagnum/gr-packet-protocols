@@ -1,5 +1,63 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="classgr_1_1packet__protocols_1_1adaptive__modulator" kind="class"><name>gr::packet_protocols::adaptive_modulator</name>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__modulator_1ae5c638066e1a9e4da56f7b41d0f39389" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__modulator_1a56a6101f7210765ad18e6f4028d1685f" kind="function"><name>make</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__modulator_1a927fc2368fa234190334acb1ce225f51" kind="function"><name>get_rate_control</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__modulator_1ade55ad6beb0f59ca71689dba188e36a0" kind="function"><name>get_modulation_mode</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__modulator_1adbdeca6b646209d3fa4b6353a06de51e" kind="function"><name>set_modulation_mode</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__modulator_1a5f9929f5e2eb882ddc420148a6e0d9d7" kind="function"><name>set_adaptation_enabled</name></member>
+  </compound>
+  <compound refid="classgr_1_1packet__protocols_1_1adaptive__modulator__impl" kind="class"><name>gr::packet_protocols::adaptive_modulator_impl</name>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__modulator__impl_1a063c0b197b6cf67d4f0e60c98c37e7d2" kind="variable"><name>d_rate_control</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__modulator__impl_1a0673152541e2a032cce9a80d1b9da624" kind="variable"><name>d_selector</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__modulator__impl_1a4fe8e155efc02ef823989b78ef454945" kind="variable"><name>d_samples_per_symbol</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__modulator__impl_1a425576eaa61bbf642ed532dfce367930" kind="variable"><name>d_current_mode</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__modulator__impl_1aefe12c292bd89b9722b2d5bb8bd12ab2" kind="variable"><name>d_last_mode</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__modulator__impl_1a038afa89dfe0f74f9052bc0bf835490f" kind="variable"><name>d_mod_blocks</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__modulator__impl_1a204ccb17c44f09dc335ed6412ca6b39c" kind="variable"><name>d_mode_to_index</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__modulator__impl_1a3a8b90ae50f844e1f88faab00a292a69" kind="variable"><name>d_mutex</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__modulator__impl_1ae6b455f37df2341a944c340ffd5a025f" kind="function"><name>create_modulator</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__modulator__impl_1ae8b3d87931c144cd1bf7f4df4dd4d083" kind="function"><name>switch_modulation_mode</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__modulator__impl_1a9ac5c533ccec89085020c976fd571fe7" kind="function"><name>monitor_mode_changes</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__modulator__impl_1a67e5dc94f9d09e4add2ed2b12b17f5f3" kind="function"><name>adaptive_modulator_impl</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__modulator__impl_1ab3419ff942f4899b12ea0788fc55e5c0" kind="function"><name>~adaptive_modulator_impl</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__modulator__impl_1a6e786876305345563a4236e1fd980cb7" kind="function"><name>get_rate_control</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__modulator__impl_1af7865cb7e4463edfd5311cfd68e39634" kind="function"><name>get_modulation_mode</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__modulator__impl_1a3ee84c26e1bdd22a863e93769e7d289c" kind="function"><name>set_modulation_mode</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__modulator__impl_1a7a5e633c3967577f12366ae79a7c3367" kind="function"><name>set_adaptation_enabled</name></member>
+  </compound>
+  <compound refid="classgr_1_1packet__protocols_1_1adaptive__rate__control" kind="class"><name>gr::packet_protocols::adaptive_rate_control</name>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__rate__control_1a8c4b532e1cbe930615d789400d833f1f" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__rate__control_1a9056b417121c6b8db81e5b8a22ba9e52" kind="function"><name>make</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__rate__control_1afd1576f28b332cd5bfe47f49034347db" kind="function"><name>get_modulation_mode</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__rate__control_1afbad77143efbc5f8da9391e89375fcb3" kind="function"><name>set_modulation_mode</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__rate__control_1a8036d30190fdcca4a807d4873bd23f08" kind="function"><name>set_adaptation_enabled</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__rate__control_1a0be51ce018eb81b664f19028c2ce36ee" kind="function"><name>update_quality</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__rate__control_1a963bb9b504b25264db9fae816a4a624b" kind="function"><name>recommend_mode</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__rate__control_1a1a5e4910591f0f6d34c3b2047e4cbf94" kind="function"><name>get_data_rate</name></member>
+  </compound>
+  <compound refid="classgr_1_1packet__protocols_1_1adaptive__rate__control__impl" kind="class"><name>gr::packet_protocols::adaptive_rate_control_impl</name>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__rate__control__impl_1a38b43abbca742a391b364e822b8d46b5" kind="variable"><name>d_current_mode</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__rate__control__impl_1a212b19441209c1663d5063702e36b75a" kind="variable"><name>d_adaptation_enabled</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__rate__control__impl_1a6e57c8b73d8dcc10947a0f24735f0008" kind="variable"><name>d_hysteresis_db</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__rate__control__impl_1a0a8853ba656aa4758923c854604dba15" kind="variable"><name>d_last_snr_db</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__rate__control__impl_1a7b30b74f8e99e4a0793588e2d2a920a8" kind="variable"><name>d_last_mode</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__rate__control__impl_1adbf980078c2ee974fc691c2b6ca107ea" kind="variable"><name>d_mode_thresholds</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__rate__control__impl_1a7112e0cfbb9dfb367aa8d47e86a7e599" kind="variable"><name>d_mode_data_rates</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__rate__control__impl_1acd58cbe572d72af5b24b6579d1ea3859" kind="variable"><name>d_mutex</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__rate__control__impl_1acb99a1a3aa264b1da9c9e28150b6e6fe" kind="function"><name>initialize_thresholds</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__rate__control__impl_1a8ab6c19db8893b9b8569fe7b649b3957" kind="function"><name>get_thresholds</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__rate__control__impl_1a13b6cd9c459fa274c3e3d450f10394e4" kind="function"><name>adaptive_rate_control_impl</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__rate__control__impl_1ae9c97ca2ea95b2fc65e954f8d3d5f32a" kind="function"><name>~adaptive_rate_control_impl</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__rate__control__impl_1ac0c7721ff5d69be738b280696134a2f0" kind="function"><name>work</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__rate__control__impl_1ab897dd15f8b823231886ff269638b6cd" kind="function"><name>get_modulation_mode</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__rate__control__impl_1afbc0a30528ec855bcbbd7d0512065fb5" kind="function"><name>set_modulation_mode</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__rate__control__impl_1a0c5c4f96d3c935ba76d54e593f512fe7" kind="function"><name>set_adaptation_enabled</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__rate__control__impl_1a3c5ff9dbbbcb19a2707d34723593904a" kind="function"><name>update_quality</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__rate__control__impl_1a1fd8c8ca4091b873ed7dab3317ce9321" kind="function"><name>recommend_mode</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1adaptive__rate__control__impl_1afcc2f0a8ae16bfab7f990c71f2ddeead" kind="function"><name>get_data_rate</name></member>
+  </compound>
   <compound refid="structax25__address__t" kind="struct"><name>ax25_address_t</name>
     <member refid="structax25__address__t_1a7a5530698412e4845a0908797b6f52f9" kind="variable"><name>callsign</name></member>
     <member refid="structax25__address__t_1ab61d296cf37c2d22db0790d695b1ad1a" kind="variable"><name>ssid</name></member>
@@ -295,6 +353,10 @@
     <member refid="classgr_1_1packet__protocols_1_1kiss__tnc_1aa9961c6c5d7f526dbb3a3f032d4b6178" kind="function"><name>set_slot_time</name></member>
     <member refid="classgr_1_1packet__protocols_1_1kiss__tnc_1a7b1399b56bf9467fdc3a946c8aeb3a81" kind="function"><name>set_tx_tail</name></member>
     <member refid="classgr_1_1packet__protocols_1_1kiss__tnc_1ad308ff2e111f0293306800d2d9241043" kind="function"><name>set_full_duplex</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1kiss__tnc_1a57d995adb40d41e7e87d6b21d89d542c" kind="function"><name>set_ptt</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1kiss__tnc_1a1b64d9b1d0d18e5f403ebd2bb2cbf8b6" kind="function"><name>get_ptt</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1kiss__tnc_1ae2e9fbcb0eb1dc057b0bbbe43aa8e085" kind="function"><name>set_ptt_enabled</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1kiss__tnc_1a3a03ae18b2beb7591f0791e8e9086229" kind="function"><name>set_ptt_use_dtr</name></member>
   </compound>
   <compound refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl" kind="class"><name>gr::packet_protocols::kiss_tnc_impl</name>
     <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a8464c604239e41e44c09447a72ee2346" kind="variable"><name>d_device</name></member>
@@ -313,6 +375,9 @@
     <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a89c93d26cdf3aeb0acea6e496363b87b" kind="variable"><name>d_full_duplex</name></member>
     <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1afee76ecc578bdb57e8be3b938f217d9d" kind="variable"><name>d_hardware_type</name></member>
     <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1afa35f32e58d8e2a21255f62c865c9bc6" kind="variable"><name>d_kiss_mode</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1ab88938573f1f6023fd1a640a342f5dbe" kind="variable"><name>d_ptt_enabled</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a0d71bf9e2d97578d0c349550ee866515" kind="variable"><name>d_ptt_state</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a9b280ab4ffea80867ec6015f46e96b43" kind="variable"><name>d_use_dtr_for_ptt</name></member>
     <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a2b2ce11a1699910651886b6fc881a0df" kind="function"><name>kiss_tnc_impl</name></member>
     <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a43ac6740a12a852e637c5c8e46d758bd" kind="function"><name>~kiss_tnc_impl</name></member>
     <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a56a2b8df2805daa1a765040fd2d0c472" kind="function"><name>work</name></member>
@@ -321,9 +386,14 @@
     <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a4aacc9d4b14e7c9d440c8ee855b72def" kind="function"><name>set_slot_time</name></member>
     <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1aede2a16925160472dca239bdfbce13fd" kind="function"><name>set_tx_tail</name></member>
     <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1acd5505dbc9b8c0bfe72943268c214ff5" kind="function"><name>set_full_duplex</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a80d96fde047238482882ee3b7b8df699" kind="function"><name>set_ptt</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a3813f35edbc3c8df7bc0e3cb1b03b704" kind="function"><name>get_ptt</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a2e0a5f4d17982a8bb9b226f527e21351" kind="function"><name>set_ptt_enabled</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a668833b13e93a6b56f3d6fb6e1e04d2a" kind="function"><name>set_ptt_use_dtr</name></member>
     <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a1148d075622dd1ad7a40fd5122134cba" kind="function"><name>open_serial_port</name></member>
     <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a51529866e6625d0867bd4eeac54d6013" kind="function"><name>process_kiss_frame</name></member>
     <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a79764347a7a03b72e1a10cb2a90e4924" kind="function"><name>send_kiss_frame</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a4e555947f3f39fdcb5f8f40631a409ac" kind="function"><name>control_ptt_line</name></member>
   </compound>
   <compound refid="structkiss__tnc__t" kind="struct"><name>kiss_tnc_t</name>
     <member refid="structkiss__tnc__t_1acee015632d3ba228caa59e84aaf77d64" kind="variable"><name>state</name></member>
@@ -334,6 +404,94 @@
     <member refid="structkiss__tnc__t_1a44193e82c1fda8e49ab89949f45168f1" kind="variable"><name>frame_ready</name></member>
     <member refid="structkiss__tnc__t_1ab71b4d7f01479c037a672e6c07017f5c" kind="variable"><name>serial_fd</name></member>
     <member refid="structkiss__tnc__t_1aa63899d3b7eac8d0de0c870cd045f3ef" kind="variable"><name>tcp_socket</name></member>
+  </compound>
+  <compound refid="classgr_1_1packet__protocols_1_1link__quality__monitor" kind="class"><name>gr::packet_protocols::link_quality_monitor</name>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor_1a4f082821ae67e0654b1a93edf3e7285d" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor_1acb0ef6379249ed2718e6a2144dcc0928" kind="function"><name>make</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor_1aa95d06773ae25b486fc1d2f46f98a4bf" kind="function"><name>get_snr</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor_1a9a5404e76166d695c4495743236e3f53" kind="function"><name>get_ber</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor_1a1169b7f8997f29632100cf74f34333ba" kind="function"><name>get_fer</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor_1a4e7b4f1cf987a21678de4043d707ba76" kind="function"><name>get_quality_score</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor_1acadaeda33906fd553f23aa8b0f9cda36" kind="function"><name>update_snr</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor_1a53590c3564748950d3fdc78816c37233" kind="function"><name>update_ber</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor_1a894383a7651b3f55ea2c36bebf61f1c1" kind="function"><name>record_frame_error</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor_1ae4e153d11b956122f8b31d29871053f3" kind="function"><name>record_frame_success</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor_1a46a43d3b904d5e25ad8153ad5816d73a" kind="function"><name>reset</name></member>
+  </compound>
+  <compound refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl" kind="class"><name>gr::packet_protocols::link_quality_monitor_impl</name>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl_1ada3f4e4d56ae4d0999553a65ac9718b0" kind="variable"><name>d_alpha</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl_1ad38c1c39daeb1ba44f0960d696544285" kind="variable"><name>d_update_period</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl_1ac4dea9c51edee276963bfd8b98bdecd3" kind="variable"><name>d_sample_count</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl_1a71814fc5e9159bdb87bf252bfb17ee57" kind="variable"><name>d_mutex</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl_1a984c135d5b519a43fd1e45350c1cb37e" kind="variable"><name>d_snr_db</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl_1ae278dec0628b33341b81d12067fb2f61" kind="variable"><name>d_ber</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl_1ae9f2fadeee36f318b24b788600b8a58d" kind="variable"><name>d_fer</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl_1a48c6ae8363a1f72622235c5cfabbc469" kind="variable"><name>d_quality_score</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl_1ada3f7a4511c7af77a7511252a2c99891" kind="variable"><name>d_total_frames</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl_1af4761d98a91ec307f06417b8d2a209a1" kind="variable"><name>d_error_frames</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl_1ac5ef3d03fe9a87315c76c4bf056c2067" kind="variable"><name>d_total_bits</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl_1a9383bbb208ed213548695116a55b0464" kind="variable"><name>d_error_bits</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl_1a063727149b1e6706b5893f2136ed32e4" kind="variable"><name>d_snr_history</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl_1afc26b38911b127b52c034d36a05b15c1" kind="variable"><name>d_ber_history</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl_1a46d60d5c364c95284eaf9f39a1a37ce4" kind="variable"><name>MAX_HISTORY</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl_1a9225e9542439017aca6e86e01f6e236a" kind="function"><name>calculate_quality_score</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl_1ac833671a644f75a1dcd45b1c1ec1f6da" kind="function"><name>link_quality_monitor_impl</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl_1a8d3cf595175b9b5d0ed34e81340a0c76" kind="function"><name>~link_quality_monitor_impl</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl_1a07038f0e6787fad9da251cfc122bdbd2" kind="function"><name>work</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl_1a753e8fc29ce1c14f220678623341e3c5" kind="function"><name>get_snr</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl_1ad57a73260b78c51967c9aa62005af0bf" kind="function"><name>get_ber</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl_1ab302cac3981536abd06faff60330696e" kind="function"><name>get_fer</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl_1ac4c4f77ab3e065b63e7fa48c02ac2b63" kind="function"><name>get_quality_score</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl_1ab2f7f16a7f0f67a6a3e575c4f65381b8" kind="function"><name>update_snr</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl_1ad9caea42af08f0b8a73c429f53a1583c" kind="function"><name>update_ber</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl_1a8404a1fe97418b9630bdf820ed01d548" kind="function"><name>record_frame_error</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl_1a319518faf82cfdd174ac48283465599d" kind="function"><name>record_frame_success</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1link__quality__monitor__impl_1a74d3ea1c4764b3813e9e724b09fb69f2" kind="function"><name>reset</name></member>
+  </compound>
+  <compound refid="classgr_1_1packet__protocols_1_1modulation__negotiation" kind="class"><name>gr::packet_protocols::modulation_negotiation</name>
+    <member refid="classgr_1_1packet__protocols_1_1modulation__negotiation_1ad6558ccc643679a1e3d408a4b1dfc8b6" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1modulation__negotiation_1ae3eccf39811593556395f049314ed4c5" kind="function"><name>make</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1modulation__negotiation_1ad0551ba2e9d58397cea2d5ef477e5adc" kind="function"><name>initiate_negotiation</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1modulation__negotiation_1a42397b351b9141308a99a99d7b8d6013" kind="function"><name>get_negotiated_mode</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1modulation__negotiation_1a05c4c4a58079e8fb6e4e1ca8a41fae0d" kind="function"><name>is_negotiating</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1modulation__negotiation_1a4bd0adf30e9332a488530528cf4025da" kind="function"><name>send_quality_feedback</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1modulation__negotiation_1a211cc644373b26bd320fc20701f7b3b4" kind="function"><name>get_supported_modes</name></member>
+  </compound>
+  <compound refid="classgr_1_1packet__protocols_1_1modulation__negotiation__impl" kind="class"><name>gr::packet_protocols::modulation_negotiation_impl</name>
+    <member refid="classgr_1_1packet__protocols_1_1modulation__negotiation__impl_1ae7225a012fafaace13783bf28bdd2cf8" kind="variable"><name>d_station_id</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1modulation__negotiation__impl_1a578e7f8b858a8f29f0e9c15f443de08f" kind="variable"><name>d_supported_modes</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1modulation__negotiation__impl_1a65868cc0edff96eacf4753605f80bc0e" kind="variable"><name>d_negotiation_timeout_ms</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1modulation__negotiation__impl_1aee486e4110dee9d416a8f05d4fb00bc7" kind="variable"><name>d_mutex</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1modulation__negotiation__impl_1a9727ee26db77416cb0e17d5033c2b2f9" kind="variable"><name>d_negotiating</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1modulation__negotiation__impl_1a24e60b335c15284795feb5ebea3d1ff8" kind="variable"><name>d_remote_station_id</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1modulation__negotiation__impl_1abbe2002a669904f18404b415c155054d" kind="variable"><name>d_negotiated_mode</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1modulation__negotiation__impl_1af4ac590e0616ef28422ff3d6fe7d743e" kind="variable"><name>d_pending_mode</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1modulation__negotiation__impl_1ade0350d53d26ec18cdc4504de0ead619" kind="variable"><name>d_negotiation_start_time</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1modulation__negotiation__impl_1a1adf0e4eb9c6c88ac0e7a3cbf576710d" kind="variable"><name>d_negotiated_modes</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1modulation__negotiation__impl_1a3cb3ce49c128d5e89fa466b726b4d1a0" kind="function"><name>modulation_negotiation_impl</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1modulation__negotiation__impl_1a5b55a5b1145f47a3cdd575753b2fc28e" kind="function"><name>~modulation_negotiation_impl</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1modulation__negotiation__impl_1aaa3d3844a85bef99842aa0a034431772" kind="function"><name>work</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1modulation__negotiation__impl_1aaacc9e1edae8785ac8b4526ff4d6e679" kind="function"><name>initiate_negotiation</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1modulation__negotiation__impl_1adb0bd3dbae27fe73ca1e2ef3028d7e5c" kind="function"><name>get_negotiated_mode</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1modulation__negotiation__impl_1a561b563ef992603f49a253df6f6f1d8b" kind="function"><name>is_negotiating</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1modulation__negotiation__impl_1a573c48b140b21cd5b63ad0dc571b9aee" kind="function"><name>send_quality_feedback</name></member>
+    <member refid="classgr_1_1packet__protocols_1_1modulation__negotiation__impl_1aa75e990662927d61fde3f1a6b74092b4" kind="function"><name>get_supported_modes</name></member>
+  </compound>
+  <compound refid="structgr_1_1packet__protocols_1_1negotiation__msg__t" kind="struct"><name>gr::packet_protocols::negotiation_msg_t</name>
+    <member refid="structgr_1_1packet__protocols_1_1negotiation__msg__t_1a669dcf42d0a01b86d6dd59bee7851f70" kind="variable"><name>type</name></member>
+    <member refid="structgr_1_1packet__protocols_1_1negotiation__msg__t_1a73bf78be290539a93ac0e8794b2d56f6" kind="variable"><name>proposed_mode</name></member>
+    <member refid="structgr_1_1packet__protocols_1_1negotiation__msg__t_1a101229f55e3f48474321fe70db0919ee" kind="variable"><name>supported_modes</name></member>
+    <member refid="structgr_1_1packet__protocols_1_1negotiation__msg__t_1a8dc1580fbd30b54354d19a29bb58183d" kind="variable"><name>num_supported_modes</name></member>
+    <member refid="structgr_1_1packet__protocols_1_1negotiation__msg__t_1ae9ce54e06ca76e01138023e5395e3b1a" kind="variable"><name>snr_db</name></member>
+    <member refid="structgr_1_1packet__protocols_1_1negotiation__msg__t_1a57515d4a4d0e3731baa18a681ea7dae8" kind="variable"><name>ber</name></member>
+    <member refid="structgr_1_1packet__protocols_1_1negotiation__msg__t_1a5e38aeea486b2af766022b66280b7251" kind="variable"><name>quality_score</name></member>
+    <member refid="structgr_1_1packet__protocols_1_1negotiation__msg__t_1a574734a6ba40e5650df56cf216e3c81f" kind="variable"><name>station_id</name></member>
+  </compound>
+  <compound refid="structgr_1_1packet__protocols_1_1rate__thresholds__t" kind="struct"><name>gr::packet_protocols::rate_thresholds_t</name>
+    <member refid="structgr_1_1packet__protocols_1_1rate__thresholds__t_1a016a9522e597299e879dba3ddf74516b" kind="variable"><name>snr_min_dB</name></member>
+    <member refid="structgr_1_1packet__protocols_1_1rate__thresholds__t_1aac8e84514178a1447ec749a99aaa167d" kind="variable"><name>snr_max_dB</name></member>
+    <member refid="structgr_1_1packet__protocols_1_1rate__thresholds__t_1a5504fec052bf70337e620b96f2a4b651" kind="variable"><name>ber_max</name></member>
+    <member refid="structgr_1_1packet__protocols_1_1rate__thresholds__t_1a21f3e4ec3264275ebb74ed0dd8b0aaa0" kind="variable"><name>quality_min</name></member>
   </compound>
   <compound refid="classReedSolomonDecoder" kind="class"><name>ReedSolomonDecoder</name>
     <member refid="classReedSolomonDecoder_1a6960e0598bb64edad5cb3386d0141cb7" kind="variable"><name>d_n</name></member>
@@ -357,6 +515,23 @@
   <compound refid="namespacegr" kind="namespace"><name>gr</name>
   </compound>
   <compound refid="namespacegr_1_1packet__protocols" kind="namespace"><name>gr::packet_protocols</name>
+    <member refid="namespacegr_1_1packet__protocols_1a9e7a572c6db95031cfbe3d4aea31b647" kind="enum"><name>modulation_mode_t</name></member>
+    <member refid="namespacegr_1_1packet__protocols_1a9e7a572c6db95031cfbe3d4aea31b647abbe937abcc0ff235716dcdaf1692aa7e" kind="enumvalue"><name>MODE_2FSK</name></member>
+    <member refid="namespacegr_1_1packet__protocols_1a9e7a572c6db95031cfbe3d4aea31b647a6b9c2acc09990bff4ae32ad28e5012ee" kind="enumvalue"><name>MODE_4FSK</name></member>
+    <member refid="namespacegr_1_1packet__protocols_1a9e7a572c6db95031cfbe3d4aea31b647a6dfac67d7e28b66d90b406b44ffc00df" kind="enumvalue"><name>MODE_8FSK</name></member>
+    <member refid="namespacegr_1_1packet__protocols_1a9e7a572c6db95031cfbe3d4aea31b647a2517d8bfbdf6bcbed9555feeb5f70209" kind="enumvalue"><name>MODE_16FSK</name></member>
+    <member refid="namespacegr_1_1packet__protocols_1a9e7a572c6db95031cfbe3d4aea31b647a39ff41bd8ee9b5942491639f7e8b6929" kind="enumvalue"><name>MODE_BPSK</name></member>
+    <member refid="namespacegr_1_1packet__protocols_1a9e7a572c6db95031cfbe3d4aea31b647a7012b106363135f234d176cf691c1147" kind="enumvalue"><name>MODE_QPSK</name></member>
+    <member refid="namespacegr_1_1packet__protocols_1a9e7a572c6db95031cfbe3d4aea31b647aabb1f479361c119aeface5e8f6b0cb45" kind="enumvalue"><name>MODE_8PSK</name></member>
+    <member refid="namespacegr_1_1packet__protocols_1a9e7a572c6db95031cfbe3d4aea31b647a01960aeec12346758c706793b010b9d0" kind="enumvalue"><name>MODE_QAM16</name></member>
+    <member refid="namespacegr_1_1packet__protocols_1a9e7a572c6db95031cfbe3d4aea31b647ab9aa4b3e526e0d3ebdc66c85b9dd4bee" kind="enumvalue"><name>MODE_QAM64</name></member>
+    <member refid="namespacegr_1_1packet__protocols_1a42c9ff6d141ab0c325c83effb4054fd4" kind="enum"><name>negotiation_msg_type_t</name></member>
+    <member refid="namespacegr_1_1packet__protocols_1a42c9ff6d141ab0c325c83effb4054fd4ad95294ad603f50dc7d8f0b062c983c43" kind="enumvalue"><name>NEG_REQ</name></member>
+    <member refid="namespacegr_1_1packet__protocols_1a42c9ff6d141ab0c325c83effb4054fd4aa1d477e6a739c9578219c8365b69a2bb" kind="enumvalue"><name>NEG_RESP</name></member>
+    <member refid="namespacegr_1_1packet__protocols_1a42c9ff6d141ab0c325c83effb4054fd4a495eb183369ca653f21710ce5900d527" kind="enumvalue"><name>NEG_ACK</name></member>
+    <member refid="namespacegr_1_1packet__protocols_1a42c9ff6d141ab0c325c83effb4054fd4a46f06fd5999b2ec9c665493e4982ebb4" kind="enumvalue"><name>NEG_REJECT</name></member>
+    <member refid="namespacegr_1_1packet__protocols_1a42c9ff6d141ab0c325c83effb4054fd4a9906a8c86db61e3435806069da65522e" kind="enumvalue"><name>MODE_CHANGE</name></member>
+    <member refid="namespacegr_1_1packet__protocols_1a42c9ff6d141ab0c325c83effb4054fd4a94dde43ba704a55e69978f76b43625bb" kind="enumvalue"><name>QUALITY_FEEDBACK</name></member>
     <member refid="namespacegr_1_1packet__protocols_1a673b3cba6ae8af0fa1fad2e9124816a5" kind="enum"><name>ax25_state_t</name></member>
     <member refid="namespacegr_1_1packet__protocols_1ad7afc6939b4bcb401c2a11e67508529ba2dd89299dbe9b977f3e8a3896185279a" kind="enumvalue"><name>STATE_IDLE</name></member>
     <member refid="namespacegr_1_1packet__protocols_1ad7afc6939b4bcb401c2a11e67508529baa85e73a39f53df1497ac4ad4f1388b63" kind="enumvalue"><name>STATE_FLAG</name></member>
@@ -391,6 +566,112 @@
   </compound>
   <compound refid="namespacestd" kind="namespace"><name>std</name>
   </compound>
+  <compound refid="adaptive__rate__control__pydoc_8h" kind="file"><name>adaptive_rate_control_pydoc.h</name>
+    <member refid="adaptive__rate__control__pydoc_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="adaptive__rate__control__pydoc_8h_1abf64a3d53c76e7a1170746ce1fd9bb4f" kind="variable"><name>__doc_gr_packet_protocols_rate_thresholds_t</name></member>
+    <member refid="adaptive__rate__control__pydoc_8h_1ae7ab3f98235ca47f5f24f5e31b805e99" kind="variable"><name>__doc_gr_packet_protocols_rate_thresholds_t_rate_thresholds_t_0</name></member>
+    <member refid="adaptive__rate__control__pydoc_8h_1a0eb549db8947527dd619ad2a7e251593" kind="variable"><name>__doc_gr_packet_protocols_rate_thresholds_t_rate_thresholds_t_1</name></member>
+    <member refid="adaptive__rate__control__pydoc_8h_1a85f3605df884962bad581fa68f5275bb" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control</name></member>
+    <member refid="adaptive__rate__control__pydoc_8h_1a3c7dc3841f93549fc27c7476c9f6b280" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control_adaptive_rate_control_0</name></member>
+    <member refid="adaptive__rate__control__pydoc_8h_1a667883f29165cd531f988c2c2fd62f73" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control_adaptive_rate_control_1</name></member>
+    <member refid="adaptive__rate__control__pydoc_8h_1a873a6e0d517bcc9d7a3bb73354808338" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control_make</name></member>
+    <member refid="adaptive__rate__control__pydoc_8h_1afc470203a64414737594743ded28d84f" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control_get_modulation_mode</name></member>
+    <member refid="adaptive__rate__control__pydoc_8h_1ac74fcba9960c10ccae8ff5540baa1c52" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control_set_modulation_mode</name></member>
+    <member refid="adaptive__rate__control__pydoc_8h_1a50cf4562a106172f1f01ca043e770eb1" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control_set_adaptation_enabled</name></member>
+    <member refid="adaptive__rate__control__pydoc_8h_1aab3c256600f8557873c655c42ed2aa50" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control_update_quality</name></member>
+    <member refid="adaptive__rate__control__pydoc_8h_1acdc5fab9519eb39de75ac7ebbeaf4ec6" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control_recommend_mode</name></member>
+    <member refid="adaptive__rate__control__pydoc_8h_1a0e8625a78d98bac33ae47af662fbdd4d" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control_get_data_rate</name></member>
+  </compound>
+  <compound refid="ax25__decoder__pydoc_8h" kind="file"><name>ax25_decoder_pydoc.h</name>
+    <member refid="ax25__decoder__pydoc_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="ax25__decoder__pydoc_8h_1aec3c5c900d59b9cf469202f51a732eb3" kind="variable"><name>__doc_gr_packet_protocols_ax25_decoder</name></member>
+    <member refid="ax25__decoder__pydoc_8h_1a1a1a245b0a9ea6e07d76bb45cb9ab4af" kind="variable"><name>__doc_gr_packet_protocols_ax25_decoder_ax25_decoder_0</name></member>
+    <member refid="ax25__decoder__pydoc_8h_1ac8ddf87d9560c0f4fed2a68850a461ea" kind="variable"><name>__doc_gr_packet_protocols_ax25_decoder_make</name></member>
+  </compound>
+  <compound refid="ax25__encoder__pydoc_8h" kind="file"><name>ax25_encoder_pydoc.h</name>
+    <member refid="ax25__encoder__pydoc_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="ax25__encoder__pydoc_8h_1ad974153131981b3b55f0e88af88a5aca" kind="variable"><name>__doc_gr_packet_protocols_ax25_encoder</name></member>
+    <member refid="ax25__encoder__pydoc_8h_1aaf6b3af3af79071420f4f88991d7c7cb" kind="variable"><name>__doc_gr_packet_protocols_ax25_encoder_ax25_encoder_0</name></member>
+    <member refid="ax25__encoder__pydoc_8h_1a63f6a1089b721319679b4e06676552f2" kind="variable"><name>__doc_gr_packet_protocols_ax25_encoder_make</name></member>
+  </compound>
+  <compound refid="fx25__decoder__pydoc_8h" kind="file"><name>fx25_decoder_pydoc.h</name>
+    <member refid="fx25__decoder__pydoc_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="fx25__decoder__pydoc_8h_1a5a0564b6ab0dc0637a9a66a763806f70" kind="variable"><name>__doc_gr_packet_protocols_fx25_decoder</name></member>
+    <member refid="fx25__decoder__pydoc_8h_1a3c21e0a0061d5280743b9e9590382ec3" kind="variable"><name>__doc_gr_packet_protocols_fx25_decoder_fx25_decoder_0</name></member>
+    <member refid="fx25__decoder__pydoc_8h_1a647d7effe879a4a1279e78b78787f459" kind="variable"><name>__doc_gr_packet_protocols_fx25_decoder_make</name></member>
+  </compound>
+  <compound refid="fx25__encoder__pydoc_8h" kind="file"><name>fx25_encoder_pydoc.h</name>
+    <member refid="fx25__encoder__pydoc_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="fx25__encoder__pydoc_8h_1afd8d9d697aa9bd0b01dbf29921d8ec47" kind="variable"><name>__doc_gr_packet_protocols_fx25_encoder</name></member>
+    <member refid="fx25__encoder__pydoc_8h_1a605cff763f15489ec078a35e90ebbf32" kind="variable"><name>__doc_gr_packet_protocols_fx25_encoder_fx25_encoder_0</name></member>
+    <member refid="fx25__encoder__pydoc_8h_1a730f2909e314b9df1694604f1543b126" kind="variable"><name>__doc_gr_packet_protocols_fx25_encoder_fx25_encoder_1</name></member>
+    <member refid="fx25__encoder__pydoc_8h_1a0d83610b020af4b41deb37146ed78bc7" kind="variable"><name>__doc_gr_packet_protocols_fx25_encoder_make</name></member>
+    <member refid="fx25__encoder__pydoc_8h_1a55445be6d2e011cec269aa216efce690" kind="variable"><name>__doc_gr_packet_protocols_fx25_encoder_set_fec_type</name></member>
+    <member refid="fx25__encoder__pydoc_8h_1a43ab77318de127c6327de16839c8daa6" kind="variable"><name>__doc_gr_packet_protocols_fx25_encoder_set_interleaver_depth</name></member>
+    <member refid="fx25__encoder__pydoc_8h_1a2e7a9d601c112177c9d05b1e6def37e7" kind="variable"><name>__doc_gr_packet_protocols_fx25_encoder_set_add_checksum</name></member>
+  </compound>
+  <compound refid="il2p__decoder__pydoc_8h" kind="file"><name>il2p_decoder_pydoc.h</name>
+    <member refid="il2p__decoder__pydoc_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="il2p__decoder__pydoc_8h_1a0e24c8e2dcd6db0c470858f5610c4f31" kind="variable"><name>__doc_gr_packet_protocols_il2p_decoder</name></member>
+    <member refid="il2p__decoder__pydoc_8h_1a20c31c8c0ff3f103d057343429069a43" kind="variable"><name>__doc_gr_packet_protocols_il2p_decoder_il2p_decoder_0</name></member>
+    <member refid="il2p__decoder__pydoc_8h_1a46e9f1924e27f26de118c7813f41f6bd" kind="variable"><name>__doc_gr_packet_protocols_il2p_decoder_make</name></member>
+  </compound>
+  <compound refid="il2p__encoder__pydoc_8h" kind="file"><name>il2p_encoder_pydoc.h</name>
+    <member refid="il2p__encoder__pydoc_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="il2p__encoder__pydoc_8h_1a64f0e027a6f86bd6ff68ef5e2ddc2059" kind="variable"><name>__doc_gr_packet_protocols_il2p_encoder</name></member>
+    <member refid="il2p__encoder__pydoc_8h_1a41bba09cd1402e5c6cc824d1cfb3f841" kind="variable"><name>__doc_gr_packet_protocols_il2p_encoder_il2p_encoder_0</name></member>
+    <member refid="il2p__encoder__pydoc_8h_1a8045da4ef93aa53cbca8790bbaa6b10b" kind="variable"><name>__doc_gr_packet_protocols_il2p_encoder_il2p_encoder_1</name></member>
+    <member refid="il2p__encoder__pydoc_8h_1af63b1f296715691ddd4213f31061e117" kind="variable"><name>__doc_gr_packet_protocols_il2p_encoder_make</name></member>
+    <member refid="il2p__encoder__pydoc_8h_1ac3987c77490544f3bf6154c888750625" kind="variable"><name>__doc_gr_packet_protocols_il2p_encoder_set_fec_type</name></member>
+    <member refid="il2p__encoder__pydoc_8h_1a9c750a2b9021301eff105118576ccbf2" kind="variable"><name>__doc_gr_packet_protocols_il2p_encoder_set_add_checksum</name></member>
+  </compound>
+  <compound refid="kiss__tnc__pydoc_8h" kind="file"><name>kiss_tnc_pydoc.h</name>
+    <member refid="kiss__tnc__pydoc_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="kiss__tnc__pydoc_8h_1a2bb5c4244201ec3a4fdc165c8ce06cdf" kind="variable"><name>__doc_gr_packet_protocols_kiss_tnc</name></member>
+    <member refid="kiss__tnc__pydoc_8h_1a7d4d3b7764b487c3c953e686fec392c0" kind="variable"><name>__doc_gr_packet_protocols_kiss_tnc_kiss_tnc_0</name></member>
+    <member refid="kiss__tnc__pydoc_8h_1abfa219a8a02767d3095fef687a5d0df0" kind="variable"><name>__doc_gr_packet_protocols_kiss_tnc_kiss_tnc_1</name></member>
+    <member refid="kiss__tnc__pydoc_8h_1a6849b9a602a5832d1a0fd78f17a997b6" kind="variable"><name>__doc_gr_packet_protocols_kiss_tnc_make</name></member>
+    <member refid="kiss__tnc__pydoc_8h_1a1212a45ffa8e701fbd7e743a3d3ad459" kind="variable"><name>__doc_gr_packet_protocols_kiss_tnc_set_tx_delay</name></member>
+    <member refid="kiss__tnc__pydoc_8h_1a4ecf309a01fe5245489e9000dddf5368" kind="variable"><name>__doc_gr_packet_protocols_kiss_tnc_set_persistence</name></member>
+    <member refid="kiss__tnc__pydoc_8h_1a38ffed02de8820cb65d2559fbe09d0c7" kind="variable"><name>__doc_gr_packet_protocols_kiss_tnc_set_slot_time</name></member>
+    <member refid="kiss__tnc__pydoc_8h_1a1db27cd4f2146747a5862880c98215b0" kind="variable"><name>__doc_gr_packet_protocols_kiss_tnc_set_tx_tail</name></member>
+    <member refid="kiss__tnc__pydoc_8h_1a9c5c4f4b8973ced33a1a9eb2719c0deb" kind="variable"><name>__doc_gr_packet_protocols_kiss_tnc_set_full_duplex</name></member>
+    <member refid="kiss__tnc__pydoc_8h_1aa5863a5b767476bcb42069db6b29f68a" kind="variable"><name>__doc_gr_packet_protocols_kiss_tnc_set_ptt</name></member>
+    <member refid="kiss__tnc__pydoc_8h_1aaef7e8015723a2653bda2ceb7812c5d5" kind="variable"><name>__doc_gr_packet_protocols_kiss_tnc_get_ptt</name></member>
+    <member refid="kiss__tnc__pydoc_8h_1aa4307a8853ac91067b5c06018f4df102" kind="variable"><name>__doc_gr_packet_protocols_kiss_tnc_set_ptt_enabled</name></member>
+    <member refid="kiss__tnc__pydoc_8h_1ab1c27ec9b0fcd73f8ceffbaa8bb2a7ed" kind="variable"><name>__doc_gr_packet_protocols_kiss_tnc_set_ptt_use_dtr</name></member>
+  </compound>
+  <compound refid="link__quality__monitor__pydoc_8h" kind="file"><name>link_quality_monitor_pydoc.h</name>
+    <member refid="link__quality__monitor__pydoc_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="link__quality__monitor__pydoc_8h_1a12839c4ee5bb03eab907a2f449fdf8ae" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor</name></member>
+    <member refid="link__quality__monitor__pydoc_8h_1a18529ce943109ad34ec17e4e321dd545" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_link_quality_monitor_0</name></member>
+    <member refid="link__quality__monitor__pydoc_8h_1a7858af1262e683c828be261753f9c672" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_link_quality_monitor_1</name></member>
+    <member refid="link__quality__monitor__pydoc_8h_1a192f47733696e4d01bf53a7f1a2bc2f6" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_make</name></member>
+    <member refid="link__quality__monitor__pydoc_8h_1ada3ad8f0b413344d0730699c786b73b1" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_get_snr</name></member>
+    <member refid="link__quality__monitor__pydoc_8h_1a2e0cdd6621edffb01f8253aea2322c7f" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_get_ber</name></member>
+    <member refid="link__quality__monitor__pydoc_8h_1affd34dec99bc478282062783592e835f" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_get_fer</name></member>
+    <member refid="link__quality__monitor__pydoc_8h_1acab48c4908e854b77d35079706938622" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_get_quality_score</name></member>
+    <member refid="link__quality__monitor__pydoc_8h_1a64392bb356c4c6607a273844e9494fec" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_update_snr</name></member>
+    <member refid="link__quality__monitor__pydoc_8h_1ac36a5b7299f2d83dfa061e313c98b0f0" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_update_ber</name></member>
+    <member refid="link__quality__monitor__pydoc_8h_1ab584d2e04439d5ddf3a6a44f3d023cc4" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_record_frame_error</name></member>
+    <member refid="link__quality__monitor__pydoc_8h_1a94ee5efe7eba6fb705dea40bd26e6fb3" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_record_frame_success</name></member>
+    <member refid="link__quality__monitor__pydoc_8h_1a207b84eb68a8487ac05dfc4aff1ba29e" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_reset</name></member>
+  </compound>
+  <compound refid="modulation__negotiation__pydoc_8h" kind="file"><name>modulation_negotiation_pydoc.h</name>
+    <member refid="modulation__negotiation__pydoc_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="modulation__negotiation__pydoc_8h_1a6aa5b6ebc4acda835b6c9eb4c2696f7f" kind="variable"><name>__doc_gr_packet_protocols_negotiation_msg_t</name></member>
+    <member refid="modulation__negotiation__pydoc_8h_1ad25ae8e2b15568b79a2ff1ad66615da0" kind="variable"><name>__doc_gr_packet_protocols_negotiation_msg_t_negotiation_msg_t_0</name></member>
+    <member refid="modulation__negotiation__pydoc_8h_1ad4acf5277b8e75ac29843ff6b9a15d39" kind="variable"><name>__doc_gr_packet_protocols_negotiation_msg_t_negotiation_msg_t_1</name></member>
+    <member refid="modulation__negotiation__pydoc_8h_1a28726713603b46206a081ec8895c56be" kind="variable"><name>__doc_gr_packet_protocols_modulation_negotiation</name></member>
+    <member refid="modulation__negotiation__pydoc_8h_1a3d720d5cab6bc28d2ad1fe19ea6274bd" kind="variable"><name>__doc_gr_packet_protocols_modulation_negotiation_modulation_negotiation_0</name></member>
+    <member refid="modulation__negotiation__pydoc_8h_1a9daf6fedff51d035918d4b5f3027c0bc" kind="variable"><name>__doc_gr_packet_protocols_modulation_negotiation_modulation_negotiation_1</name></member>
+    <member refid="modulation__negotiation__pydoc_8h_1a12fe4b7c621e272462278e98b0434c15" kind="variable"><name>__doc_gr_packet_protocols_modulation_negotiation_make</name></member>
+    <member refid="modulation__negotiation__pydoc_8h_1a3d8e567ed2be11642d0673dbe0de4b8a" kind="variable"><name>__doc_gr_packet_protocols_modulation_negotiation_initiate_negotiation</name></member>
+    <member refid="modulation__negotiation__pydoc_8h_1a2bc180e24dca250b50d5830acb2e3f6a" kind="variable"><name>__doc_gr_packet_protocols_modulation_negotiation_get_negotiated_mode</name></member>
+    <member refid="modulation__negotiation__pydoc_8h_1aded6b334285acb3c82034dea7d6c3912" kind="variable"><name>__doc_gr_packet_protocols_modulation_negotiation_is_negotiating</name></member>
+    <member refid="modulation__negotiation__pydoc_8h_1a385eb12a06f43be747188c77e838dad0" kind="variable"><name>__doc_gr_packet_protocols_modulation_negotiation_send_quality_feedback</name></member>
+    <member refid="modulation__negotiation__pydoc_8h_1abd10b49fc708a50b50923744f445f79f" kind="variable"><name>__doc_gr_packet_protocols_modulation_negotiation_get_supported_modes</name></member>
+  </compound>
   <compound refid="group__defs_8dox" kind="file"><name>group_defs.dox</name>
   </compound>
   <compound refid="main__page_8dox" kind="file"><name>main_page.dox</name>
@@ -424,6 +705,10 @@
     <member refid="docs_2doxygen_2pydoc__macros_8h_1a31ea356761360e78d16525aa69d2dae6" kind="define"><name>__DOC6</name></member>
     <member refid="docs_2doxygen_2pydoc__macros_8h_1a6f1e731f1c6d2893ff1bf98582a7de6e" kind="define"><name>__DOC7</name></member>
     <member refid="docs_2doxygen_2pydoc__macros_8h_1a4e578031ec998eaeb933d5caa6a7d28a" kind="define"><name>DOC</name></member>
+  </compound>
+  <compound refid="adaptive__modulator_8h" kind="file"><name>adaptive_modulator.h</name>
+  </compound>
+  <compound refid="adaptive__rate__control_8h" kind="file"><name>adaptive_rate_control.h</name>
   </compound>
   <compound refid="api_8h" kind="file"><name>api.h</name>
     <member refid="api_8h_1a4861f4ce8b413f150d428154cd0ca2c3" kind="define"><name>PACKET_PROTOCOLS_API</name></member>
@@ -615,7 +900,15 @@
   </compound>
   <compound refid="kiss__tnc_8h" kind="file"><name>kiss_tnc.h</name>
   </compound>
+  <compound refid="link__quality__monitor_8h" kind="file"><name>link_quality_monitor.h</name>
+  </compound>
+  <compound refid="modulation__negotiation_8h" kind="file"><name>modulation_negotiation.h</name>
+  </compound>
   <compound refid="packet__protocols_8h" kind="file"><name>packet_protocols.h</name>
+  </compound>
+  <compound refid="adaptive__modulator__impl_8h" kind="file"><name>adaptive_modulator_impl.h</name>
+  </compound>
+  <compound refid="adaptive__rate__control__impl_8h" kind="file"><name>adaptive_rate_control_impl.h</name>
   </compound>
   <compound refid="ax25__decoder__impl_8h" kind="file"><name>ax25_decoder_impl.h</name>
   </compound>
@@ -630,6 +923,42 @@
   <compound refid="il2p__encoder__impl_8h" kind="file"><name>il2p_encoder_impl.h</name>
   </compound>
   <compound refid="kiss__tnc__impl_8h" kind="file"><name>kiss_tnc_impl.h</name>
+  </compound>
+  <compound refid="link__quality__monitor__impl_8h" kind="file"><name>link_quality_monitor_impl.h</name>
+  </compound>
+  <compound refid="modulation__negotiation__impl_8h" kind="file"><name>modulation_negotiation_impl.h</name>
+  </compound>
+  <compound refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h" kind="file"><name>build/test_modules/gnuradio/packet_protocols/bindings/docstrings/adaptive_rate_control_pydoc_template.h</name>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h_1abf64a3d53c76e7a1170746ce1fd9bb4f" kind="variable"><name>__doc_gr_packet_protocols_rate_thresholds_t</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h_1ae7ab3f98235ca47f5f24f5e31b805e99" kind="variable"><name>__doc_gr_packet_protocols_rate_thresholds_t_rate_thresholds_t_0</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h_1a0eb549db8947527dd619ad2a7e251593" kind="variable"><name>__doc_gr_packet_protocols_rate_thresholds_t_rate_thresholds_t_1</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h_1a85f3605df884962bad581fa68f5275bb" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h_1a3c7dc3841f93549fc27c7476c9f6b280" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control_adaptive_rate_control_0</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h_1a667883f29165cd531f988c2c2fd62f73" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control_adaptive_rate_control_1</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h_1a873a6e0d517bcc9d7a3bb73354808338" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control_make</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h_1afc470203a64414737594743ded28d84f" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control_get_modulation_mode</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h_1ac74fcba9960c10ccae8ff5540baa1c52" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control_set_modulation_mode</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h_1a50cf4562a106172f1f01ca043e770eb1" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control_set_adaptation_enabled</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h_1aab3c256600f8557873c655c42ed2aa50" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control_update_quality</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h_1acdc5fab9519eb39de75ac7ebbeaf4ec6" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control_recommend_mode</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h_1a0e8625a78d98bac33ae47af662fbdd4d" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control_get_data_rate</name></member>
+  </compound>
+  <compound refid="python_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h" kind="file"><name>python/packet_protocols/bindings/docstrings/adaptive_rate_control_pydoc_template.h</name>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h_1abf64a3d53c76e7a1170746ce1fd9bb4f" kind="variable"><name>__doc_gr_packet_protocols_rate_thresholds_t</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h_1ae7ab3f98235ca47f5f24f5e31b805e99" kind="variable"><name>__doc_gr_packet_protocols_rate_thresholds_t_rate_thresholds_t_0</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h_1a0eb549db8947527dd619ad2a7e251593" kind="variable"><name>__doc_gr_packet_protocols_rate_thresholds_t_rate_thresholds_t_1</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h_1a85f3605df884962bad581fa68f5275bb" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h_1a3c7dc3841f93549fc27c7476c9f6b280" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control_adaptive_rate_control_0</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h_1a667883f29165cd531f988c2c2fd62f73" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control_adaptive_rate_control_1</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h_1a873a6e0d517bcc9d7a3bb73354808338" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control_make</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h_1afc470203a64414737594743ded28d84f" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control_get_modulation_mode</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h_1ac74fcba9960c10ccae8ff5540baa1c52" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control_set_modulation_mode</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h_1a50cf4562a106172f1f01ca043e770eb1" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control_set_adaptation_enabled</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h_1aab3c256600f8557873c655c42ed2aa50" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control_update_quality</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h_1acdc5fab9519eb39de75ac7ebbeaf4ec6" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control_recommend_mode</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2adaptive__rate__control__pydoc__template_8h_1a0e8625a78d98bac33ae47af662fbdd4d" kind="variable"><name>__doc_gr_packet_protocols_adaptive_rate_control_get_data_rate</name></member>
   </compound>
   <compound refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2ax25__decoder__pydoc__template_8h" kind="file"><name>build/test_modules/gnuradio/packet_protocols/bindings/docstrings/ax25_decoder_pydoc_template.h</name>
     <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2ax25__decoder__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
@@ -728,6 +1057,10 @@
     <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h_1a38ffed02de8820cb65d2559fbe09d0c7" kind="variable"><name>__doc_gr_packet_protocols_kiss_tnc_set_slot_time</name></member>
     <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h_1a1db27cd4f2146747a5862880c98215b0" kind="variable"><name>__doc_gr_packet_protocols_kiss_tnc_set_tx_tail</name></member>
     <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h_1a9c5c4f4b8973ced33a1a9eb2719c0deb" kind="variable"><name>__doc_gr_packet_protocols_kiss_tnc_set_full_duplex</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h_1aa5863a5b767476bcb42069db6b29f68a" kind="variable"><name>__doc_gr_packet_protocols_kiss_tnc_set_ptt</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h_1aaef7e8015723a2653bda2ceb7812c5d5" kind="variable"><name>__doc_gr_packet_protocols_kiss_tnc_get_ptt</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h_1aa4307a8853ac91067b5c06018f4df102" kind="variable"><name>__doc_gr_packet_protocols_kiss_tnc_set_ptt_enabled</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h_1ab1c27ec9b0fcd73f8ceffbaa8bb2a7ed" kind="variable"><name>__doc_gr_packet_protocols_kiss_tnc_set_ptt_use_dtr</name></member>
   </compound>
   <compound refid="python_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h" kind="file"><name>python/packet_protocols/bindings/docstrings/kiss_tnc_pydoc_template.h</name>
     <member refid="python_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
@@ -740,6 +1073,72 @@
     <member refid="python_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h_1a38ffed02de8820cb65d2559fbe09d0c7" kind="variable"><name>__doc_gr_packet_protocols_kiss_tnc_set_slot_time</name></member>
     <member refid="python_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h_1a1db27cd4f2146747a5862880c98215b0" kind="variable"><name>__doc_gr_packet_protocols_kiss_tnc_set_tx_tail</name></member>
     <member refid="python_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h_1a9c5c4f4b8973ced33a1a9eb2719c0deb" kind="variable"><name>__doc_gr_packet_protocols_kiss_tnc_set_full_duplex</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h_1aa5863a5b767476bcb42069db6b29f68a" kind="variable"><name>__doc_gr_packet_protocols_kiss_tnc_set_ptt</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h_1aaef7e8015723a2653bda2ceb7812c5d5" kind="variable"><name>__doc_gr_packet_protocols_kiss_tnc_get_ptt</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h_1aa4307a8853ac91067b5c06018f4df102" kind="variable"><name>__doc_gr_packet_protocols_kiss_tnc_set_ptt_enabled</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2kiss__tnc__pydoc__template_8h_1ab1c27ec9b0fcd73f8ceffbaa8bb2a7ed" kind="variable"><name>__doc_gr_packet_protocols_kiss_tnc_set_ptt_use_dtr</name></member>
+  </compound>
+  <compound refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h" kind="file"><name>build/test_modules/gnuradio/packet_protocols/bindings/docstrings/link_quality_monitor_pydoc_template.h</name>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h_1a12839c4ee5bb03eab907a2f449fdf8ae" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h_1a18529ce943109ad34ec17e4e321dd545" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_link_quality_monitor_0</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h_1a7858af1262e683c828be261753f9c672" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_link_quality_monitor_1</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h_1a192f47733696e4d01bf53a7f1a2bc2f6" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_make</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h_1ada3ad8f0b413344d0730699c786b73b1" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_get_snr</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h_1a2e0cdd6621edffb01f8253aea2322c7f" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_get_ber</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h_1affd34dec99bc478282062783592e835f" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_get_fer</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h_1acab48c4908e854b77d35079706938622" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_get_quality_score</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h_1a64392bb356c4c6607a273844e9494fec" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_update_snr</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h_1ac36a5b7299f2d83dfa061e313c98b0f0" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_update_ber</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h_1ab584d2e04439d5ddf3a6a44f3d023cc4" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_record_frame_error</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h_1a94ee5efe7eba6fb705dea40bd26e6fb3" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_record_frame_success</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h_1a207b84eb68a8487ac05dfc4aff1ba29e" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_reset</name></member>
+  </compound>
+  <compound refid="python_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h" kind="file"><name>python/packet_protocols/bindings/docstrings/link_quality_monitor_pydoc_template.h</name>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h_1a12839c4ee5bb03eab907a2f449fdf8ae" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h_1a18529ce943109ad34ec17e4e321dd545" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_link_quality_monitor_0</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h_1a7858af1262e683c828be261753f9c672" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_link_quality_monitor_1</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h_1a192f47733696e4d01bf53a7f1a2bc2f6" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_make</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h_1ada3ad8f0b413344d0730699c786b73b1" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_get_snr</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h_1a2e0cdd6621edffb01f8253aea2322c7f" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_get_ber</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h_1affd34dec99bc478282062783592e835f" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_get_fer</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h_1acab48c4908e854b77d35079706938622" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_get_quality_score</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h_1a64392bb356c4c6607a273844e9494fec" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_update_snr</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h_1ac36a5b7299f2d83dfa061e313c98b0f0" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_update_ber</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h_1ab584d2e04439d5ddf3a6a44f3d023cc4" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_record_frame_error</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h_1a94ee5efe7eba6fb705dea40bd26e6fb3" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_record_frame_success</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2link__quality__monitor__pydoc__template_8h_1a207b84eb68a8487ac05dfc4aff1ba29e" kind="variable"><name>__doc_gr_packet_protocols_link_quality_monitor_reset</name></member>
+  </compound>
+  <compound refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h" kind="file"><name>build/test_modules/gnuradio/packet_protocols/bindings/docstrings/modulation_negotiation_pydoc_template.h</name>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h_1a6aa5b6ebc4acda835b6c9eb4c2696f7f" kind="variable"><name>__doc_gr_packet_protocols_negotiation_msg_t</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h_1ad25ae8e2b15568b79a2ff1ad66615da0" kind="variable"><name>__doc_gr_packet_protocols_negotiation_msg_t_negotiation_msg_t_0</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h_1ad4acf5277b8e75ac29843ff6b9a15d39" kind="variable"><name>__doc_gr_packet_protocols_negotiation_msg_t_negotiation_msg_t_1</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h_1a28726713603b46206a081ec8895c56be" kind="variable"><name>__doc_gr_packet_protocols_modulation_negotiation</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h_1a3d720d5cab6bc28d2ad1fe19ea6274bd" kind="variable"><name>__doc_gr_packet_protocols_modulation_negotiation_modulation_negotiation_0</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h_1a9daf6fedff51d035918d4b5f3027c0bc" kind="variable"><name>__doc_gr_packet_protocols_modulation_negotiation_modulation_negotiation_1</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h_1a12fe4b7c621e272462278e98b0434c15" kind="variable"><name>__doc_gr_packet_protocols_modulation_negotiation_make</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h_1a3d8e567ed2be11642d0673dbe0de4b8a" kind="variable"><name>__doc_gr_packet_protocols_modulation_negotiation_initiate_negotiation</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h_1a2bc180e24dca250b50d5830acb2e3f6a" kind="variable"><name>__doc_gr_packet_protocols_modulation_negotiation_get_negotiated_mode</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h_1aded6b334285acb3c82034dea7d6c3912" kind="variable"><name>__doc_gr_packet_protocols_modulation_negotiation_is_negotiating</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h_1a385eb12a06f43be747188c77e838dad0" kind="variable"><name>__doc_gr_packet_protocols_modulation_negotiation_send_quality_feedback</name></member>
+    <member refid="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h_1abd10b49fc708a50b50923744f445f79f" kind="variable"><name>__doc_gr_packet_protocols_modulation_negotiation_get_supported_modes</name></member>
+  </compound>
+  <compound refid="python_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h" kind="file"><name>python/packet_protocols/bindings/docstrings/modulation_negotiation_pydoc_template.h</name>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h_1a6aa5b6ebc4acda835b6c9eb4c2696f7f" kind="variable"><name>__doc_gr_packet_protocols_negotiation_msg_t</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h_1ad25ae8e2b15568b79a2ff1ad66615da0" kind="variable"><name>__doc_gr_packet_protocols_negotiation_msg_t_negotiation_msg_t_0</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h_1ad4acf5277b8e75ac29843ff6b9a15d39" kind="variable"><name>__doc_gr_packet_protocols_negotiation_msg_t_negotiation_msg_t_1</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h_1a28726713603b46206a081ec8895c56be" kind="variable"><name>__doc_gr_packet_protocols_modulation_negotiation</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h_1a3d720d5cab6bc28d2ad1fe19ea6274bd" kind="variable"><name>__doc_gr_packet_protocols_modulation_negotiation_modulation_negotiation_0</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h_1a9daf6fedff51d035918d4b5f3027c0bc" kind="variable"><name>__doc_gr_packet_protocols_modulation_negotiation_modulation_negotiation_1</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h_1a12fe4b7c621e272462278e98b0434c15" kind="variable"><name>__doc_gr_packet_protocols_modulation_negotiation_make</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h_1a3d8e567ed2be11642d0673dbe0de4b8a" kind="variable"><name>__doc_gr_packet_protocols_modulation_negotiation_initiate_negotiation</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h_1a2bc180e24dca250b50d5830acb2e3f6a" kind="variable"><name>__doc_gr_packet_protocols_modulation_negotiation_get_negotiated_mode</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h_1aded6b334285acb3c82034dea7d6c3912" kind="variable"><name>__doc_gr_packet_protocols_modulation_negotiation_is_negotiating</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h_1a385eb12a06f43be747188c77e838dad0" kind="variable"><name>__doc_gr_packet_protocols_modulation_negotiation_send_quality_feedback</name></member>
+    <member refid="python_2packet__protocols_2bindings_2docstrings_2modulation__negotiation__pydoc__template_8h_1abd10b49fc708a50b50923744f445f79f" kind="variable"><name>__doc_gr_packet_protocols_modulation_negotiation_get_supported_modes</name></member>
   </compound>
   <compound refid="group__block" kind="group"><name>block</name>
   </compound>

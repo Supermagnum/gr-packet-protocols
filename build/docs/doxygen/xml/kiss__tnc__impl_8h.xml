@@ -72,6 +72,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h"/>
+    <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h"/>
   </compounddef>
 </doxygen>

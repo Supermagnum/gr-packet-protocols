@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="63" column="17" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="63" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="63" column="17" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" bodystart="63" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a68b664f039d2bd000861f55fb3e1aa4a" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="64" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="64" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="64" column="9" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" bodystart="64" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a971b05d2cf3695e8d7ff433971d88526" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="65" column="10" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="65" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="65" column="10" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" bodystart="65" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a79dbee44d1dcb84b45728d12fc830ca0" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -63,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="66" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="66" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="66" column="9" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" bodystart="66" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1aaed2496c525f2cb783d7d404c0cf1f87" prot="private" static="no" mutable="no">
         <type><ref refid="namespacegr_1_1packet__protocols_1a74ba379c9101bfd5982ad0872b3f00b4" kindref="member">kiss_state_t</ref></type>
@@ -78,7 +78,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="67" column="18" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="67" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="67" column="18" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" bodystart="67" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a9b53dd646c4cb381adc34259de3ea7d6" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="68" column="10" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="68" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="68" column="10" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" bodystart="68" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a40173456df5fa61fb8579fe3afb62ecb" prot="private" static="no" mutable="no">
         <type>std::vector&lt; uint8_t &gt;</type>
@@ -108,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="69" column="17" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="69" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="69" column="17" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" bodystart="69" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1ab5cfdd3acb9da2101a824409e381818c" prot="private" static="no" mutable="no">
         <type>uint16_t</type>
@@ -123,7 +123,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="70" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="70" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="70" column="14" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" bodystart="70" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a1b1a918c8d92f63749a89599c882889b" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -138,7 +138,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="71" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="71" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="71" column="13" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" bodystart="71" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1ad18d6a774390d0e709a7bedaaedf9f0f" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -153,7 +153,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="74" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="74" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="74" column="9" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" bodystart="74" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a3ba651759f84b45cd214826b6fc377b4" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -168,7 +168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="75" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="75" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="75" column="9" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" bodystart="75" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a96640d0ff86c55cb72935703020d4cc3" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -183,7 +183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="76" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="76" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="76" column="9" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" bodystart="76" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1affeb021c4d0d615bd3559ad2a133c58a" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -198,7 +198,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="77" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="77" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="77" column="9" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" bodystart="77" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a89c93d26cdf3aeb0acea6e496363b87b" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -213,7 +213,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="78" column="10" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="78" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="78" column="10" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" bodystart="78" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1afee76ecc578bdb57e8be3b938f217d9d" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -228,7 +228,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="79" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="79" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="79" column="13" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" bodystart="79" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1afa35f32e58d8e2a21255f62c865c9bc6" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -243,7 +243,52 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="80" column="10" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="80" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="80" column="10" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1ab88938573f1f6023fd1a640a342f5dbe" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr::packet_protocols::kiss_tnc_impl::d_ptt_enabled</definition>
+        <argsstring></argsstring>
+        <name>d_ptt_enabled</name>
+        <qualifiedname>gr::packet_protocols::kiss_tnc_impl::d_ptt_enabled</qualifiedname>
+        <briefdescription>
+<para>PTT control enabled. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="83" column="10" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a0d71bf9e2d97578d0c349550ee866515" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr::packet_protocols::kiss_tnc_impl::d_ptt_state</definition>
+        <argsstring></argsstring>
+        <name>d_ptt_state</name>
+        <qualifiedname>gr::packet_protocols::kiss_tnc_impl::d_ptt_state</qualifiedname>
+        <briefdescription>
+<para>Current PTT state (true = keyed) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="84" column="10" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a9b280ab4ffea80867ec6015f46e96b43" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr::packet_protocols::kiss_tnc_impl::d_use_dtr_for_ptt</definition>
+        <argsstring></argsstring>
+        <name>d_use_dtr_for_ptt</name>
+        <qualifiedname>gr::packet_protocols::kiss_tnc_impl::d_use_dtr_for_ptt</qualifiedname>
+        <briefdescription>
+<para>Use DTR for PTT (false = use RTS) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="85" column="10" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" bodystart="85" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -298,7 +343,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="89" column="5"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="94" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a43ac6740a12a852e637c5c8e46d758bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -313,7 +358,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="94" column="5"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="99" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a56a2b8df2805daa1a765040fd2d0c472" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -368,7 +413,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="103" column="9"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="108" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1abb5c1d225f4f3f5858808aa7906d7e90" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -398,7 +443,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="110" column="10"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="115" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a3f90da4e0be9ccec955b97b62ed613d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -428,7 +473,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="116" column="10"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="121" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a4aacc9d4b14e7c9d440c8ee855b72def" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -458,7 +503,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="122" column="10"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="127" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1aede2a16925160472dca239bdfbce13fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -488,7 +533,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="128" column="10"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="133" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1acd5505dbc9b8c0bfe72943268c214ff5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -518,7 +563,116 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="134" column="10"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="139" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a80d96fde047238482882ee3b7b8df699" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void gr::packet_protocols::kiss_tnc_impl::set_ptt</definition>
+        <argsstring>(bool ptt_state) override</argsstring>
+        <name>set_ptt</name>
+        <qualifiedname>gr::packet_protocols::kiss_tnc_impl::set_ptt</qualifiedname>
+        <reimplements refid="classgr_1_1packet__protocols_1_1kiss__tnc_1a57d995adb40d41e7e87d6b21d89d542c">set_ptt</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>ptt_state</declname>
+        </param>
+        <briefdescription>
+<para>Set PTT state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptt_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PTT state (true = keyed, false = unkeyed) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="145" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a3813f35edbc3c8df7bc0e3cb1b03b704" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool gr::packet_protocols::kiss_tnc_impl::get_ptt</definition>
+        <argsstring>() const override</argsstring>
+        <name>get_ptt</name>
+        <qualifiedname>gr::packet_protocols::kiss_tnc_impl::get_ptt</qualifiedname>
+        <reimplements refid="classgr_1_1packet__protocols_1_1kiss__tnc_1a1b64d9b1d0d18e5f403ebd2bb2cbf8b6">get_ptt</reimplements>
+        <briefdescription>
+<para>Get PTT state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Current PTT state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="151" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a2e0a5f4d17982a8bb9b226f527e21351" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void gr::packet_protocols::kiss_tnc_impl::set_ptt_enabled</definition>
+        <argsstring>(bool enabled) override</argsstring>
+        <name>set_ptt_enabled</name>
+        <qualifiedname>gr::packet_protocols::kiss_tnc_impl::set_ptt_enabled</qualifiedname>
+        <reimplements refid="classgr_1_1packet__protocols_1_1kiss__tnc_1ae2e9fbcb0eb1dc057b0bbbe43aa8e085">set_ptt_enabled</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+<para>Enable/disable PTT control. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>enabled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Enable PTT control </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="157" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a668833b13e93a6b56f3d6fb6e1e04d2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void gr::packet_protocols::kiss_tnc_impl::set_ptt_use_dtr</definition>
+        <argsstring>(bool use_dtr) override</argsstring>
+        <name>set_ptt_use_dtr</name>
+        <qualifiedname>gr::packet_protocols::kiss_tnc_impl::set_ptt_use_dtr</qualifiedname>
+        <reimplements refid="classgr_1_1packet__protocols_1_1kiss__tnc_1a3a03ae18b2beb7591f0791e8e9086229">set_ptt_use_dtr</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>use_dtr</declname>
+        </param>
+        <briefdescription>
+<para>Set PTT control method. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>use_dtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Use DTR for PTT (false = use RTS) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="163" column="10"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -538,7 +692,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="141" column="10"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="170" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a51529866e6625d0867bd4eeac54d6013" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -553,7 +707,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="146" column="10"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="175" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a79764347a7a03b72e1a10cb2a90e4924" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -618,7 +772,36 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="155" column="10"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="184" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a4e555947f3f39fdcb5f8f40631a409ac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::packet_protocols::kiss_tnc_impl::control_ptt_line</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>control_ptt_line</name>
+        <qualifiedname>gr::packet_protocols::kiss_tnc_impl::control_ptt_line</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Control PTT line (DTR or RTS) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PTT state (true = keyed, false = unkeyed) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="190" column="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -661,8 +844,9 @@
         <label>gr::sync_block</label>
       </node>
     </collaborationgraph>
-    <location file="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" line="61" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/kiss_tnc_impl.h" bodystart="61" bodyend="156"/>
+    <location file="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" line="61" column="1" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/kiss_tnc_impl.h" bodystart="61" bodyend="191"/>
     <listofallmembers>
+      <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a4e555947f3f39fdcb5f8f40631a409ac" prot="private" virt="non-virtual"><scope>gr::packet_protocols::kiss_tnc_impl</scope><name>control_ptt_line</name></member>
       <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a68b664f039d2bd000861f55fb3e1aa4a" prot="private" virt="non-virtual"><scope>gr::packet_protocols::kiss_tnc_impl</scope><name>d_baud_rate</name></member>
       <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a8464c604239e41e44c09447a72ee2346" prot="private" virt="non-virtual"><scope>gr::packet_protocols::kiss_tnc_impl</scope><name>d_device</name></member>
       <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a9b53dd646c4cb381adc34259de3ea7d6" prot="private" virt="non-virtual"><scope>gr::packet_protocols::kiss_tnc_impl</scope><name>d_escape_next</name></member>
@@ -675,10 +859,14 @@
       <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1aaed2496c525f2cb783d7d404c0cf1f87" prot="private" virt="non-virtual"><scope>gr::packet_protocols::kiss_tnc_impl</scope><name>d_kiss_state</name></member>
       <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a1b1a918c8d92f63749a89599c882889b" prot="private" virt="non-virtual"><scope>gr::packet_protocols::kiss_tnc_impl</scope><name>d_ones_count</name></member>
       <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a3ba651759f84b45cd214826b6fc377b4" prot="private" virt="non-virtual"><scope>gr::packet_protocols::kiss_tnc_impl</scope><name>d_persistence</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1ab88938573f1f6023fd1a640a342f5dbe" prot="private" virt="non-virtual"><scope>gr::packet_protocols::kiss_tnc_impl</scope><name>d_ptt_enabled</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a0d71bf9e2d97578d0c349550ee866515" prot="private" virt="non-virtual"><scope>gr::packet_protocols::kiss_tnc_impl</scope><name>d_ptt_state</name></member>
       <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a79dbee44d1dcb84b45728d12fc830ca0" prot="private" virt="non-virtual"><scope>gr::packet_protocols::kiss_tnc_impl</scope><name>d_serial_fd</name></member>
       <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a96640d0ff86c55cb72935703020d4cc3" prot="private" virt="non-virtual"><scope>gr::packet_protocols::kiss_tnc_impl</scope><name>d_slot_time</name></member>
       <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1ad18d6a774390d0e709a7bedaaedf9f0f" prot="private" virt="non-virtual"><scope>gr::packet_protocols::kiss_tnc_impl</scope><name>d_tx_delay</name></member>
       <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1affeb021c4d0d615bd3559ad2a133c58a" prot="private" virt="non-virtual"><scope>gr::packet_protocols::kiss_tnc_impl</scope><name>d_tx_tail</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a9b280ab4ffea80867ec6015f46e96b43" prot="private" virt="non-virtual"><scope>gr::packet_protocols::kiss_tnc_impl</scope><name>d_use_dtr_for_ptt</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a3813f35edbc3c8df7bc0e3cb1b03b704" prot="public" virt="virtual"><scope>gr::packet_protocols::kiss_tnc_impl</scope><name>get_ptt</name></member>
       <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a2b2ce11a1699910651886b6fc881a0df" prot="public" virt="non-virtual"><scope>gr::packet_protocols::kiss_tnc_impl</scope><name>kiss_tnc_impl</name></member>
       <member refid="classgr_1_1packet__protocols_1_1kiss__tnc_1a0faefa3d3f88cf49dd06d8c2e1856ed1" prot="public" virt="non-virtual"><scope>gr::packet_protocols::kiss_tnc_impl</scope><name>make</name></member>
       <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a1148d075622dd1ad7a40fd5122134cba" prot="private" virt="non-virtual"><scope>gr::packet_protocols::kiss_tnc_impl</scope><name>open_serial_port</name></member>
@@ -686,6 +874,9 @@
       <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a79764347a7a03b72e1a10cb2a90e4924" prot="private" virt="non-virtual"><scope>gr::packet_protocols::kiss_tnc_impl</scope><name>send_kiss_frame</name></member>
       <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1acd5505dbc9b8c0bfe72943268c214ff5" prot="public" virt="virtual"><scope>gr::packet_protocols::kiss_tnc_impl</scope><name>set_full_duplex</name></member>
       <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a3f90da4e0be9ccec955b97b62ed613d2" prot="public" virt="virtual"><scope>gr::packet_protocols::kiss_tnc_impl</scope><name>set_persistence</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a80d96fde047238482882ee3b7b8df699" prot="public" virt="virtual"><scope>gr::packet_protocols::kiss_tnc_impl</scope><name>set_ptt</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a2e0a5f4d17982a8bb9b226f527e21351" prot="public" virt="virtual"><scope>gr::packet_protocols::kiss_tnc_impl</scope><name>set_ptt_enabled</name></member>
+      <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a668833b13e93a6b56f3d6fb6e1e04d2a" prot="public" virt="virtual"><scope>gr::packet_protocols::kiss_tnc_impl</scope><name>set_ptt_use_dtr</name></member>
       <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1a4aacc9d4b14e7c9d440c8ee855b72def" prot="public" virt="virtual"><scope>gr::packet_protocols::kiss_tnc_impl</scope><name>set_slot_time</name></member>
       <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1abb5c1d225f4f3f5858808aa7906d7e90" prot="public" virt="virtual"><scope>gr::packet_protocols::kiss_tnc_impl</scope><name>set_tx_delay</name></member>
       <member refid="classgr_1_1packet__protocols_1_1kiss__tnc__impl_1aede2a16925160472dca239bdfbce13fd" prot="public" virt="virtual"><scope>gr::packet_protocols::kiss_tnc_impl</scope><name>set_tx_tail</name></member>

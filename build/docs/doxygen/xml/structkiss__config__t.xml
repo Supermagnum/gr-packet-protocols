@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="50" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="50" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="50" column="14" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="50" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structkiss__config__t_1ae2aa1ffc40ebd29729960f034385d86b" prot="public" static="no" mutable="no">
         <type>uint8_t</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="51" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="51" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="51" column="13" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="51" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structkiss__config__t_1a9d336c6a0c38f59c26fd337bf84f24f1" prot="public" static="no" mutable="no">
         <type>uint16_t</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="52" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="52" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="52" column="14" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="52" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structkiss__config__t_1adf098a0d62227e05cc7bef24f1ae8369" prot="public" static="no" mutable="no">
         <type>uint8_t</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="53" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="53" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="53" column="13" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="53" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structkiss__config__t_1aef05c7d7c35a421115431eceb5c0482a" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="54" column="10" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="54" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="54" column="10" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="54" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structkiss__config__t_1a4a2db35e32752406063e2106af517e9b" prot="public" static="no" mutable="no">
         <type>uint8_t</type>
@@ -86,14 +86,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="55" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="55" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="55" column="13" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="55" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="49" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="49" bodyend="56"/>
+    <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/kiss_protocol.h" line="49" column="1" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/kiss_protocol.h" bodystart="49" bodyend="56"/>
     <listofallmembers>
       <member refid="structkiss__config__t_1aef05c7d7c35a421115431eceb5c0482a" prot="public" virt="non-virtual"><scope>kiss_config_t</scope><name>full_duplex</name></member>
       <member refid="structkiss__config__t_1a4a2db35e32752406063e2106af517e9b" prot="public" virt="non-virtual"><scope>kiss_config_t</scope><name>hardware_id</name></member>

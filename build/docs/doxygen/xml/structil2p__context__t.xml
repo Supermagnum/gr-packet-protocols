@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="48" column="10" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="48" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="48" column="10" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structil2p__context__t_1a127c559d3636112f00132e9774ae5977" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="49" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="49" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="49" column="14" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structil2p__context__t_1a1d064cdf827f2f0bfcbf9011411ac066" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="50" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="50" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="50" column="14" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="50" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structil2p__context__t_1a7f394571bc2d6b42a27f37bbb89d3acb" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -58,14 +58,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="51" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="51" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="51" column="14" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="51" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="47" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="47" bodyend="53"/>
+    <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="47" column="1" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="47" bodyend="53"/>
     <listofallmembers>
       <member refid="structil2p__context__t_1afdddf1cf44c091a3bf05f16986704796" prot="public" virt="non-virtual"><scope>il2p_context_t</scope><name>enabled</name></member>
       <member refid="structil2p__context__t_1a7f394571bc2d6b42a27f37bbb89d3acb" prot="public" virt="non-virtual"><scope>il2p_context_t</scope><name>errors_corrected</name></member>

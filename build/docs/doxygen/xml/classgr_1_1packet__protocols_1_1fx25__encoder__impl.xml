@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="42" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" bodystart="42" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" line="42" column="9" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a840b4c7faf237277ec233c08bb93ca9b" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="43" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" bodystart="43" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" line="43" column="9" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a26c62bdd5549d129aaced6a8c4d42b3d" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="44" column="10" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" bodystart="44" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" line="44" column="10" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1aac20ddb6d24d03bc04742f270bee97e7" prot="private" static="no" mutable="no">
         <type>std::vector&lt; uint8_t &gt;</type>
@@ -63,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="45" column="17" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" bodystart="45" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" line="45" column="17" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" bodystart="45" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a541cfac6d2e3ed98c330a710e7ea3216" prot="private" static="no" mutable="no">
         <type>uint16_t</type>
@@ -78,7 +78,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="46" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" bodystart="46" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" line="46" column="14" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a1ac81ed5cbca072b433d6744cb02f823" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="47" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" bodystart="47" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" line="47" column="13" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a938974c1d5c8ff0d1921f38b5a140243" prot="private" static="no" mutable="no">
         <type>uint16_t</type>
@@ -108,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="48" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" bodystart="48" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" line="48" column="14" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a6fbf87fdb5f3a822152ed06bc9e13fa0" prot="private" static="no" mutable="no">
         <type><ref refid="classReedSolomonEncoder" kindref="compound">ReedSolomonEncoder</ref> *</type>
@@ -123,7 +123,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="49" column="24" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" bodystart="49" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" line="49" column="24" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" bodystart="49" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -178,7 +178,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="58" column="5"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" line="58" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1ab2b52e407c75ee2f6dbf912167e6367d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -193,7 +193,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="63" column="5"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" line="63" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a429a0efb8aa4c5548758f3aa1a0959a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -248,7 +248,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="72" column="9"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" line="72" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a88dfe8eec8bc20cef63e23bdde336250" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -278,7 +278,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="79" column="10"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" line="79" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a8fece3c9773bd3b28e5e4804e072fec1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -308,7 +308,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="85" column="10"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" line="85" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1ad2e4a311a6558ce997685162b8f00bd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -338,7 +338,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="91" column="10"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" line="91" column="10"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -355,7 +355,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="97" column="10"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" line="97" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1af68024f25d1b96bb4053fd2819e69298" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -384,7 +384,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="103" column="10"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" line="103" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a70b3e9099f2f05456ee92887ba6bc9cf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -399,7 +399,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="108" column="10"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" line="108" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a28e5e4f2a42c24a8023904dac6ffa5f0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::vector&lt; uint8_t &gt;</type>
@@ -430,7 +430,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="115" column="17"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" line="115" column="17"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a7736ac61bf21603661a396dad60f9f4b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::vector&lt; uint8_t &gt;</type>
@@ -461,7 +461,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="122" column="17"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" line="122" column="17"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1af4e8d29b07f2b074e2b12d61480d2a01" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint16_t</type>
@@ -479,7 +479,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="128" column="14"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" line="128" column="14"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -522,7 +522,7 @@
         <label>gr::sync_block</label>
       </node>
     </collaborationgraph>
-    <location file="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" line="40" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h" bodystart="40" bodyend="129"/>
+    <location file="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" line="40" column="1" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h" bodystart="40" bodyend="129"/>
     <listofallmembers>
       <member refid="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a70b3e9099f2f05456ee92887ba6bc9cf" prot="private" virt="non-virtual"><scope>gr::packet_protocols::fx25_encoder_impl</scope><name>add_fx25_header</name></member>
       <member refid="classgr_1_1packet__protocols_1_1fx25__encoder__impl_1a28e5e4f2a42c24a8023904dac6ffa5f0" prot="private" virt="non-virtual"><scope>gr::packet_protocols::fx25_encoder_impl</scope><name>apply_reed_solomon_fec</name></member>

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/haaken/github-projects/gr-packet_protocols
+CMAKE_SOURCE_DIR = /home/haaken/github-projects/gr-packet-protocols
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/haaken/github-projects/gr-packet_protocols/build
+CMAKE_BINARY_DIR = /home/haaken/github-projects/gr-packet-protocols/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/haaken/github-projects/gr-packet_protocols/build/CMakeFiles /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings//CMakeFiles/progress.marks
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/packet_protocols/bindings/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/haaken/github-projects/gr-packet_protocols/build/CMakeFiles 0
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings//CMakeFiles/progress.marks
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/packet_protocols/bindings/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/packet_protocols/bindings/clean
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/packet_protocols/bindings/clean
 .PHONY : clean
 
 # The main clean target
@@ -158,22 +158,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/packet_protocols/bindings/preinstall
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/packet_protocols/bindings/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/packet_protocols/bindings/preinstall
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/packet_protocols/bindings/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/rule:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/rule
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/rule
 .PHONY : python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/rule
 
 # Convenience name for target.
@@ -182,12 +182,12 @@ packet_protocols_python: python/packet_protocols/bindings/CMakeFiles/packet_prot
 
 # fast build rule for target.
 packet_protocols_python/fast:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build
 .PHONY : packet_protocols_python/fast
 
 # Convenience name for target.
 python/packet_protocols/bindings/CMakeFiles/extracted_docstrings.dir/rule:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/packet_protocols/bindings/CMakeFiles/extracted_docstrings.dir/rule
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/packet_protocols/bindings/CMakeFiles/extracted_docstrings.dir/rule
 .PHONY : python/packet_protocols/bindings/CMakeFiles/extracted_docstrings.dir/rule
 
 # Convenience name for target.
@@ -196,12 +196,12 @@ extracted_docstrings: python/packet_protocols/bindings/CMakeFiles/extracted_docs
 
 # fast build rule for target.
 extracted_docstrings/fast:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/extracted_docstrings.dir/build.make python/packet_protocols/bindings/CMakeFiles/extracted_docstrings.dir/build
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/extracted_docstrings.dir/build.make python/packet_protocols/bindings/CMakeFiles/extracted_docstrings.dir/build
 .PHONY : extracted_docstrings/fast
 
 # Convenience name for target.
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_docstrings.dir/rule:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/packet_protocols/bindings/CMakeFiles/packet_protocols_docstrings.dir/rule
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/packet_protocols/bindings/CMakeFiles/packet_protocols_docstrings.dir/rule
 .PHONY : python/packet_protocols/bindings/CMakeFiles/packet_protocols_docstrings.dir/rule
 
 # Convenience name for target.
@@ -210,15 +210,39 @@ packet_protocols_docstrings: python/packet_protocols/bindings/CMakeFiles/packet_
 
 # fast build rule for target.
 packet_protocols_docstrings/fast:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_docstrings.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_docstrings.dir/build
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_docstrings.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_docstrings.dir/build
 .PHONY : packet_protocols_docstrings/fast
+
+adaptive_rate_control_python.o: adaptive_rate_control_python.cc.o
+.PHONY : adaptive_rate_control_python.o
+
+# target to build an object file
+adaptive_rate_control_python.cc.o:
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/adaptive_rate_control_python.cc.o
+.PHONY : adaptive_rate_control_python.cc.o
+
+adaptive_rate_control_python.i: adaptive_rate_control_python.cc.i
+.PHONY : adaptive_rate_control_python.i
+
+# target to preprocess a source file
+adaptive_rate_control_python.cc.i:
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/adaptive_rate_control_python.cc.i
+.PHONY : adaptive_rate_control_python.cc.i
+
+adaptive_rate_control_python.s: adaptive_rate_control_python.cc.s
+.PHONY : adaptive_rate_control_python.s
+
+# target to generate assembly for a file
+adaptive_rate_control_python.cc.s:
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/adaptive_rate_control_python.cc.s
+.PHONY : adaptive_rate_control_python.cc.s
 
 ax25_decoder_python.o: ax25_decoder_python.cc.o
 .PHONY : ax25_decoder_python.o
 
 # target to build an object file
 ax25_decoder_python.cc.o:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_decoder_python.cc.o
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_decoder_python.cc.o
 .PHONY : ax25_decoder_python.cc.o
 
 ax25_decoder_python.i: ax25_decoder_python.cc.i
@@ -226,7 +250,7 @@ ax25_decoder_python.i: ax25_decoder_python.cc.i
 
 # target to preprocess a source file
 ax25_decoder_python.cc.i:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_decoder_python.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_decoder_python.cc.i
 .PHONY : ax25_decoder_python.cc.i
 
 ax25_decoder_python.s: ax25_decoder_python.cc.s
@@ -234,7 +258,7 @@ ax25_decoder_python.s: ax25_decoder_python.cc.s
 
 # target to generate assembly for a file
 ax25_decoder_python.cc.s:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_decoder_python.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_decoder_python.cc.s
 .PHONY : ax25_decoder_python.cc.s
 
 ax25_encoder_python.o: ax25_encoder_python.cc.o
@@ -242,7 +266,7 @@ ax25_encoder_python.o: ax25_encoder_python.cc.o
 
 # target to build an object file
 ax25_encoder_python.cc.o:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_encoder_python.cc.o
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_encoder_python.cc.o
 .PHONY : ax25_encoder_python.cc.o
 
 ax25_encoder_python.i: ax25_encoder_python.cc.i
@@ -250,7 +274,7 @@ ax25_encoder_python.i: ax25_encoder_python.cc.i
 
 # target to preprocess a source file
 ax25_encoder_python.cc.i:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_encoder_python.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_encoder_python.cc.i
 .PHONY : ax25_encoder_python.cc.i
 
 ax25_encoder_python.s: ax25_encoder_python.cc.s
@@ -258,7 +282,7 @@ ax25_encoder_python.s: ax25_encoder_python.cc.s
 
 # target to generate assembly for a file
 ax25_encoder_python.cc.s:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_encoder_python.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/ax25_encoder_python.cc.s
 .PHONY : ax25_encoder_python.cc.s
 
 fx25_decoder_python.o: fx25_decoder_python.cc.o
@@ -266,7 +290,7 @@ fx25_decoder_python.o: fx25_decoder_python.cc.o
 
 # target to build an object file
 fx25_decoder_python.cc.o:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_decoder_python.cc.o
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_decoder_python.cc.o
 .PHONY : fx25_decoder_python.cc.o
 
 fx25_decoder_python.i: fx25_decoder_python.cc.i
@@ -274,7 +298,7 @@ fx25_decoder_python.i: fx25_decoder_python.cc.i
 
 # target to preprocess a source file
 fx25_decoder_python.cc.i:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_decoder_python.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_decoder_python.cc.i
 .PHONY : fx25_decoder_python.cc.i
 
 fx25_decoder_python.s: fx25_decoder_python.cc.s
@@ -282,7 +306,7 @@ fx25_decoder_python.s: fx25_decoder_python.cc.s
 
 # target to generate assembly for a file
 fx25_decoder_python.cc.s:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_decoder_python.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_decoder_python.cc.s
 .PHONY : fx25_decoder_python.cc.s
 
 fx25_encoder_python.o: fx25_encoder_python.cc.o
@@ -290,7 +314,7 @@ fx25_encoder_python.o: fx25_encoder_python.cc.o
 
 # target to build an object file
 fx25_encoder_python.cc.o:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_encoder_python.cc.o
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_encoder_python.cc.o
 .PHONY : fx25_encoder_python.cc.o
 
 fx25_encoder_python.i: fx25_encoder_python.cc.i
@@ -298,7 +322,7 @@ fx25_encoder_python.i: fx25_encoder_python.cc.i
 
 # target to preprocess a source file
 fx25_encoder_python.cc.i:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_encoder_python.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_encoder_python.cc.i
 .PHONY : fx25_encoder_python.cc.i
 
 fx25_encoder_python.s: fx25_encoder_python.cc.s
@@ -306,7 +330,7 @@ fx25_encoder_python.s: fx25_encoder_python.cc.s
 
 # target to generate assembly for a file
 fx25_encoder_python.cc.s:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_encoder_python.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/fx25_encoder_python.cc.s
 .PHONY : fx25_encoder_python.cc.s
 
 il2p_decoder_python.o: il2p_decoder_python.cc.o
@@ -314,7 +338,7 @@ il2p_decoder_python.o: il2p_decoder_python.cc.o
 
 # target to build an object file
 il2p_decoder_python.cc.o:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_decoder_python.cc.o
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_decoder_python.cc.o
 .PHONY : il2p_decoder_python.cc.o
 
 il2p_decoder_python.i: il2p_decoder_python.cc.i
@@ -322,7 +346,7 @@ il2p_decoder_python.i: il2p_decoder_python.cc.i
 
 # target to preprocess a source file
 il2p_decoder_python.cc.i:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_decoder_python.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_decoder_python.cc.i
 .PHONY : il2p_decoder_python.cc.i
 
 il2p_decoder_python.s: il2p_decoder_python.cc.s
@@ -330,7 +354,7 @@ il2p_decoder_python.s: il2p_decoder_python.cc.s
 
 # target to generate assembly for a file
 il2p_decoder_python.cc.s:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_decoder_python.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_decoder_python.cc.s
 .PHONY : il2p_decoder_python.cc.s
 
 il2p_encoder_python.o: il2p_encoder_python.cc.o
@@ -338,7 +362,7 @@ il2p_encoder_python.o: il2p_encoder_python.cc.o
 
 # target to build an object file
 il2p_encoder_python.cc.o:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_encoder_python.cc.o
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_encoder_python.cc.o
 .PHONY : il2p_encoder_python.cc.o
 
 il2p_encoder_python.i: il2p_encoder_python.cc.i
@@ -346,7 +370,7 @@ il2p_encoder_python.i: il2p_encoder_python.cc.i
 
 # target to preprocess a source file
 il2p_encoder_python.cc.i:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_encoder_python.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_encoder_python.cc.i
 .PHONY : il2p_encoder_python.cc.i
 
 il2p_encoder_python.s: il2p_encoder_python.cc.s
@@ -354,7 +378,7 @@ il2p_encoder_python.s: il2p_encoder_python.cc.s
 
 # target to generate assembly for a file
 il2p_encoder_python.cc.s:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_encoder_python.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/il2p_encoder_python.cc.s
 .PHONY : il2p_encoder_python.cc.s
 
 kiss_tnc_python.o: kiss_tnc_python.cc.o
@@ -362,7 +386,7 @@ kiss_tnc_python.o: kiss_tnc_python.cc.o
 
 # target to build an object file
 kiss_tnc_python.cc.o:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/kiss_tnc_python.cc.o
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/kiss_tnc_python.cc.o
 .PHONY : kiss_tnc_python.cc.o
 
 kiss_tnc_python.i: kiss_tnc_python.cc.i
@@ -370,7 +394,7 @@ kiss_tnc_python.i: kiss_tnc_python.cc.i
 
 # target to preprocess a source file
 kiss_tnc_python.cc.i:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/kiss_tnc_python.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/kiss_tnc_python.cc.i
 .PHONY : kiss_tnc_python.cc.i
 
 kiss_tnc_python.s: kiss_tnc_python.cc.s
@@ -378,15 +402,63 @@ kiss_tnc_python.s: kiss_tnc_python.cc.s
 
 # target to generate assembly for a file
 kiss_tnc_python.cc.s:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/kiss_tnc_python.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/kiss_tnc_python.cc.s
 .PHONY : kiss_tnc_python.cc.s
+
+link_quality_monitor_python.o: link_quality_monitor_python.cc.o
+.PHONY : link_quality_monitor_python.o
+
+# target to build an object file
+link_quality_monitor_python.cc.o:
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/link_quality_monitor_python.cc.o
+.PHONY : link_quality_monitor_python.cc.o
+
+link_quality_monitor_python.i: link_quality_monitor_python.cc.i
+.PHONY : link_quality_monitor_python.i
+
+# target to preprocess a source file
+link_quality_monitor_python.cc.i:
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/link_quality_monitor_python.cc.i
+.PHONY : link_quality_monitor_python.cc.i
+
+link_quality_monitor_python.s: link_quality_monitor_python.cc.s
+.PHONY : link_quality_monitor_python.s
+
+# target to generate assembly for a file
+link_quality_monitor_python.cc.s:
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/link_quality_monitor_python.cc.s
+.PHONY : link_quality_monitor_python.cc.s
+
+modulation_negotiation_python.o: modulation_negotiation_python.cc.o
+.PHONY : modulation_negotiation_python.o
+
+# target to build an object file
+modulation_negotiation_python.cc.o:
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/modulation_negotiation_python.cc.o
+.PHONY : modulation_negotiation_python.cc.o
+
+modulation_negotiation_python.i: modulation_negotiation_python.cc.i
+.PHONY : modulation_negotiation_python.i
+
+# target to preprocess a source file
+modulation_negotiation_python.cc.i:
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/modulation_negotiation_python.cc.i
+.PHONY : modulation_negotiation_python.cc.i
+
+modulation_negotiation_python.s: modulation_negotiation_python.cc.s
+.PHONY : modulation_negotiation_python.s
+
+# target to generate assembly for a file
+modulation_negotiation_python.cc.s:
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/modulation_negotiation_python.cc.s
+.PHONY : modulation_negotiation_python.cc.s
 
 python_bindings.o: python_bindings.cc.o
 .PHONY : python_bindings.o
 
 # target to build an object file
 python_bindings.cc.o:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/python_bindings.cc.o
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/python_bindings.cc.o
 .PHONY : python_bindings.cc.o
 
 python_bindings.i: python_bindings.cc.i
@@ -394,7 +466,7 @@ python_bindings.i: python_bindings.cc.i
 
 # target to preprocess a source file
 python_bindings.cc.i:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/python_bindings.cc.i
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/python_bindings.cc.i
 .PHONY : python_bindings.cc.i
 
 python_bindings.s: python_bindings.cc.s
@@ -402,7 +474,7 @@ python_bindings.s: python_bindings.cc.s
 
 # target to generate assembly for a file
 python_bindings.cc.s:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/python_bindings.cc.s
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/build.make python/packet_protocols/bindings/CMakeFiles/packet_protocols_python.dir/python_bindings.cc.s
 .PHONY : python_bindings.cc.s
 
 # Help Target
@@ -421,6 +493,9 @@ help:
 	@echo "... extracted_docstrings"
 	@echo "... packet_protocols_docstrings"
 	@echo "... packet_protocols_python"
+	@echo "... adaptive_rate_control_python.o"
+	@echo "... adaptive_rate_control_python.i"
+	@echo "... adaptive_rate_control_python.s"
 	@echo "... ax25_decoder_python.o"
 	@echo "... ax25_decoder_python.i"
 	@echo "... ax25_decoder_python.s"
@@ -442,6 +517,12 @@ help:
 	@echo "... kiss_tnc_python.o"
 	@echo "... kiss_tnc_python.i"
 	@echo "... kiss_tnc_python.s"
+	@echo "... link_quality_monitor_python.o"
+	@echo "... link_quality_monitor_python.i"
+	@echo "... link_quality_monitor_python.s"
+	@echo "... modulation_negotiation_python.o"
+	@echo "... modulation_negotiation_python.i"
+	@echo "... modulation_negotiation_python.s"
 	@echo "... python_bindings.o"
 	@echo "... python_bindings.i"
 	@echo "... python_bindings.s"
@@ -456,6 +537,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

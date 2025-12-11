@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h" line="44" column="18" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h" bodystart="44" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.h" line="44" column="18" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1ax25__decoder__impl_1ab03f2fed8f2509e5b7cba1683845e748" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h" line="45" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h" bodystart="45" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.h" line="45" column="13" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.h" bodystart="45" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1ax25__decoder__impl_1af5d6607b03ee79a105ce5b941c66abbc" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h" line="46" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h" bodystart="46" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.h" line="46" column="13" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.h" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1ax25__decoder__impl_1a755a136282e79cca3931673cdb63caea" prot="private" static="no" mutable="no">
         <type>std::vector&lt; uint8_t &gt;</type>
@@ -63,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h" line="47" column="17" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h" bodystart="47" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.h" line="47" column="17" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.h" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1ax25__decoder__impl_1a06aa212493a840d13ad07e2ac9fea16f" prot="private" static="no" mutable="no">
         <type>uint16_t</type>
@@ -78,7 +78,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h" line="48" column="14" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h" bodystart="48" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.h" line="48" column="14" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.h" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1ax25__decoder__impl_1af32bc564a665da09cfbf773a42b61dcb" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h" line="49" column="13" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h" bodystart="49" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.h" line="49" column="13" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.h" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1packet__protocols_1_1ax25__decoder__impl_1a81502028e719df5aae882d6d788977e5" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -108,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h" line="50" column="10" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h" bodystart="50" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.h" line="50" column="10" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.h" bodystart="50" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -125,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h" line="56" column="5"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.h" line="56" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1ax25__decoder__impl_1a73e82c10ad82b613d41a4d2d867412b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -140,7 +140,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h" line="61" column="5"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.h" line="61" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1ax25__decoder__impl_1a6c6cf88d1226bb0eb31233cca979474b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -195,7 +195,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h" line="70" column="9"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.h" line="70" column="9"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -226,7 +226,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h" line="78" column="10"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.h" line="78" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1ax25__decoder__impl_1aa11f54ef97152c6c4ae8fc64e86d535c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -244,7 +244,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h" line="84" column="10"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.h" line="84" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1ax25__decoder__impl_1acc2f44803f11cc363380d2ab33466ce4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint16_t</type>
@@ -262,7 +262,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h" line="90" column="14"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.h" line="90" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1ax25__decoder__impl_1a46d1c8b3534ab48862e6f28ed57b8dda" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -293,7 +293,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h" line="97" column="17"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.h" line="97" column="17"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1ax25__decoder__impl_1a540c2c8bb915b4b62d9095dc29ba9b0e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -324,7 +324,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h" line="104" column="9"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.h" line="104" column="9"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -367,7 +367,7 @@
         <label>gr::sync_block</label>
       </node>
     </collaborationgraph>
-    <location file="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h" line="42" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/lib/ax25_decoder_impl.h" bodystart="42" bodyend="105"/>
+    <location file="/home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.h" line="42" column="1" bodyfile="/home/haaken/github-projects/gr-packet-protocols/lib/ax25_decoder_impl.h" bodystart="42" bodyend="105"/>
     <listofallmembers>
       <member refid="classgr_1_1packet__protocols_1_1ax25__decoder__impl_1a55c2340d5300757dee13d946cd158c53" prot="public" virt="non-virtual"><scope>gr::packet_protocols::ax25_decoder_impl</scope><name>ax25_decoder_impl</name></member>
       <member refid="classgr_1_1packet__protocols_1_1ax25__decoder__impl_1acc2f44803f11cc363380d2ab33466ce4" prot="private" virt="non-virtual"><scope>gr::packet_protocols::ax25_decoder_impl</scope><name>calculate_fcs</name></member>

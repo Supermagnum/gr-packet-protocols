@@ -12,13 +12,17 @@
 include(GrPlatform) #define LIB_SUFFIX
 
 list(APPEND packet_protocols_sources
+    ax25_protocol.c
     ax25_encoder_impl.cc
     ax25_decoder_impl.cc
     fx25_encoder_impl.cc
     fx25_decoder_impl.cc
     il2p_encoder_impl.cc
     il2p_decoder_impl.cc
-    kiss_tnc_impl.cc)
+    kiss_tnc_impl.cc
+    link_quality_monitor_impl.cc
+    adaptive_rate_control_impl.cc
+    modulation_negotiation_impl.cc)
 
 set(packet_protocols_sources
     "${packet_protocols_sources}"

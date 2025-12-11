@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_reed_solomon.h" line="38" column="29" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_reed_solomon.h" bodystart="38" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_reed_solomon.h" line="38" column="29" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_reed_solomon.h" bodystart="38" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_reed_solomon.h" line="43" column="17"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_reed_solomon.h" line="43" column="17"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_reed_solomon.h" line="48" column="18"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_reed_solomon.h" line="48" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1il2p__reed__solomon_1a9fe8da8ab34fbb44148d9988406ebc25" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -84,7 +84,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_reed_solomon.h" line="53" column="18"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_reed_solomon.h" line="53" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1il2p__reed__solomon_1ab3b4254a1ada71fbeaa176a264c4df43" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_reed_solomon.h" line="58" column="17"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_reed_solomon.h" line="58" column="17"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1il2p__reed__solomon_1abb83933a324789d77f2df805693c9074" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
@@ -114,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_reed_solomon.h" line="63" column="17"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_reed_solomon.h" line="63" column="17"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1il2p__reed__solomon_1a1b458943a9330d5f92cfd26a86658118" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
@@ -129,7 +129,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_reed_solomon.h" line="68" column="17"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_reed_solomon.h" line="68" column="17"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -159,7 +159,7 @@
         <label>gr::sync_block</label>
       </node>
     </collaborationgraph>
-    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_reed_solomon.h" line="36" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_reed_solomon.h" bodystart="36" bodyend="69"/>
+    <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_reed_solomon.h" line="36" column="1" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_reed_solomon.h" bodystart="36" bodyend="69"/>
     <listofallmembers>
       <member refid="classgr_1_1packet__protocols_1_1il2p__reed__solomon_1abb83933a324789d77f2df805693c9074" prot="public" virt="pure-virtual"><scope>gr::packet_protocols::il2p_reed_solomon</scope><name>get_code_length</name></member>
       <member refid="classgr_1_1packet__protocols_1_1il2p__reed__solomon_1ab3b4254a1ada71fbeaa176a264c4df43" prot="public" virt="pure-virtual"><scope>gr::packet_protocols::il2p_reed_solomon</scope><name>get_data_length</name></member>

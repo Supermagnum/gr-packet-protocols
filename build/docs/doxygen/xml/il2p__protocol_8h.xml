@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="21" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="21" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="21" column="9" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="il2p__protocol_8h_1a949e2591db7a867a5a8c484f7e1abd78" prot="public" static="no">
         <name>IL2P_SYNC_WORD</name>
@@ -77,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="22" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="22" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="22" column="9" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="il2p__protocol_8h_1a5603f6e6c21e95aaad7acb6eb18c9a40" prot="public" static="no">
         <name>IL2P_SYNC_WORD_SIZE</name>
@@ -88,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="23" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="23" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="23" column="9" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="23" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="il2p__protocol_8h_1a6cd46ad63c83b80b0632398a4db4015b" prot="public" static="no">
         <name>IL2P_HEADER_SIZE</name>
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="24" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="24" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="24" column="9" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="24" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="il2p__protocol_8h_1a5e0e6a0e0a4c1a75b0c6405267cb2bca" prot="public" static="no">
         <name>IL2P_HEADER_PARITY</name>
@@ -110,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="25" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="25" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="25" column="9" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="25" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="il2p__protocol_8h_1a9875fcae3aab87784e47c2fc5807c946" prot="public" static="no">
         <name>IL2P_MAX_PAYLOAD_SIZE</name>
@@ -121,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="26" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="26" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="26" column="9" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="26" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="il2p__protocol_8h_1afddfd849c5bab0336c3bb56c8fb941a1" prot="public" static="no">
         <name>IL2P_MAX_PAYLOAD_BLOCKS</name>
@@ -132,7 +132,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="27" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="27" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="27" column="9" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="27" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="il2p__protocol_8h_1a7d6796ab951dd9cb3e781011012717a3" prot="public" static="no">
         <name>IL2P_MAX_PARITY_SYMBOLS</name>
@@ -143,7 +143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="28" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="28" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="28" column="9" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="28" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="il2p__protocol_8h_1a04d57b68131a485de27d3279422d1745" prot="public" static="no">
         <name>IL2P_MAX_ENCODED_PAYLOAD_SIZE</name>
@@ -154,7 +154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="29" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="29" bodyend="30"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="29" column="9" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="29" bodyend="30"/>
       </memberdef>
       <memberdef kind="define" id="il2p__protocol_8h_1a29b2801c24a91caf87556b96ad154957" prot="public" static="no">
         <name>IL2P_MAX_PACKET_SIZE</name>
@@ -165,7 +165,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="31" column="9" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="31" bodyend="32"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="31" column="9" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" bodystart="31" bodyend="32"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -184,7 +184,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="69" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="69" declcolumn="5"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="69" column="5" declfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="69" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="il2p__protocol_8h_1a24ef4fca73dd4b48dc31e24e32ba88f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -201,7 +201,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="70" column="6" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="70" declcolumn="6"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="70" column="6" declfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="70" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="il2p__protocol_8h_1a0c98f99a5c013760a156c230aeb60f76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -230,7 +230,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="75" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="75" declcolumn="5"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="75" column="5" declfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="75" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="il2p__protocol_8h_1ac8b4acebb41669e41522e9d7c5bc7624" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -259,7 +259,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="77" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="77" declcolumn="5"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="77" column="5" declfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="77" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="il2p__protocol_8h_1a75e17f7fa93f8626775fb6559c563e8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -280,7 +280,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="79" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="79" declcolumn="5"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="79" column="5" declfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="79" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="il2p__protocol_8h_1a990085ebf4fc7e918296e4f2ace1f1d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -305,7 +305,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="80" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="80" declcolumn="5"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="80" column="5" declfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="80" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="il2p__protocol_8h_1a5f3287c52ef93d525329fa7f1d41e1c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -330,7 +330,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="83" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="83" declcolumn="5"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="83" column="5" declfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="83" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="il2p__protocol_8h_1a7813249c6367566336e1f127299abac8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -355,7 +355,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="84" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="84" declcolumn="5"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="84" column="5" declfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="84" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="il2p__protocol_8h_1a198ac2536460a8155234678500544877" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -372,7 +372,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="85" column="9" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="85" declcolumn="9"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="85" column="9" declfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="85" declcolumn="9"/>
       </memberdef>
       <memberdef kind="function" id="il2p__protocol_8h_1a0d532923c31d7b0d01d8a2895edfbdc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -405,7 +405,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="88" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="88" declcolumn="5"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="88" column="5" declfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="88" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="il2p__protocol_8h_1a452b34224ebdaf77a55a946431c57ae0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -438,7 +438,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="90" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="90" declcolumn="5"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="90" column="5" declfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="90" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="il2p__protocol_8h_1a37ba7c369bed59eaba49ffc4eb325eef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -459,7 +459,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="94" column="6" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="94" declcolumn="6"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="94" column="6" declfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="94" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="il2p__protocol_8h_1ae9752169e680cd3c5569708316f6eb0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -480,7 +480,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="95" column="6" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="95" declcolumn="6"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="95" column="6" declfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="95" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="il2p__protocol_8h_1ab7ac6eb91258a5521547be915f062198" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>struct il2p_rs *</type>
@@ -497,7 +497,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="98" column="15" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="98" declcolumn="15"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="98" column="15" declfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="98" declcolumn="15"/>
       </memberdef>
       <memberdef kind="function" id="il2p__protocol_8h_1af1dd2f9650a52932c8ea1738a687ccaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -526,7 +526,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="99" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="99" declcolumn="5"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="99" column="5" declfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="99" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="il2p__protocol_8h_1ac189ce9f6e95d88d389c1662aad6947b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -555,7 +555,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="100" column="5" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="100" declcolumn="5"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="100" column="5" declfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="100" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="il2p__protocol_8h_1a3e1ef8fd6cc96e80f4e4a9ffa923cff4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -584,13 +584,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="103" column="6" declfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="103" declcolumn="6"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" line="103" column="6" declfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h" declline="103" declcolumn="6"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/il2p_protocol.h"/>
+    <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/il2p_protocol.h"/>
   </compounddef>
 </doxygen>

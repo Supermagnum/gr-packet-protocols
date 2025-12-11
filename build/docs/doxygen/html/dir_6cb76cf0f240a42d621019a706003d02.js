@@ -1,5 +1,7 @@
 var dir_6cb76cf0f240a42d621019a706003d02 =
 [
+    [ "adaptive_modulator.h", "adaptive__modulator_8h.html", "adaptive__modulator_8h" ],
+    [ "adaptive_rate_control.h", "adaptive__rate__control_8h.html", "adaptive__rate__control_8h" ],
     [ "api.h", "api_8h.html", "api_8h" ],
     [ "ax25_decoder.h", "ax25__decoder_8h.html", "ax25__decoder_8h" ],
     [ "ax25_encoder.h", "ax25__encoder_8h.html", "ax25__encoder_8h" ],
@@ -15,5 +17,7 @@ var dir_6cb76cf0f240a42d621019a706003d02 =
     [ "il2p_reed_solomon.h", "il2p__reed__solomon_8h.html", "il2p__reed__solomon_8h" ],
     [ "kiss_protocol.h", "kiss__protocol_8h.html", "kiss__protocol_8h" ],
     [ "kiss_tnc.h", "kiss__tnc_8h.html", "kiss__tnc_8h" ],
+    [ "link_quality_monitor.h", "link__quality__monitor_8h.html", "link__quality__monitor_8h" ],
+    [ "modulation_negotiation.h", "modulation__negotiation_8h.html", "modulation__negotiation_8h" ],
     [ "packet_protocols.h", "packet__protocols_8h.html", null ]
 ];

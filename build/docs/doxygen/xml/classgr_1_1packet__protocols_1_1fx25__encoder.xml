@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_encoder.h" line="38" column="29" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_encoder.h" bodystart="38" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/fx25_encoder.h" line="38" column="29" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/fx25_encoder.h" bodystart="38" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -50,7 +50,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_encoder.h" line="43" column="17"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/fx25_encoder.h" line="43" column="17"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_encoder.h" line="49" column="18"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/fx25_encoder.h" line="49" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__encoder_1a0c42aa60e25a104ad99bc06903586d36" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -92,7 +92,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_encoder.h" line="54" column="18"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/fx25_encoder.h" line="54" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1packet__protocols_1_1fx25__encoder_1a5cecc0b913330fd71cd609bcba9e401e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -112,7 +112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_encoder.h" line="59" column="18"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/fx25_encoder.h" line="59" column="18"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -148,7 +148,7 @@
         <label>gr::sync_block</label>
       </node>
     </collaborationgraph>
-    <location file="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_encoder.h" line="36" column="1" bodyfile="/home/haaken/github-projects/gr-packet_protocols/include/gnuradio/packet_protocols/fx25_encoder.h" bodystart="36" bodyend="60"/>
+    <location file="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/fx25_encoder.h" line="36" column="1" bodyfile="/home/haaken/github-projects/gr-packet-protocols/include/gnuradio/packet_protocols/fx25_encoder.h" bodystart="36" bodyend="60"/>
     <listofallmembers>
       <member refid="classgr_1_1packet__protocols_1_1fx25__encoder_1a9a776182bac82f8ff061777f568bff32" prot="public" virt="non-virtual"><scope>gr::packet_protocols::fx25_encoder</scope><name>make</name></member>
       <member refid="classgr_1_1packet__protocols_1_1fx25__encoder_1a5cecc0b913330fd71cd609bcba9e401e" prot="public" virt="pure-virtual"><scope>gr::packet_protocols::fx25_encoder</scope><name>set_add_checksum</name></member>

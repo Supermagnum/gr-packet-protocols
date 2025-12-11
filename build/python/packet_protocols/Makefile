@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/haaken/github-projects/gr-packet_protocols
+CMAKE_SOURCE_DIR = /home/haaken/github-projects/gr-packet-protocols
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/haaken/github-projects/gr-packet_protocols/build
+CMAKE_BINARY_DIR = /home/haaken/github-projects/gr-packet-protocols/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/haaken/github-projects/gr-packet_protocols/build/CMakeFiles /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols//CMakeFiles/progress.marks
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/packet_protocols/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/haaken/github-projects/gr-packet_protocols/build/CMakeFiles 0
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols//CMakeFiles/progress.marks
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/packet_protocols/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/packet_protocols/clean
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/packet_protocols/clean
 .PHONY : clean
 
 # The main clean target
@@ -158,36 +158,36 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/packet_protocols/preinstall
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/packet_protocols/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/packet_protocols/preinstall
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/packet_protocols/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-python/packet_protocols/CMakeFiles/pygen_python_packet_protocols_a3b24addfa20afcf72c80339370e61f5.dir/rule:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/packet_protocols/CMakeFiles/pygen_python_packet_protocols_a3b24addfa20afcf72c80339370e61f5.dir/rule
-.PHONY : python/packet_protocols/CMakeFiles/pygen_python_packet_protocols_a3b24addfa20afcf72c80339370e61f5.dir/rule
+python/packet_protocols/CMakeFiles/pygen_python_packet_protocols_0dded37ad97c88f88754f234d82aaf2a.dir/rule:
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/packet_protocols/CMakeFiles/pygen_python_packet_protocols_0dded37ad97c88f88754f234d82aaf2a.dir/rule
+.PHONY : python/packet_protocols/CMakeFiles/pygen_python_packet_protocols_0dded37ad97c88f88754f234d82aaf2a.dir/rule
 
 # Convenience name for target.
-pygen_python_packet_protocols_a3b24addfa20afcf72c80339370e61f5: python/packet_protocols/CMakeFiles/pygen_python_packet_protocols_a3b24addfa20afcf72c80339370e61f5.dir/rule
-.PHONY : pygen_python_packet_protocols_a3b24addfa20afcf72c80339370e61f5
+pygen_python_packet_protocols_0dded37ad97c88f88754f234d82aaf2a: python/packet_protocols/CMakeFiles/pygen_python_packet_protocols_0dded37ad97c88f88754f234d82aaf2a.dir/rule
+.PHONY : pygen_python_packet_protocols_0dded37ad97c88f88754f234d82aaf2a
 
 # fast build rule for target.
-pygen_python_packet_protocols_a3b24addfa20afcf72c80339370e61f5/fast:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/CMakeFiles/pygen_python_packet_protocols_a3b24addfa20afcf72c80339370e61f5.dir/build.make python/packet_protocols/CMakeFiles/pygen_python_packet_protocols_a3b24addfa20afcf72c80339370e61f5.dir/build
-.PHONY : pygen_python_packet_protocols_a3b24addfa20afcf72c80339370e61f5/fast
+pygen_python_packet_protocols_0dded37ad97c88f88754f234d82aaf2a/fast:
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/CMakeFiles/pygen_python_packet_protocols_0dded37ad97c88f88754f234d82aaf2a.dir/build.make python/packet_protocols/CMakeFiles/pygen_python_packet_protocols_0dded37ad97c88f88754f234d82aaf2a.dir/build
+.PHONY : pygen_python_packet_protocols_0dded37ad97c88f88754f234d82aaf2a/fast
 
 # Convenience name for target.
 python/packet_protocols/CMakeFiles/copy_module_for_tests.dir/rule:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/packet_protocols/CMakeFiles/copy_module_for_tests.dir/rule
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/packet_protocols/CMakeFiles/copy_module_for_tests.dir/rule
 .PHONY : python/packet_protocols/CMakeFiles/copy_module_for_tests.dir/rule
 
 # Convenience name for target.
@@ -196,7 +196,7 @@ copy_module_for_tests: python/packet_protocols/CMakeFiles/copy_module_for_tests.
 
 # fast build rule for target.
 copy_module_for_tests/fast:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/CMakeFiles/copy_module_for_tests.dir/build.make python/packet_protocols/CMakeFiles/copy_module_for_tests.dir/build
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f python/packet_protocols/CMakeFiles/copy_module_for_tests.dir/build.make python/packet_protocols/CMakeFiles/copy_module_for_tests.dir/build
 .PHONY : copy_module_for_tests/fast
 
 # Help Target
@@ -213,7 +213,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... copy_module_for_tests"
-	@echo "... pygen_python_packet_protocols_a3b24addfa20afcf72c80339370e61f5"
+	@echo "... pygen_python_packet_protocols_0dded37ad97c88f88754f234d82aaf2a"
 .PHONY : help
 
 
@@ -225,6 +225,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

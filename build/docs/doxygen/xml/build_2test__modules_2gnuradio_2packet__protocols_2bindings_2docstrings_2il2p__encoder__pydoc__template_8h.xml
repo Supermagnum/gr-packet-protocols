@@ -25,7 +25,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h" line="10" column="10" bodyfile="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h" bodystart="10" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h" line="10" column="10" bodyfile="/home/haaken/github-projects/gr-packet-protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h" bodystart="10" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="var">
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h" line="18" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h" bodystart="18" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h" line="18" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h" bodystart="18" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2il2p__encoder__pydoc__template_8h_1a41bba09cd1402e5c6cc824d1cfb3f841" prot="public" static="yes" mutable="no">
         <type>const char *</type>
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h" line="21" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h" bodystart="21" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h" line="21" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2il2p__encoder__pydoc__template_8h_1a8045da4ef93aa53cbca8790bbaa6b10b" prot="public" static="yes" mutable="no">
         <type>const char *</type>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h" line="24" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h" bodystart="24" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h" line="24" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h" bodystart="24" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2il2p__encoder__pydoc__template_8h_1af63b1f296715691ddd4213f31061e117" prot="public" static="yes" mutable="no">
         <type>const char *</type>
@@ -83,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h" line="27" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h" bodystart="27" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h" line="27" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h" bodystart="27" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2il2p__encoder__pydoc__template_8h_1ac3987c77490544f3bf6154c888750625" prot="public" static="yes" mutable="no">
         <type>const char *</type>
@@ -97,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h" line="30" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h" bodystart="30" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h" line="30" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="build_2test__modules_2gnuradio_2packet__protocols_2bindings_2docstrings_2il2p__encoder__pydoc__template_8h_1a9c750a2b9021301eff105118576ccbf2" prot="public" static="yes" mutable="no">
         <type>const char *</type>
@@ -111,13 +111,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h" line="33" column="19" bodyfile="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h" bodystart="33" bodyend="-1"/>
+        <location file="/home/haaken/github-projects/gr-packet-protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h" line="33" column="19" bodyfile="/home/haaken/github-projects/gr-packet-protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h" bodystart="33" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/haaken/github-projects/gr-packet_protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h"/>
+    <location file="/home/haaken/github-projects/gr-packet-protocols/build/test_modules/gnuradio/packet_protocols/bindings/docstrings/il2p_encoder_pydoc_template.h"/>
   </compounddef>
 </doxygen>

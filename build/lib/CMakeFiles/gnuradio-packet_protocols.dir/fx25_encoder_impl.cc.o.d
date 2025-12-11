@@ -1,8 +1,8 @@
 lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.o: \
- /home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.cc \
+ /home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.cc \
  /usr/include/stdc-predef.h \
- /home/haaken/github-projects/gr-packet_protocols/lib/fx25_encoder_impl.h \
- /home/haaken/github-projects/gr-packet_protocols/lib/../include/gnuradio/packet_protocols/common.h \
+ /home/haaken/github-projects/gr-packet-protocols/lib/fx25_encoder_impl.h \
+ /home/haaken/github-projects/gr-packet-protocols/lib/../include/gnuradio/packet_protocols/common.h \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -63,8 +63,8 @@ lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
- /home/haaken/github-projects/gr-packet_protocols/lib/../include/gnuradio/packet_protocols/fx25_encoder.h \
- /home/haaken/github-projects/gr-packet_protocols/lib/../include/gnuradio/packet_protocols/api.h \
+ /home/haaken/github-projects/gr-packet-protocols/lib/../include/gnuradio/packet_protocols/fx25_encoder.h \
+ /home/haaken/github-projects/gr-packet-protocols/lib/../include/gnuradio/packet_protocols/api.h \
  /usr/include/gnuradio/attributes.h /usr/include/gnuradio/sync_block.h \
  /usr/include/gnuradio/api.h /usr/include/gnuradio/block.h \
  /usr/include/c++/13/memory /usr/include/c++/13/bits/stl_tempbuf.h \
@@ -1018,5 +1018,5 @@ lib/CMakeFiles/gnuradio-packet_protocols.dir/fx25_encoder_impl.cc.o: \
  /usr/include/gmpxx.h /usr/include/c++/13/cfloat \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \
  /usr/include/x86_64-linux-gnu/gmp.h \
- /home/haaken/github-projects/gr-packet_protocols/lib/../include/gnuradio/packet_protocols/fx25_protocol.h \
+ /home/haaken/github-projects/gr-packet-protocols/lib/../include/gnuradio/packet_protocols/fx25_protocol.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h

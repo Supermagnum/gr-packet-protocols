@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/haaken/github-projects/gr-packet_protocols
+CMAKE_SOURCE_DIR = /home/haaken/github-projects/gr-packet-protocols
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/haaken/github-projects/gr-packet_protocols/build
+CMAKE_BINARY_DIR = /home/haaken/github-projects/gr-packet-protocols/build
 
 # Utility rule file for packet_protocols_docstrings.
 
@@ -69,8 +69,8 @@ include python/packet_protocols/bindings/CMakeFiles/packet_protocols_docstrings.
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_docstrings: python/packet_protocols/bindings/docstring_status
 
 python/packet_protocols/bindings/docstring_status:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/haaken/github-projects/gr-packet_protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Adding docstrings into packet_protocols pybind headers ..."
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && /usr/bin/python3 /home/haaken/github-projects/gr-packet_protocols/docs/doxygen/update_pydoc.py sub --json_path /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings/extracted_docstrings.json --bindings_dir /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings/docstrings --output_dir /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings --filter gr::packet_protocols
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Adding docstrings into packet_protocols pybind headers ..."
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && /usr/bin/python3 /home/haaken/github-projects/gr-packet-protocols/docs/doxygen/update_pydoc.py sub --json_path /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings/extracted_docstrings.json --bindings_dir /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings/docstrings --output_dir /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings --filter gr::packet_protocols
 
 packet_protocols_docstrings: python/packet_protocols/bindings/CMakeFiles/packet_protocols_docstrings
 packet_protocols_docstrings: python/packet_protocols/bindings/docstring_status
@@ -82,10 +82,10 @@ python/packet_protocols/bindings/CMakeFiles/packet_protocols_docstrings.dir/buil
 .PHONY : python/packet_protocols/bindings/CMakeFiles/packet_protocols_docstrings.dir/build
 
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_docstrings.dir/clean:
-	cd /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings && $(CMAKE_COMMAND) -P CMakeFiles/packet_protocols_docstrings.dir/cmake_clean.cmake
+	cd /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings && $(CMAKE_COMMAND) -P CMakeFiles/packet_protocols_docstrings.dir/cmake_clean.cmake
 .PHONY : python/packet_protocols/bindings/CMakeFiles/packet_protocols_docstrings.dir/clean
 
 python/packet_protocols/bindings/CMakeFiles/packet_protocols_docstrings.dir/depend:
-	cd /home/haaken/github-projects/gr-packet_protocols/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/haaken/github-projects/gr-packet_protocols /home/haaken/github-projects/gr-packet_protocols/python/packet_protocols/bindings /home/haaken/github-projects/gr-packet_protocols/build /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings /home/haaken/github-projects/gr-packet_protocols/build/python/packet_protocols/bindings/CMakeFiles/packet_protocols_docstrings.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/haaken/github-projects/gr-packet-protocols /home/haaken/github-projects/gr-packet-protocols/python/packet_protocols/bindings /home/haaken/github-projects/gr-packet-protocols/build /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings /home/haaken/github-projects/gr-packet-protocols/build/python/packet_protocols/bindings/CMakeFiles/packet_protocols_docstrings.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : python/packet_protocols/bindings/CMakeFiles/packet_protocols_docstrings.dir/depend
 

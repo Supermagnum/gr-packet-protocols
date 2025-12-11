@@ -37,7 +37,7 @@ var NAVTREE =
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
+        [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
         [ "Typedefs", "functions_type.html", null ]
@@ -48,7 +48,7 @@ var NAVTREE =
       [ "File Members", "globals.html", [
         [ "All", "globals.html", "globals_dup" ],
         [ "Functions", "globals_func.html", null ],
-        [ "Variables", "globals_vars.html", null ],
+        [ "Variables", "globals_vars.html", "globals_vars" ],
         [ "Enumerations", "globals_enum.html", null ],
         [ "Enumerator", "globals_eval.html", null ],
         [ "Macros", "globals_defs.html", null ]
@@ -59,9 +59,10 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"common_8h.html#ac131721f9f036414ef4f2278b735edf9",
-"python_2packet__protocols_2bindings_2docstrings_2il2p__encoder__pydoc__template_8h.html#a41bba09cd1402e5c6cc824d1cfb3f841"
+"adaptive__modulator_8h.html",
+"classgr_1_1packet__protocols_1_1adaptive__modulator.html#a56a6101f7210765ad18e6f4028d1685f",
+"fx25__decoder_8h_source.html",
+"modulation__negotiation__pydoc_8h.html#ad25ae8e2b15568b79a2ff1ad66615da0"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
