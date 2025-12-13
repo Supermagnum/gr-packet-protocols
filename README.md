@@ -2,6 +2,8 @@
 
 **IMPORTANT NOTICE**: This is AI-generated code. The developer has a neurological condition that makes it impossible to use and learn traditional programming. The developer has put in a significant effort. This code might not work properly. Use at your own risk.
 
+This code has not been reviewed by professional coders, it is a large task. If there are tests available in the codebase, please review those and their code.
+
 ---
 
 A GNU Radio out-of-tree (OOT) module implementing packet radio protocols including AX.25, FX.25, and IL2P.
