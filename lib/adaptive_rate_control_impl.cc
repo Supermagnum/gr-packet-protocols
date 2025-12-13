@@ -73,15 +73,19 @@ void adaptive_rate_control_impl::initialize_thresholds() {
   d_mode_thresholds[modulation_mode_t::MODE_8PSK] = {14.0f, 26.0f, 0.001f, 0.75f};
   d_mode_data_rates[modulation_mode_t::MODE_8PSK] = 3600;
 
-  // 16-QAM - High rate, needs good SNR
+  // 16-QAM @ 2,400 baud (2,400 × 4 = 9,600 bps)
   d_mode_thresholds[modulation_mode_t::MODE_QAM16] = {16.0f, 28.0f, 0.0005f, 0.8f};
-  d_mode_data_rates[modulation_mode_t::MODE_QAM16] = 4800;
+  d_mode_data_rates[modulation_mode_t::MODE_QAM16] = 9600;
 
-  // 64-QAM - High rate, needs excellent SNR (12,500 baud × 6 bits/symbol = 75,000 bps)
-  d_mode_thresholds[modulation_mode_t::MODE_QAM64] = {22.0f, 35.0f, 0.0001f, 0.9f};
-  d_mode_data_rates[modulation_mode_t::MODE_QAM64] = 75000;
+  // 64-QAM @ 6,250 baud (6,250 × 6 = 37,500 bps)
+  d_mode_thresholds[modulation_mode_t::MODE_QAM64_6250] = {20.0f, 32.0f, 0.0001f, 0.85f};
+  d_mode_data_rates[modulation_mode_t::MODE_QAM64_6250] = 37500;
 
-  // 256-QAM - Highest rate, needs excellent SNR (12,500 baud × 8 bits/symbol = 100,000 bps)
+  // 64-QAM @ 12,500 baud (12,500 × 6 = 75,000 bps)
+  d_mode_thresholds[modulation_mode_t::MODE_QAM64_12500] = {22.0f, 35.0f, 0.0001f, 0.9f};
+  d_mode_data_rates[modulation_mode_t::MODE_QAM64_12500] = 75000;
+
+  // 256-QAM @ 12,500 baud (12,500 × 8 = 100,000 bps)
   d_mode_thresholds[modulation_mode_t::MODE_QAM256] = {28.0f, 40.0f, 0.00005f, 0.95f};
   d_mode_data_rates[modulation_mode_t::MODE_QAM256] = 100000;
 }
@@ -158,11 +162,12 @@ modulation_mode_t adaptive_rate_control_impl::recommend_mode(float snr_db,
 
   // Check modes in order from highest to lowest rate
   std::vector<modulation_mode_t> modes = {
-      modulation_mode_t::MODE_QAM256, modulation_mode_t::MODE_QAM64,
-      modulation_mode_t::MODE_QAM16, modulation_mode_t::MODE_16FSK,
-      modulation_mode_t::MODE_8PSK,  modulation_mode_t::MODE_8FSK,
-      modulation_mode_t::MODE_QPSK,  modulation_mode_t::MODE_4FSK,
-      modulation_mode_t::MODE_BPSK,  modulation_mode_t::MODE_2FSK};
+      modulation_mode_t::MODE_QAM256, modulation_mode_t::MODE_QAM64_12500,
+      modulation_mode_t::MODE_QAM64_6250, modulation_mode_t::MODE_QAM16,
+      modulation_mode_t::MODE_16FSK, modulation_mode_t::MODE_8PSK,
+      modulation_mode_t::MODE_8FSK,  modulation_mode_t::MODE_QPSK,
+      modulation_mode_t::MODE_4FSK,  modulation_mode_t::MODE_BPSK,
+      modulation_mode_t::MODE_2FSK};
 
   for (auto mode : modes) {
     auto thresholds = get_thresholds(mode);

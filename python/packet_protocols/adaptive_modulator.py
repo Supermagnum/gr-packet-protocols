@@ -172,17 +172,27 @@ class adaptive_modulator(gr.hier_block2):
         self.d_mode_to_index[packet_protocols.modulation_mode_t.MODE_QAM16] = self.d_index
         self.d_index += 1
 
-        # 64-QAM (12,500 baud)
-        mod_qam64 = digital.qam.qam_mod(
+        # 64-QAM @ 6,250 baud (37,500 bps)
+        mod_qam64_6250 = digital.qam.qam_mod(
             constellation_points=64,
             mod_code=digital.GRAY_CODE,
             differential=False
         )
-        self.d_mod_blocks[packet_protocols.modulation_mode_t.MODE_QAM64] = mod_qam64
-        self.d_mode_to_index[packet_protocols.modulation_mode_t.MODE_QAM64] = self.d_index
+        self.d_mod_blocks[packet_protocols.modulation_mode_t.MODE_QAM64_6250] = mod_qam64_6250
+        self.d_mode_to_index[packet_protocols.modulation_mode_t.MODE_QAM64_6250] = self.d_index
         self.d_index += 1
 
-        # 256-QAM (12,500 baud)
+        # 64-QAM @ 12,500 baud (75,000 bps)
+        mod_qam64_12500 = digital.qam.qam_mod(
+            constellation_points=64,
+            mod_code=digital.GRAY_CODE,
+            differential=False
+        )
+        self.d_mod_blocks[packet_protocols.modulation_mode_t.MODE_QAM64_12500] = mod_qam64_12500
+        self.d_mode_to_index[packet_protocols.modulation_mode_t.MODE_QAM64_12500] = self.d_index
+        self.d_index += 1
+
+        # 256-QAM @ 12,500 baud (100,000 bps)
         mod_qam256 = digital.qam.qam_mod(
             constellation_points=256,
             mod_code=digital.GRAY_CODE,

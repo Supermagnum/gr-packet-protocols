@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(adaptive_rate_control.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(97080dfe03434c59884de81391e78e2a)                     */
+/* BINDTOOL_HEADER_FILE_HASH(ae1c5f34bd8370edf9abfc5fb4d0a585)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -43,8 +43,9 @@ void bind_adaptive_rate_control(py::module& m)
         .value("MODE_QPSK", ::gr::packet_protocols::modulation_mode_t::MODE_QPSK)   // 5
         .value("MODE_8PSK", ::gr::packet_protocols::modulation_mode_t::MODE_8PSK)   // 6
         .value("MODE_QAM16", ::gr::packet_protocols::modulation_mode_t::MODE_QAM16) // 7
-        .value("MODE_QAM64", ::gr::packet_protocols::modulation_mode_t::MODE_QAM64) // 8
-        .value("MODE_QAM256", ::gr::packet_protocols::modulation_mode_t::MODE_QAM256) // 9
+        .value("MODE_QAM64_6250", ::gr::packet_protocols::modulation_mode_t::MODE_QAM64_6250) // 8
+        .value("MODE_QAM64_12500", ::gr::packet_protocols::modulation_mode_t::MODE_QAM64_12500) // 9
+        .value("MODE_QAM256", ::gr::packet_protocols::modulation_mode_t::MODE_QAM256) // 10
         .export_values();
 
     py::implicitly_convertible<int, ::gr::packet_protocols::modulation_mode_t>();
