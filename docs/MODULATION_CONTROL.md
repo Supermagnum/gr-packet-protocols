@@ -13,7 +13,7 @@ from gnuradio import packet_protocols
 
 # Create adaptive rate controller
 rate_control = packet_protocols.adaptive_rate_control(
-    initial_mode=packet_protocols.modulation_mode_t.MODE_4FSK,
+    initial_mode=packet_protocols.modulation_mode_t.MODE_2FSK,  # Default: Bell 202 / AX.25
     enable_adaptation=True
 )
 
@@ -85,7 +85,7 @@ class adaptive_modulation_flowgraph(gr.top_block):
         
         # Adaptive rate control
         rate_control = packet_protocols.adaptive_rate_control(
-            initial_mode=packet_protocols.modulation_mode_t.MODE_4FSK
+            initial_mode=packet_protocols.modulation_mode_t.MODE_2FSK  # Default: Bell 202 / AX.25
         )
         
         # Create multiple modulation blocks
@@ -279,7 +279,7 @@ class adaptive_packet_tx(gr.top_block):
         
         # Adaptive rate control
         rate_control = packet_protocols.adaptive_rate_control(
-            initial_mode=packet_protocols.modulation_mode_t.MODE_4FSK
+            initial_mode=packet_protocols.modulation_mode_t.MODE_2FSK  # Default: Bell 202 / AX.25
         )
         
         # Create modulation blocks for each mode

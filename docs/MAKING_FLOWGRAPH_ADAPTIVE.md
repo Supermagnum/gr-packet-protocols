@@ -55,7 +55,7 @@ class adaptive_flowgraph(gr.top_block):
         
         # NEW: Add Adaptive Modulator (includes rate control internally)
         self.adaptive_mod = packet_protocols.adaptive_modulator(
-            initial_mode=packet_protocols.modulation_mode_t.MODE_4FSK,
+            initial_mode=packet_protocols.modulation_mode_t.MODE_2FSK,  # Default: Bell 202 / AX.25
             samples_per_symbol=2,
             enable_adaptation=True,
             hysteresis_db=2.0
@@ -157,7 +157,7 @@ class adaptive_flowgraph_manual(gr.top_block):
         
         # NEW: Adaptive Rate Control
         self.rate_control = packet_protocols.adaptive_rate_control(
-            initial_mode=packet_protocols.modulation_mode_t.MODE_4FSK,
+            initial_mode=packet_protocols.modulation_mode_t.MODE_2FSK,  # Default: Bell 202 / AX.25
             enable_adaptation=True,
             hysteresis_db=2.0
         )

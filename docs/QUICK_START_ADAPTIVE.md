@@ -18,7 +18,7 @@ class my_flowgraph(gr.top_block):
         encoder = packet_protocols.ax25_encoder('N0CALL', '0', 'N1CALL', '0')
         quality_monitor = packet_protocols.link_quality_monitor()
         rate_control = packet_protocols.adaptive_rate_control(
-            initial_mode=packet_protocols.modulation_mode_t.MODE_4FSK
+            initial_mode=packet_protocols.modulation_mode_t.MODE_2FSK  # Default: Bell 202 / AX.25
         )
         
         # 2. Create modulators

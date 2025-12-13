@@ -30,7 +30,7 @@ namespace packet_protocols {
 
 // Modulation modes
 enum class modulation_mode_t {
-  MODE_2FSK = 0,   // Binary FSK
+  MODE_2FSK = 0,   // Binary FSK (Bell 202 / AX.25, 1200 baud)
   MODE_4FSK = 1,   // 4-level FSK
   MODE_8FSK = 2,   // 8-level FSK
   MODE_16FSK = 3,  // 16-level FSK
@@ -38,7 +38,8 @@ enum class modulation_mode_t {
   MODE_QPSK = 5,   // Quadrature PSK
   MODE_8PSK = 6,   // 8-PSK
   MODE_QAM16 = 7,  // 16-QAM
-  MODE_QAM64 = 8   // 64-QAM
+  MODE_QAM64 = 8,  // 64-QAM (12,500 baud)
+  MODE_QAM256 = 9  // 256-QAM (12,500 baud)
 };
 
 // Rate adaptation thresholds
@@ -66,7 +67,7 @@ class PACKET_PROTOCOLS_API adaptive_rate_control : virtual public gr::sync_block
    * \param enable_adaptation Enable automatic rate adaptation
    * \param hysteresis_db Hysteresis in dB to prevent rapid switching
    */
-  static sptr make(modulation_mode_t initial_mode = modulation_mode_t::MODE_4FSK,
+  static sptr make(modulation_mode_t initial_mode = modulation_mode_t::MODE_2FSK,
                    bool enable_adaptation = true, float hysteresis_db = 2.0);
 
   /*!

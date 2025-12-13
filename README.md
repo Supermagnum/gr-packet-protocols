@@ -488,7 +488,10 @@ if not negotiator.is_negotiating():
 - **QPSK**: Quadrature PSK (2400 bps)
 - **8PSK**: 8-PSK (3600 bps)
 - **16-QAM**: 16-QAM (4800 bps)
-- **64-QAM**: 64-QAM (9600 bps, highest rate)
+- **64-QAM**: 64-QAM (12,500 baud)
+- **256-QAM**: 256-QAM (12,500 baud, highest rate)
+
+**Default Mode**: 2FSK (Bell 202 / AX.25) at 1200 bps - most common for packet radio
 
 ### Integration with GNU Radio Blocks
 

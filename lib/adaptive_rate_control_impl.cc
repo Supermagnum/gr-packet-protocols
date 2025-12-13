@@ -77,9 +77,13 @@ void adaptive_rate_control_impl::initialize_thresholds() {
   d_mode_thresholds[modulation_mode_t::MODE_QAM16] = {16.0f, 28.0f, 0.0005f, 0.8f};
   d_mode_data_rates[modulation_mode_t::MODE_QAM16] = 4800;
 
-  // 64-QAM - Highest rate, needs excellent SNR
+  // 64-QAM - High rate, needs excellent SNR (12,500 baud)
   d_mode_thresholds[modulation_mode_t::MODE_QAM64] = {22.0f, 35.0f, 0.0001f, 0.9f};
-  d_mode_data_rates[modulation_mode_t::MODE_QAM64] = 9600;
+  d_mode_data_rates[modulation_mode_t::MODE_QAM64] = 12500;
+
+  // 256-QAM - Highest rate, needs excellent SNR (12,500 baud)
+  d_mode_thresholds[modulation_mode_t::MODE_QAM256] = {28.0f, 40.0f, 0.00005f, 0.95f};
+  d_mode_data_rates[modulation_mode_t::MODE_QAM256] = 12500;
 }
 
 int adaptive_rate_control_impl::work(int noutput_items,
@@ -154,11 +158,11 @@ modulation_mode_t adaptive_rate_control_impl::recommend_mode(float snr_db,
 
   // Check modes in order from highest to lowest rate
   std::vector<modulation_mode_t> modes = {
-      modulation_mode_t::MODE_QAM64, modulation_mode_t::MODE_QAM16,
-      modulation_mode_t::MODE_16FSK, modulation_mode_t::MODE_8PSK,
-      modulation_mode_t::MODE_8FSK,  modulation_mode_t::MODE_QPSK,
-      modulation_mode_t::MODE_4FSK,  modulation_mode_t::MODE_BPSK,
-      modulation_mode_t::MODE_2FSK};
+      modulation_mode_t::MODE_QAM256, modulation_mode_t::MODE_QAM64,
+      modulation_mode_t::MODE_QAM16, modulation_mode_t::MODE_16FSK,
+      modulation_mode_t::MODE_8PSK,  modulation_mode_t::MODE_8FSK,
+      modulation_mode_t::MODE_QPSK,  modulation_mode_t::MODE_4FSK,
+      modulation_mode_t::MODE_BPSK,  modulation_mode_t::MODE_2FSK};
 
   for (auto mode : modes) {
     auto thresholds = get_thresholds(mode);

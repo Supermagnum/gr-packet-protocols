@@ -7,9 +7,9 @@ parameters:
 -   id: initial_mode
     label: Initial Modulation Mode
     dtype: enum
-    default: 'MODE_4FSK'
-    options: ['MODE_2FSK', 'MODE_4FSK', 'MODE_8FSK', 'MODE_16FSK', 'MODE_BPSK', 'MODE_QPSK', 'MODE_8PSK', 'MODE_QAM16', 'MODE_QAM64']
-    option_labels: ['2FSK', '4FSK', '8FSK', '16FSK', 'BPSK', 'QPSK', '8PSK', '16-QAM', '64-QAM']
+    default: 'MODE_2FSK'
+    options: ['MODE_2FSK', 'MODE_4FSK', 'MODE_8FSK', 'MODE_16FSK', 'MODE_BPSK', 'MODE_QPSK', 'MODE_8PSK', 'MODE_QAM16', 'MODE_QAM64', 'MODE_QAM256']
+    option_labels: ['2FSK (Bell 202/AX.25)', '4FSK', '8FSK', '16FSK', 'BPSK', 'QPSK', '8PSK', '16-QAM', '64-QAM (12.5k)', '256-QAM (12.5k)']
 -   id: enable_adaptation
     label: Enable Adaptation
     dtype: bool

@@ -75,7 +75,7 @@ from gnuradio import packet_protocols
 
 # Create adaptive rate controller
 rate_control = packet_protocols.adaptive_rate_control(
-    initial_mode=packet_protocols.modulation_mode_t.MODE_4FSK,
+    initial_mode=packet_protocols.modulation_mode_t.MODE_2FSK,  # Default: Bell 202 / AX.25
     enable_adaptation=True,
     hysteresis_db=2.0  # Prevent rapid switching
 )
@@ -99,7 +99,7 @@ recommended = rate_control.recommend_mode(snr_db=20.0, ber=0.0001)
 
 Supported modulation modes:
 
-- `MODE_2FSK`: Binary FSK (most robust, 1200 bps)
+- `MODE_2FSK`: Binary FSK / Bell 202 / AX.25 (most robust, 1200 bps) - **Default**
 - `MODE_4FSK`: 4-level FSK (2400 bps)
 - `MODE_8FSK`: 8-level FSK (3600 bps)
 - `MODE_16FSK`: 16-level FSK (4800 bps)
@@ -107,7 +107,8 @@ Supported modulation modes:
 - `MODE_QPSK`: Quadrature PSK (2400 bps)
 - `MODE_8PSK`: 8-PSK (3600 bps)
 - `MODE_QAM16`: 16-QAM (4800 bps)
-- `MODE_QAM64`: 64-QAM (9600 bps)
+- `MODE_QAM64`: 64-QAM (12,500 baud)
+- `MODE_QAM256`: 256-QAM (12,500 baud) - **Top speed**
 
 ### Using GNU Radio Modulation Blocks
 
@@ -176,9 +177,16 @@ qam16_mod = digital.qam.qam_mod(
     differential=False
 )
 
-# 64-QAM
+# 64-QAM (12,500 baud)
 qam64_mod = digital.qam.qam_mod(
     constellation_points=64,
+    mod_code=digital.GRAY_CODE,
+    differential=False
+)
+
+# 256-QAM (12,500 baud, highest rate)
+qam256_mod = digital.qam.qam_mod(
+    constellation_points=256,
     mod_code=digital.GRAY_CODE,
     differential=False
 )
@@ -202,7 +210,7 @@ class adaptive_packet_tx(gr.top_block):
         
         # Adaptive rate control
         rate_control = packet_protocols.adaptive_rate_control(
-            initial_mode=packet_protocols.modulation_mode_t.MODE_4FSK
+            initial_mode=packet_protocols.modulation_mode_t.MODE_2FSK  # Default: Bell 202 / AX.25
         )
         
         # SNR estimator (from GNU Radio)
@@ -274,7 +282,7 @@ negotiator.set_kiss_frame_sender(send_kiss_frame)
 # Initiate negotiation
 negotiator.initiate_negotiation(
     remote_station_id="N1CALL",
-    proposed_mode=packet_protocols.modulation_mode_t.MODE_4FSK
+    proposed_mode=packet_protocols.modulation_mode_t.MODE_2FSK  # Default: Bell 202 / AX.25
 )
 
 # Check negotiated mode
@@ -289,7 +297,7 @@ Enable automatic negotiation that triggers when the adaptive rate control change
 ```python
 # Create adaptive rate control
 rate_control = packet_protocols.adaptive_rate_control(
-    initial_mode=packet_protocols.modulation_mode_t.MODE_4FSK,
+    initial_mode=packet_protocols.modulation_mode_t.MODE_2FSK,  # Default: Bell 202 / AX.25
     enable_adaptation=True
 )
 
@@ -383,17 +391,18 @@ The KISS TNC automatically forwards received negotiation frames (commands 0x10-0
 
 Each modulation mode has default thresholds:
 
-| Mode | Min SNR (dB) | Max SNR (dB) | Max BER | Min Quality |
-|------|--------------|--------------|---------|-------------|
-| 2FSK | 0.0 | 15.0 | 0.01 | 0.3 |
-| 4FSK | 8.0 | 20.0 | 0.005 | 0.5 |
-| 8FSK | 12.0 | 25.0 | 0.001 | 0.7 |
-| 16FSK | 18.0 | 30.0 | 0.0005 | 0.8 |
-| BPSK | 6.0 | 18.0 | 0.01 | 0.4 |
-| QPSK | 10.0 | 22.0 | 0.005 | 0.6 |
-| 8PSK | 14.0 | 26.0 | 0.001 | 0.75 |
-| 16-QAM | 16.0 | 28.0 | 0.0005 | 0.8 |
-| 64-QAM | 22.0 | 35.0 | 0.0001 | 0.9 |
+| Mode | Min SNR (dB) | Max SNR (dB) | Max BER | Min Quality | Data Rate |
+|------|--------------|--------------|---------|-------------|-----------|
+| 2FSK (Bell 202/AX.25) | 0.0 | 15.0 | 0.01 | 0.3 | 1200 bps |
+| 4FSK | 8.0 | 20.0 | 0.005 | 0.5 | 2400 bps |
+| 8FSK | 12.0 | 25.0 | 0.001 | 0.7 | 3600 bps |
+| 16FSK | 18.0 | 30.0 | 0.0005 | 0.8 | 4800 bps |
+| BPSK | 6.0 | 18.0 | 0.01 | 0.4 | 1200 bps |
+| QPSK | 10.0 | 22.0 | 0.005 | 0.6 | 2400 bps |
+| 8PSK | 14.0 | 26.0 | 0.001 | 0.75 | 3600 bps |
+| 16-QAM | 16.0 | 28.0 | 0.0005 | 0.8 | 4800 bps |
+| 64-QAM | 22.0 | 35.0 | 0.0001 | 0.9 | 12,500 baud |
+| 256-QAM | 28.0 | 40.0 | 0.00005 | 0.95 | 12,500 baud |
 
 ### Hysteresis
 

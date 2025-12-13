@@ -35,7 +35,7 @@ quality_monitor = packet_protocols.link_quality_monitor(
 ```python
 # Create adaptive rate controller
 rate_control = packet_protocols.adaptive_rate_control(
-    initial_mode=packet_protocols.modulation_mode_t.MODE_4FSK,
+    initial_mode=packet_protocols.modulation_mode_t.MODE_2FSK,  # Default: Bell 202 / AX.25
     enable_adaptation=True,   # Enable automatic mode switching
     hysteresis_db=2.0        # Prevent rapid switching (2 dB margin)
 )
@@ -116,8 +116,8 @@ mod_switch = modulation_switch(
 
 ```python
 # Create selector to switch between modulators
-# Start with initial mode (e.g., 4FSK = index 1)
-initial_index = mode_to_index[packet_protocols.modulation_mode_t.MODE_4FSK]
+# Start with initial mode (e.g., 2FSK = index 0, default: Bell 202 / AX.25)
+initial_index = mode_to_index[packet_protocols.modulation_mode_t.MODE_2FSK]
 selector = blocks.selector(gr.sizeof_gr_complex, initial_index)
 ```
 
@@ -397,7 +397,7 @@ negotiator.set_kiss_frame_sender(send_kiss_callback)
 negotiator.set_auto_negotiation_enabled(True, rate_control)
 
 # Manually initiate negotiation if needed
-negotiator.initiate_negotiation("N1CALL", packet_protocols.modulation_mode_t.MODE_4FSK)
+negotiator.initiate_negotiation("N1CALL", packet_protocols.modulation_mode_t.MODE_2FSK)  # Default: Bell 202 / AX.25
 ```
 
 ### Quality Feedback

@@ -44,6 +44,7 @@ void bind_adaptive_rate_control(py::module& m)
         .value("MODE_8PSK", ::gr::packet_protocols::modulation_mode_t::MODE_8PSK)   // 6
         .value("MODE_QAM16", ::gr::packet_protocols::modulation_mode_t::MODE_QAM16) // 7
         .value("MODE_QAM64", ::gr::packet_protocols::modulation_mode_t::MODE_QAM64) // 8
+        .value("MODE_QAM256", ::gr::packet_protocols::modulation_mode_t::MODE_QAM256) // 9
         .export_values();
 
     py::implicitly_convertible<int, ::gr::packet_protocols::modulation_mode_t>();
@@ -68,7 +69,7 @@ void bind_adaptive_rate_control(py::module& m)
 
         .def(py::init(&adaptive_rate_control::make),
              py::arg("initial_mode") =
-                 ::gr::packet_protocols::modulation_mode_t::MODE_4FSK,
+                 ::gr::packet_protocols::modulation_mode_t::MODE_2FSK,
              py::arg("enable_adaptation") = true,
              py::arg("hysteresis_db") = 2.,
              D(adaptive_rate_control, make))

@@ -35,7 +35,7 @@ class adaptive_modulator(gr.hier_block2):
         from gnuradio import packet_protocols
 
         if initial_mode is None:
-            initial_mode = packet_protocols.modulation_mode_t.MODE_4FSK
+            initial_mode = packet_protocols.modulation_mode_t.MODE_2FSK
 
         gr.hier_block2.__init__(
             self,
@@ -172,7 +172,7 @@ class adaptive_modulator(gr.hier_block2):
         self.d_mode_to_index[packet_protocols.modulation_mode_t.MODE_QAM16] = self.d_index
         self.d_index += 1
 
-        # 64-QAM
+        # 64-QAM (12,500 baud)
         mod_qam64 = digital.qam.qam_mod(
             constellation_points=64,
             mod_code=digital.GRAY_CODE,
@@ -180,6 +180,16 @@ class adaptive_modulator(gr.hier_block2):
         )
         self.d_mod_blocks[packet_protocols.modulation_mode_t.MODE_QAM64] = mod_qam64
         self.d_mode_to_index[packet_protocols.modulation_mode_t.MODE_QAM64] = self.d_index
+        self.d_index += 1
+
+        # 256-QAM (12,500 baud)
+        mod_qam256 = digital.qam.qam_mod(
+            constellation_points=256,
+            mod_code=digital.GRAY_CODE,
+            differential=False
+        )
+        self.d_mod_blocks[packet_protocols.modulation_mode_t.MODE_QAM256] = mod_qam256
+        self.d_mode_to_index[packet_protocols.modulation_mode_t.MODE_QAM256] = self.d_index
         self.d_index += 1
 
     def _get_mode_index(self, mode):
