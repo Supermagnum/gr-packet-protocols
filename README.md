@@ -432,7 +432,7 @@ from gnuradio import packet_protocols
 
 # Create adaptive rate controller
 rate_control = packet_protocols.adaptive_rate_control(
-    initial_mode=packet_protocols.modulation_mode_t.MODE_4FSK,
+    initial_mode=packet_protocols.modulation_mode_t.MODE_2FSK,  # Default: Bell 202 for maximum compatibility
     enable_adaptation=True,
     hysteresis_db=2.0  # Prevent rapid switching
 )
@@ -470,7 +470,7 @@ negotiator = packet_protocols.modulation_negotiation(
 # Initiate negotiation with remote station
 negotiator.initiate_negotiation(
     remote_station_id="N1CALL",
-    proposed_mode=packet_protocols.modulation_mode_t.MODE_4FSK
+    proposed_mode=packet_protocols.modulation_mode_t.MODE_2FSK  # Start with Bell 202 for compatibility
 )
 
 # Check negotiated mode
@@ -492,6 +492,22 @@ if not negotiator.is_negotiating():
 - **256-QAM**: 256-QAM (12,500 baud × 8 = 100,000 bps / 100 kbps, highest rate)
 
 **Default Mode**: 2FSK (Bell 202 / AX.25) at 1200 bps - most common for packet radio
+
+#### Why Bell 202 (2FSK) is the Default
+
+The system defaults to **2FSK (Bell 202 / AX.25) at 1,200 bps** for several critical reasons:
+
+1. **Maximum Compatibility**: Bell 202 is the de facto standard for packet radio. Virtually all packet radio hardware, software, and networks support this mode, ensuring your station can communicate with the widest range of equipment.
+
+2. **Best Link Reliability**: 2FSK is the most robust modulation scheme, providing reliable communication even in poor propagation conditions, high noise environments, and during atmospheric disturbances. This ensures initial link establishment and maintains connectivity when channel conditions degrade.
+
+3. **Industry Standard**: Bell 202 is the most common packet radio mode worldwide. Using it as the default ensures your station follows established conventions and can participate in existing packet radio networks without configuration changes.
+
+4. **Graceful Degradation**: Starting at the most robust mode allows the adaptive system to establish a link first, then negotiate and adapt to higher speeds as channel conditions permit. This prevents connection failures that might occur if starting at higher, less robust modes.
+
+5. **Interoperability**: Many packet radio systems, digipeaters, and BBSs expect Bell 202 as the initial mode. Starting with 2FSK ensures compatibility with legacy systems and maximizes the chances of successful communication.
+
+The adaptive system will automatically upgrade to higher speeds (up to 100 kbps with 256-QAM) when channel conditions allow, but always begins with the most reliable mode to ensure successful link establishment.
 
 ### Integration with GNU Radio Blocks
 

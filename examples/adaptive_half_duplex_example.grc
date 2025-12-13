@@ -307,10 +307,10 @@ blocks:
   parameters:
     affinity: ''
     alias: ''
-    comment: TX Adaptive Modulator
+    comment: 'TX Adaptive Modulator - Default: MODE_2FSK (Bell 202/AX.25 at 1,200 bps) for maximum compatibility and robustness. 2FSK is the most common packet radio mode and provides the best link reliability in poor conditions.'
     enable_adaptation: 'True'
     hysteresis_db: '2.0'
-    initial_mode: MODE_4FSK
+    initial_mode: MODE_2FSK
     maxoutbuf: '0'
     minoutbuf: '0'
     samples_per_symbol: '2'
@@ -326,10 +326,10 @@ blocks:
   parameters:
     affinity: ''
     alias: ''
-    comment: Adaptive Rate Control - selects modulation mode
+    comment: 'Adaptive Rate Control - selects modulation mode. Default: MODE_2FSK (Bell 202/AX.25 at 1,200 bps) for maximum compatibility and robustness. 2FSK is the most common packet radio mode and provides the best link reliability in poor conditions.'
     enable_adaptation: 'True'
     hysteresis_db: '2.0'
-    initial_mode: MODE_4FSK
+    initial_mode: MODE_2FSK
     maxoutbuf: '0'
     minoutbuf: '0'
   states:
