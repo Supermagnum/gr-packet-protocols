@@ -164,7 +164,7 @@ Station A: [Receives response via message port]
 
 **Limitation**: Each station adapts independently, so they might not agree on a mode.
 
-### Scenario 2: With Negotiation (Planned Implementation)
+### Scenario 2: With Negotiation (Fully Implemented)
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -299,7 +299,7 @@ current_mode = rate_control.get_modulation_mode()
 
 **Result**: Station adapts locally, but remote station may use different mode.
 
-### Pattern 2: With Negotiation (Requires Implementation)
+### Pattern 2: With Negotiation (Fully Implemented)
 
 ```python
 # Station A
@@ -329,29 +329,29 @@ rate_control.set_modulation_mode(agreed_mode)
 
 1. **Quality measurement is local**: Each station measures the quality of signals it receives
 2. **Adaptation is local**: Each station independently decides what mode to use
-3. **Negotiation is inter-station**: Requires communication over the radio link
-4. **Current limitation**: Without negotiation, stations may use incompatible modes
-5. **Future enhancement**: Full negotiation implementation will ensure mode compatibility
+3. **Negotiation is inter-station**: Requires communication over the radio link (fully implemented)
+4. **With negotiation enabled**: Stations coordinate to use compatible modes
+5. **Implementation complete**: Full negotiation implementation ensures mode compatibility
 
 ## Questions Answered
 
 **Q: Is there communication between modem instances to measure channel quality?**
 
-**A**: Partially. Quality measurement itself is **local** - each station measures what it receives. However, the **negotiation protocol** (when fully implemented) will allow stations to:
+**A**: Quality measurement itself is **local** - each station measures what it receives. The **negotiation protocol** (fully implemented) allows stations to:
 - Exchange quality feedback
 - Agree on common modulation modes
 - Coordinate mode changes
 
 **Q: How does a station know what mode the remote station is using?**
 
-**A**: Currently, it doesn't! This is a limitation of the current implementation. The negotiation protocol (when implemented) will solve this by:
+**A**: With negotiation enabled, stations know each other's modes! The negotiation protocol (fully implemented) solves this by:
 - Sending mode change notifications
 - Exchanging supported mode lists
 - Confirming mode switches
 
 **Q: Can stations use different modes?**
 
-**A**: Yes, with the current implementation. Station A might transmit in 8FSK while Station B transmits in 4FSK. This works if both stations can receive and decode the other's mode. However, negotiation will ensure they use the same mode for optimal compatibility.
+**A**: Without negotiation, yes - stations can use different modes. Station A might transmit in 8FSK while Station B transmits in 4FSK. This works if both stations can receive and decode the other's mode. With negotiation enabled, they will coordinate to use the same mode for optimal compatibility.
 
 ## Implementation Details
 
