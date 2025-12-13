@@ -99,7 +99,7 @@ This document lists all available blocks in GNU Radio Companion for gr-packet-pr
 - **Output**: Byte stream (pass-through)
 - **Parameters**:
   - Initial Modulation Mode (enum, default: MODE_2FSK - Bell 202 / AX.25)
-    - Options: 2FSK (Bell 202/AX.25), 4FSK, 8FSK, 16FSK, BPSK, QPSK, 8PSK, 16-QAM, 64-QAM (12.5k), 256-QAM (12.5k)
+    - Options: 2FSK (Bell 202/AX.25), 4FSK, 8FSK, 16FSK, BPSK, QPSK, 8PSK, 16-QAM, 64-QAM (75k), 256-QAM (100k)
   - Enable Adaptation (bool, default: True)
   - Hysteresis (dB) (float, default: 2.0)
 - **Description**: Automatically adjusts modulation mode based on link quality metrics.

@@ -77,13 +77,13 @@ void adaptive_rate_control_impl::initialize_thresholds() {
   d_mode_thresholds[modulation_mode_t::MODE_QAM16] = {16.0f, 28.0f, 0.0005f, 0.8f};
   d_mode_data_rates[modulation_mode_t::MODE_QAM16] = 4800;
 
-  // 64-QAM - High rate, needs excellent SNR (12,500 baud)
+  // 64-QAM - High rate, needs excellent SNR (12,500 baud × 6 bits/symbol = 75,000 bps)
   d_mode_thresholds[modulation_mode_t::MODE_QAM64] = {22.0f, 35.0f, 0.0001f, 0.9f};
-  d_mode_data_rates[modulation_mode_t::MODE_QAM64] = 12500;
+  d_mode_data_rates[modulation_mode_t::MODE_QAM64] = 75000;
 
-  // 256-QAM - Highest rate, needs excellent SNR (12,500 baud)
+  // 256-QAM - Highest rate, needs excellent SNR (12,500 baud × 8 bits/symbol = 100,000 bps)
   d_mode_thresholds[modulation_mode_t::MODE_QAM256] = {28.0f, 40.0f, 0.00005f, 0.95f};
-  d_mode_data_rates[modulation_mode_t::MODE_QAM256] = 12500;
+  d_mode_data_rates[modulation_mode_t::MODE_QAM256] = 100000;
 }
 
 int adaptive_rate_control_impl::work(int noutput_items,

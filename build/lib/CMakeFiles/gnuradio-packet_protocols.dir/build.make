@@ -223,6 +223,20 @@ lib/CMakeFiles/gnuradio-packet_protocols.dir/modulation_negotiation_impl.cc.s: c
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gnuradio-packet_protocols.dir/modulation_negotiation_impl.cc.s"
 	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet-protocols/lib/modulation_negotiation_impl.cc -o CMakeFiles/gnuradio-packet_protocols.dir/modulation_negotiation_impl.cc.s
 
+lib/CMakeFiles/gnuradio-packet_protocols.dir/negotiation_frame.cc.o: lib/CMakeFiles/gnuradio-packet_protocols.dir/flags.make
+lib/CMakeFiles/gnuradio-packet_protocols.dir/negotiation_frame.cc.o: /home/haaken/github-projects/gr-packet-protocols/lib/negotiation_frame.cc
+lib/CMakeFiles/gnuradio-packet_protocols.dir/negotiation_frame.cc.o: lib/CMakeFiles/gnuradio-packet_protocols.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object lib/CMakeFiles/gnuradio-packet_protocols.dir/negotiation_frame.cc.o"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-packet_protocols.dir/negotiation_frame.cc.o -MF CMakeFiles/gnuradio-packet_protocols.dir/negotiation_frame.cc.o.d -o CMakeFiles/gnuradio-packet_protocols.dir/negotiation_frame.cc.o -c /home/haaken/github-projects/gr-packet-protocols/lib/negotiation_frame.cc
+
+lib/CMakeFiles/gnuradio-packet_protocols.dir/negotiation_frame.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gnuradio-packet_protocols.dir/negotiation_frame.cc.i"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haaken/github-projects/gr-packet-protocols/lib/negotiation_frame.cc > CMakeFiles/gnuradio-packet_protocols.dir/negotiation_frame.cc.i
+
+lib/CMakeFiles/gnuradio-packet_protocols.dir/negotiation_frame.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gnuradio-packet_protocols.dir/negotiation_frame.cc.s"
+	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haaken/github-projects/gr-packet-protocols/lib/negotiation_frame.cc -o CMakeFiles/gnuradio-packet_protocols.dir/negotiation_frame.cc.s
+
 # Object files for target gnuradio-packet_protocols
 gnuradio__packet_protocols_OBJECTS = \
 "CMakeFiles/gnuradio-packet_protocols.dir/ax25_protocol.c.o" \
@@ -235,7 +249,8 @@ gnuradio__packet_protocols_OBJECTS = \
 "CMakeFiles/gnuradio-packet_protocols.dir/kiss_tnc_impl.cc.o" \
 "CMakeFiles/gnuradio-packet_protocols.dir/link_quality_monitor_impl.cc.o" \
 "CMakeFiles/gnuradio-packet_protocols.dir/adaptive_rate_control_impl.cc.o" \
-"CMakeFiles/gnuradio-packet_protocols.dir/modulation_negotiation_impl.cc.o"
+"CMakeFiles/gnuradio-packet_protocols.dir/modulation_negotiation_impl.cc.o" \
+"CMakeFiles/gnuradio-packet_protocols.dir/negotiation_frame.cc.o"
 
 # External object files for target gnuradio-packet_protocols
 gnuradio__packet_protocols_EXTERNAL_OBJECTS =
@@ -251,6 +266,7 @@ lib/libgnuradio-packet_protocols.so.1.0.0.0: lib/CMakeFiles/gnuradio-packet_prot
 lib/libgnuradio-packet_protocols.so.1.0.0.0: lib/CMakeFiles/gnuradio-packet_protocols.dir/link_quality_monitor_impl.cc.o
 lib/libgnuradio-packet_protocols.so.1.0.0.0: lib/CMakeFiles/gnuradio-packet_protocols.dir/adaptive_rate_control_impl.cc.o
 lib/libgnuradio-packet_protocols.so.1.0.0.0: lib/CMakeFiles/gnuradio-packet_protocols.dir/modulation_negotiation_impl.cc.o
+lib/libgnuradio-packet_protocols.so.1.0.0.0: lib/CMakeFiles/gnuradio-packet_protocols.dir/negotiation_frame.cc.o
 lib/libgnuradio-packet_protocols.so.1.0.0.0: lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make
 lib/libgnuradio-packet_protocols.so.1.0.0.0: /usr/lib/x86_64-linux-gnu/libgnuradio-runtime.so.3.10.12.0
 lib/libgnuradio-packet_protocols.so.1.0.0.0: /usr/lib/x86_64-linux-gnu/libgnuradio-pmt.so.3.10.12.0
@@ -262,7 +278,7 @@ lib/libgnuradio-packet_protocols.so.1.0.0.0: /usr/lib/x86_64-linux-gnu/libfmt.so
 lib/libgnuradio-packet_protocols.so.1.0.0.0: /usr/lib/x86_64-linux-gnu/libgmpxx.so
 lib/libgnuradio-packet_protocols.so.1.0.0.0: /usr/lib/x86_64-linux-gnu/libgmp.so
 lib/libgnuradio-packet_protocols.so.1.0.0.0: lib/CMakeFiles/gnuradio-packet_protocols.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX shared library libgnuradio-packet_protocols.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/haaken/github-projects/gr-packet-protocols/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX shared library libgnuradio-packet_protocols.so"
 	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gnuradio-packet_protocols.dir/link.txt --verbose=$(VERBOSE)
 	cd /home/haaken/github-projects/gr-packet-protocols/build/lib && $(CMAKE_COMMAND) -E cmake_symlink_library libgnuradio-packet_protocols.so.1.0.0.0 libgnuradio-packet_protocols.so.1.0.0 libgnuradio-packet_protocols.so
 

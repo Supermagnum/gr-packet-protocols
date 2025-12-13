@@ -38,8 +38,8 @@ enum class modulation_mode_t {
   MODE_QPSK = 5,   // Quadrature PSK
   MODE_8PSK = 6,   // 8-PSK
   MODE_QAM16 = 7,  // 16-QAM
-  MODE_QAM64 = 8,  // 64-QAM (12,500 baud)
-  MODE_QAM256 = 9  // 256-QAM (12,500 baud)
+  MODE_QAM64 = 8,  // 64-QAM (12,500 baud × 6 = 75,000 bps)
+  MODE_QAM256 = 9  // 256-QAM (12,500 baud × 8 = 100,000 bps)
 };
 
 // Rate adaptation thresholds

@@ -254,7 +254,7 @@ Station A: [Receives response via message port]
    - Data rate lookup for each modulation mode
    - Support for 10 modulation modes (2FSK through 256-QAM)
    - Default mode: 2FSK (Bell 202 / AX.25) at 1200 bps
-   - Top speeds: 64-QAM and 256-QAM at 12,500 baud
+   - Top speeds: 64-QAM at 75,000 bps (12.5k baud) and 256-QAM at 100,000 bps (12.5k baud)
    - Threshold-based mode selection algorithm
 
 ### Fully Implemented

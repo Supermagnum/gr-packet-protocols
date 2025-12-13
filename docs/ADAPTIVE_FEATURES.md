@@ -107,8 +107,8 @@ Supported modulation modes:
 - `MODE_QPSK`: Quadrature PSK (2400 bps)
 - `MODE_8PSK`: 8-PSK (3600 bps)
 - `MODE_QAM16`: 16-QAM (4800 bps)
-- `MODE_QAM64`: 64-QAM (12,500 baud)
-- `MODE_QAM256`: 256-QAM (12,500 baud) - **Top speed**
+- `MODE_QAM64`: 64-QAM (12,500 baud × 6 = 75,000 bps / 75 kbps)
+- `MODE_QAM256`: 256-QAM (12,500 baud × 8 = 100,000 bps / 100 kbps) - **Top speed**
 
 ### Using GNU Radio Modulation Blocks
 
@@ -177,14 +177,14 @@ qam16_mod = digital.qam.qam_mod(
     differential=False
 )
 
-# 64-QAM (12,500 baud)
+# 64-QAM (12,500 baud × 6 = 75,000 bps)
 qam64_mod = digital.qam.qam_mod(
     constellation_points=64,
     mod_code=digital.GRAY_CODE,
     differential=False
 )
 
-# 256-QAM (12,500 baud, highest rate)
+# 256-QAM (12,500 baud × 8 = 100,000 bps, highest rate)
 qam256_mod = digital.qam.qam_mod(
     constellation_points=256,
     mod_code=digital.GRAY_CODE,
@@ -401,8 +401,8 @@ Each modulation mode has default thresholds:
 | QPSK | 10.0 | 22.0 | 0.005 | 0.6 | 2400 bps |
 | 8PSK | 14.0 | 26.0 | 0.001 | 0.75 | 3600 bps |
 | 16-QAM | 16.0 | 28.0 | 0.0005 | 0.8 | 4800 bps |
-| 64-QAM | 22.0 | 35.0 | 0.0001 | 0.9 | 12,500 baud |
-| 256-QAM | 28.0 | 40.0 | 0.00005 | 0.95 | 12,500 baud |
+| 64-QAM | 22.0 | 35.0 | 0.0001 | 0.9 | 75,000 bps (12.5k baud) |
+| 256-QAM | 28.0 | 40.0 | 0.00005 | 0.95 | 100,000 bps (12.5k baud) |
 
 ### Hysteresis
 

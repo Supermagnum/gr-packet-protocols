@@ -56,6 +56,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     "/home/haaken/github-projects/gr-packet-protocols/grc/packet_protocols_modulation_negotiation.block.yml"
     "/home/haaken/github-projects/gr-packet-protocols/grc/packet_protocols_adaptive_modulator.block.yml"
     "/home/haaken/github-projects/gr-packet-protocols/grc/packet_protocols_modulation_switch.block.yml"
+    "/home/haaken/github-projects/gr-packet-protocols/grc/packet_protocols_pluto_ptt_control.block.yml"
     )
 endif()
 

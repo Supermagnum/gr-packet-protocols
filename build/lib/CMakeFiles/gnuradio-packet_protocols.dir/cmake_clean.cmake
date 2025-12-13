@@ -22,6 +22,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/gnuradio-packet_protocols.dir/link_quality_monitor_impl.cc.o.d"
   "CMakeFiles/gnuradio-packet_protocols.dir/modulation_negotiation_impl.cc.o"
   "CMakeFiles/gnuradio-packet_protocols.dir/modulation_negotiation_impl.cc.o.d"
+  "CMakeFiles/gnuradio-packet_protocols.dir/negotiation_frame.cc.o"
+  "CMakeFiles/gnuradio-packet_protocols.dir/negotiation_frame.cc.o.d"
   "libgnuradio-packet_protocols.pdb"
   "libgnuradio-packet_protocols.so"
   "libgnuradio-packet_protocols.so.1.0.0"

@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(adaptive_rate_control.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(ff6ac0a900ecca50fd121ce40e7c551b)                     */
+/* BINDTOOL_HEADER_FILE_HASH(97080dfe03434c59884de81391e78e2a)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>

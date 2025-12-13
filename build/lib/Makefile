@@ -449,6 +449,30 @@ modulation_negotiation_impl.cc.s:
 	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/modulation_negotiation_impl.cc.s
 .PHONY : modulation_negotiation_impl.cc.s
 
+negotiation_frame.o: negotiation_frame.cc.o
+.PHONY : negotiation_frame.o
+
+# target to build an object file
+negotiation_frame.cc.o:
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/negotiation_frame.cc.o
+.PHONY : negotiation_frame.cc.o
+
+negotiation_frame.i: negotiation_frame.cc.i
+.PHONY : negotiation_frame.i
+
+# target to preprocess a source file
+negotiation_frame.cc.i:
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/negotiation_frame.cc.i
+.PHONY : negotiation_frame.cc.i
+
+negotiation_frame.s: negotiation_frame.cc.s
+.PHONY : negotiation_frame.s
+
+# target to generate assembly for a file
+negotiation_frame.cc.s:
+	cd /home/haaken/github-projects/gr-packet-protocols/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-packet_protocols.dir/build.make lib/CMakeFiles/gnuradio-packet_protocols.dir/negotiation_frame.cc.s
+.PHONY : negotiation_frame.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -496,6 +520,9 @@ help:
 	@echo "... modulation_negotiation_impl.o"
 	@echo "... modulation_negotiation_impl.i"
 	@echo "... modulation_negotiation_impl.s"
+	@echo "... negotiation_frame.o"
+	@echo "... negotiation_frame.i"
+	@echo "... negotiation_frame.s"
 .PHONY : help
 
 
