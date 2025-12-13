@@ -1,0 +1,61 @@
+id: packet_protocols_pluto_ptt_control
+label: PlutoSDR PTT Control
+category: '[Packet Protocols]'
+flags: [python]
+
+parameters:
+-   id: pluto_uri
+    label: PlutoSDR URI
+    dtype: string
+    default: 'ip:pluto.local'
+    comment: 'PlutoSDR connection URI (e.g., "ip:pluto.local" or "usb:1.2.5")'
+-   id: gpio_pin
+    label: GPIO Pin
+    dtype: int
+    default: '0'
+    range: [0, 7]
+    comment: GPIO pin number on PlutoSDR (0-7)
+-   id: tx_delay_ms
+    label: TX Delay (ms)
+    dtype: int
+    default: '10'
+    range: [0, 1000]
+    comment: Delay after keying PTT before transmission starts
+-   id: tx_tail_ms
+    label: TX Tail (ms)
+    dtype: int
+    default: '10'
+    range: [0, 1000]
+    comment: Delay after transmission ends before unkeying PTT
+-   id: invert
+    label: Invert GPIO Logic
+    dtype: bool
+    default: 'False'
+    comment: 'Invert GPIO logic (True = active low, False = active high)'
+
+message_ports:
+-   id: ptt_control
+    label: PTT Control
+    direction: input
+    optional: 'False'
+    comment: 'Boolean message: True = key PTT (TX), False = unkey PTT (RX)'
+-   id: tx_trigger
+    label: TX Trigger
+    direction: input
+    optional: 'True'
+    comment: 'Trigger message for timed TX (key, transmit, unkey)'
+
+templates:
+    imports: |-
+        from gnuradio import packet_protocols
+    make: |-
+        packet_protocols.pluto_ptt_control(
+            '${pluto_uri}',
+            ${gpio_pin},
+            ${tx_delay_ms},
+            ${tx_tail_ms},
+            ${invert}
+        )
+
+file_format: 1
+

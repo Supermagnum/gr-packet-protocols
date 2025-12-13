@@ -19,4 +19,5 @@ install(FILES
     packet_protocols_modulation_negotiation.block.yml
     packet_protocols_adaptive_modulator.block.yml
     packet_protocols_modulation_switch.block.yml
+    packet_protocols_pluto_ptt_control.block.yml
     DESTINATION share/gnuradio/grc/blocks)

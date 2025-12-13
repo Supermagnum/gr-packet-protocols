@@ -99,6 +99,267 @@ class sdr_packet_tx(gr.top_block):
         self.connect(encoder, sdr)
 ```
 
+### gr-iio (PlutoSDR)
+
+PlutoSDR uses the IIO (Industrial I/O) subsystem for GPIO control. The PlutoSDR has several GPIO pins accessible through the IIO interface.
+
+#### Prerequisites
+
+The PlutoSDR PTT control block requires the `pylibiio` Python package:
+
+```bash
+pip install pylibiio
+```
+
+On some systems (e.g., newer Debian/Ubuntu), you may need to use the `--break-system-packages` flag:
+
+```bash
+pip install --break-system-packages pylibiio
+```
+
+**Note**: The `pylibiio` package provides Python bindings for the libiio library, which is required to control GPIO pins on PlutoSDR devices.
+
+#### Basic Usage
+
+```python
+from gnuradio import iio
+import iio as libiio
+
+# Create PlutoSDR sink
+pluto_sink = iio.pluto_sink(
+    uri="ip:pluto.local",  # or "usb:1.2.5" for USB connection
+    buffer_size=32768,
+    cyclic=False
+)
+
+# Set frequency and sample rate
+pluto_sink.set_params(
+    144390000,  # Center frequency (Hz)
+    9600000,    # Sample rate (Hz)
+    20000000,   # Bandwidth (Hz)
+    0,          # RF port select (0 = A, 1 = B)
+    -89.75,     # Attenuation (dB)
+    True        # Filter auto
+)
+
+# GPIO control via IIO context
+ctx = libiio.Context("ip:pluto.local")
+gpio = ctx.find_device("gpio")
+gpio_attr = gpio.find_channel("out", False)  # False = output channel
+gpio_attr.attrs[0].value = "1"  # Set GPIO pin (PTT on)
+```
+
+#### PlutoSDR GPIO Pins
+
+PlutoSDR has GPIO pins accessible through the IIO subsystem:
+- **GPIO 0-7**: Available on the expansion connector
+- **GPIO control**: Via IIO device "gpio"
+
+#### Complete Example with PTT Control
+
+```python
+from gnuradio import gr, blocks, packet_protocols, iio
+import iio as libiio
+import threading
+import time
+
+class pluto_ptt_control:
+    def __init__(self, pluto_uri="ip:pluto.local", gpio_pin=0):
+        self.ctx = libiio.Context(pluto_uri)
+        self.gpio = self.ctx.find_device("gpio")
+        self.gpio_attr = self.gpio.find_channel("out", False)
+        self.gpio_pin = gpio_pin
+        self.ptt_state = False
+        
+    def set_ptt(self, state):
+        """Set PTT state (True = TX, False = RX)"""
+        if state != self.ptt_state:
+            # GPIO value is a bitmask
+            current = int(self.gpio_attr.attrs[0].value) if self.gpio_attr.attrs[0].value else 0
+            if state:
+                # Set bit for PTT (TX mode)
+                new_value = current | (1 << self.gpio_pin)
+            else:
+                # Clear bit for PTT (RX mode)
+                new_value = current & ~(1 << self.gpio_pin)
+            
+            self.gpio_attr.attrs[0].value = str(new_value)
+            self.ptt_state = state
+            
+    def cleanup(self):
+        self.set_ptt(False)
+        self.ctx = None
+
+class pluto_packet_tx(gr.top_block):
+    def __init__(self):
+        gr.top_block.__init__(self)
+        
+        # Packet encoder
+        encoder = packet_protocols.ax25_encoder(
+            dest_callsign="N0CALL",
+            dest_ssid="0",
+            src_callsign="N1CALL",
+            src_ssid="0"
+        )
+        
+        # PlutoSDR sink
+        pluto_sink = iio.pluto_sink(
+            uri="ip:pluto.local",
+            buffer_size=32768,
+            cyclic=False
+        )
+        pluto_sink.set_params(
+            144390000,  # 2m band
+            9600000,
+            20000000,
+            0,
+            -89.75,
+            True
+        )
+        
+        # PTT control
+        self.ptt = pluto_ptt_control("ip:pluto.local", gpio_pin=0)
+        
+        # Connect blocks
+        self.connect(encoder, pluto_sink)
+        
+        # Message port for PTT control
+        self.message_port_register_in(pmt.intern("ptt_control"))
+        self.set_msg_handler(pmt.intern("ptt_control"), self.handle_ptt)
+        
+    def handle_ptt(self, msg):
+        state = pmt.to_bool(msg)
+        self.ptt.set_ptt(state)
+        
+    def start(self):
+        gr.top_block.start(self)
+        
+    def stop(self):
+        self.ptt.cleanup()
+        gr.top_block.stop(self)
+```
+
+#### Alternative: Using IIO Sysfs Interface
+
+For direct GPIO control without libiio:
+
+```python
+import os
+
+class pluto_sysfs_gpio:
+    def __init__(self, gpio_pin=0):
+        self.gpio_pin = gpio_pin
+        self.iio_path = "/sys/bus/iio/devices/iio:device0"
+        # Note: GPIO access path may vary
+        self.gpio_path = f"{self.iio_path}/out_voltage{gpio_pin}_raw"
+        
+    def set_ptt(self, state):
+        """Set PTT via sysfs"""
+        try:
+            with open(self.gpio_path, "w") as f:
+                f.write("1" if state else "0")
+        except IOError as e:
+            print(f"Failed to set GPIO: {e}")
+```
+
+#### Using the Built-in PlutoSDR PTT Control Block
+
+The `gr-packet-protocols` module includes a dedicated `pluto_ptt_control` block that simplifies PTT control for PlutoSDR.
+
+**Prerequisites**: Install `pylibiio` before using this block:
+```bash
+pip install pylibiio
+```
+
+On some systems (e.g., newer Debian/Ubuntu), you may need to use:
+```bash
+pip install --break-system-packages pylibiio
+```
+
+##### Basic Usage in GRC
+
+1. Add the "PlutoSDR PTT Control" block from the Packet Protocols category
+2. Configure:
+   - **PlutoSDR URI**: Connection string (e.g., "ip:pluto.local")
+   - **GPIO Pin**: GPIO pin number (0-7)
+   - **TX Delay**: Delay after keying PTT (ms)
+   - **TX Tail**: Delay after transmission (ms)
+   - **Invert GPIO Logic**: For active-low PTT circuits
+
+3. Connect message ports:
+   - Connect a message source to the `ptt_control` message port
+   - Send boolean messages: `True` to key PTT, `False` to unkey
+
+##### Python Example
+
+```python
+from gnuradio import gr, blocks, packet_protocols, iio
+import pmt
+
+class pluto_packet_tx(gr.top_block):
+    def __init__(self):
+        gr.top_block.__init__(self)
+        
+        # Packet encoder
+        encoder = packet_protocols.ax25_encoder(...)
+        
+        # Adaptive modulator
+        modulator = packet_protocols.adaptive_modulator(...)
+        
+        # PlutoSDR sink
+        pluto_sink = iio.pluto_sink(uri="ip:pluto.local", ...)
+        
+        # PTT Control block
+        ptt_control = packet_protocols.pluto_ptt_control(
+            pluto_uri="ip:pluto.local",
+            gpio_pin=0,
+            tx_delay_ms=10,
+            tx_tail_ms=10
+        )
+        
+        # Connect blocks
+        self.connect(encoder, modulator, pluto_sink)
+        
+        # Control PTT via message port
+        self.message_port_register_out(pmt.intern("ptt_trigger"))
+        self.msg_connect((self, "ptt_trigger"), (ptt_control, "ptt_control"))
+        
+        # Key PTT when starting transmission
+        ptt_control.set_ptt(True)
+        
+    def stop(self):
+        # Unkey PTT when stopping
+        self.ptt_control.set_ptt(False)
+        gr.top_block.stop(self)
+```
+
+##### Integration with Half-Duplex Flowgraph
+
+For the `adaptive_half_duplex_example.grc`:
+
+1. Add `pluto_ptt_control` block
+2. Connect message ports:
+   - Connect selector control logic to `ptt_control` message port
+   - When switching to TX mode, send `True`
+   - When switching to RX mode, send `False`
+
+3. In Python code:
+```python
+# In your flowgraph's Python code
+def set_tx_mode(self, tx_mode):
+    # Update selector
+    self.blocks_selector_0.set_input_index(0 if tx_mode else 1)
+    
+    # Control PTT
+    ptt_msg = pmt.from_bool(tx_mode)
+    self.msg_connect((self, "ptt_control"), 
+                     (self.packet_protocols_pluto_ptt_control_0, "ptt_control"))
+    self.packet_protocols_pluto_ptt_control_0.message_port_pub(
+        pmt.intern("ptt_control"), ptt_msg)
+```
+
+See `examples/pluto_ptt_example.py` for a complete working example.
+
 ### gr-uhd (Ettus USRP)
 
 USRP devices provide GPIO control through the UHD API.

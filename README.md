@@ -88,6 +88,20 @@ sudo dnf install gnuradio-devel cmake gcc-c++
 brew install gnuradio cmake
 ```
 
+#### Optional Dependencies
+
+For PlutoSDR PTT control functionality:
+```bash
+pip install pylibiio
+```
+
+On some systems (e.g., newer Debian/Ubuntu), you may need to use:
+```bash
+pip install --break-system-packages pylibiio
+```
+
+This package provides Python bindings for libiio, required to control GPIO pins on PlutoSDR devices. See `docs/PTT_CONTROL.md` for more information.
+
 ## Usage
 
 ### GNU Radio Companion

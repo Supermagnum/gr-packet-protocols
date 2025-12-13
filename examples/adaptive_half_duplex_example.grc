@@ -1,0 +1,493 @@
+options:
+  parameters:
+    author: gr-packet-protocols
+    catch_exceptions: 'True'
+    category: Packet Protocols
+    cmake_opt: ''
+    comment: Half-Duplex Adaptive Modulation System
+    copyright: ''
+    description: 'Half-duplex adaptive modulation system with TX/RX switching:
+
+      - TX Mode: Source -> Encoder -> Link Quality Monitor -> Adaptive Modulator ->
+      Output
+
+      - RX Mode: Input -> Demodulator -> Decoder -> Link Quality Monitor
+
+      - PTT Control: Switches between TX and RX modes
+
+      - Adaptive Rate Control: Automatically selects modulation mode
+
+      - Modulation Negotiation: Coordinates mode changes between stations
+
+      - KISS TNC: Handles negotiation frames via message ports
+
+      - Quality Feedback: Bidirectional quality metric exchange
+
+
+      IMPORTANT: Message port connections must be added in generated Python code:
+
+      1. Connect KISS TNC negotiation_out to Modulation Negotiation negotiation_in
+
+      2. Connect Modulation Negotiation to Adaptive Rate Control for mode updates
+
+      3. Setup quality update thread to feed SNR/BER to Link Quality Monitor
+
+      4. Setup periodic quality feedback transmission
+
+      5. Implement PTT control logic to switch between TX/RX modes
+
+
+      See adaptive_half_duplex_example.py for complete implementation with all connections.'
+    gen_cmake: 'On'
+    gen_linking: dynamic
+    generate_options: qt_gui
+    hier_block_src_path: '.:'
+    id: top_block
+    max_nouts: '0'
+    output_language: python
+    placement: (0,0)
+    qt_qss_theme: ''
+    realtime_scheduling: ''
+    run: 'True'
+    run_command: '{python} -u {filename}'
+    run_options: prompt
+    sizing_mode: fixed
+    thread_safe_setters: ''
+    title: Half-Duplex Adaptive System
+    window_size: (1920, 1080)
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [56, 8.0]
+    rotation: 0
+    state: enabled
+
+blocks:
+- name: blocks_file_sink_0
+  id: blocks_file_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    append: 'False'
+    comment: Radio Output (replace with USRP sink for SDR)
+    file: /tmp/radio_output.cfile
+    type: complex
+    unbuffered: 'False'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1568, 72.0]
+    rotation: 0
+    state: enabled
+- name: blocks_file_source_1
+  id: blocks_file_source
+  parameters:
+    affinity: ''
+    alias: ''
+    begin_tag: ''
+    comment: Radio Input (replace with USRP source for SDR)
+    file: /tmp/radio_input.cfile
+    length: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    offset: '0'
+    repeat: 'True'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1344, 288.0]
+    rotation: 180
+    state: enabled
+- name: blocks_null_sink_0
+  id: blocks_null_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    bus_structure_sink: '[[0,],]'
+    comment: RX Output Sink
+    num_inputs: '1'
+    type: byte
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1056, 416.0]
+    rotation: 0
+    state: enabled
+- name: blocks_null_sink_1
+  id: blocks_null_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    bus_structure_sink: '[[0,],]'
+    comment: Control Path Sink (for adaptive_rate_control/modulation_negotiation/kiss_tnc)
+    num_inputs: '1'
+    type: byte
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1808, 632.0]
+    rotation: 0
+    state: enabled
+- name: blocks_null_source_0
+  id: blocks_null_source
+  parameters:
+    affinity: ''
+    alias: ''
+    bus_structure_source: '[[0,],]'
+    comment: Null source for RX selector (TX mode)
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_outputs: '1'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1064, 336.0]
+    rotation: 0
+    state: enabled
+- name: blocks_selector_0
+  id: blocks_selector
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: 'TX/RX Mode Selector
+
+      Input 0: TX path (adaptive modulator output)
+
+      Input 1: RX path (input from radio)
+
+      Output: Selected path to radio
+
+      NOTE: Control via Python code based on PTT state'
+    enabled: 'True'
+    input_index: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_inputs: '2'
+    num_outputs: '1'
+    output_index: '0'
+    showports: 'True'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1328, 72.0]
+    rotation: 0
+    state: enabled
+- name: blocks_selector_1
+  id: blocks_selector
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: 'RX Input Selector
+
+      Input 0: From radio (RX mode)
+
+      Input 1: Null (TX mode - no RX)
+
+      Output: To demodulator
+
+      NOTE: Control via Python code based on PTT state'
+    enabled: 'True'
+    input_index: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_inputs: '2'
+    num_outputs: '1'
+    output_index: '0'
+    showports: 'True'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1352, 432.0]
+    rotation: 0
+    state: enabled
+- name: blocks_throttle2_0
+  id: blocks_throttle2
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: TX Throttle
+    ignoretag: 'True'
+    limit: auto
+    maximum: '0.1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samples_per_second: 9.6k
+    type: byte
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [248, 200.0]
+    rotation: 0
+    state: enabled
+- name: blocks_vector_source_x_0
+  id: blocks_vector_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: TX Data Source
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    repeat: 'True'
+    tags: ''
+    type: byte
+    vector: '[0x48, 0x65, 0x6C, 0x6C, 0x6F, 0x20, 0x57, 0x6F, 0x72, 0x6C, 0x64]'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [24, 184.0]
+    rotation: 0
+    state: enabled
+- name: digital_gfsk_demod_0
+  id: digital_gfsk_demod
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: RX Demodulator (placeholder - use appropriate demodulator for current
+      mode)
+    freq_error: '0.0'
+    gain_mu: '0.175'
+    log: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    mu: '0.5'
+    omega_relative_limit: '0.005'
+    samples_per_symbol: '2'
+    sensitivity: '1.0'
+    verbose: 'False'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [216, 488.0]
+    rotation: 0
+    state: enabled
+- name: digital_probe_mpsk_snr_est_c_0
+  id: digital_probe_mpsk_snr_est_c
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha: '0.001'
+    comment: RX SNR Estimator
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    msg_nsamples: '1000'
+    type: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [216, 640.0]
+    rotation: 0
+    state: enabled
+- name: packet_protocols_adaptive_modulator_0
+  id: packet_protocols_adaptive_modulator
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: TX Adaptive Modulator
+    enable_adaptation: 'True'
+    hysteresis_db: '2.0'
+    initial_mode: MODE_4FSK
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samples_per_symbol: '2'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1024, 144.0]
+    rotation: 0
+    state: enabled
+- name: packet_protocols_adaptive_rate_control_0
+  id: packet_protocols_adaptive_rate_control
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: Adaptive Rate Control - selects modulation mode
+    enable_adaptation: 'True'
+    hysteresis_db: '2.0'
+    initial_mode: MODE_4FSK
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [688, 688.0]
+    rotation: 0
+    state: enabled
+- name: packet_protocols_ax25_decoder_0
+  id: packet_protocols_ax25_decoder
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: RX AX.25 Decoder
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [440, 488.0]
+    rotation: 0
+    state: enabled
+- name: packet_protocols_ax25_encoder_0
+  id: packet_protocols_ax25_encoder
+  parameters:
+    affinity: ''
+    alias: ''
+    command_response: 'False'
+    comment: TX AX.25 Encoder
+    dest_callsign: N1CALL
+    dest_ssid: '0'
+    digipeaters: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    poll_final: 'False'
+    src_callsign: N0CALL
+    src_ssid: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [472, 200.0]
+    rotation: 0
+    state: enabled
+- name: packet_protocols_kiss_tnc_0
+  id: packet_protocols_kiss_tnc
+  parameters:
+    affinity: ''
+    alias: ''
+    baud_rate: '9600'
+    comment: 'KISS TNC - handles negotiation frames via message ports
+
+      NOTE: Connect negotiation_out message port to modulation_negotiation negotiation_in
+
+      in generated Python code'
+    device: /dev/null
+    hardware_flow_control: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    ptt_enabled: 'True'
+    ptt_use_dtr: 'False'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1376, 648.0]
+    rotation: 0
+    state: enabled
+- name: packet_protocols_link_quality_monitor_0
+  id: packet_protocols_link_quality_monitor
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha: '0.1'
+    comment: TX Link Quality Monitor
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    update_period: '1000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [720, 200.0]
+    rotation: 0
+    state: enabled
+- name: packet_protocols_link_quality_monitor_1
+  id: packet_protocols_link_quality_monitor
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha: '0.1'
+    comment: RX Link Quality Monitor
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    update_period: '1000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [680, 432.0]
+    rotation: 0
+    state: enabled
+- name: packet_protocols_modulation_negotiation_0
+  id: packet_protocols_modulation_negotiation
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: 'Modulation Negotiation - coordinates mode changes between stations
+
+      NOTE: Message port connections must be added in Python code'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    negotiation_timeout_ms: '5000'
+    station_id: N0CALL
+    supported_modes: MODE_2FSK,MODE_4FSK,MODE_8FSK,MODE_QPSK
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [992, 688.0]
+    rotation: 0
+    state: enabled
+
+connections:
+- [blocks_file_source_1, '0', blocks_selector_1, '0']
+- [blocks_null_source_0, '0', blocks_selector_0, '1']
+- [blocks_null_source_0, '0', blocks_selector_1, '1']
+- [blocks_selector_0, '0', blocks_file_sink_0, '0']
+- [blocks_selector_1, '0', digital_gfsk_demod_0, '0']
+- [blocks_selector_1, '0', digital_probe_mpsk_snr_est_c_0, '0']
+- [blocks_throttle2_0, '0', packet_protocols_ax25_encoder_0, '0']
+- [blocks_vector_source_x_0, '0', blocks_throttle2_0, '0']
+- [digital_gfsk_demod_0, '0', packet_protocols_ax25_decoder_0, '0']
+- [packet_protocols_adaptive_modulator_0, '0', blocks_selector_0, '0']
+- [packet_protocols_adaptive_rate_control_0, '0', packet_protocols_modulation_negotiation_0,
+  '0']
+- [packet_protocols_ax25_decoder_0, '0', packet_protocols_link_quality_monitor_1,
+  '0']
+- [packet_protocols_ax25_encoder_0, '0', packet_protocols_link_quality_monitor_0,
+  '0']
+- [packet_protocols_kiss_tnc_0, '0', blocks_null_sink_1, '0']
+- [packet_protocols_link_quality_monitor_0, '0', packet_protocols_adaptive_modulator_0,
+  '0']
+- [packet_protocols_link_quality_monitor_0, '0', packet_protocols_adaptive_rate_control_0,
+  '0']
+- [packet_protocols_link_quality_monitor_1, '0', blocks_null_sink_0, '0']
+- [packet_protocols_modulation_negotiation_0, '0', packet_protocols_kiss_tnc_0, '0']
+
+msg_connections:
+- [packet_protocols_kiss_tnc_0, 'negotiation_out', packet_protocols_modulation_negotiation_0, 'negotiation_in']
+
+callbacks:
+- |-
+    # Connect message ports for negotiation
+    self.msg_connect((self.packet_protocols_kiss_tnc_0, 'negotiation_out'), (self.packet_protocols_modulation_negotiation_0, 'negotiation_in'))
+
+metadata:
+  file_format: 1
+  grc_version: 3.10.12.0

@@ -27,6 +27,12 @@ outputs:
 -   domain: stream
     dtype: byte
 
+message_ports:
+-   id: negotiation_in
+    label: Negotiation In
+    direction: input
+    optional: 'True'
+
 templates:
     imports: |-
         from gnuradio import packet_protocols
