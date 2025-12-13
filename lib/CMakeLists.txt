@@ -22,7 +22,8 @@ list(APPEND packet_protocols_sources
     kiss_tnc_impl.cc
     link_quality_monitor_impl.cc
     adaptive_rate_control_impl.cc
-    modulation_negotiation_impl.cc)
+    modulation_negotiation_impl.cc
+    negotiation_frame.cc)
 
 set(packet_protocols_sources
     "${packet_protocols_sources}"

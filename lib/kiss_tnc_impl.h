@@ -42,6 +42,11 @@ enum kiss_cmd_t {
     KISS_CMD_TXTAIL = 4,
     KISS_CMD_FULLDUPLEX = 5,
     KISS_CMD_SET_HARDWARE = 6,
+    KISS_CMD_NEG_REQ = 0x10,      // Negotiation request
+    KISS_CMD_NEG_RESP = 0x11,     // Negotiation response
+    KISS_CMD_NEG_ACK = 0x12,      // Negotiation acknowledgment
+    KISS_CMD_MODE_CHANGE = 0x13,  // Mode change notification
+    KISS_CMD_QUALITY_FB = 0x14,   // Quality feedback
     KISS_CMD_RETURN = 15
 };
 

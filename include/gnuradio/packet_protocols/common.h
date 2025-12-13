@@ -42,6 +42,11 @@
 #define KISS_CMD_TXTAIL 0x04
 #define KISS_CMD_FULLDUPLEX 0x05
 #define KISS_CMD_SET_HARDWARE 0x06
+#define KISS_CMD_NEG_REQ 0x10      // Negotiation request
+#define KISS_CMD_NEG_RESP 0x11     // Negotiation response
+#define KISS_CMD_NEG_ACK 0x12       // Negotiation acknowledgment
+#define KISS_CMD_MODE_CHANGE 0x13  // Mode change notification
+#define KISS_CMD_QUALITY_FB 0x14   // Quality feedback
 #define KISS_CMD_RETURN 0xFF
 
 // FX.25 FEC Types

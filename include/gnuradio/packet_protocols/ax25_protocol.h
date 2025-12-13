@@ -40,6 +40,8 @@ extern "C" {
 #define AX25_CTRL_UA 0x63    // Unnumbered Acknowledge
 #define AX25_CTRL_FRMR 0x87  // Frame Reject
 #define AX25_CTRL_UI 0x03    // Unnumbered Information
+#define AX25_CTRL_XID 0xAF   // eXchange IDentification (P/F=0)
+#define AX25_CTRL_XID_PF 0xBF // eXchange IDentification (P/F=1)
 
 // AX.25 PID Types
 #define AX25_PID_NONE 0xF0   // No layer 3 protocol
@@ -87,6 +89,38 @@ typedef struct {
     uint32_t timeout;     // Connection timeout
     uint32_t retry_count; // Retry counter
 } ax25_connection_t;
+
+// AX.25 XID Format Identifiers (v2.2)
+#define AX25_XID_FMT_BASIC 0x81      // Basic format identifier
+#define AX25_XID_FMT_EXTENDED 0x82   // Extended format identifier
+
+// AX.25 XID Group Identifiers
+#define AX25_XID_GROUP_DEFAULT 0x00   // Default group
+#define AX25_XID_GROUP_LINK 0x01      // Link layer parameters
+
+// AX.25 XID Parameter Types
+#define AX25_XID_PARAM_WINDOW_SIZE 0x01    // Window size parameter
+#define AX25_XID_PARAM_MAX_FRAME 0x02      // Maximum frame size parameter
+#define AX25_XID_PARAM_RETRY_COUNT 0x03    // Retry count parameter
+#define AX25_XID_PARAM_T1_TIMEOUT 0x04      // T1 timeout parameter
+#define AX25_XID_PARAM_T2_TIMEOUT 0x05     // T2 timeout parameter
+#define AX25_XID_PARAM_T3_TIMEOUT 0x06     // T3 timeout parameter
+
+// AX.25 XID Parameter Structure
+typedef struct {
+    uint8_t type;         // Parameter type
+    uint8_t length;       // Parameter length
+    uint8_t value[16];    // Parameter value (max 16 bytes)
+} ax25_xid_param_t;
+
+// AX.25 XID Frame Structure
+typedef struct {
+    uint8_t format_id;              // Format identifier
+    uint8_t group_id;                // Group identifier
+    ax25_xid_param_t params[8];     // Parameter list (max 8 parameters)
+    uint8_t num_params;              // Number of parameters
+    bool is_response;                // Response frame flag
+} ax25_xid_frame_t;
 
 // AX.25 TNC Configuration
 typedef struct {
@@ -157,6 +191,17 @@ int ax25_bit_stuff(const uint8_t* input, uint16_t input_len, uint8_t* output, ui
 int ax25_bit_unstuff(const uint8_t* input, uint16_t input_len, uint8_t* output,
                      uint16_t* output_len);
 int ax25_add_flags(uint8_t* data, uint16_t* length, uint16_t max_length);
+
+// XID Functions (AX.25 v2.2)
+int ax25_create_xid_frame(ax25_frame_t* frame, const ax25_address_t* src, const ax25_address_t* dst,
+                          const ax25_xid_frame_t* xid_data, bool poll);
+int ax25_parse_xid_frame(const ax25_frame_t* frame, ax25_xid_frame_t* xid_data);
+int ax25_encode_xid_params(const ax25_xid_frame_t* xid_data, uint8_t* buffer, uint16_t* length);
+int ax25_decode_xid_params(const uint8_t* buffer, uint16_t length, ax25_xid_frame_t* xid_data);
+int ax25_send_xid(ax25_tnc_t* tnc, const ax25_address_t* remote_addr, const ax25_xid_frame_t* xid_data, bool poll);
+int ax25_receive_xid(ax25_tnc_t* tnc, ax25_address_t* remote_addr, ax25_xid_frame_t* xid_data);
+int ax25_add_xid_param(ax25_xid_frame_t* xid_data, uint8_t type, const uint8_t* value, uint8_t length);
+int ax25_get_xid_param(const ax25_xid_frame_t* xid_data, uint8_t type, uint8_t* value, uint8_t* length);
 
 #ifdef __cplusplus
 }

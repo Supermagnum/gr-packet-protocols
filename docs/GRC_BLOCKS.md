@@ -30,12 +30,18 @@ This document lists all available blocks in GNU Radio Companion for gr-packet-pr
 - **Category**: `[Packet Protocols]`
 - **Input**: Byte stream
 - **Output**: Byte stream
+- **Message Ports**:
+  - `negotiation_out`: Forwards received negotiation frames (commands 0x10-0x14)
 - **Parameters**:
   - Device (string, e.g., `/dev/ttyUSB0`)
   - Baud Rate (int, default: 9600)
   - Hardware Flow Control (bool)
   - Enable PTT Control (bool)
   - Use DTR for PTT (bool, shown when PTT enabled)
+- **Features**:
+  - Supports KISS protocol extensions for modulation negotiation
+  - Automatically forwards negotiation frames to message port
+  - PTT control via DTR or RTS line
 
 ### FX.25 Encoder
 - **ID**: `packet_protocols_fx25_encoder`
@@ -103,11 +109,19 @@ This document lists all available blocks in GNU Radio Companion for gr-packet-pr
 - **Category**: `[Packet Protocols]`
 - **Input**: Byte stream (pass-through)
 - **Output**: Byte stream (pass-through)
+- **Message Ports**:
+  - `negotiation_in`: Receives negotiation frames from KISS TNC
 - **Parameters**:
   - Station ID (Callsign) (string, default: N0CALL)
   - Supported Modes (comma-separated string, default: MODE_2FSK,MODE_4FSK,MODE_8FSK)
   - Negotiation Timeout (ms) (int, default: 5000)
-- **Description**: Handles negotiation of modulation modes between stations.
+- **Description**: Handles negotiation of modulation modes between stations using KISS protocol extensions (commands 0x10-0x14). Supports automatic negotiation triggers and quality feedback. Connect KISS TNC's `negotiation_out` message port to this block's `negotiation_in` port.
+- **Features**:
+  - Full KISS protocol extension support
+  - Frame encoding/decoding for all negotiation message types
+  - Automatic negotiation when adaptive rate control changes modes
+  - Quality feedback transmission
+  - Message port integration with KISS TNC
 
 ### Adaptive Modulator
 - **ID**: `packet_protocols_adaptive_modulator`

@@ -29,7 +29,10 @@ This is offering complete packet radio protocol support for GNU Radio applicatio
 ### Adaptive Features
 - **Link Quality Monitoring**: Real-time SNR, BER, and frame error rate monitoring
 - **Automatic Rate Adaptation**: Dynamically adjusts modulation mode based on channel quality
-- **Modulation Negotiation**: Protocol for negotiating modulation modes between stations
+- **Modulation Negotiation**: Full protocol implementation for negotiating modulation modes between stations
+- **Inter-Station Communication**: KISS protocol extensions (0x10-0x14) for negotiation and quality feedback
+- **Automatic Negotiation Triggers**: Automatically negotiates mode changes when adaptive rate control switches modes
+- **Quality Feedback**: Bidirectional quality metric exchange between stations
 - **Multi-Mode Support**: Supports 2FSK, 4FSK, 8FSK, 16FSK, BPSK, QPSK, 8PSK, 16-QAM, and 64-QAM
 - **Quality-Based Switching**: Intelligent mode selection based on SNR, BER, and link quality scores
 
@@ -583,10 +586,18 @@ This will remove all installed files. If you don't have the build directory, see
 - Added adaptive modulation features:
   - Link Quality Monitor block
   - Adaptive Rate Control block
-  - Modulation Negotiation block
+  - Modulation Negotiation block with full KISS protocol extensions
   - Adaptive Modulator hierarchical block
   - Modulation Switch block
 - Added PTT (Push To Talk) control to KISS TNC block
+- Implemented KISS protocol extensions for negotiation (commands 0x10-0x14):
+  - Negotiation request/response/acknowledgment
+  - Mode change notifications
+  - Quality feedback messages
+- Inter-station communication for coordinated mode adaptation
+- Automatic negotiation triggers when mode changes
+- Frame encoding/decoding for all negotiation message types
+- Message port integration between KISS TNC and Modulation Negotiation
 - All blocks available in GNU Radio Companion
 - Comprehensive documentation and examples
 - Unit tests for all adaptive blocks

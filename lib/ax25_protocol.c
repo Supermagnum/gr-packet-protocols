@@ -57,7 +57,7 @@ AX25_EXPORT int ax25_init(ax25_tnc_t* tnc) {
     tnc->config.slot_time = 10;     // 100ms
     tnc->config.tx_tail = 10;       // 100ms
     tnc->config.full_duplex = false;
-    tnc->config.max_frame_length = 256;
+    tnc->config.max_frame_length = 255;
     tnc->config.window_size = 4;
     tnc->config.t1_timeout = 3000;  // 3 seconds
     tnc->config.t2_timeout = 1000;  // 1 second
@@ -340,12 +340,87 @@ int ax25_validate_frame(const ax25_frame_t* frame) {
     return 0;
 }
 
-// Connection functions (stubs for now)
+// Helper function to find a connection by remote address
+static ax25_connection_t* find_connection(ax25_tnc_t* tnc, const ax25_address_t* remote_addr) {
+    if (!tnc || !remote_addr) {
+        return NULL;
+    }
+    
+    for (int i = 0; i < 16; i++) {
+        if (tnc->connections[i].state != AX25_STATE_DISCONNECTED) {
+            if (ax25_address_equal(&tnc->connections[i].remote_addr, remote_addr)) {
+                return &tnc->connections[i];
+            }
+        }
+    }
+    return NULL;
+}
+
+// Helper function to find an available connection slot
+static ax25_connection_t* find_free_connection(ax25_tnc_t* tnc) {
+    if (!tnc) {
+        return NULL;
+    }
+    
+    for (int i = 0; i < 16; i++) {
+        if (tnc->connections[i].state == AX25_STATE_DISCONNECTED) {
+            return &tnc->connections[i];
+        }
+    }
+    return NULL;
+}
+
+// Connection functions
 int ax25_connect(ax25_tnc_t* tnc, const ax25_address_t* remote_addr) {
     if (!tnc || !remote_addr) {
         return -1;
     }
-    // Implementation would manage connections
+    
+    // Check if connection already exists
+    ax25_connection_t* conn = find_connection(tnc, remote_addr);
+    if (conn) {
+        // Connection already exists
+        if (conn->state == AX25_STATE_CONNECTED) {
+            return 0; // Already connected
+        }
+        if (conn->state == AX25_STATE_CONNECTING) {
+            return 0; // Already connecting
+        }
+    } else {
+        // Find free connection slot
+        conn = find_free_connection(tnc);
+        if (!conn) {
+            return -1; // No free connection slots
+        }
+        
+        // Initialize connection
+        memset(conn, 0, sizeof(ax25_connection_t));
+        conn->local_addr = tnc->config.my_address;
+        conn->remote_addr = *remote_addr;
+        conn->state = AX25_STATE_CONNECTING;
+        conn->send_seq = 0;
+        conn->recv_seq = 0;
+        conn->window_size = tnc->config.window_size;
+        conn->timeout = tnc->config.t1_timeout;
+        conn->retry_count = 0;
+        
+        tnc->num_connections++;
+    }
+    
+    // Create SABM frame to initiate connection
+    ax25_frame_t frame;
+    if (ax25_create_frame(&frame, &conn->local_addr, &conn->remote_addr, 
+                          AX25_CTRL_SABM, 0, NULL, 0) != 0) {
+        return -1;
+    }
+    
+    // Store frame for transmission
+    tnc->tx_frame = frame;
+    tnc->frame_ready = true;
+    
+    // Connection state will transition to CONNECTED when UA is received
+    // This is handled by the caller or higher-level protocol
+    
     return 0;
 }
 
@@ -353,7 +428,36 @@ int ax25_disconnect(ax25_tnc_t* tnc, const ax25_address_t* remote_addr) {
     if (!tnc || !remote_addr) {
         return -1;
     }
-    // Implementation would manage connections
+    
+    // Find the connection
+    ax25_connection_t* conn = find_connection(tnc, remote_addr);
+    if (!conn) {
+        return -1; // Connection not found
+    }
+    
+    if (conn->state == AX25_STATE_DISCONNECTED) {
+        return 0; // Already disconnected
+    }
+    
+    // Set state to disconnecting
+    conn->state = AX25_STATE_DISCONNECTING;
+    
+    // Create DISC frame
+    ax25_frame_t frame;
+    if (ax25_create_frame(&frame, &conn->local_addr, &conn->remote_addr, 
+                          AX25_CTRL_DISC, 0, NULL, 0) != 0) {
+        return -1;
+    }
+    
+    // Store frame for transmission
+    tnc->tx_frame = frame;
+    tnc->frame_ready = true;
+    
+    // Clean up connection
+    conn->state = AX25_STATE_DISCONNECTED;
+    memset(conn, 0, sizeof(ax25_connection_t));
+    tnc->num_connections--;
+    
     return 0;
 }
 
@@ -362,7 +466,38 @@ int ax25_send_data(ax25_tnc_t* tnc, const ax25_address_t* remote_addr, const uin
     if (!tnc || !remote_addr || !data) {
         return -1;
     }
-    // Implementation would send data
+    
+    if (length == 0 || length > AX25_MAX_INFO) {
+        return -1;
+    }
+    
+    // Find the connection
+    ax25_connection_t* conn = find_connection(tnc, remote_addr);
+    if (!conn) {
+        return -1; // Connection not found
+    }
+    
+    // Check if connection is established
+    if (conn->state != AX25_STATE_CONNECTED) {
+        return -1; // Connection not established
+    }
+    
+    // Create I-frame (Information frame) with sequence numbers
+    uint8_t control = AX25_CTRL_I | (conn->send_seq << 1) | (conn->recv_seq << 5);
+    
+    ax25_frame_t frame;
+    if (ax25_create_frame(&frame, &conn->local_addr, &conn->remote_addr, 
+                          control, AX25_PID_NONE, data, length) != 0) {
+        return -1;
+    }
+    
+    // Store frame for transmission
+    tnc->tx_frame = frame;
+    tnc->frame_ready = true;
+    
+    // Update send sequence number (modulo 8)
+    conn->send_seq = (conn->send_seq + 1) % 8;
+    
     return 0;
 }
 
@@ -371,7 +506,63 @@ int ax25_receive_data(ax25_tnc_t* tnc, ax25_address_t* remote_addr, uint8_t* dat
     if (!tnc || !remote_addr || !data || !length) {
         return -1;
     }
-    // Implementation would receive data
+    
+    // Check if there's a received frame ready
+    if (!tnc->frame_ready) {
+        return -1; // No frame available
+    }
+    
+    const ax25_frame_t* frame = &tnc->rx_frame;
+    if (!frame->valid || frame->num_addresses < 2) {
+        return -1; // Invalid frame
+    }
+    
+    // Check if this is an I-frame (Information frame)
+    if ((frame->control & 0x01) != 0x00) {
+        return -1; // Not an I-frame
+    }
+    
+    // Extract remote address (source address)
+    *remote_addr = frame->addresses[1];
+    
+    // Find the connection
+    ax25_connection_t* conn = find_connection(tnc, remote_addr);
+    if (!conn) {
+        // Auto-create connection if not found (for incoming connections)
+        conn = find_free_connection(tnc);
+        if (conn) {
+            memset(conn, 0, sizeof(ax25_connection_t));
+            conn->local_addr = tnc->config.my_address;
+            conn->remote_addr = *remote_addr;
+            conn->state = AX25_STATE_CONNECTED;
+            conn->window_size = tnc->config.window_size;
+            tnc->num_connections++;
+        } else {
+            return -1; // No free connection slots
+        }
+    }
+    
+    // Extract sequence numbers from control field
+    uint8_t recv_seq = (frame->control >> 5) & 0x07;
+    // send_seq is in the frame but we don't need to use it for receive
+    // (it's the remote station's send sequence number)
+    
+    // Update receive sequence number
+    if (recv_seq == ((conn->recv_seq + 1) % 8)) {
+        conn->recv_seq = recv_seq;
+    }
+    
+    // Copy data
+    if (frame->info_length > *length) {
+        return -1; // Buffer too small
+    }
+    
+    memcpy(data, frame->info, frame->info_length);
+    *length = frame->info_length;
+    
+    // Mark frame as processed
+    tnc->frame_ready = false;
+    
     return 0;
 }
 
@@ -569,6 +760,246 @@ AX25_EXPORT int ax25_add_flags(uint8_t* data, uint16_t* length, uint16_t max_len
     data[*length + 1] = AX25_FLAG;
     
     *length += 2;
+    return 0;
+}
+
+// XID Functions (AX.25 v2.2)
+
+// Encode XID parameters into buffer
+AX25_EXPORT int ax25_encode_xid_params(const ax25_xid_frame_t* xid_data, uint8_t* buffer, uint16_t* length) {
+    if (!xid_data || !buffer || !length) {
+        return -1;
+    }
+    
+    uint16_t pos = 0;
+    
+    // Format identifier
+    if (pos >= *length) {
+        return -1;
+    }
+    buffer[pos++] = xid_data->format_id;
+    
+    // Group identifier
+    if (pos >= *length) {
+        return -1;
+    }
+    buffer[pos++] = xid_data->group_id;
+    
+    // Encode parameters
+    for (uint8_t i = 0; i < xid_data->num_params && i < 8; i++) {
+        const ax25_xid_param_t* param = &xid_data->params[i];
+        
+        // Parameter type
+        if (pos >= *length) {
+            return -1;
+        }
+        buffer[pos++] = param->type;
+        
+        // Parameter length
+        if (pos >= *length) {
+            return -1;
+        }
+        buffer[pos++] = param->length;
+        
+        // Parameter value
+        if (pos + param->length > *length) {
+            return -1;
+        }
+        if (param->length > 0 && param->length <= 16) {
+            memcpy(&buffer[pos], param->value, param->length);
+            pos += param->length;
+        }
+    }
+    
+    *length = pos;
+    return 0;
+}
+
+// Decode XID parameters from buffer
+AX25_EXPORT int ax25_decode_xid_params(const uint8_t* buffer, uint16_t length, ax25_xid_frame_t* xid_data) {
+    if (!buffer || !xid_data || length < 2) {
+        return -1;
+    }
+    
+    uint16_t pos = 0;
+    
+    // Format identifier
+    xid_data->format_id = buffer[pos++];
+    
+    // Group identifier
+    xid_data->group_id = buffer[pos++];
+    
+    // Decode parameters
+    xid_data->num_params = 0;
+    while (pos < length && xid_data->num_params < 8) {
+        if (pos + 2 > length) {
+            break; // Need at least type and length
+        }
+        
+        ax25_xid_param_t* param = &xid_data->params[xid_data->num_params];
+        param->type = buffer[pos++];
+        param->length = buffer[pos++];
+        
+        if (param->length > 16) {
+            return -1; // Invalid parameter length
+        }
+        
+        if (pos + param->length > length) {
+            return -1; // Not enough data
+        }
+        
+        if (param->length > 0) {
+            memcpy(param->value, &buffer[pos], param->length);
+            pos += param->length;
+        }
+        
+        xid_data->num_params++;
+    }
+    
+    return 0;
+}
+
+// Create XID frame
+AX25_EXPORT int ax25_create_xid_frame(ax25_frame_t* frame, const ax25_address_t* src, const ax25_address_t* dst,
+                          const ax25_xid_frame_t* xid_data, bool poll) {
+    if (!frame || !src || !dst || !xid_data) {
+        return -1;
+    }
+    
+    // Encode XID parameters
+    uint8_t xid_buffer[256];
+    uint16_t xid_length = sizeof(xid_buffer);
+    if (ax25_encode_xid_params(xid_data, xid_buffer, &xid_length) != 0) {
+        return -1;
+    }
+    
+    // Create frame with XID control field
+    uint8_t control = poll ? AX25_CTRL_XID_PF : AX25_CTRL_XID;
+    if (xid_data->is_response) {
+        control |= 0x01; // Set response bit
+    }
+    
+    if (ax25_create_frame(frame, src, dst, control, AX25_PID_NONE, xid_buffer, xid_length) != 0) {
+        return -1;
+    }
+    
+    return 0;
+}
+
+// Parse XID frame
+AX25_EXPORT int ax25_parse_xid_frame(const ax25_frame_t* frame, ax25_xid_frame_t* xid_data) {
+    if (!frame || !xid_data) {
+        return -1;
+    }
+    
+    // Check if this is an XID frame
+    uint8_t control = frame->control & 0xEF; // Mask P/F bit
+    if (control != AX25_CTRL_XID) {
+        return -1; // Not an XID frame
+    }
+    
+    // Check if it's a response
+    xid_data->is_response = (frame->control & 0x01) != 0;
+    
+    // Decode XID parameters
+    if (ax25_decode_xid_params(frame->info, frame->info_length, xid_data) != 0) {
+        return -1;
+    }
+    
+    return 0;
+}
+
+// Add parameter to XID frame
+AX25_EXPORT int ax25_add_xid_param(ax25_xid_frame_t* xid_data, uint8_t type, const uint8_t* value, uint8_t length) {
+    if (!xid_data || !value || length == 0 || length > 16) {
+        return -1;
+    }
+    
+    if (xid_data->num_params >= 8) {
+        return -1; // Too many parameters
+    }
+    
+    ax25_xid_param_t* param = &xid_data->params[xid_data->num_params];
+    param->type = type;
+    param->length = length;
+    memcpy(param->value, value, length);
+    
+    xid_data->num_params++;
+    return 0;
+}
+
+// Get parameter from XID frame
+AX25_EXPORT int ax25_get_xid_param(const ax25_xid_frame_t* xid_data, uint8_t type, uint8_t* value, uint8_t* length) {
+    if (!xid_data || !value || !length) {
+        return -1;
+    }
+    
+    for (uint8_t i = 0; i < xid_data->num_params; i++) {
+        if (xid_data->params[i].type == type) {
+            if (*length < xid_data->params[i].length) {
+                return -1; // Buffer too small
+            }
+            memcpy(value, xid_data->params[i].value, xid_data->params[i].length);
+            *length = xid_data->params[i].length;
+            return 0;
+        }
+    }
+    
+    return -1; // Parameter not found
+}
+
+// Send XID frame
+AX25_EXPORT int ax25_send_xid(ax25_tnc_t* tnc, const ax25_address_t* remote_addr, const ax25_xid_frame_t* xid_data, bool poll) {
+    if (!tnc || !remote_addr || !xid_data) {
+        return -1;
+    }
+    
+    // Create XID frame
+    ax25_frame_t frame;
+    if (ax25_create_xid_frame(&frame, &tnc->config.my_address, remote_addr, xid_data, poll) != 0) {
+        return -1;
+    }
+    
+    // Store frame for transmission
+    tnc->tx_frame = frame;
+    tnc->frame_ready = true;
+    
+    return 0;
+}
+
+// Receive XID frame
+AX25_EXPORT int ax25_receive_xid(ax25_tnc_t* tnc, ax25_address_t* remote_addr, ax25_xid_frame_t* xid_data) {
+    if (!tnc || !remote_addr || !xid_data) {
+        return -1;
+    }
+    
+    // Check if there's a received frame ready
+    if (!tnc->frame_ready) {
+        return -1; // No frame available
+    }
+    
+    const ax25_frame_t* frame = &tnc->rx_frame;
+    if (!frame->valid || frame->num_addresses < 2) {
+        return -1; // Invalid frame
+    }
+    
+    // Check if this is an XID frame
+    uint8_t control = frame->control & 0xEF; // Mask P/F bit
+    if (control != AX25_CTRL_XID) {
+        return -1; // Not an XID frame
+    }
+    
+    // Extract remote address (source address)
+    *remote_addr = frame->addresses[1];
+    
+    // Parse XID frame
+    if (ax25_parse_xid_frame(frame, xid_data) != 0) {
+        return -1;
+    }
+    
+    // Mark frame as processed
+    tnc->frame_ready = false;
+    
     return 0;
 }
 

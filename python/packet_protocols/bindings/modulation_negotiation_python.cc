@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(modulation_negotiation.h) */
-/* BINDTOOL_HEADER_FILE_HASH(f60077c3884ecd3050c3997269488371)                     */
+/* BINDTOOL_HEADER_FILE_HASH(0)                                                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -24,6 +24,7 @@
 namespace py = pybind11;
 
 #include <gnuradio/packet_protocols/modulation_negotiation.h>
+#include <gnuradio/packet_protocols/adaptive_rate_control.h>
 // pydoc.h is automatically generated in the build directory
 #include <modulation_negotiation_pydoc.h>
 
@@ -33,6 +34,7 @@ void bind_modulation_negotiation(py::module& m)
     using negotiation_msg_t = ::gr::packet_protocols::negotiation_msg_t;
     using modulation_negotiation = ::gr::packet_protocols::modulation_negotiation;
     using modulation_mode_t = ::gr::packet_protocols::modulation_mode_t;
+    using adaptive_rate_control = ::gr::packet_protocols::adaptive_rate_control;
 
 
     py::class_<negotiation_msg_t, std::shared_ptr<negotiation_msg_t>>(
@@ -100,6 +102,21 @@ void bind_modulation_negotiation(py::module& m)
         .def("get_supported_modes",
              &modulation_negotiation::get_supported_modes,
              D(modulation_negotiation, get_supported_modes))
+
+        .def("set_kiss_frame_sender",
+             &modulation_negotiation::set_kiss_frame_sender,
+             py::arg("callback"),
+             "Set callback function for sending KISS frames")
+
+        .def("set_auto_negotiation_enabled",
+             [](modulation_negotiation& self, bool enabled, 
+                std::shared_ptr<adaptive_rate_control> rate_control) {
+                 adaptive_rate_control* ptr = rate_control ? rate_control.get() : nullptr;
+                 self.set_auto_negotiation_enabled(enabled, ptr);
+             },
+             py::arg("enabled"),
+             py::arg("rate_control") = nullptr,
+             "Enable automatic negotiation when mode changes")
 
         ;
 

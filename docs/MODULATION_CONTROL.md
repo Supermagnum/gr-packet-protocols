@@ -327,14 +327,41 @@ class adaptive_packet_tx(gr.top_block):
 | `recommend_mode()` | Get recommendation | Preview mode without switching |
 | `set_adaptation_enabled()` | Enable/disable auto-adapt | Toggle automatic vs manual |
 
-## Future Enhancements
+## Inter-Station Negotiation
 
-Planned improvements:
+The modulation negotiation block can coordinate mode changes between stations:
 
-1. **Integrated Modulation Switch Block**: A hierarchical block that combines rate control with actual modulation switching
-2. **Message Port Integration**: Automatic mode change messages when mode switches
-3. **GRC Block Support**: Visual blocks for GNU Radio Companion
-4. **Python Bindings**: Full Python API for mode control
+```python
+from gnuradio import packet_protocols
+
+# Create negotiator
+negotiator = packet_protocols.modulation_negotiation(
+    station_id="N0CALL",
+    supported_modes=[...]
+)
+
+# Enable automatic negotiation when mode changes
+negotiator.set_auto_negotiation_enabled(
+    enabled=True,
+    rate_control=rate_control
+)
+
+# When rate_control changes mode, negotiation is automatically triggered
+# Both stations will switch to the agreed mode
+```
+
+See [Adaptive Features Guide](ADAPTIVE_FEATURES.md) for complete negotiation setup.
+
+## Implementation Status
+
+All features are fully implemented:
+
+1. **Integrated Modulation Switch Block**: Available as `adaptive_modulator` hierarchical block
+2. **Message Port Integration**: Automatic mode change messages via modulation_negotiation
+3. **GRC Block Support**: All blocks available in GNU Radio Companion
+4. **Python Bindings**: Full Python API for all mode control functions
+5. **Inter-Station Negotiation**: KISS protocol extensions for coordinated mode changes
+6. **Automatic Triggers**: Automatic negotiation when adaptive rate control changes modes
 
 ## See Also
 

@@ -66,6 +66,7 @@ class my_flowgraph(gr.top_block):
 3. **Modulation Blocks** - Actual modulators (FSK, PSK, QAM)
 4. **Adaptive Modulator** - Python hierarchical block that automatically switches between modulators (recommended for GRC)
 5. **Modulation Switch** - Helper block for programmatic use (uses GNU Radio's selector in GRC)
+6. **Modulation Negotiation** - Coordinates mode changes between stations (optional, for inter-station communication)
 
 ## Connection Pattern
 
@@ -76,8 +77,35 @@ class my_flowgraph(gr.top_block):
                                           [Rate Control] (controls switch)
 ```
 
+## Adding Inter-Station Negotiation (Optional)
+
+For coordinated mode changes between stations:
+
+```python
+# Create negotiator
+negotiator = packet_protocols.modulation_negotiation(
+    station_id="N0CALL",
+    supported_modes=[
+        packet_protocols.modulation_mode_t.MODE_2FSK,
+        packet_protocols.modulation_mode_t.MODE_4FSK,
+        packet_protocols.modulation_mode_t.MODE_8FSK
+    ]
+)
+
+# If using KISS TNC, connect message ports
+# tnc.msg_connect(tnc, "negotiation_out", negotiator, "negotiation_in")
+
+# Set callback for sending frames (see ADAPTIVE_FEATURES.md for details)
+negotiator.set_kiss_frame_sender(send_kiss_frame_callback)
+
+# Enable automatic negotiation
+negotiator.set_auto_negotiation_enabled(True, rate_control)
+```
+
 ## See Also
 
 - [Complete Integration Guide](COMPLETE_INTEGRATION_GUIDE.md) - Full details
+- [Adaptive Features Guide](ADAPTIVE_FEATURES.md) - Feature overview including negotiation
+- [Adaptive System Architecture](ADAPTIVE_SYSTEM_ARCHITECTURE.md) - Detailed architecture
 - [Example Code](../examples/adaptive_modulation_example.py) - Working example
 

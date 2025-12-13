@@ -107,6 +107,21 @@ class PACKET_PROTOCOLS_API modulation_negotiation : virtual public gr::sync_bloc
    * \brief Get list of supported modes
    */
   virtual std::vector<modulation_mode_t> get_supported_modes() const = 0;
+
+  /*!
+   * \brief Set callback for sending KISS frames
+   * \param callback Function to call when sending KISS frames
+   */
+  virtual void set_kiss_frame_sender(
+      std::function<void(uint8_t, const std::vector<uint8_t>&)> callback) = 0;
+
+  /*!
+   * \brief Enable automatic negotiation when mode changes
+   * \param enabled Enable automatic negotiation
+   * \param rate_control Pointer to adaptive_rate_control to monitor for mode changes
+   */
+  virtual void set_auto_negotiation_enabled(bool enabled,
+                                             adaptive_rate_control* rate_control = nullptr) = 0;
 };
 
 } // namespace packet_protocols

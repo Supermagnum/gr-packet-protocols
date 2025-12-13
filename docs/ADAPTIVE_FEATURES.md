@@ -223,7 +223,7 @@ class adaptive_packet_tx(gr.top_block):
 
 ## Modulation Negotiation Protocol
 
-The modulation negotiation extends the KISS protocol with additional commands:
+The modulation negotiation extends the KISS protocol with additional commands for inter-station communication.
 
 ### KISS Extension Commands
 
@@ -233,10 +233,11 @@ The modulation negotiation extends the KISS protocol with additional commands:
 - `KISS_CMD_MODE_CHANGE (0x13)`: Mode change notification
 - `KISS_CMD_QUALITY_FB (0x14)`: Quality feedback
 
-### Usage
+### Basic Usage
 
 ```python
 from gnuradio import packet_protocols
+from gnuradio import pmt
 
 # Create modulation negotiator
 negotiator = packet_protocols.modulation_negotiation(
@@ -249,6 +250,27 @@ negotiator = packet_protocols.modulation_negotiation(
     negotiation_timeout_ms=5000
 )
 
+# Create KISS TNC
+tnc = packet_protocols.kiss_tnc(
+    device="/dev/ttyUSB0",
+    baud_rate=9600
+)
+
+# Connect message ports for negotiation frames
+tnc.msg_connect(tnc, "negotiation_out", negotiator, "negotiation_in")
+
+# Set callback for sending KISS frames
+def send_kiss_frame(command, data):
+    # Create KISS frame and send to TNC input
+    frame = bytearray()
+    frame.append(0xC0)  # KISS_FEND
+    frame.append(command)
+    frame.extend(data)
+    frame.append(0xC0)  # KISS_FEND
+    # Send frame to TNC (implementation depends on your flowgraph)
+
+negotiator.set_kiss_frame_sender(send_kiss_frame)
+
 # Initiate negotiation
 negotiator.initiate_negotiation(
     remote_station_id="N1CALL",
@@ -260,24 +282,100 @@ if not negotiator.is_negotiating():
     mode = negotiator.get_negotiated_mode()
 ```
 
+### Automatic Negotiation
+
+Enable automatic negotiation that triggers when the adaptive rate control changes modes:
+
+```python
+# Create adaptive rate control
+rate_control = packet_protocols.adaptive_rate_control(
+    initial_mode=packet_protocols.modulation_mode_t.MODE_4FSK,
+    enable_adaptation=True
+)
+
+# Enable automatic negotiation
+negotiator.set_auto_negotiation_enabled(
+    enabled=True,
+    rate_control=rate_control
+)
+
+# Now when rate_control changes mode, negotiation is automatically triggered
+```
+
+### Quality Feedback
+
+Send quality feedback to remote stations:
+
+```python
+# Send quality metrics to remote station
+negotiator.send_quality_feedback(
+    remote_station_id="N1CALL",
+    snr_db=15.5,
+    ber=0.001,
+    quality_score=0.85
+)
+```
+
+### Frame Format Details
+
+**Negotiation Request (0x10)**:
+- Station ID length (1 byte)
+- Station ID (variable length)
+- Proposed mode (1 byte)
+- Number of supported modes (1 byte)
+- Supported modes list (1 byte each, max 8)
+
+**Negotiation Response (0x11)**:
+- Station ID length (1 byte)
+- Station ID (variable length)
+- Accepted flag (1 byte: 0=rejected, 1=accepted)
+- Negotiated mode (1 byte)
+
+**Mode Change (0x13)**:
+- Station ID length (1 byte)
+- Station ID (variable length)
+- New mode (1 byte)
+
+**Quality Feedback (0x14)**:
+- Station ID length (1 byte)
+- Station ID (variable length)
+- SNR in dB (4 bytes, IEEE 754 float)
+- BER (4 bytes, IEEE 754 float)
+- Quality score (4 bytes, IEEE 754 float)
+
 ## Integration with KISS TNC
 
-The adaptive features can be integrated into the KISS TNC block:
+The adaptive features integrate with KISS TNC via message ports:
 
 ```python
 from gnuradio import packet_protocols
+from gnuradio import pmt
 
-# Create KISS TNC with adaptive features
+# Create KISS TNC
 tnc = packet_protocols.kiss_tnc(
     device="/dev/ttyUSB0",
     baud_rate=9600
 )
 
-# Enable adaptive features (when implemented)
-tnc.set_adaptive_mode_enabled(True)
-tnc.set_link_quality_monitor(quality_monitor)
-tnc.set_rate_control(rate_control)
+# Create adaptive components
+quality_monitor = packet_protocols.link_quality_monitor()
+rate_control = packet_protocols.adaptive_rate_control()
+negotiator = packet_protocols.modulation_negotiation(
+    station_id="N0CALL",
+    supported_modes=[...]
+)
+
+# Connect negotiation message ports
+tnc.msg_connect(tnc, "negotiation_out", negotiator, "negotiation_in")
+
+# Set up callback for sending frames (see negotiation example above)
+negotiator.set_kiss_frame_sender(send_kiss_frame_callback)
+
+# Enable automatic negotiation
+negotiator.set_auto_negotiation_enabled(True, rate_control)
 ```
+
+The KISS TNC automatically forwards received negotiation frames (commands 0x10-0x14) to the `negotiation_out` message port, which can be connected to the modulation_negotiation block's `negotiation_in` port.
 
 ## Thresholds and Configuration
 

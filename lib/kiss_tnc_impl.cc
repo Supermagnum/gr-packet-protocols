@@ -26,6 +26,8 @@
 #include "kiss_tnc_impl.h"
 #include <fcntl.h>
 #include <gnuradio/io_signature.h>
+#include <gnuradio/message.h>
+#include <pmt/pmt.h>
 #include <sys/ioctl.h>
 #include <termios.h>
 #include <unistd.h>
@@ -52,6 +54,9 @@ kiss_tnc_impl::kiss_tnc_impl(const std::string& device, int baud_rate, bool hard
 
     d_frame_buffer.clear();
     d_frame_length = 0;
+    
+    // Register message port for forwarding negotiation frames
+    message_port_register_out(pmt::mp("negotiation_out"));
 }
 
 kiss_tnc_impl::~kiss_tnc_impl() {
@@ -272,6 +277,21 @@ void kiss_tnc_impl::process_kiss_frame() {
     case KISS_CMD_RETURN:
         // Return to normal mode
         d_kiss_mode = false;
+        break;
+
+    case KISS_CMD_NEG_REQ:
+    case KISS_CMD_NEG_RESP:
+    case KISS_CMD_NEG_ACK:
+    case KISS_CMD_MODE_CHANGE:
+    case KISS_CMD_QUALITY_FB:
+        // Negotiation frames - forward to message port
+        // These will be handled by modulation_negotiation block
+        if (d_frame_length > 1) {
+            pmt::pmt_t command_pmt = pmt::from_long(static_cast<long>(command));
+            pmt::pmt_t data_pmt = pmt::init_u8vector(d_frame_length - 1, &d_frame_buffer[1]);
+            pmt::pmt_t msg = pmt::cons(command_pmt, data_pmt);
+            message_port_pub(pmt::mp("negotiation_out"), msg);
+        }
         break;
     }
 }

@@ -363,9 +363,67 @@ class modulation_switch(gr.sync_block):
         return 0
 ```
 
+## Step 9: Add Modulation Negotiation (Optional)
+
+For inter-station coordination, add modulation negotiation:
+
+```python
+from gnuradio import packet_protocols
+
+# Create modulation negotiator
+negotiator = packet_protocols.modulation_negotiation(
+    station_id="N0CALL",
+    supported_modes=[
+        packet_protocols.modulation_mode_t.MODE_2FSK,
+        packet_protocols.modulation_mode_t.MODE_4FSK,
+        packet_protocols.modulation_mode_t.MODE_8FSK,
+        packet_protocols.modulation_mode_t.MODE_QPSK
+    ],
+    negotiation_timeout_ms=5000
+)
+
+# If using KISS TNC, connect message ports
+# tnc.msg_connect(tnc, "negotiation_out", negotiator, "negotiation_in")
+
+# Set callback for sending KISS frames
+def send_kiss_callback(command, data):
+    # Implementation depends on your setup
+    # This should send the KISS frame to your TNC or radio interface
+    pass
+
+negotiator.set_kiss_frame_sender(send_kiss_callback)
+
+# Enable automatic negotiation
+negotiator.set_auto_negotiation_enabled(True, rate_control)
+
+# Manually initiate negotiation if needed
+negotiator.initiate_negotiation("N1CALL", packet_protocols.modulation_mode_t.MODE_4FSK)
+```
+
+### Quality Feedback
+
+Periodically send quality feedback to remote stations:
+
+```python
+import threading
+import time
+
+def send_periodic_feedback():
+    while True:
+        time.sleep(5.0)  # Every 5 seconds
+        snr = quality_monitor.get_snr()
+        ber = quality_monitor.get_ber()
+        quality = quality_monitor.get_quality_score()
+        
+        negotiator.send_quality_feedback("N1CALL", snr, ber, quality)
+
+threading.Thread(target=send_periodic_feedback, daemon=True).start()
+```
+
 ## See Also
 
 - [Adaptive Features Guide](ADAPTIVE_FEATURES.md) - Feature overview
 - [Modulation Control](MODULATION_CONTROL.md) - Mode control details
+- [Adaptive System Architecture](ADAPTIVE_SYSTEM_ARCHITECTURE.md) - Detailed architecture
 - [Example Code](../examples/adaptive_modulation_example.py) - Complete working example
 
