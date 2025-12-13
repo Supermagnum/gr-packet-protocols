@@ -70,10 +70,11 @@ class pluto_ptt_control(gr.basic_block):
             if not self.gpio:
                 raise RuntimeError("GPIO device not found on PlutoSDR")
 
-            # Find output channel
-            self.gpio_attr = self.gpio.find_channel("out", False)  # False = output
-            if not self.gpio_attr:
-                raise RuntimeError("GPIO output channel not found")
+            # For PlutoSDR, GPIO is typically accessed via device attributes
+            # The GPIO pins are controlled via the "out" attribute
+            # Check if the device has the required attributes
+            if not self.gpio.attrs:
+                raise RuntimeError("GPIO device has no attributes")
 
             # Initialize PTT to RX (unkeyed)
             self._set_gpio(False)
@@ -82,7 +83,7 @@ class pluto_ptt_control(gr.basic_block):
             print(f"WARNING: Failed to initialize PlutoSDR GPIO: {e}")
             self.iio_available = False
             self.ctx = None
-            self.gpio_attr = None
+            self.gpio = None
 
         # Register message port for PTT control
         self.message_port_register_in(pmt.intern("ptt_control"))
@@ -93,23 +94,32 @@ class pluto_ptt_control(gr.basic_block):
         self.set_msg_handler(pmt.intern("tx_trigger"), self.handle_tx_trigger)
 
     def _set_gpio(self, state):
-        """Internal method to set GPIO pin state"""
-        if not self.iio_available or not self.gpio_attr:
+        """
+        Internal method to set GPIO pin state using libiio API.
+        
+        For PlutoSDR, GPIO pins are controlled via device attributes.
+        The "out" attribute contains a bitmask where each bit represents a GPIO pin.
+        """
+        if not self.iio_available or not self.gpio:
             return
 
         try:
             # Apply inversion if needed
             gpio_value = not state if self.invert else state
 
-            # Read current GPIO value
+            # Read current GPIO value from "out" attribute
             current_value = 0
-            if self.gpio_attr.attrs and len(self.gpio_attr.attrs) > 0:
-                try:
-                    current_str = self.gpio_attr.attrs[0].value
+            try:
+                # Access the "out" attribute by name
+                out_attr = self.gpio.find_attr("out")
+                if out_attr:
+                    # Read current value
+                    current_str = out_attr.read()
                     if current_str:
-                        current_value = int(current_str)
-                except (ValueError, AttributeError):
-                    current_value = 0
+                        current_value = int(current_str, 0)  # Allow hex/octal/decimal
+            except (ValueError, AttributeError, TypeError) as e:
+                # If read fails or returns None, start with 0
+                current_value = 0
 
             # Set or clear the bit for our GPIO pin
             if gpio_value:
@@ -117,14 +127,21 @@ class pluto_ptt_control(gr.basic_block):
             else:
                 new_value = current_value & ~(1 << self.gpio_pin)
 
-            # Write new value
-            if self.gpio_attr.attrs and len(self.gpio_attr.attrs) > 0:
-                self.gpio_attr.attrs[0].value = str(new_value)
+            # Write new value to "out" attribute
+            try:
+                out_attr = self.gpio.find_attr("out")
+                if out_attr:
+                    out_attr.write(str(new_value))
+                else:
+                    raise RuntimeError("GPIO 'out' attribute not found")
+            except Exception as e:
+                raise RuntimeError(f"Failed to write GPIO value: {e}")
 
             self.ptt_state = state
 
         except Exception as e:
             print(f"ERROR: Failed to set GPIO: {e}")
+            # Don't update ptt_state if write failed
 
     def set_ptt(self, state, apply_delay=True):
         """

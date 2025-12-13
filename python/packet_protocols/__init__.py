@@ -22,4 +22,9 @@ except ModuleNotFoundError:
 # import any pure python here
 from .adaptive_modulator import adaptive_modulator
 from .modulation_switch import modulation_switch
-from .pluto_ptt_control import pluto_ptt_control
+# pluto_ptt_control may not be available if module wasn't fully installed
+try:
+    from .pluto_ptt_control import pluto_ptt_control
+except ImportError:
+    # Gracefully handle if pluto_ptt_control is not available
+    pluto_ptt_control = None

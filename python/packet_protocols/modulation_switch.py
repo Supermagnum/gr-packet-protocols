@@ -10,6 +10,7 @@
 
 from gnuradio import gr
 import pmt
+import numpy
 
 
 class modulation_switch(gr.sync_block):
@@ -26,11 +27,13 @@ class modulation_switch(gr.sync_block):
         num_inputs: Number of input ports (number of modulation modes)
     """
     def __init__(self, rate_control, mode_to_index, num_inputs=4):
+        # For multiple inputs, we need to specify the type for each input
+        # Use numpy dtype instead of sizeof
         gr.sync_block.__init__(
             self,
             name="modulation_switch",
-            in_sig=[(gr.sizeof_gr_complex)] * num_inputs,
-            out_sig=[gr.sizeof_gr_complex]
+            in_sig=[numpy.complex64] * num_inputs,
+            out_sig=[numpy.complex64]
         )
         self.rate_control = rate_control
         self.mode_to_index = mode_to_index
