@@ -163,42 +163,48 @@ class adaptive_modulator(gr.hier_block2):
         self.d_mode_to_index[packet_protocols.modulation_mode_t.MODE_2FSK] = self.d_index
         self.d_index += 1
 
-        # 4FSK - Use qradiolink.mod_4fsk (proper 4FSK implementation)
+        # 4FSK - Use qradiolink.mod_cpm_4fsk (CPM modulator for better spectral efficiency)
         from gnuradio import qradiolink
-        mod_4fsk = qradiolink.mod_4fsk(
+        mod_4fsk = qradiolink.mod_cpm_4fsk(
             sps=sps,
             samp_rate=sps * 48000,  # Sample rate based on sps
             carrier_freq=0,
             filter_width=5000,
-            fm=True
+            h=0.5,  # Modulation index
+            L=4,    # Pulse length
+            beta=0.3  # Roll-off factor
         )
         self.d_mod_blocks[packet_protocols.modulation_mode_t.MODE_4FSK] = mod_4fsk
         self.d_mode_to_index[packet_protocols.modulation_mode_t.MODE_4FSK] = self.d_index
         self.d_index += 1
 
-        # 8FSK - Use qradiolink.mod_4fsk with different configuration
-        # Note: qradiolink doesn't have mod_8fsk, so we'll use mod_4fsk as approximation
+        # 8FSK - Use qradiolink.mod_cpm_4fsk with different configuration
+        # Note: qradiolink doesn't have mod_8fsk, so we'll use mod_cpm_4fsk as approximation
         # For true 8FSK, would need custom implementation
-        mod_8fsk = qradiolink.mod_4fsk(
+        mod_8fsk = qradiolink.mod_cpm_4fsk(
             sps=sps,
             samp_rate=sps * 48000,
             carrier_freq=0,
             filter_width=5000,
-            fm=True
+            h=0.5,
+            L=4,
+            beta=0.3
         )
         self.d_mod_blocks[packet_protocols.modulation_mode_t.MODE_8FSK] = mod_8fsk
         self.d_mode_to_index[packet_protocols.modulation_mode_t.MODE_8FSK] = self.d_index
         self.d_index += 1
 
-        # 16FSK - Use qradiolink.mod_4fsk with different configuration
-        # Note: qradiolink doesn't have mod_16fsk, so we'll use mod_4fsk as approximation
+        # 16FSK - Use qradiolink.mod_cpm_4fsk with different configuration
+        # Note: qradiolink doesn't have mod_16fsk, so we'll use mod_cpm_4fsk as approximation
         # For true 16FSK, would need custom implementation
-        mod_16fsk = qradiolink.mod_4fsk(
+        mod_16fsk = qradiolink.mod_cpm_4fsk(
             sps=sps,
             samp_rate=sps * 48000,
             carrier_freq=0,
             filter_width=5000,
-            fm=True
+            h=0.5,
+            L=4,
+            beta=0.3
         )
         self.d_mod_blocks[packet_protocols.modulation_mode_t.MODE_16FSK] = mod_16fsk
         self.d_mode_to_index[packet_protocols.modulation_mode_t.MODE_16FSK] = self.d_index
