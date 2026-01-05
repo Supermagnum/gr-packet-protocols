@@ -630,7 +630,6 @@ The system integrates with:
 - KISS interface for hardware TNCs
 - Full address and control field handling
 - Built-in PTT (Push To Talk) control via serial port DTR/RTS lines
-- Compatible with Dire Wolf and standard AX.25 implementations
 
 ### FX.25
 - Extends AX.25 with forward error correction
@@ -639,7 +638,7 @@ The system integrates with:
 - Interleaving for burst error protection
 - Error correction capability up to (n-k)/2 errors per codeword
 - Backward compatible with standard AX.25
-- Compatible with Dire Wolf FX.25 implementation
+
 
 ### IL2P
 - Modern packet radio protocol (not backward compatible with AX.25)
