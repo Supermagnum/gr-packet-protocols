@@ -8,8 +8,8 @@ parameters:
     label: Initial Modulation Mode
     dtype: enum
     default: 'MODE_2FSK'
-    options: ['MODE_2FSK', 'MODE_4FSK', 'MODE_8FSK', 'MODE_16FSK', 'MODE_BPSK', 'MODE_QPSK', 'MODE_8PSK', 'MODE_QAM16', 'MODE_QAM64_6250', 'MODE_QAM64_12500', 'MODE_QAM256']
-    option_labels: ['2FSK (Bell 202/AX.25)', '4FSK', '8FSK', '16FSK', 'BPSK', 'QPSK', '8PSK', '16-QAM (9.6k)', '64-QAM @ 6.25k (37.5k)', '64-QAM @ 12.5k (75k)', '256-QAM (100k)']
+    options: ['MODE_2FSK', 'MODE_4FSK', 'MODE_8FSK', 'MODE_16FSK', 'MODE_BPSK', 'MODE_QPSK', 'MODE_8PSK', 'MODE_QAM16', 'MODE_QAM64_6250', 'MODE_QAM64_12500', 'MODE_QAM256', 'MODE_BPSK_12500', 'MODE_QPSK_12500', 'MODE_8PSK_12500', 'MODE_QAM16_12500', 'MODE_SOQPSK_1M', 'MODE_SOQPSK_5M', 'MODE_SOQPSK_10M', 'MODE_SOQPSK_20M', 'MODE_SOQPSK_40M']
+    option_labels: ['2FSK (Bell 202/AX.25)', '4FSK', '8FSK', '16FSK', 'BPSK', 'QPSK', '8PSK', '16-QAM (9.6k)', '64-QAM @ 6.25k (37.5k)', '64-QAM @ 12.5k (75k)', '256-QAM (100k)', 'BPSK @ 12.5k (12.5k)', 'QPSK @ 12.5k (25k)', '8PSK @ 12.5k (37.5k)', '16-QAM @ 12.5k (50k)', 'SOQPSK 1M (23cm/13cm)', 'SOQPSK 5M (23cm/13cm)', 'SOQPSK 10M (23cm/13cm)', 'SOQPSK 20M (13cm)', 'SOQPSK 40M (13cm)']
 -   id: samples_per_symbol
     label: Samples per Symbol
     dtype: int
@@ -24,6 +24,11 @@ parameters:
     dtype: float
     default: '2.0'
     range: [0.0, 10.0]
+-   id: enable_tier4
+    label: Enable Tier 4 (Broadband)
+    dtype: bool
+    default: 'False'
+    comment: 'WARNING: Tier 4 modes (1-40 Mbps) require 1-40 MHz bandwidth and are for 23cm/13cm bands only. Enabling on standard 12.5 kHz VHF/UHF channels will cause out-of-bandwidth transmissions!'
 
 inputs:
 -   domain: stream
@@ -41,7 +46,8 @@ templates:
             initial_mode=packet_protocols.modulation_mode_t.${initial_mode},
             samples_per_symbol=${samples_per_symbol},
             enable_adaptation=${enable_adaptation},
-            hysteresis_db=${hysteresis_db}
+            hysteresis_db=${hysteresis_db},
+            enable_tier4=${enable_tier4}
         )
 
 file_format: 1

@@ -63,6 +63,8 @@ class adaptive_modulator(gr.hier_block2):
         samples_per_symbol: Samples per symbol for modulation (default: 2)
         enable_adaptation: Enable automatic rate adaptation (default: True)
         hysteresis_db: Hysteresis in dB to prevent rapid switching (default: 2.0)
+        enable_tier4: Enable Tier 4 broadband modes (default: False)
+            ⚠️ WARNING: Tier 4 requires 1-40 MHz bandwidth. Only for 23cm/13cm bands!
     
     Note:
         All modulators process the input stream simultaneously. The switch
@@ -72,7 +74,7 @@ class adaptive_modulator(gr.hier_block2):
     """
 
     def __init__(self, initial_mode=None, samples_per_symbol=2,
-                 enable_adaptation=True, hysteresis_db=2.0):
+                 enable_adaptation=True, hysteresis_db=2.0, enable_tier4=False):
         # Import here to avoid circular dependencies
         # Try installed module first, handle gracefully if incomplete
         try:
@@ -118,7 +120,8 @@ class adaptive_modulator(gr.hier_block2):
         self.d_rate_control = packet_protocols.adaptive_rate_control(
             initial_mode=initial_mode,
             enable_adaptation=enable_adaptation,
-            hysteresis_db=hysteresis_db
+            hysteresis_db=hysteresis_db,
+            enable_tier4=enable_tier4
         )
 
         # Create all modulation blocks
@@ -240,6 +243,37 @@ class adaptive_modulator(gr.hier_block2):
         self.d_mode_to_index[packet_protocols.modulation_mode_t.MODE_8PSK] = self.d_index
         self.d_index += 1
 
+        # Tier 2: 12,500 baud PSK modes (constant envelope)
+        # BPSK @ 12,500 baud (12.5 kbps)
+        mod_bpsk_12500 = digital.psk.psk_mod(
+            constellation_points=2,
+            mod_code='gray',
+            differential=False
+        )
+        self.d_mod_blocks[packet_protocols.modulation_mode_t.MODE_BPSK_12500] = mod_bpsk_12500
+        self.d_mode_to_index[packet_protocols.modulation_mode_t.MODE_BPSK_12500] = self.d_index
+        self.d_index += 1
+
+        # QPSK @ 12,500 baud (25 kbps)
+        mod_qpsk_12500 = digital.psk.psk_mod(
+            constellation_points=4,
+            mod_code='gray',
+            differential=False
+        )
+        self.d_mod_blocks[packet_protocols.modulation_mode_t.MODE_QPSK_12500] = mod_qpsk_12500
+        self.d_mode_to_index[packet_protocols.modulation_mode_t.MODE_QPSK_12500] = self.d_index
+        self.d_index += 1
+
+        # 8PSK @ 12,500 baud (37.5 kbps)
+        mod_8psk_12500 = digital.psk.psk_mod(
+            constellation_points=8,
+            mod_code='gray',
+            differential=False
+        )
+        self.d_mod_blocks[packet_protocols.modulation_mode_t.MODE_8PSK_12500] = mod_8psk_12500
+        self.d_mode_to_index[packet_protocols.modulation_mode_t.MODE_8PSK_12500] = self.d_index
+        self.d_index += 1
+
         # 16-QAM
         qam16_const = digital.qam.qam_constellation(
             constellation_points=16,
@@ -294,6 +328,72 @@ class adaptive_modulator(gr.hier_block2):
         )
         self.d_mod_blocks[packet_protocols.modulation_mode_t.MODE_QAM256] = mod_qam256
         self.d_mode_to_index[packet_protocols.modulation_mode_t.MODE_QAM256] = self.d_index
+        self.d_index += 1
+
+        # Tier 3: 12,500 baud QAM modes (variable envelope)
+        # 16-QAM @ 12,500 baud (50 kbps)
+        mod_qam16_12500 = digital.generic_mod(
+            constellation=qam16_const,
+            differential=False,
+            samples_per_symbol=sps
+        )
+        self.d_mod_blocks[packet_protocols.modulation_mode_t.MODE_QAM16_12500] = mod_qam16_12500
+        self.d_mode_to_index[packet_protocols.modulation_mode_t.MODE_QAM16_12500] = self.d_index
+        self.d_index += 1
+
+        # Tier 4: Broadband SOQPSK modes (23cm/13cm bands, constant envelope)
+        # SOQPSK is a shaped offset QPSK with constant envelope
+        # Use QPSK with appropriate shaping for SOQPSK approximation
+        # Note: True SOQPSK requires specialized blocks, this is an approximation
+        
+        # SOQPSK @ 781 kbaud (1 Mbps) - ~1 MHz bandwidth
+        mod_soqpsk_1m = digital.psk.psk_mod(
+            constellation_points=4,
+            mod_code='gray',
+            differential=False
+        )
+        self.d_mod_blocks[packet_protocols.modulation_mode_t.MODE_SOQPSK_1M] = mod_soqpsk_1m
+        self.d_mode_to_index[packet_protocols.modulation_mode_t.MODE_SOQPSK_1M] = self.d_index
+        self.d_index += 1
+
+        # SOQPSK @ 3.9 Mbaud (5 Mbps) - ~5 MHz bandwidth
+        mod_soqpsk_5m = digital.psk.psk_mod(
+            constellation_points=4,
+            mod_code='gray',
+            differential=False
+        )
+        self.d_mod_blocks[packet_protocols.modulation_mode_t.MODE_SOQPSK_5M] = mod_soqpsk_5m
+        self.d_mode_to_index[packet_protocols.modulation_mode_t.MODE_SOQPSK_5M] = self.d_index
+        self.d_index += 1
+
+        # SOQPSK @ 7.8 Mbaud (10 Mbps) - ~10 MHz bandwidth
+        mod_soqpsk_10m = digital.psk.psk_mod(
+            constellation_points=4,
+            mod_code='gray',
+            differential=False
+        )
+        self.d_mod_blocks[packet_protocols.modulation_mode_t.MODE_SOQPSK_10M] = mod_soqpsk_10m
+        self.d_mode_to_index[packet_protocols.modulation_mode_t.MODE_SOQPSK_10M] = self.d_index
+        self.d_index += 1
+
+        # SOQPSK @ 15.6 Mbaud (20 Mbps) - ~20 MHz bandwidth
+        mod_soqpsk_20m = digital.psk.psk_mod(
+            constellation_points=4,
+            mod_code='gray',
+            differential=False
+        )
+        self.d_mod_blocks[packet_protocols.modulation_mode_t.MODE_SOQPSK_20M] = mod_soqpsk_20m
+        self.d_mode_to_index[packet_protocols.modulation_mode_t.MODE_SOQPSK_20M] = self.d_index
+        self.d_index += 1
+
+        # SOQPSK @ 31.3 Mbaud (40 Mbps) - ~40 MHz bandwidth
+        mod_soqpsk_40m = digital.psk.psk_mod(
+            constellation_points=4,
+            mod_code='gray',
+            differential=False
+        )
+        self.d_mod_blocks[packet_protocols.modulation_mode_t.MODE_SOQPSK_40M] = mod_soqpsk_40m
+        self.d_mode_to_index[packet_protocols.modulation_mode_t.MODE_SOQPSK_40M] = self.d_index
         self.d_index += 1
 
     def _get_mode_index(self, mode):

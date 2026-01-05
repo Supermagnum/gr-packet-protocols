@@ -19,22 +19,29 @@ namespace packet_protocols {
 
 adaptive_rate_control::sptr adaptive_rate_control::make(modulation_mode_t initial_mode,
                                                           bool enable_adaptation,
-                                                          float hysteresis_db) {
+                                                          float hysteresis_db,
+                                                          bool enable_tier4) {
   return gnuradio::make_block_sptr<adaptive_rate_control_impl>(
-      initial_mode, enable_adaptation, hysteresis_db);
+      initial_mode, enable_adaptation, hysteresis_db, enable_tier4);
 }
 
 adaptive_rate_control_impl::adaptive_rate_control_impl(modulation_mode_t initial_mode,
                                                        bool enable_adaptation,
-                                                       float hysteresis_db)
+                                                       float hysteresis_db,
+                                                       bool enable_tier4)
     : gr::sync_block("adaptive_rate_control",
                      gr::io_signature::make(1, 1, sizeof(char)),
                      gr::io_signature::make(1, 1, sizeof(char))),
       d_current_mode(initial_mode),
       d_adaptation_enabled(enable_adaptation),
       d_hysteresis_db(hysteresis_db),
+      d_enable_tier4(enable_tier4),
       d_last_snr_db(0.0f),
       d_last_mode(initial_mode) {
+  // Validate initial mode - reject Tier 4 if disabled
+  if (is_tier4_mode(initial_mode) && !d_enable_tier4) {
+    d_current_mode = modulation_mode_t::MODE_2FSK;  // Fallback to default
+  }
   initialize_thresholds();
 }
 
@@ -88,6 +95,45 @@ void adaptive_rate_control_impl::initialize_thresholds() {
   // 256-QAM @ 12,500 baud (12,500 × 8 = 100,000 bps)
   d_mode_thresholds[modulation_mode_t::MODE_QAM256] = {28.0f, 40.0f, 0.00005f, 0.95f};
   d_mode_data_rates[modulation_mode_t::MODE_QAM256] = 100000;
+
+  // Tier 2: 12,500 baud PSK modes (constant envelope)
+  // BPSK @ 12,500 baud (12,500 × 1 = 12,500 bps)
+  d_mode_thresholds[modulation_mode_t::MODE_BPSK_12500] = {8.0f, 20.0f, 0.005f, 0.5f};
+  d_mode_data_rates[modulation_mode_t::MODE_BPSK_12500] = 12500;
+
+  // QPSK @ 12,500 baud (12,500 × 2 = 25,000 bps)
+  d_mode_thresholds[modulation_mode_t::MODE_QPSK_12500] = {12.0f, 24.0f, 0.002f, 0.65f};
+  d_mode_data_rates[modulation_mode_t::MODE_QPSK_12500] = 25000;
+
+  // 8PSK @ 12,500 baud (12,500 × 3 = 37,500 bps)
+  d_mode_thresholds[modulation_mode_t::MODE_8PSK_12500] = {16.0f, 28.0f, 0.0008f, 0.78f};
+  d_mode_data_rates[modulation_mode_t::MODE_8PSK_12500] = 37500;
+
+  // Tier 3: 12,500 baud QAM modes (variable envelope)
+  // 16-QAM @ 12,500 baud (12,500 × 4 = 50,000 bps)
+  d_mode_thresholds[modulation_mode_t::MODE_QAM16_12500] = {18.0f, 30.0f, 0.0003f, 0.82f};
+  d_mode_data_rates[modulation_mode_t::MODE_QAM16_12500] = 50000;
+
+  // Tier 4: Broadband SOQPSK modes (23cm/13cm bands, constant envelope)
+  // SOQPSK @ 781 kbaud (1 Mbps) - ~1 MHz bandwidth
+  d_mode_thresholds[modulation_mode_t::MODE_SOQPSK_1M] = {10.0f, 25.0f, 0.001f, 0.6f};
+  d_mode_data_rates[modulation_mode_t::MODE_SOQPSK_1M] = 1000000;
+
+  // SOQPSK @ 3.9 Mbaud (5 Mbps) - ~5 MHz bandwidth
+  d_mode_thresholds[modulation_mode_t::MODE_SOQPSK_5M] = {15.0f, 30.0f, 0.0005f, 0.7f};
+  d_mode_data_rates[modulation_mode_t::MODE_SOQPSK_5M] = 5000000;
+
+  // SOQPSK @ 7.8 Mbaud (10 Mbps) - ~10 MHz bandwidth
+  d_mode_thresholds[modulation_mode_t::MODE_SOQPSK_10M] = {18.0f, 33.0f, 0.0003f, 0.75f};
+  d_mode_data_rates[modulation_mode_t::MODE_SOQPSK_10M] = 10000000;
+
+  // SOQPSK @ 15.6 Mbaud (20 Mbps) - ~20 MHz bandwidth
+  d_mode_thresholds[modulation_mode_t::MODE_SOQPSK_20M] = {22.0f, 36.0f, 0.0002f, 0.8f};
+  d_mode_data_rates[modulation_mode_t::MODE_SOQPSK_20M] = 20000000;
+
+  // SOQPSK @ 31.3 Mbaud (40 Mbps) - ~40 MHz bandwidth
+  d_mode_thresholds[modulation_mode_t::MODE_SOQPSK_40M] = {26.0f, 40.0f, 0.0001f, 0.85f};
+  d_mode_data_rates[modulation_mode_t::MODE_SOQPSK_40M] = 40000000;
 }
 
 int adaptive_rate_control_impl::work(int noutput_items,
@@ -107,8 +153,21 @@ modulation_mode_t adaptive_rate_control_impl::get_modulation_mode() const {
   return d_current_mode;
 }
 
+bool adaptive_rate_control_impl::is_tier4_mode(modulation_mode_t mode) const {
+  return (mode == modulation_mode_t::MODE_SOQPSK_1M ||
+          mode == modulation_mode_t::MODE_SOQPSK_5M ||
+          mode == modulation_mode_t::MODE_SOQPSK_10M ||
+          mode == modulation_mode_t::MODE_SOQPSK_20M ||
+          mode == modulation_mode_t::MODE_SOQPSK_40M);
+}
+
 void adaptive_rate_control_impl::set_modulation_mode(modulation_mode_t mode) {
   std::lock_guard<std::mutex> lock(d_mutex);
+  // Reject Tier 4 modes if disabled
+  if (is_tier4_mode(mode) && !d_enable_tier4) {
+    // Silently fall back to current mode or default
+    return;
+  }
   d_current_mode = mode;
   d_last_mode = mode;
 }
@@ -116,6 +175,16 @@ void adaptive_rate_control_impl::set_modulation_mode(modulation_mode_t mode) {
 void adaptive_rate_control_impl::set_adaptation_enabled(bool enabled) {
   std::lock_guard<std::mutex> lock(d_mutex);
   d_adaptation_enabled = enabled;
+}
+
+void adaptive_rate_control_impl::set_tier4_enabled(bool enabled) {
+  std::lock_guard<std::mutex> lock(d_mutex);
+  d_enable_tier4 = enabled;
+  // If Tier 4 is being disabled and current mode is Tier 4, fall back to default
+  if (!d_enable_tier4 && is_tier4_mode(d_current_mode)) {
+    d_current_mode = modulation_mode_t::MODE_2FSK;
+    d_last_mode = modulation_mode_t::MODE_2FSK;
+  }
 }
 
 void adaptive_rate_control_impl::update_quality(float snr_db, float ber,
@@ -162,14 +231,23 @@ modulation_mode_t adaptive_rate_control_impl::recommend_mode(float snr_db,
 
   // Check modes in order from highest to lowest rate
   std::vector<modulation_mode_t> modes = {
-      modulation_mode_t::MODE_QAM256, modulation_mode_t::MODE_QAM64_12500,
-      modulation_mode_t::MODE_QAM64_6250, modulation_mode_t::MODE_QAM16,
-      modulation_mode_t::MODE_16FSK, modulation_mode_t::MODE_8PSK,
-      modulation_mode_t::MODE_8FSK,  modulation_mode_t::MODE_QPSK,
-      modulation_mode_t::MODE_4FSK,  modulation_mode_t::MODE_BPSK,
-      modulation_mode_t::MODE_2FSK};
+      modulation_mode_t::MODE_SOQPSK_40M, modulation_mode_t::MODE_SOQPSK_20M,
+      modulation_mode_t::MODE_SOQPSK_10M, modulation_mode_t::MODE_SOQPSK_5M,
+      modulation_mode_t::MODE_SOQPSK_1M, modulation_mode_t::MODE_QAM256,
+      modulation_mode_t::MODE_QAM64_12500, modulation_mode_t::MODE_QAM16_12500,
+      modulation_mode_t::MODE_8PSK_12500, modulation_mode_t::MODE_QPSK_12500,
+      modulation_mode_t::MODE_BPSK_12500, modulation_mode_t::MODE_QAM64_6250,
+      modulation_mode_t::MODE_QAM16, modulation_mode_t::MODE_16FSK,
+      modulation_mode_t::MODE_8PSK, modulation_mode_t::MODE_8FSK,
+      modulation_mode_t::MODE_QPSK, modulation_mode_t::MODE_4FSK,
+      modulation_mode_t::MODE_BPSK, modulation_mode_t::MODE_2FSK};
 
   for (auto mode : modes) {
+    // Skip Tier 4 modes if disabled
+    if (is_tier4_mode(mode) && !d_enable_tier4) {
+      continue;
+    }
+    
     auto thresholds = get_thresholds(mode);
     auto rate_it = d_mode_data_rates.find(mode);
 

@@ -12,7 +12,7 @@ parameters:
     label: Supported Modes
     dtype: string
     default: 'MODE_2FSK,MODE_4FSK,MODE_8FSK'
-    comment: 'Comma-separated list: MODE_2FSK,MODE_4FSK,MODE_8FSK,MODE_16FSK,MODE_BPSK,MODE_QPSK,MODE_8PSK,MODE_QAM16,MODE_QAM64'
+    comment: 'Comma-separated list: MODE_2FSK,MODE_4FSK,MODE_8FSK,MODE_16FSK,MODE_BPSK,MODE_QPSK,MODE_8PSK,MODE_QAM16,MODE_QAM64,MODE_BPSK_12500,MODE_QPSK_12500,MODE_8PSK_12500,MODE_QAM16_12500,MODE_QAM64_12500,MODE_QAM256,MODE_SOQPSK_1M,MODE_SOQPSK_5M,MODE_SOQPSK_10M,MODE_SOQPSK_20M,MODE_SOQPSK_40M'
 -   id: negotiation_timeout_ms
     label: Negotiation Timeout (ms)
     dtype: int
@@ -47,7 +47,18 @@ templates:
             'MODE_QPSK': packet_protocols.modulation_mode_t.MODE_QPSK,
             'MODE_8PSK': packet_protocols.modulation_mode_t.MODE_8PSK,
             'MODE_QAM16': packet_protocols.modulation_mode_t.MODE_QAM16,
-            'MODE_QAM64': packet_protocols.modulation_mode_t.MODE_QAM64,
+            'MODE_QAM64': packet_protocols.modulation_mode_t.MODE_QAM64_12500,  # Default to 12.5k version
+            'MODE_BPSK_12500': packet_protocols.modulation_mode_t.MODE_BPSK_12500,
+            'MODE_QPSK_12500': packet_protocols.modulation_mode_t.MODE_QPSK_12500,
+            'MODE_8PSK_12500': packet_protocols.modulation_mode_t.MODE_8PSK_12500,
+            'MODE_QAM16_12500': packet_protocols.modulation_mode_t.MODE_QAM16_12500,
+            'MODE_QAM64_12500': packet_protocols.modulation_mode_t.MODE_QAM64_12500,
+            'MODE_QAM256': packet_protocols.modulation_mode_t.MODE_QAM256,
+            'MODE_SOQPSK_1M': packet_protocols.modulation_mode_t.MODE_SOQPSK_1M,
+            'MODE_SOQPSK_5M': packet_protocols.modulation_mode_t.MODE_SOQPSK_5M,
+            'MODE_SOQPSK_10M': packet_protocols.modulation_mode_t.MODE_SOQPSK_10M,
+            'MODE_SOQPSK_20M': packet_protocols.modulation_mode_t.MODE_SOQPSK_20M,
+            'MODE_SOQPSK_40M': packet_protocols.modulation_mode_t.MODE_SOQPSK_40M,
         }
         supported_modes_list = [mode_map[m.strip()] for m in '${supported_modes}'.split(',') if m.strip() in mode_map]
         packet_protocols.modulation_negotiation(

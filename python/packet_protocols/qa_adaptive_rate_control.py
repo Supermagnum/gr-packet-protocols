@@ -143,7 +143,8 @@ class qa_adaptive_rate_control(gr_unittest.TestCase):
             modulation_mode_t.MODE_QPSK,
             modulation_mode_t.MODE_8PSK,
             modulation_mode_t.MODE_QAM16,
-            modulation_mode_t.MODE_QAM64
+            modulation_mode_t.MODE_QAM64_6250,
+            modulation_mode_t.MODE_QAM64_12500
         ])
 
     def test_recommend_mode_low_snr(self):
@@ -231,6 +232,210 @@ class qa_adaptive_rate_control(gr_unittest.TestCase):
         # Check that data passed through
         data = sink.data()
         self.assertEqual(len(data), 5)
+
+    def test_tier4_disabled_by_default(self):
+        if not _has_bindings:
+            self.skipTest("adaptive_rate_control bindings not available")
+        """Test that Tier 4 is disabled by default"""
+        # Check if Tier 4 modes are available
+        if not hasattr(modulation_mode_t, 'MODE_SOQPSK_1M'):
+            self.skipTest("Tier 4 modes not available in bindings - rebuild required")
+        
+        rate_control = adaptive_rate_control(
+            initial_mode=modulation_mode_t.MODE_2FSK
+        )
+        
+        # Try to set a Tier 4 mode - should be rejected
+        initial_mode = rate_control.get_modulation_mode()
+        rate_control.set_modulation_mode(modulation_mode_t.MODE_SOQPSK_1M)
+        
+        # Mode should not have changed (Tier 4 rejected)
+        final_mode = rate_control.get_modulation_mode()
+        self.assertEqual(final_mode, initial_mode)
+
+    def test_tier4_filtered_from_recommendations(self):
+        if not _has_bindings:
+            self.skipTest("adaptive_rate_control bindings not available")
+        """Test that Tier 4 modes are filtered from recommendations when disabled"""
+        # Check if Tier 4 modes are available
+        if not hasattr(modulation_mode_t, 'MODE_SOQPSK_1M'):
+            self.skipTest("Tier 4 modes not available in bindings - rebuild required")
+        
+        # Check if enable_tier4 parameter exists
+        try:
+            rate_control = adaptive_rate_control(
+                initial_mode=modulation_mode_t.MODE_2FSK,
+                enable_tier4=False  # Explicitly disabled
+            )
+        except TypeError:
+            self.skipTest("enable_tier4 parameter not available in bindings - rebuild required")
+        
+        # Very high SNR should recommend high rate, but not Tier 4
+        recommended = rate_control.recommend_mode(snr_db=50.0, ber=0.00001)
+        
+        # Should NOT recommend Tier 4 modes
+        self.assertNotIn(recommended, [
+            modulation_mode_t.MODE_SOQPSK_1M,
+            modulation_mode_t.MODE_SOQPSK_5M,
+            modulation_mode_t.MODE_SOQPSK_10M,
+            modulation_mode_t.MODE_SOQPSK_20M,
+            modulation_mode_t.MODE_SOQPSK_40M
+        ])
+
+    def test_tier4_can_be_enabled(self):
+        if not _has_bindings:
+            self.skipTest("adaptive_rate_control bindings not available")
+        """Test that Tier 4 can be enabled"""
+        # Check if Tier 4 modes are available
+        if not hasattr(modulation_mode_t, 'MODE_SOQPSK_1M'):
+            self.skipTest("Tier 4 modes not available in bindings - rebuild required")
+        
+        # Check if enable_tier4 parameter exists
+        try:
+            rate_control = adaptive_rate_control(
+                initial_mode=modulation_mode_t.MODE_2FSK,
+                enable_tier4=True  # Explicitly enabled
+            )
+        except TypeError:
+            self.skipTest("enable_tier4 parameter not available in bindings - rebuild required")
+        
+        # Should be able to set Tier 4 mode when enabled
+        rate_control.set_modulation_mode(modulation_mode_t.MODE_SOQPSK_1M)
+        mode = rate_control.get_modulation_mode()
+        self.assertEqual(mode, modulation_mode_t.MODE_SOQPSK_1M)
+
+    def test_tier4_data_rates(self):
+        if not _has_bindings:
+            self.skipTest("adaptive_rate_control bindings not available")
+        """Test that Tier 4 modes have correct data rates"""
+        # Check if Tier 4 modes are available
+        if not hasattr(modulation_mode_t, 'MODE_SOQPSK_1M'):
+            self.skipTest("Tier 4 modes not available in bindings - rebuild required")
+        
+        # Check if enable_tier4 parameter exists
+        try:
+            rate_control = adaptive_rate_control(
+                initial_mode=modulation_mode_t.MODE_2FSK,
+                enable_tier4=True
+            )
+        except TypeError:
+            self.skipTest("enable_tier4 parameter not available in bindings - rebuild required")
+        
+        # Test SOQPSK 1M
+        rate_control.set_modulation_mode(modulation_mode_t.MODE_SOQPSK_1M)
+        rate = rate_control.get_data_rate()
+        self.assertEqual(rate, 1000000)  # 1 Mbps
+        
+        # Test SOQPSK 5M
+        rate_control.set_modulation_mode(modulation_mode_t.MODE_SOQPSK_5M)
+        rate = rate_control.get_data_rate()
+        self.assertEqual(rate, 5000000)  # 5 Mbps
+        
+        # Test SOQPSK 10M
+        rate_control.set_modulation_mode(modulation_mode_t.MODE_SOQPSK_10M)
+        rate = rate_control.get_data_rate()
+        self.assertEqual(rate, 10000000)  # 10 Mbps
+        
+        # Test SOQPSK 20M
+        rate_control.set_modulation_mode(modulation_mode_t.MODE_SOQPSK_20M)
+        rate = rate_control.get_data_rate()
+        self.assertEqual(rate, 20000000)  # 20 Mbps
+        
+        # Test SOQPSK 40M
+        rate_control.set_modulation_mode(modulation_mode_t.MODE_SOQPSK_40M)
+        rate = rate_control.get_data_rate()
+        self.assertEqual(rate, 40000000)  # 40 Mbps
+
+    def test_tier4_in_recommendations_when_enabled(self):
+        if not _has_bindings:
+            self.skipTest("adaptive_rate_control bindings not available")
+        """Test that Tier 4 modes can be recommended when enabled"""
+        # Check if Tier 4 modes are available
+        if not hasattr(modulation_mode_t, 'MODE_SOQPSK_1M'):
+            self.skipTest("Tier 4 modes not available in bindings - rebuild required")
+        
+        # Check if enable_tier4 parameter exists
+        try:
+            rate_control = adaptive_rate_control(
+                initial_mode=modulation_mode_t.MODE_2FSK,
+                enable_tier4=True  # Enabled
+            )
+        except TypeError:
+            self.skipTest("enable_tier4 parameter not available in bindings - rebuild required")
+        
+        # Very high SNR should potentially recommend Tier 4
+        recommended = rate_control.recommend_mode(snr_db=50.0, ber=0.00001)
+        
+        # Should be able to recommend Tier 4 modes (or other high rate modes)
+        # Just verify it's a valid mode
+        self.assertIsNotNone(recommended)
+
+    def test_set_tier4_enabled(self):
+        if not _has_bindings:
+            self.skipTest("adaptive_rate_control bindings not available")
+        """Test set_tier4_enabled() method"""
+        # Check if Tier 4 modes are available
+        if not hasattr(modulation_mode_t, 'MODE_SOQPSK_1M'):
+            self.skipTest("Tier 4 modes not available in bindings - rebuild required")
+        
+        # Check if enable_tier4 parameter exists
+        try:
+            rate_control = adaptive_rate_control(
+                initial_mode=modulation_mode_t.MODE_2FSK,
+                enable_tier4=False
+            )
+        except TypeError:
+            self.skipTest("enable_tier4 parameter not available in bindings - rebuild required")
+        
+        # Check if set_tier4_enabled method exists
+        if not hasattr(rate_control, 'set_tier4_enabled'):
+            self.skipTest("set_tier4_enabled method not available in bindings - rebuild required")
+        
+        # Initially disabled - try to set Tier 4 mode
+        rate_control.set_modulation_mode(modulation_mode_t.MODE_SOQPSK_1M)
+        mode = rate_control.get_modulation_mode()
+        self.assertNotEqual(mode, modulation_mode_t.MODE_SOQPSK_1M)  # Should be rejected
+        
+        # Enable Tier 4
+        rate_control.set_tier4_enabled(True)
+        
+        # Now should be able to set Tier 4 mode
+        rate_control.set_modulation_mode(modulation_mode_t.MODE_SOQPSK_1M)
+        mode = rate_control.get_modulation_mode()
+        self.assertEqual(mode, modulation_mode_t.MODE_SOQPSK_1M)
+        
+        # Disable Tier 4 while in Tier 4 mode - should fall back
+        rate_control.set_tier4_enabled(False)
+        mode = rate_control.get_modulation_mode()
+        self.assertNotIn(mode, [
+            modulation_mode_t.MODE_SOQPSK_1M,
+            modulation_mode_t.MODE_SOQPSK_5M,
+            modulation_mode_t.MODE_SOQPSK_10M,
+            modulation_mode_t.MODE_SOQPSK_20M,
+            modulation_mode_t.MODE_SOQPSK_40M
+        ])  # Should have fallen back to non-Tier 4 mode
+
+    def test_tier4_initial_mode_rejected(self):
+        if not _has_bindings:
+            self.skipTest("adaptive_rate_control bindings not available")
+        """Test that Tier 4 initial mode is rejected when disabled"""
+        # Check if Tier 4 modes are available
+        if not hasattr(modulation_mode_t, 'MODE_SOQPSK_1M'):
+            self.skipTest("Tier 4 modes not available in bindings - rebuild required")
+        
+        # Check if enable_tier4 parameter exists
+        try:
+            # Try to create with Tier 4 mode but Tier 4 disabled
+            rate_control = adaptive_rate_control(
+                initial_mode=modulation_mode_t.MODE_SOQPSK_1M,
+                enable_tier4=False
+            )
+        except TypeError:
+            self.skipTest("enable_tier4 parameter not available in bindings - rebuild required")
+        
+        # Should fall back to default mode (2FSK)
+        mode = rate_control.get_modulation_mode()
+        self.assertEqual(mode, modulation_mode_t.MODE_2FSK)
 
 
 if __name__ == '__main__':

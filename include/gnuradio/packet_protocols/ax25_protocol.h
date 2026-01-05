@@ -21,7 +21,7 @@ extern "C" {
 #define AX25_FLAG 0x7E    // Frame flag
 #define AX25_ADDR_LEN 7   // Address length
 #define AX25_MAX_ADDRS 9  // Maximum addresses
-#define AX25_MAX_INFO 256 // Maximum information field length
+#define AX25_MAX_INFO 2048 // Maximum information field length (AX.25 v2.2)
 
 // AX.25 Frame Types
 #define AX25_FRAME_I 0x00 // Information frame
@@ -33,6 +33,7 @@ extern "C" {
 #define AX25_CTRL_RR 0x01    // Receive Ready
 #define AX25_CTRL_RNR 0x05   // Receive Not Ready
 #define AX25_CTRL_REJ 0x09   // Reject
+#define AX25_CTRL_SREJ 0x0D  // Selective Reject (AX.25 v2.2)
 #define AX25_CTRL_SABM 0x2F  // Set Asynchronous Balanced Mode
 #define AX25_CTRL_SABME 0x6F // Set Asynchronous Balanced Mode Extended
 #define AX25_CTRL_DISC 0x43  // Disconnect
@@ -88,6 +89,7 @@ typedef struct {
     uint8_t window_size;  // Window size
     uint32_t timeout;     // Connection timeout
     uint32_t retry_count; // Retry counter
+    bool extended_mode;   // true for modulo 128 (SABME), false for modulo 8 (SABM)
 } ax25_connection_t;
 
 // AX.25 XID Format Identifiers (v2.2)
@@ -168,11 +170,15 @@ int ax25_validate_frame(const ax25_frame_t* frame);
 
 // Connection Functions
 int ax25_connect(ax25_tnc_t* tnc, const ax25_address_t* remote_addr);
+int ax25_connect_extended(ax25_tnc_t* tnc, const ax25_address_t* remote_addr, bool use_extended);
 int ax25_disconnect(ax25_tnc_t* tnc, const ax25_address_t* remote_addr);
 int ax25_send_data(ax25_tnc_t* tnc, const ax25_address_t* remote_addr, const uint8_t* data,
                    uint16_t length);
 int ax25_receive_data(ax25_tnc_t* tnc, ax25_address_t* remote_addr, uint8_t* data,
                       uint16_t* length);
+int ax25_process_frame(ax25_tnc_t* tnc, const ax25_frame_t* frame);
+int ax25_send_supervisory(ax25_tnc_t* tnc, const ax25_address_t* remote_addr, uint8_t ctrl_type);
+int ax25_send_frmr(ax25_tnc_t* tnc, const ax25_address_t* remote_addr, uint8_t reason);
 
 // UI Frame Functions (for APRS)
 int ax25_send_ui_frame(ax25_tnc_t* tnc, const ax25_address_t* src, const ax25_address_t* dst,

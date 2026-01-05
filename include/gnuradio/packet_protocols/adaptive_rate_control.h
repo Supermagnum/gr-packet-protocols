@@ -37,10 +37,22 @@ enum class modulation_mode_t {
   MODE_BPSK = 4,   // Binary PSK
   MODE_QPSK = 5,   // Quadrature PSK
   MODE_8PSK = 6,   // 8-PSK
-  MODE_QAM16 = 7,  // 16-QAM
+  MODE_QAM16 = 7,  // 16-QAM @ 2,400 baud (2,400 × 4 = 9,600 bps)
   MODE_QAM64_6250 = 8,  // 64-QAM @ 6,250 baud (6,250 × 6 = 37,500 bps)
   MODE_QAM64_12500 = 9,  // 64-QAM @ 12,500 baud (12,500 × 6 = 75,000 bps)
-  MODE_QAM256 = 10  // 256-QAM @ 12,500 baud (12,500 × 8 = 100,000 bps)
+  MODE_QAM256 = 10,  // 256-QAM @ 12,500 baud (12,500 × 8 = 100,000 bps)
+  // Tier 2: 12,500 baud PSK modes (constant envelope)
+  MODE_BPSK_12500 = 11,  // BPSK @ 12,500 baud (12,500 × 1 = 12,500 bps)
+  MODE_QPSK_12500 = 12,  // QPSK @ 12,500 baud (12,500 × 2 = 25,000 bps)
+  MODE_8PSK_12500 = 13,  // 8PSK @ 12,500 baud (12,500 × 3 = 37,500 bps)
+  // Tier 3: 12,500 baud QAM modes (variable envelope)
+  MODE_QAM16_12500 = 14,  // 16-QAM @ 12,500 baud (12,500 × 4 = 50,000 bps)
+  // Tier 4: Broadband SOQPSK modes (23cm/13cm bands, constant envelope)
+  MODE_SOQPSK_1M = 15,    // SOQPSK @ 781 kbaud (1 Mbps) - ~1 MHz bandwidth
+  MODE_SOQPSK_5M = 16,    // SOQPSK @ 3.9 Mbaud (5 Mbps) - ~5 MHz bandwidth
+  MODE_SOQPSK_10M = 17,   // SOQPSK @ 7.8 Mbaud (10 Mbps) - ~10 MHz bandwidth
+  MODE_SOQPSK_20M = 18,   // SOQPSK @ 15.6 Mbaud (20 Mbps) - ~20 MHz bandwidth
+  MODE_SOQPSK_40M = 19    // SOQPSK @ 31.3 Mbaud (40 Mbps) - ~40 MHz bandwidth
 };
 
 // Rate adaptation thresholds
@@ -67,9 +79,11 @@ class PACKET_PROTOCOLS_API adaptive_rate_control : virtual public gr::sync_block
    * \param initial_mode Initial modulation mode
    * \param enable_adaptation Enable automatic rate adaptation
    * \param hysteresis_db Hysteresis in dB to prevent rapid switching
+   * \param enable_tier4 Enable Tier 4 broadband modes (1-40 Mbps, disabled by default to prevent out-of-bandwidth transmissions)
    */
   static sptr make(modulation_mode_t initial_mode = modulation_mode_t::MODE_2FSK,
-                   bool enable_adaptation = true, float hysteresis_db = 2.0);
+                   bool enable_adaptation = true, float hysteresis_db = 2.0,
+                   bool enable_tier4 = false);
 
   /*!
    * \brief Get current modulation mode
@@ -87,6 +101,15 @@ class PACKET_PROTOCOLS_API adaptive_rate_control : virtual public gr::sync_block
    * \param enabled Enable adaptation
    */
   virtual void set_adaptation_enabled(bool enabled) = 0;
+
+  /*!
+   * \brief Enable/disable Tier 4 broadband modes (1-40 Mbps)
+   * \param enabled Enable Tier 4 modes (disabled by default to prevent out-of-bandwidth transmissions)
+   * 
+   * WARNING: Tier 4 modes require 1-40 MHz bandwidth and are designed for 23cm/13cm bands only.
+   * Enabling Tier 4 on standard 12.5 kHz VHF/UHF channels will cause out-of-bandwidth transmissions.
+   */
+  virtual void set_tier4_enabled(bool enabled) = 0;
 
   /*!
    * \brief Update link quality metrics and adapt if enabled

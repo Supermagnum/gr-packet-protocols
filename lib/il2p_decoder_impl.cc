@@ -205,8 +205,11 @@ std::vector<uint8_t> il2p_decoder_impl::decode_il2p_frame() {
         data.push_back(d_frame_buffer[i]);
     }
 
+    // Descramble data (IL2P uses scrambling)
+    std::vector<uint8_t> descrambled_data = descramble_data(data);
+
     // Apply Reed-Solomon decoding
-    std::vector<uint8_t> decoded_data = apply_reed_solomon_decode(data);
+    std::vector<uint8_t> decoded_data = apply_reed_solomon_decode(descrambled_data);
 
     return decoded_data;
 }
@@ -216,9 +219,14 @@ bool il2p_decoder_impl::parse_il2p_header() {
         return false;
     }
 
-    // Check IL2P identifier
-    if (d_frame_buffer[1] != 'I' || d_frame_buffer[2] != 'L' || d_frame_buffer[3] != '2' ||
-        d_frame_buffer[4] != 'P') {
+    // Check IL2P preamble (0x55)
+    if (d_frame_buffer[0] != IL2P_PREAMBLE) {
+        return false;
+    }
+
+    // Check IL2P sync word (0xF15E48)
+    if (d_frame_length < 4 || d_frame_buffer[1] != 0xF1 || 
+        d_frame_buffer[2] != 0x5E || d_frame_buffer[3] != 0x48) {
         return false;
     }
 
@@ -266,6 +274,29 @@ std::vector<uint8_t> il2p_decoder_impl::apply_reed_solomon_decode(
     }
 
     return decoded_data;
+}
+
+std::vector<uint8_t> il2p_decoder_impl::descramble_data(const std::vector<uint8_t>& data) {
+    // IL2P uses a simple XOR scrambler with polynomial 0x21 (x^5 + x^0)
+    // Descrambling is the same as scrambling (XOR is self-inverse)
+    std::vector<uint8_t> descrambled(data.size());
+    uint8_t scrambler_state = 0x1F; // Initial state (all ones)
+    
+    for (size_t i = 0; i < data.size(); i++) {
+        uint8_t output_bit = 0;
+        for (int bit = 0; bit < 8; bit++) {
+            // XOR feedback
+            uint8_t feedback = ((scrambler_state >> 4) ^ (scrambler_state >> 0)) & 0x01;
+            scrambler_state = ((scrambler_state << 1) | feedback) & 0x1F;
+            
+            // XOR with input bit (descrambling is same as scrambling)
+            uint8_t input_bit = (data[i] >> (7 - bit)) & 0x01;
+            output_bit |= ((input_bit ^ feedback) << (7 - bit));
+        }
+        descrambled[i] = output_bit;
+    }
+    
+    return descrambled;
 }
 
 bool il2p_decoder_impl::validate_checksum() {

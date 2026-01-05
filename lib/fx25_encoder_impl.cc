@@ -53,22 +53,34 @@ fx25_encoder_impl::~fx25_encoder_impl() {
 }
 
 void fx25_encoder_impl::initialize_reed_solomon() {
-    // Initialize Reed-Solomon encoder based on FEC type
+    // Initialize Reed-Solomon encoder based on FEC type (FX.25 uses RS(255,k) codes)
     switch (d_fec_type) {
-    case FX25_FEC_RS_12_8:
-        d_reed_solomon_encoder = new ReedSolomonEncoder(12, 8);
+    case FX25_FEC_RS_255_239:
+        d_reed_solomon_encoder = new ReedSolomonEncoder(255, 239);
         break;
-    case FX25_FEC_RS_16_12:
-        d_reed_solomon_encoder = new ReedSolomonEncoder(16, 12);
+    case FX25_FEC_RS_255_223:
+        d_reed_solomon_encoder = new ReedSolomonEncoder(255, 223);
         break;
-    case FX25_FEC_RS_20_16:
-        d_reed_solomon_encoder = new ReedSolomonEncoder(20, 16);
+    case FX25_FEC_RS_255_191:
+        d_reed_solomon_encoder = new ReedSolomonEncoder(255, 191);
         break;
-    case FX25_FEC_RS_24_20:
-        d_reed_solomon_encoder = new ReedSolomonEncoder(24, 20);
+    case FX25_FEC_RS_255_159:
+        d_reed_solomon_encoder = new ReedSolomonEncoder(255, 159);
+        break;
+    case FX25_FEC_RS_255_127:
+        d_reed_solomon_encoder = new ReedSolomonEncoder(255, 127);
+        break;
+    case FX25_FEC_RS_255_95:
+        d_reed_solomon_encoder = new ReedSolomonEncoder(255, 95);
+        break;
+    case FX25_FEC_RS_255_63:
+        d_reed_solomon_encoder = new ReedSolomonEncoder(255, 63);
+        break;
+    case FX25_FEC_RS_255_31:
+        d_reed_solomon_encoder = new ReedSolomonEncoder(255, 31);
         break;
     default:
-        d_reed_solomon_encoder = new ReedSolomonEncoder(16, 12);
+        d_reed_solomon_encoder = new ReedSolomonEncoder(255, 223); // Default: 32 parity bytes
         break;
     }
 }

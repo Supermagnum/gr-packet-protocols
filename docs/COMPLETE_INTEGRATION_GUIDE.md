@@ -96,12 +96,13 @@ Use the custom `modulation_switch` block for better control:
 from gnuradio.packet_protocols import modulation_switch
 
 # Create mode to index mapping
+# Include modes from all tiers you want to support
 mode_to_index = {
     packet_protocols.modulation_mode_t.MODE_2FSK: 0,
     packet_protocols.modulation_mode_t.MODE_4FSK: 1,
     packet_protocols.modulation_mode_t.MODE_8FSK: 2,
-    packet_protocols.modulation_mode_t.MODE_QPSK: 3,
-    packet_protocols.modulation_mode_t.MODE_QAM16: 4,
+    packet_protocols.modulation_mode_t.MODE_QPSK_12500: 3,  # Tier 2
+    packet_protocols.modulation_mode_t.MODE_QAM16_12500: 4,  # Tier 3
 }
 
 # Create modulation switch block

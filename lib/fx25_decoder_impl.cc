@@ -37,7 +37,7 @@ fx25_decoder_impl::fx25_decoder_impl()
     : gr::sync_block("fx25_decoder", gr::io_signature::make(1, 1, sizeof(char)),
                      gr::io_signature::make(1, 1, sizeof(char))),
       d_state(STATE_IDLE), d_bit_buffer(0), d_bit_count(0), d_frame_buffer(2048), d_frame_length(0),
-      d_ones_count(0), d_escaped(false), d_fec_type(FX25_FEC_RS_16_12), d_interleaver_depth(1),
+      d_ones_count(0), d_escaped(false), d_fec_type(FX25_FEC_RS_255_223), d_interleaver_depth(1),
       d_reed_solomon_decoder(nullptr) {
     // Initialize Reed-Solomon decoder
     initialize_reed_solomon();
@@ -53,22 +53,34 @@ fx25_decoder_impl::~fx25_decoder_impl() {
 }
 
 void fx25_decoder_impl::initialize_reed_solomon() {
-    // Initialize Reed-Solomon decoder based on FEC type
+    // Initialize Reed-Solomon decoder based on FEC type (FX.25 uses RS(255,k) codes)
     switch (d_fec_type) {
-    case FX25_FEC_RS_12_8:
-        d_reed_solomon_decoder = new ReedSolomonDecoder(12, 8);
+    case FX25_FEC_RS_255_239:
+        d_reed_solomon_decoder = new ReedSolomonDecoder(255, 239);
         break;
-    case FX25_FEC_RS_16_12:
-        d_reed_solomon_decoder = new ReedSolomonDecoder(16, 12);
+    case FX25_FEC_RS_255_223:
+        d_reed_solomon_decoder = new ReedSolomonDecoder(255, 223);
         break;
-    case FX25_FEC_RS_20_16:
-        d_reed_solomon_decoder = new ReedSolomonDecoder(20, 16);
+    case FX25_FEC_RS_255_191:
+        d_reed_solomon_decoder = new ReedSolomonDecoder(255, 191);
         break;
-    case FX25_FEC_RS_24_20:
-        d_reed_solomon_decoder = new ReedSolomonDecoder(24, 20);
+    case FX25_FEC_RS_255_159:
+        d_reed_solomon_decoder = new ReedSolomonDecoder(255, 159);
+        break;
+    case FX25_FEC_RS_255_127:
+        d_reed_solomon_decoder = new ReedSolomonDecoder(255, 127);
+        break;
+    case FX25_FEC_RS_255_95:
+        d_reed_solomon_decoder = new ReedSolomonDecoder(255, 95);
+        break;
+    case FX25_FEC_RS_255_63:
+        d_reed_solomon_decoder = new ReedSolomonDecoder(255, 63);
+        break;
+    case FX25_FEC_RS_255_31:
+        d_reed_solomon_decoder = new ReedSolomonDecoder(255, 31);
         break;
     default:
-        d_reed_solomon_decoder = new ReedSolomonDecoder(16, 12);
+        d_reed_solomon_decoder = new ReedSolomonDecoder(255, 223); // Default: 32 parity bytes
         break;
     }
 }

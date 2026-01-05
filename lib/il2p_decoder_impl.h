@@ -59,6 +59,7 @@ class il2p_decoder_impl : public il2p_decoder {
     std::vector<uint8_t> decode_il2p_frame();
     bool parse_il2p_header();
     std::vector<uint8_t> apply_reed_solomon_decode(const std::vector<uint8_t>& data);
+    std::vector<uint8_t> descramble_data(const std::vector<uint8_t>& data);
     bool validate_checksum();
     uint32_t calculate_checksum();
     std::string extract_callsign(int start_pos);

@@ -40,7 +40,7 @@ class PACKET_PROTOCOLS_API fx25_encoder : virtual public gr::sync_block {
     /*!
      * \brief Return a shared_ptr to a new instance of packet_protocols::fx25_encoder.
      */
-    static sptr make(int fec_type = FX25_FEC_RS_16_12, int interleaver_depth = 1,
+    static sptr make(int fec_type = FX25_FEC_RS_255_223, int interleaver_depth = 1,
                      bool add_checksum = true);
 
     /*!

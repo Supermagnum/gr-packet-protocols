@@ -57,7 +57,7 @@ AX25_EXPORT int ax25_init(ax25_tnc_t* tnc) {
     tnc->config.slot_time = 10;     // 100ms
     tnc->config.tx_tail = 10;       // 100ms
     tnc->config.full_duplex = false;
-    tnc->config.max_frame_length = 255;
+    tnc->config.max_frame_length = 2048; // AX.25 v2.2 supports up to 2048 bytes
     tnc->config.window_size = 4;
     tnc->config.t1_timeout = 3000;  // 3 seconds
     tnc->config.t2_timeout = 1000;  // 1 second
@@ -372,6 +372,10 @@ static ax25_connection_t* find_free_connection(ax25_tnc_t* tnc) {
 
 // Connection functions
 int ax25_connect(ax25_tnc_t* tnc, const ax25_address_t* remote_addr) {
+    return ax25_connect_extended(tnc, remote_addr, false); // Default to modulo 8
+}
+
+int ax25_connect_extended(ax25_tnc_t* tnc, const ax25_address_t* remote_addr, bool use_extended) {
     if (!tnc || !remote_addr) {
         return -1;
     }
@@ -403,14 +407,16 @@ int ax25_connect(ax25_tnc_t* tnc, const ax25_address_t* remote_addr) {
         conn->window_size = tnc->config.window_size;
         conn->timeout = tnc->config.t1_timeout;
         conn->retry_count = 0;
+        conn->extended_mode = use_extended;
         
         tnc->num_connections++;
     }
     
-    // Create SABM frame to initiate connection
+    // Create SABM or SABME frame to initiate connection
+    uint8_t ctrl = use_extended ? AX25_CTRL_SABME : AX25_CTRL_SABM;
     ax25_frame_t frame;
     if (ax25_create_frame(&frame, &conn->local_addr, &conn->remote_addr, 
-                          AX25_CTRL_SABM, 0, NULL, 0) != 0) {
+                          ctrl, 0, NULL, 0) != 0) {
         return -1;
     }
     
@@ -483,7 +489,14 @@ int ax25_send_data(ax25_tnc_t* tnc, const ax25_address_t* remote_addr, const uin
     }
     
     // Create I-frame (Information frame) with sequence numbers
-    uint8_t control = AX25_CTRL_I | (conn->send_seq << 1) | (conn->recv_seq << 5);
+    uint8_t control;
+    if (conn->extended_mode) {
+        // Modulo 128: 7-bit sequence numbers
+        control = AX25_CTRL_I | (conn->send_seq << 1) | ((conn->recv_seq & 0x07) << 5);
+    } else {
+        // Modulo 8: 3-bit sequence numbers
+        control = AX25_CTRL_I | ((conn->send_seq & 0x07) << 1) | ((conn->recv_seq & 0x07) << 5);
+    }
     
     ax25_frame_t frame;
     if (ax25_create_frame(&frame, &conn->local_addr, &conn->remote_addr, 
@@ -495,8 +508,12 @@ int ax25_send_data(ax25_tnc_t* tnc, const ax25_address_t* remote_addr, const uin
     tnc->tx_frame = frame;
     tnc->frame_ready = true;
     
-    // Update send sequence number (modulo 8)
-    conn->send_seq = (conn->send_seq + 1) % 8;
+    // Update send sequence number (modulo 8 or 128)
+    if (conn->extended_mode) {
+        conn->send_seq = (conn->send_seq + 1) % 128;
+    } else {
+        conn->send_seq = (conn->send_seq + 1) % 8;
+    }
     
     return 0;
 }
@@ -536,6 +553,7 @@ int ax25_receive_data(ax25_tnc_t* tnc, ax25_address_t* remote_addr, uint8_t* dat
             conn->remote_addr = *remote_addr;
             conn->state = AX25_STATE_CONNECTED;
             conn->window_size = tnc->config.window_size;
+            conn->extended_mode = false; // Default to modulo 8 for auto-created connections
             tnc->num_connections++;
         } else {
             return -1; // No free connection slots
@@ -543,13 +561,24 @@ int ax25_receive_data(ax25_tnc_t* tnc, ax25_address_t* remote_addr, uint8_t* dat
     }
     
     // Extract sequence numbers from control field
-    uint8_t recv_seq = (frame->control >> 5) & 0x07;
+    uint8_t recv_seq;
+    if (conn->extended_mode) {
+        recv_seq = (frame->control >> 5) & 0x7F; // 7 bits for modulo 128
+    } else {
+        recv_seq = (frame->control >> 5) & 0x07; // 3 bits for modulo 8
+    }
     // send_seq is in the frame but we don't need to use it for receive
     // (it's the remote station's send sequence number)
     
     // Update receive sequence number
-    if (recv_seq == ((conn->recv_seq + 1) % 8)) {
-        conn->recv_seq = recv_seq;
+    if (conn->extended_mode) {
+        if (recv_seq == ((conn->recv_seq + 1) % 128)) {
+            conn->recv_seq = recv_seq;
+        }
+    } else {
+        if (recv_seq == ((conn->recv_seq + 1) % 8)) {
+            conn->recv_seq = recv_seq;
+        }
     }
     
     // Copy data
@@ -1000,6 +1029,193 @@ AX25_EXPORT int ax25_receive_xid(ax25_tnc_t* tnc, ax25_address_t* remote_addr, a
     // Mark frame as processed
     tnc->frame_ready = false;
     
+    return 0;
+}
+
+// Process received frame (handles all frame types including supervisory)
+int ax25_process_frame(ax25_tnc_t* tnc, const ax25_frame_t* frame) {
+    if (!tnc || !frame || !frame->valid) {
+        return -1;
+    }
+    
+    uint8_t control = frame->control;
+    uint8_t frame_type = control & 0x03;
+    
+    // Extract source address
+    if (frame->num_addresses < 2) {
+        return -1;
+    }
+    ax25_address_t remote_addr = frame->addresses[1];
+    
+    // Find or create connection
+    ax25_connection_t* conn = find_connection(tnc, &remote_addr);
+    
+    // Handle unnumbered frames
+    if (frame_type == 0x03) {
+        uint8_t u_type = control & 0xEF; // Mask P/F bit
+        
+        if (u_type == AX25_CTRL_SABM || u_type == AX25_CTRL_SABME) {
+            // Connection request
+            if (!conn) {
+                conn = find_free_connection(tnc);
+                if (conn) {
+                    memset(conn, 0, sizeof(ax25_connection_t));
+                    conn->local_addr = tnc->config.my_address;
+                    conn->remote_addr = remote_addr;
+                    conn->state = AX25_STATE_CONNECTED;
+                    conn->window_size = tnc->config.window_size;
+                    conn->extended_mode = (u_type == AX25_CTRL_SABME);
+                    tnc->num_connections++;
+                }
+            }
+            // Respond with UA
+            ax25_frame_t ua_frame;
+            if (ax25_create_frame(&ua_frame, &tnc->config.my_address, &remote_addr,
+                                  AX25_CTRL_UA, 0, NULL, 0) == 0) {
+                tnc->tx_frame = ua_frame;
+                tnc->frame_ready = true;
+            }
+            return 0;
+        } else if (u_type == AX25_CTRL_UA) {
+            // Connection acknowledgment
+            if (conn && conn->state == AX25_STATE_CONNECTING) {
+                conn->state = AX25_STATE_CONNECTED;
+            }
+            return 0;
+        } else if (u_type == AX25_CTRL_DISC) {
+            // Disconnect request
+            if (conn) {
+                conn->state = AX25_STATE_DISCONNECTED;
+                memset(conn, 0, sizeof(ax25_connection_t));
+                tnc->num_connections--;
+            }
+            // Respond with UA
+            ax25_frame_t ua_frame;
+            if (ax25_create_frame(&ua_frame, &tnc->config.my_address, &remote_addr,
+                                  AX25_CTRL_UA, 0, NULL, 0) == 0) {
+                tnc->tx_frame = ua_frame;
+                tnc->frame_ready = true;
+            }
+            return 0;
+        } else if (u_type == AX25_CTRL_DM) {
+            // Disconnected mode
+            if (conn) {
+                conn->state = AX25_STATE_DISCONNECTED;
+            }
+            return 0;
+        } else if (u_type == AX25_CTRL_FRMR) {
+            // Frame reject - protocol error
+            if (conn) {
+                // Handle FRMR - may need to reset connection
+                conn->state = AX25_STATE_DISCONNECTED;
+            }
+            return -1; // Protocol error
+        }
+    }
+    
+    // Handle supervisory frames
+    if (frame_type == 0x01 && conn) {
+        uint8_t s_type = control & 0x0F;
+        uint8_t n_r = (control >> 5) & 0x07;
+        
+        if (s_type == AX25_CTRL_RR) {
+            // Receive Ready - acknowledgment
+            if (conn->extended_mode) {
+                conn->send_seq = n_r % 128;
+            } else {
+                conn->send_seq = n_r % 8;
+            }
+            return 0;
+        } else if (s_type == AX25_CTRL_RNR) {
+            // Receive Not Ready - flow control
+            if (conn->extended_mode) {
+                conn->send_seq = n_r % 128;
+            } else {
+                conn->send_seq = n_r % 8;
+            }
+            // Stop sending until RR received
+            return 0;
+        } else if (s_type == AX25_CTRL_REJ) {
+            // Reject - retransmit from sequence number
+            if (conn->extended_mode) {
+                conn->send_seq = n_r % 128;
+            } else {
+                conn->send_seq = n_r % 8;
+            }
+            // Trigger retransmission
+            return 0;
+        } else if (s_type == AX25_CTRL_SREJ) {
+            // Selective Reject (v2.2) - retransmit specific frame
+            if (conn->extended_mode) {
+                conn->send_seq = n_r % 128;
+            } else {
+                conn->send_seq = n_r % 8;
+            }
+            // Trigger selective retransmission
+            return 0;
+        }
+    }
+    
+    // Handle information frames
+    if (frame_type == 0x00) {
+        // I-frame handling is done in ax25_receive_data
+        return 0;
+    }
+    
+    return 0;
+}
+
+// Send supervisory frame
+int ax25_send_supervisory(ax25_tnc_t* tnc, const ax25_address_t* remote_addr, uint8_t ctrl_type) {
+    if (!tnc || !remote_addr) {
+        return -1;
+    }
+    
+    ax25_connection_t* conn = find_connection(tnc, remote_addr);
+    if (!conn || conn->state != AX25_STATE_CONNECTED) {
+        return -1;
+    }
+    
+    uint8_t control = ctrl_type;
+    if (conn->extended_mode) {
+        control |= ((conn->recv_seq & 0x07) << 5); // N(R) in bits 5-7 for extended
+    } else {
+        control |= ((conn->recv_seq & 0x07) << 5); // N(R) in bits 5-7
+    }
+    
+    ax25_frame_t frame;
+    if (ax25_create_frame(&frame, &conn->local_addr, remote_addr, 
+                          control, 0, NULL, 0) != 0) {
+        return -1;
+    }
+    
+    tnc->tx_frame = frame;
+    tnc->frame_ready = true;
+    return 0;
+}
+
+// Send FRMR (Frame Reject)
+int ax25_send_frmr(ax25_tnc_t* tnc, const ax25_address_t* remote_addr, uint8_t reason) {
+    if (!tnc || !remote_addr) {
+        return -1;
+    }
+    
+    ax25_connection_t* conn = find_connection(tnc, remote_addr);
+    if (!conn) {
+        return -1;
+    }
+    
+    // FRMR frame contains reason code in info field
+    uint8_t info[3] = {reason, 0, 0};
+    
+    ax25_frame_t frame;
+    if (ax25_create_frame(&frame, &conn->local_addr, remote_addr,
+                          AX25_CTRL_FRMR, 0, info, 3) != 0) {
+        return -1;
+    }
+    
+    tnc->tx_frame = frame;
+    tnc->frame_ready = true;
     return 0;
 }
 

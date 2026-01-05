@@ -13,24 +13,34 @@ This is offering complete packet radio protocol support for GNU Radio applicatio
 ## Features
 
 ### AX.25 Protocol
-- Complete AX.25 implementation with I, S, and U frame types
+- Complete AX.25 v2.2 Link Layer implementation
+- Support for both modulo 8 (standard) and modulo 128 (extended) sequence numbers
+- Selective Reject (SREJ) for improved error recovery
+- Extended frame sizes up to 2048 bytes (v2.2 feature)
+- I, S, and U frame types with full state machine
+- Frame Reject (FRMR) handling for protocol error recovery
 - KISS TNC interface for hardware integration
 - APRS support for position reporting and messaging
 - Full address handling with callsigns and SSIDs
-- Real protocol implementation from gr-m17
+- Compatible with Dire Wolf and standard AX.25 implementations
 
 ### FX.25 Support
 - Forward Error Correction (FEC) for AX.25 frames
-- Reed-Solomon encoding with multiple FEC types
+- Full Reed-Solomon (255,k) codec implementation with error correction
+- Multiple FEC types: RS(255,239), RS(255,223), RS(255,191), RS(255,159), RS(255,127), RS(255,95), RS(255,63), RS(255,31)
 - Interleaving support for burst error correction
-- Maintains compatibility with standard AX.25
+- Compatible with Dire Wolf FX.25 implementation
+- Maintains backward compatibility with standard AX.25
 
 
 ### IL2P Protocol
 - Improved Layer 2 Protocol implementation
-- Reed-Solomon forward error correction
+- Full Reed-Solomon (255,k) codec with error correction
+- Proper IL2P sync word (0xF15E48) and preamble (0x55)
+- Data scrambling for improved bit transitions and clock recovery
+- FEC types: RS(255,223), RS(255,239), RS(255,247)
 - Enhanced reliability over noisy channels
-- Modern replacement for AX.25
+- Modern replacement for AX.25 (not backward compatible)
 
 ### Adaptive Features
 - **Link Quality Monitoring**: Real-time SNR, BER, and frame error rate monitoring
@@ -39,7 +49,11 @@ This is offering complete packet radio protocol support for GNU Radio applicatio
 - **Inter-Station Communication**: KISS protocol extensions (0x10-0x14) for negotiation and quality feedback
 - **Automatic Negotiation Triggers**: Automatically negotiates mode changes when adaptive rate control switches modes
 - **Quality Feedback**: Bidirectional quality metric exchange between stations
-- **Multi-Mode Support**: Supports 2FSK, 4FSK, 8FSK, 16FSK, BPSK, QPSK, 8PSK, 16-QAM, and 64-QAM
+- **Multi-Mode Support**: Supports four tiers of modulation modes:
+  - Tier 1 (1,200 baud): 2FSK, 4FSK, 8FSK, 16FSK
+  - Tier 2 (12,500 baud PSK): BPSK, QPSK, 8PSK
+  - Tier 3 (12,500 baud QAM): 16-QAM, 64-QAM, 256-QAM
+  - Tier 4 (Broadband SOQPSK): 1-40 Mbps modes for 23cm/13cm bands
 - **Quality-Based Switching**: Intelligent mode selection based on SNR, BER, and link quality scores
 
 
@@ -440,7 +454,8 @@ from gnuradio import packet_protocols
 rate_control = packet_protocols.adaptive_rate_control(
     initial_mode=packet_protocols.modulation_mode_t.MODE_2FSK,  # Default: Bell 202 for maximum compatibility
     enable_adaptation=True,
-    hysteresis_db=2.0  # Prevent rapid switching
+    hysteresis_db=2.0,  # Prevent rapid switching
+    enable_tier4=False  # Tier 4 disabled by default (only enable for 23cm/13cm broadband)
 )
 
 # Update quality (typically from link quality monitor)
@@ -486,18 +501,81 @@ if not negotiator.is_negotiating():
 
 ### Supported Modulation Modes
 
-- **2FSK**: Binary FSK (1200 bps, most robust)
-- **4FSK**: 4-level FSK (2400 bps)
-- **8FSK**: 8-level FSK (3600 bps)
-- **16FSK**: 16-level FSK (4800 bps)
-- **BPSK**: Binary PSK (1200 bps)
-- **QPSK**: Quadrature PSK (2400 bps)
-- **8PSK**: 8-PSK (3600 bps)
-- **16-QAM**: 16-QAM (4800 bps)
-- **64-QAM**: 64-QAM (12,500 baud × 6 = 75,000 bps / 75 kbps)
-- **256-QAM**: 256-QAM (12,500 baud × 8 = 100,000 bps / 100 kbps, highest rate)
+The system supports four tiers of modulation modes, organized by baud rate and envelope characteristics:
 
-**Default Mode**: 2FSK (Bell 202 / AX.25) at 1200 bps - most common for packet radio
+#### Tier 1 - Robust (1,200 baud, constant envelope):
+- **2FSK**: Binary FSK (1,200 bps, most robust) - Bell 202 / AX.25 standard
+- **4FSK**: 4-level FSK (2,400 bps)
+- **8FSK**: 8-level FSK (3,600 bps)
+- **16FSK**: 16-level FSK (4,800 bps)
+
+#### Tier 2 - Medium (12,500 baud, constant envelope):
+- **BPSK @ 12.5k**: Binary PSK (12,500 bps)
+- **QPSK @ 12.5k**: Quadrature PSK (25,000 bps)
+- **8PSK @ 12.5k**: 8-PSK (37,500 bps)
+
+#### Tier 3 - High (12,500 baud, variable envelope):
+- **16-QAM @ 12.5k**: 16-QAM (50,000 bps / 50 kbps)
+- **64-QAM @ 12.5k**: 64-QAM (75,000 bps / 75 kbps)
+- **256-QAM @ 12.5k**: 256-QAM (100,000 bps / 100 kbps)
+
+#### Tier 4 - Broadband (23cm/13cm bands, SOQPSK constant envelope) - **DISABLED BY DEFAULT**:
+- **SOQPSK 1M**: SOQPSK @ 781 kbaud (1 Mbps) - ~1 MHz bandwidth
+- **SOQPSK 5M**: SOQPSK @ 3.9 Mbaud (5 Mbps) - ~5 MHz bandwidth
+- **SOQPSK 10M**: SOQPSK @ 7.8 Mbaud (10 Mbps) - ~10 MHz bandwidth
+- **SOQPSK 20M**: SOQPSK @ 15.6 Mbaud (20 Mbps) - ~20 MHz bandwidth
+- **SOQPSK 40M**: SOQPSK @ 31.3 Mbaud (40 Mbps) - ~40 MHz bandwidth
+
+**IMPORTANT: Tier 4 modes are DISABLED BY DEFAULT to prevent accidental out-of-bandwidth transmissions on standard 12.5 kHz VHF/UHF channels. These modes require 1-40 MHz bandwidth and are ONLY suitable for 23cm (1.2 GHz) and 13cm (2.4 GHz) amateur radio bands with SDR hardware. Enabling Tier 4 on standard narrowband channels will cause interference and violate regulations.**
+
+#### Legacy Modes (lower baud rates):
+- **BPSK**: Binary PSK (1,200 bps)
+- **QPSK**: Quadrature PSK (2,400 bps)
+- **8PSK**: 8-PSK (3,600 bps)
+- **16-QAM**: 16-QAM (9,600 bps @ 2,400 baud)
+- **64-QAM @ 6.25k**: 64-QAM (37,500 bps @ 6,250 baud)
+
+**Default Mode**: 2FSK (Bell 202 / AX.25) at 1,200 bps - most common for packet radio
+
+#### Tier 4 Bandwidth Requirements
+
+**WARNING: Tier 4 modes are DISABLED BY DEFAULT. They require explicit enablement via `enable_tier4=True` parameter.**
+
+**Be mindful of the bandwidth needed for Tier 4 modes:**
+
+| Rate | Symbol Rate | Bandwidth Needed | Band |
+|------|-------------|------------------|------|
+| 1 Mbps | 781 kbaud | ~1 MHz | 23cm/13cm |
+| 5 Mbps | 3.9 Mbaud | ~5 MHz | 23cm/13cm |
+| 10 Mbps | 7.8 Mbaud | ~10 MHz | 23cm/13cm |
+| 20 Mbps | 15.6 Mbaud | ~20 MHz | 13cm preferred |
+| 40 Mbps | 31.3 Mbaud | ~40 MHz | 13cm only |
+
+**Why Tier 4 is Disabled by Default:**
+- Tier 4 modes require 1-40 MHz bandwidth, far exceeding standard 12.5 kHz VHF/UHF channel spacing
+- Using Tier 4 on standard narrowband channels will cause severe out-of-bandwidth interference
+- These modes are ONLY suitable for broadband segments in 23cm (1.2 GHz) and 13cm (2.4 GHz) bands
+- Requires Software Defined Radio (SDR) hardware capable of wide bandwidth operation
+- Must be explicitly enabled to prevent accidental misuse
+
+**To Enable Tier 4 (Use with Extreme Caution):**
+
+```python
+from gnuradio import packet_protocols
+
+# Only enable Tier 4 if operating on 23cm/13cm broadband segments
+rate_control = packet_protocols.adaptive_rate_control(
+    initial_mode=packet_protocols.modulation_mode_t.MODE_2FSK,
+    enable_adaptation=True,
+    hysteresis_db=2.0,
+    enable_tier4=True  # Only enable for broadband 23cm/13cm operation
+)
+
+# Or enable/disable dynamically
+rate_control.set_tier4_enabled(True)  # Use with caution
+```
+
+Tier 4 modes use SOQPSK (Shaped Offset Quadrature Phase Shift Keying) which provides constant envelope characteristics suitable for non-linear power amplifiers.
 
 #### Why Bell 202 (2FSK) is the Default
 
@@ -544,23 +622,34 @@ The system integrates with:
 ## Protocol Details
 
 ### AX.25
-- Standard amateur packet radio protocol
+- AX.25 v2.2 Link Layer protocol implementation
+- Supports both modulo 8 (standard) and modulo 128 (extended) sequence numbers
+- Selective Reject (SREJ) for efficient error recovery
+- Extended frame sizes up to 2048 bytes
 - Supports both connected and unconnected modes
+- Full state machine with Frame Reject (FRMR) handling
 - KISS interface for hardware TNCs
 - Full address and control field handling
 - Built-in PTT (Push To Talk) control via serial port DTR/RTS lines
+- Compatible with Dire Wolf and standard AX.25 implementations
 
 ### FX.25
 - Extends AX.25 with forward error correction
-- Multiple Reed-Solomon code options
+- Full Reed-Solomon (255,k) codec implementation (not stubs)
+- Multiple Reed-Solomon code options matching FX.25 specification
 - Interleaving for burst error protection
+- Error correction capability up to (n-k)/2 errors per codeword
 - Backward compatible with standard AX.25
+- Compatible with Dire Wolf FX.25 implementation
 
 ### IL2P
-- Modern packet radio protocol
+- Modern packet radio protocol (not backward compatible with AX.25)
+- Full Reed-Solomon (255,k) codec with error correction
+- Proper IL2P frame structure with sync word and preamble
+- Data scrambling for improved transmission characteristics
 - Enhanced error correction capabilities
 - Improved performance over noisy channels
-- Designed as AX.25 replacement
+- Designed as modern AX.25 replacement
 
 ## Contributing
 
@@ -579,8 +668,9 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 ## Acknowledgments
 
 - Based on the gr-m17 project structure
-- Inspired by Dire Wolf AX.25 implementation
+- Inspired by and compatible with Dire Wolf AX.25, FX.25, and IL2P implementations
 - GNU Radio community for excellent framework
+- Reed-Solomon implementation based on standard algorithms (Berlekamp-Massey, Chien search, Forney)
 
 ## Security Testing
 
@@ -620,6 +710,34 @@ sudo ldconfig
 This will remove all installed files. If you don't have the build directory, see the [Installation Guide](docs/installation.md) for manual removal instructions.
 
 ## Changelog
+
+### Version 1.2.0
+- **AX.25 v2.2 Link Layer Support**:
+  - Added modulo 128 (extended) sequence number support
+  - Implemented Selective Reject (SREJ) for improved error recovery
+  - Extended frame sizes up to 2048 bytes (v2.2 feature)
+  - Full Frame Reject (FRMR) handling
+  - Enhanced state machine with extended mode support
+  - Compatible with Dire Wolf AX.25 v2.2 implementation
+- **Full Reed-Solomon Implementation**:
+  - Replaced stub implementations with complete RS(255,k) codec
+  - Full Galois Field GF(256) arithmetic implementation
+  - Berlekamp-Massey algorithm for error locator polynomial
+  - Chien search for error position finding
+  - Forney algorithm for error value calculation
+  - Error correction capability up to (n-k)/2 errors per codeword
+- **FX.25 Improvements**:
+  - Updated to use correct RS(255,k) codes matching FX.25 specification
+  - Support for all standard FX.25 FEC types
+  - Compatible with Dire Wolf FX.25 implementation
+- **IL2P Improvements**:
+  - Added proper IL2P sync word (0xF15E48) and preamble (0x55)
+  - Implemented data scrambling for improved bit transitions
+  - Full Reed-Solomon error correction
+- **Testing**:
+  - All unit tests passing (100% pass rate)
+  - Comprehensive test coverage for all protocols
+  - Fixed test issues and improved test reliability
 
 ### Version 1.1.0
 - Added adaptive modulation features:

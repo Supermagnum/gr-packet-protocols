@@ -99,10 +99,17 @@ This document lists all available blocks in GNU Radio Companion for gr-packet-pr
 - **Output**: Byte stream (pass-through)
 - **Parameters**:
   - Initial Modulation Mode (enum, default: MODE_2FSK - Bell 202 / AX.25)
-    - Options: 2FSK (Bell 202/AX.25), 4FSK, 8FSK, 16FSK, BPSK, QPSK, 8PSK, 16-QAM, 64-QAM (75k), 256-QAM (100k)
+    - Options: 
+      - Tier 1: 2FSK (Bell 202/AX.25), 4FSK, 8FSK, 16FSK
+      - Tier 2: BPSK @ 12.5k (12.5k), QPSK @ 12.5k (25k), 8PSK @ 12.5k (37.5k)
+      - Tier 3: 16-QAM @ 12.5k (50k), 64-QAM @ 12.5k (75k), 256-QAM (100k)
+      - Tier 4: SOQPSK 1M, 5M, 10M, 20M, 40M (23cm/13cm bands, **disabled by default**)
+      - Legacy: BPSK, QPSK, 8PSK, 16-QAM (9.6k), 64-QAM @ 6.25k (37.5k)
   - Enable Adaptation (bool, default: True)
   - Hysteresis (dB) (float, default: 2.0)
-- **Description**: Automatically adjusts modulation mode based on link quality metrics.
+  - Enable Tier 4 (Broadband) (bool, default: False)
+    - **WARNING**: Tier 4 modes require 1-40 MHz bandwidth. Only enable for 23cm/13cm broadband segments. Using on standard 12.5 kHz VHF/UHF channels will cause out-of-bandwidth interference!
+- **Description**: Automatically adjusts modulation mode based on link quality metrics. Tier 4 modes are disabled by default to prevent accidental out-of-bandwidth transmissions.
 
 ### Modulation Negotiation
 - **ID**: `packet_protocols_modulation_negotiation`

@@ -131,9 +131,12 @@ void il2p_encoder_impl::build_il2p_frame(char data_byte) {
     // Apply Reed-Solomon FEC
     std::vector<uint8_t> fec_data = apply_reed_solomon_fec(original_data);
 
+    // Scramble data (IL2P uses scrambling to improve bit transitions)
+    std::vector<uint8_t> scrambled_data = scramble_data(fec_data);
+
     // Add to frame buffer
-    for (size_t i = 0; i < fec_data.size(); i++) {
-        d_frame_buffer.push_back(fec_data[i]);
+    for (size_t i = 0; i < scrambled_data.size(); i++) {
+        d_frame_buffer.push_back(scrambled_data[i]);
         d_frame_length++;
     }
 
@@ -153,16 +156,15 @@ void il2p_encoder_impl::build_il2p_frame(char data_byte) {
 }
 
 void il2p_encoder_impl::add_il2p_header() {
-    // IL2P frame header
-    d_frame_buffer.push_back(0x7E); // Flag
+    // IL2P preamble (0x55)
+    d_frame_buffer.push_back(IL2P_PREAMBLE);
     d_frame_length++;
 
-    // IL2P identifier
-    d_frame_buffer.push_back('I');
-    d_frame_buffer.push_back('L');
-    d_frame_buffer.push_back('2');
-    d_frame_buffer.push_back('P');
-    d_frame_length += 4;
+    // IL2P sync word (0xF15E48)
+    d_frame_buffer.push_back(0xF1);
+    d_frame_buffer.push_back(0x5E);
+    d_frame_buffer.push_back(0x48);
+    d_frame_length += 3;
 
     // FEC type
     d_frame_buffer.push_back(d_fec_type & 0xFF);
@@ -257,6 +259,29 @@ void il2p_encoder_impl::set_fec_type(int fec_type) {
 
 void il2p_encoder_impl::set_add_checksum(bool add_checksum) {
     d_add_checksum = add_checksum;
+}
+
+std::vector<uint8_t> il2p_encoder_impl::scramble_data(const std::vector<uint8_t>& data) {
+    // IL2P uses a simple XOR scrambler with polynomial 0x21 (x^5 + x^0)
+    // This improves bit transitions for better clock recovery
+    std::vector<uint8_t> scrambled(data.size());
+    uint8_t scrambler_state = 0x1F; // Initial state (all ones)
+    
+    for (size_t i = 0; i < data.size(); i++) {
+        uint8_t output_bit = 0;
+        for (int bit = 0; bit < 8; bit++) {
+            // XOR feedback
+            uint8_t feedback = ((scrambler_state >> 4) ^ (scrambler_state >> 0)) & 0x01;
+            scrambler_state = ((scrambler_state << 1) | feedback) & 0x1F;
+            
+            // XOR with input bit
+            uint8_t input_bit = (data[i] >> (7 - bit)) & 0x01;
+            output_bit |= ((input_bit ^ feedback) << (7 - bit));
+        }
+        scrambled[i] = output_bit;
+    }
+    
+    return scrambled;
 }
 
 } /* namespace packet_protocols */

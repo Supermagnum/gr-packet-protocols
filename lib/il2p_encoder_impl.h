@@ -130,6 +130,13 @@ class il2p_encoder_impl : public il2p_encoder {
      * \return Calculated checksum
      */
     uint32_t calculate_checksum();
+
+    /*!
+     * \brief Scramble data (IL2P scrambling)
+     * \param data Input data
+     * \return Scrambled data
+     */
+    std::vector<uint8_t> scramble_data(const std::vector<uint8_t>& data);
 };
 
 } // namespace packet_protocols

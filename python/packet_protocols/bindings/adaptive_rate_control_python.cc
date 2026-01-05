@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(adaptive_rate_control.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(ae1c5f34bd8370edf9abfc5fb4d0a585)                     */
+/* BINDTOOL_HEADER_FILE_HASH(91ff78ca351a846915c62ec688319dd4)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -46,6 +46,15 @@ void bind_adaptive_rate_control(py::module& m)
         .value("MODE_QAM64_6250", ::gr::packet_protocols::modulation_mode_t::MODE_QAM64_6250) // 8
         .value("MODE_QAM64_12500", ::gr::packet_protocols::modulation_mode_t::MODE_QAM64_12500) // 9
         .value("MODE_QAM256", ::gr::packet_protocols::modulation_mode_t::MODE_QAM256) // 10
+        .value("MODE_BPSK_12500", ::gr::packet_protocols::modulation_mode_t::MODE_BPSK_12500) // 11
+        .value("MODE_QPSK_12500", ::gr::packet_protocols::modulation_mode_t::MODE_QPSK_12500) // 12
+        .value("MODE_8PSK_12500", ::gr::packet_protocols::modulation_mode_t::MODE_8PSK_12500) // 13
+        .value("MODE_QAM16_12500", ::gr::packet_protocols::modulation_mode_t::MODE_QAM16_12500) // 14
+        .value("MODE_SOQPSK_1M", ::gr::packet_protocols::modulation_mode_t::MODE_SOQPSK_1M) // 15
+        .value("MODE_SOQPSK_5M", ::gr::packet_protocols::modulation_mode_t::MODE_SOQPSK_5M) // 16
+        .value("MODE_SOQPSK_10M", ::gr::packet_protocols::modulation_mode_t::MODE_SOQPSK_10M) // 17
+        .value("MODE_SOQPSK_20M", ::gr::packet_protocols::modulation_mode_t::MODE_SOQPSK_20M) // 18
+        .value("MODE_SOQPSK_40M", ::gr::packet_protocols::modulation_mode_t::MODE_SOQPSK_40M) // 19
         .export_values();
 
     py::implicitly_convertible<int, ::gr::packet_protocols::modulation_mode_t>();
@@ -73,6 +82,7 @@ void bind_adaptive_rate_control(py::module& m)
                  ::gr::packet_protocols::modulation_mode_t::MODE_2FSK,
              py::arg("enable_adaptation") = true,
              py::arg("hysteresis_db") = 2.,
+             py::arg("enable_tier4") = false,
              D(adaptive_rate_control, make))
 
 
@@ -91,6 +101,10 @@ void bind_adaptive_rate_control(py::module& m)
              &adaptive_rate_control::set_adaptation_enabled,
              py::arg("enabled"),
              D(adaptive_rate_control, set_adaptation_enabled))
+        .def("set_tier4_enabled",
+             &adaptive_rate_control::set_tier4_enabled,
+             py::arg("enabled"),
+             D(adaptive_rate_control, set_tier4_enabled))
 
 
         .def("update_quality",

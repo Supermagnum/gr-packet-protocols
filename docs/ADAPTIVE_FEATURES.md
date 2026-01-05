@@ -97,18 +97,39 @@ recommended = rate_control.recommend_mode(snr_db=20.0, ber=0.0001)
 
 ### Modulation Modes
 
-Supported modulation modes:
+Supported modulation modes organized by tier:
 
-- `MODE_2FSK`: Binary FSK / Bell 202 / AX.25 (most robust, 1200 bps) - **Default**
-- `MODE_4FSK`: 4-level FSK (2400 bps)
-- `MODE_8FSK`: 8-level FSK (3600 bps)
-- `MODE_16FSK`: 16-level FSK (4800 bps)
-- `MODE_BPSK`: Binary PSK (1200 bps)
-- `MODE_QPSK`: Quadrature PSK (2400 bps)
-- `MODE_8PSK`: 8-PSK (3600 bps)
-- `MODE_QAM16`: 16-QAM (4800 bps)
-- `MODE_QAM64`: 64-QAM (12,500 baud × 6 = 75,000 bps / 75 kbps)
-- `MODE_QAM256`: 256-QAM (12,500 baud × 8 = 100,000 bps / 100 kbps) - **Top speed**
+#### Tier 1 - Robust (1,200 baud, constant envelope):
+- `MODE_2FSK`: Binary FSK / Bell 202 / AX.25 (1,200 bps, most robust) - **Default**
+- `MODE_4FSK`: 4-level FSK (2,400 bps)
+- `MODE_8FSK`: 8-level FSK (3,600 bps)
+- `MODE_16FSK`: 16-level FSK (4,800 bps)
+
+#### Tier 2 - Medium (12,500 baud, constant envelope):
+- `MODE_BPSK_12500`: Binary PSK @ 12.5k (12,500 bps)
+- `MODE_QPSK_12500`: Quadrature PSK @ 12.5k (25,000 bps)
+- `MODE_8PSK_12500`: 8-PSK @ 12.5k (37,500 bps)
+
+#### Tier 3 - High (12,500 baud, variable envelope):
+- `MODE_QAM16_12500`: 16-QAM @ 12.5k (50,000 bps / 50 kbps)
+- `MODE_QAM64_12500`: 64-QAM @ 12.5k (75,000 bps / 75 kbps)
+- `MODE_QAM256`: 256-QAM @ 12.5k (100,000 bps / 100 kbps)
+
+#### Tier 4 - Broadband (23cm/13cm bands, SOQPSK constant envelope) - **DISABLED BY DEFAULT**:
+- `MODE_SOQPSK_1M`: SOQPSK @ 781 kbaud (1 Mbps) - ~1 MHz bandwidth
+- `MODE_SOQPSK_5M`: SOQPSK @ 3.9 Mbaud (5 Mbps) - ~5 MHz bandwidth
+- `MODE_SOQPSK_10M`: SOQPSK @ 7.8 Mbaud (10 Mbps) - ~10 MHz bandwidth
+- `MODE_SOQPSK_20M`: SOQPSK @ 15.6 Mbaud (20 Mbps) - ~20 MHz bandwidth
+- `MODE_SOQPSK_40M`: SOQPSK @ 31.3 Mbaud (40 Mbps) - ~40 MHz bandwidth - **Top speed**
+
+**IMPORTANT: Tier 4 modes are DISABLED BY DEFAULT to prevent accidental out-of-bandwidth transmissions on standard 12.5 kHz VHF/UHF channels. These modes require 1-40 MHz bandwidth and will cause severe interference if used on narrowband channels. They are ONLY suitable for broadband segments in 23cm (1.2 GHz) and 13cm (2.4 GHz) amateur radio bands with SDR hardware. Must be explicitly enabled via `enable_tier4=True` parameter.**
+
+#### Legacy Modes (lower baud rates):
+- `MODE_BPSK`: Binary PSK (1,200 bps)
+- `MODE_QPSK`: Quadrature PSK (2,400 bps)
+- `MODE_8PSK`: 8-PSK (3,600 bps)
+- `MODE_QAM16`: 16-QAM (9,600 bps @ 2,400 baud)
+- `MODE_QAM64_6250`: 64-QAM (37,500 bps @ 6,250 baud)
 
 ### Using GNU Radio Modulation Blocks
 
@@ -393,16 +414,31 @@ Each modulation mode has default thresholds:
 
 | Mode | Min SNR (dB) | Max SNR (dB) | Max BER | Min Quality | Data Rate |
 |------|--------------|--------------|---------|-------------|-----------|
-| 2FSK (Bell 202/AX.25) | 0.0 | 15.0 | 0.01 | 0.3 | 1200 bps |
-| 4FSK | 8.0 | 20.0 | 0.005 | 0.5 | 2400 bps |
-| 8FSK | 12.0 | 25.0 | 0.001 | 0.7 | 3600 bps |
-| 16FSK | 18.0 | 30.0 | 0.0005 | 0.8 | 4800 bps |
-| BPSK | 6.0 | 18.0 | 0.01 | 0.4 | 1200 bps |
-| QPSK | 10.0 | 22.0 | 0.005 | 0.6 | 2400 bps |
-| 8PSK | 14.0 | 26.0 | 0.001 | 0.75 | 3600 bps |
-| 16-QAM | 16.0 | 28.0 | 0.0005 | 0.8 | 4800 bps |
-| 64-QAM | 22.0 | 35.0 | 0.0001 | 0.9 | 75,000 bps (12.5k baud) |
-| 256-QAM | 28.0 | 40.0 | 0.00005 | 0.95 | 100,000 bps (12.5k baud) |
+| **Tier 1 (1,200 baud)** ||||||
+| 2FSK (Bell 202/AX.25) | 0.0 | 15.0 | 0.01 | 0.3 | 1,200 bps |
+| 4FSK | 8.0 | 20.0 | 0.005 | 0.5 | 2,400 bps |
+| 8FSK | 12.0 | 25.0 | 0.001 | 0.7 | 3,600 bps |
+| 16FSK | 18.0 | 30.0 | 0.0005 | 0.8 | 4,800 bps |
+| **Tier 2 (12,500 baud PSK)** ||||||
+| BPSK @ 12.5k | 8.0 | 20.0 | 0.005 | 0.5 | 12,500 bps |
+| QPSK @ 12.5k | 12.0 | 24.0 | 0.002 | 0.65 | 25,000 bps |
+| 8PSK @ 12.5k | 16.0 | 28.0 | 0.0008 | 0.78 | 37,500 bps |
+| **Tier 3 (12,500 baud QAM)** ||||||
+| 16-QAM @ 12.5k | 18.0 | 30.0 | 0.0003 | 0.82 | 50,000 bps |
+| 64-QAM @ 12.5k | 22.0 | 35.0 | 0.0001 | 0.9 | 75,000 bps |
+| 256-QAM @ 12.5k | 28.0 | 40.0 | 0.00005 | 0.95 | 100,000 bps |
+| **Legacy Modes** ||||||
+| BPSK | 6.0 | 18.0 | 0.01 | 0.4 | 1,200 bps |
+| QPSK | 10.0 | 22.0 | 0.005 | 0.6 | 2,400 bps |
+| 8PSK | 14.0 | 26.0 | 0.001 | 0.75 | 3,600 bps |
+| 16-QAM | 16.0 | 28.0 | 0.0005 | 0.8 | 9,600 bps |
+| 64-QAM @ 6.25k | 20.0 | 32.0 | 0.0001 | 0.85 | 37,500 bps |
+| **Tier 4 (Broadband SOQPSK)** ||||||
+| SOQPSK 1M | 10.0 | 25.0 | 0.001 | 0.6 | 1,000,000 bps (1 Mbps) |
+| SOQPSK 5M | 15.0 | 30.0 | 0.0005 | 0.7 | 5,000,000 bps (5 Mbps) |
+| SOQPSK 10M | 18.0 | 33.0 | 0.0003 | 0.75 | 10,000,000 bps (10 Mbps) |
+| SOQPSK 20M | 22.0 | 36.0 | 0.0002 | 0.8 | 20,000,000 bps (20 Mbps) |
+| SOQPSK 40M | 26.0 | 40.0 | 0.0001 | 0.85 | 40,000,000 bps (40 Mbps) |
 
 ### Hysteresis
 
