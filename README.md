@@ -22,14 +22,13 @@ This is offering complete packet radio protocol support for GNU Radio applicatio
 - KISS TNC interface for hardware integration
 - APRS support for position reporting and messaging
 - Full address handling with callsigns and SSIDs
-- Compatible with Dire Wolf and standard AX.25 implementations
+- Compatible with standard AX.25 implementations
 
 ### FX.25 Support
 - Forward Error Correction (FEC) for AX.25 frames
 - Full Reed-Solomon (255,k) codec implementation with error correction
 - Multiple FEC types: RS(255,239), RS(255,223), RS(255,191), RS(255,159), RS(255,127), RS(255,95), RS(255,63), RS(255,31)
 - Interleaving support for burst error correction
-- Compatible with Dire Wolf FX.25 implementation
 - Maintains backward compatibility with standard AX.25
 
 
@@ -668,7 +667,7 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 ## Acknowledgments
 
 - Based on the gr-m17 project structure
-- Inspired by and compatible with Dire Wolf AX.25, FX.25, and IL2P implementations
+- Inspired by Dire Wolf and compatible with AX.25, FX.25, and IL2P implementations
 - GNU Radio community for excellent framework
 - Reed-Solomon implementation based on standard algorithms (Berlekamp-Massey, Chien search, Forney)
 
@@ -718,7 +717,7 @@ This will remove all installed files. If you don't have the build directory, see
   - Extended frame sizes up to 2048 bytes (v2.2 feature)
   - Full Frame Reject (FRMR) handling
   - Enhanced state machine with extended mode support
-  - Compatible with Dire Wolf AX.25 v2.2 implementation
+  - Compatible with AX.25 v2.2 implementation
 - **Full Reed-Solomon Implementation**:
   - Replaced stub implementations with complete RS(255,k) codec
   - Full Galois Field GF(256) arithmetic implementation
@@ -729,7 +728,6 @@ This will remove all installed files. If you don't have the build directory, see
 - **FX.25 Improvements**:
   - Updated to use correct RS(255,k) codes matching FX.25 specification
   - Support for all standard FX.25 FEC types
-  - Compatible with Dire Wolf FX.25 implementation
 - **IL2P Improvements**:
   - Added proper IL2P sync word (0xF15E48) and preamble (0x55)
   - Implemented data scrambling for improved bit transitions
