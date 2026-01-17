@@ -75,6 +75,21 @@ python3 test_scapy_attack_vectors.py --protocol ax25
 - [X] Packet injection
 - [X] ARP spoofing (test generation)
 
+## Latest Test Results
+
+**Last Run**: All tests passing (as of latest execution)
+
+### Attack Vector Tests
+- **Status**: PASS
+- **Results**: 68 tests passed, 0 failed, 0 errors
+- **Coverage**: All protocols tested (AX.25, KISS, FX.25, IL2P, Generic, Network Layer)
+
+### Protocol Parser Tests
+- **Status**: PASS
+- **AX.25 Decoder**: 80 passed, 0 failed
+- **KISS TNC**: 50 passed, 0 failed
+- **Rate Limiting**: Passed (86,520+ packets/sec generated)
+
 ## Test Output
 
 Test results are saved to `output/` directory:

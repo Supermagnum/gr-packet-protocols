@@ -61,7 +61,7 @@ def create_ax25_frame(dest_callsign: str, dest_ssid: int, src_callsign: str,
     dest_addr = dest_callsign.ljust(6).encode()[:6]
     for i, b in enumerate(dest_addr):
         frame.append((b << 1) | (0 if i < 5 else 0))  # Shift left, set C/R bit
-    frame.append((src_ssid << 1) | 0x60)  # SSID with C/R and H bits
+    frame.append((dest_ssid << 1) | 0x60)  # SSID with C/R and H bits
     
     # Source address (7 bytes)
     src_addr = src_callsign.ljust(6).encode()[:6]
