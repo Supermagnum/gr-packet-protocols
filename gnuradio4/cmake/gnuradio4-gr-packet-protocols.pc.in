@@ -1,0 +1,11 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=${prefix}
+includedir=${prefix}/@CMAKE_INSTALL_INCLUDEDIR@
+libdir=${prefix}/@CMAKE_INSTALL_LIBDIR@
+
+Name: gnuradio4-gr-packet-protocols
+Description: GNU Radio 4.0 packet protocols (AX.25 / FX.25 / IL2P / KISS negotiation)
+Version: @PROJECT_VERSION@
+Requires: gnuradio4
+Libs: -L${libdir} -lgnuradio4-packet-protocols-ax25
+Cflags: -I${includedir}

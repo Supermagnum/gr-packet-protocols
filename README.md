@@ -4,6 +4,8 @@
 
 This code has not been reviewed by professional coders, it is a large task. If there are tests available in the codebase, please review those and their code.
 
+GNU Radio 4.0 Port: A GR4-compatible port is available on the gnuradio4 branch. It requires GNU Radio 4.0 RC2 or later (/opt/gnuradio4-gcc) and is independent of the GR3 tree on this branch.
+
 ---
 
 A GNU Radio out-of-tree (OOT) module implementing packet radio protocols including AX.25, FX.25, and IL2P.

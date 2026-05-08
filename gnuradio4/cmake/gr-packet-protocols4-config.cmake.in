@@ -1,0 +1,4 @@
+@PACKAGE_INIT@
+include(CMakeFindDependencyMacro)
+find_dependency(gnuradio4)
+include("${CMAKE_CURRENT_LIST_DIR}/gr-packet-protocols4-targets.cmake")
