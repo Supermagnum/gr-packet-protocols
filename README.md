@@ -1,10 +1,50 @@
 # gr-packet-protocols
 
+## Table of contents
+
+- [GNU Radio 4.0](#gnu-radio-40)
+- [Features](#features)
+  - [AX.25 Protocol](#ax25-protocol)
+  - [FX.25 Support](#fx25-support)
+  - [IL2P Protocol](#il2p-protocol)
+  - [Adaptive Features](#adaptive-features)
+- [Installation](#installation)
+  - [Prerequisites](#prerequisites)
+  - [Build Instructions](#build-instructions)
+  - [Dependencies](#dependencies)
+- [Usage](#usage)
+  - [GNU Radio Companion](#gnu-radio-companion)
+  - [Python API](#python-api)
+- [Examples](#examples)
+  - [PTT Control](#ptt-control)
+  - [Alternative PTT Control Methods](#alternative-ptt-control-methods)
+- [Adaptive Features (documentation)](#adaptive-features-1)
+  - [Link Quality Monitoring](#link-quality-monitoring)
+  - [Automatic Rate Adaptation](#automatic-rate-adaptation)
+  - [Modulation Negotiation](#modulation-negotiation)
+  - [Supported Modulation Modes](#supported-modulation-modes)
+  - [Integration with GNU Radio Blocks](#integration-with-gnu-radio-blocks)
+- [Protocol Details](#protocol-details)
+  - [AX.25](#ax25)
+  - [FX.25](#fx25)
+  - [IL2P](#il2p)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+- [Security Testing](#security-testing)
+- [Support](#support)
+- [Uninstallation](#uninstallation)
+- [Changelog](#changelog)
+
+---
+
 **IMPORTANT NOTICE**: This is AI-generated code. The developer has a neurological condition that makes it impossible to use and learn traditional programming. The developer has put in a significant effort. This code might not work properly. Use at your own risk.
 
 This code has not been reviewed by professional coders, it is a large task. If there are tests available in the codebase, please review those and their code.
 
-GNU Radio 4.0 Port: A GR4-compatible port is available on the gnuradio4 branch. It requires GNU Radio 4.0 RC2 or later (/opt/gnuradio4-gcc) and is independent of the GR3 tree on this branch.
+### GNU Radio 4.0
+
+A GR4-compatible port lives on GitHub branch **[gnuradio4](https://github.com/Supermagnum/gr-packet-protocols/tree/gnuradio4)** (`gnuradio4/` subdirectory in that branch). Use GNU Radio 4.0 RC2 or later (for example installs under `/opt/gnuradio4-gcc`). It is independent of the GNU Radio 3.10 tree checked out here on **`main`** ([repository README](https://github.com/Supermagnum/gr-packet-protocols/blob/main/README.md)).
 
 ---
 
