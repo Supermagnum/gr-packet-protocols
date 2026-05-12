@@ -22,6 +22,7 @@
 #ifndef INCLUDED_PACKET_PROTOCOLS_AX25_DECODER_IMPL_H
 #define INCLUDED_PACKET_PROTOCOLS_AX25_DECODER_IMPL_H
 
+#include <deque>
 #include <gnuradio/packet_protocols/ax25_decoder.h>
 #include <gnuradio/packet_protocols/ax25_protocol.h>
 #include <vector>
@@ -49,6 +50,8 @@ class ax25_decoder_impl : public ax25_decoder {
     uint8_t d_ones_count;                //!< Consecutive ones count
     bool d_escaped;                      //!< Escape flag for bit stuffing
 
+    std::deque<uint8_t> d_out_queue; //!< Pending PDU bytes (handles output buffer smaller than PDU)
+
   public:
     /*!
      * \brief Constructor
@@ -61,14 +64,17 @@ class ax25_decoder_impl : public ax25_decoder {
     ~ax25_decoder_impl();
 
     /*!
-     * \brief Main work function
-     * \param noutput_items Number of output items
-     * \param input_items Input items
-     * \param output_items Output items
-     * \return Number of items produced
+     * \brief Estimate input bits needed for a produce request
      */
-    int work(int noutput_items, gr_vector_const_void_star& input_items,
-             gr_vector_void_star& output_items);
+    void forecast(int noutput_items, gr_vector_int& ninput_items_required) override;
+
+    /*!
+     * \brief Deserialize HDLC bits to AX.25 PDU bytes (non 1:1 rate)
+     */
+    int general_work(int noutput_items,
+                     gr_vector_int& ninput_items,
+                     gr_vector_const_void_star& input_items,
+                     gr_vector_void_star& output_items) override;
 
   private:
     /*!

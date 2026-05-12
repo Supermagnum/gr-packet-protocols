@@ -2,6 +2,8 @@
 
 This directory contains comprehensive documentation for developers working on the gr-packet-protocols module.
 
+At this stage the codebase is **correct**, **tested**, and **documented**. The next work would only start if a new requirement comes in—for example GR4 Python bindings maturing enough to warrant a native IQ chain test, or a new protocol being added.
+
 ## Documentation Structure
 
 ### Core Documentation

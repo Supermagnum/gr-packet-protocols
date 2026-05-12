@@ -23,7 +23,7 @@
 #define INCLUDED_PACKET_PROTOCOLS_AX25_ENCODER_H
 
 #include <gnuradio/packet_protocols/api.h>
-#include <gnuradio/sync_block.h>
+#include <gnuradio/block.h>
 
 namespace gr {
 namespace packet_protocols {
@@ -32,7 +32,7 @@ namespace packet_protocols {
  * \brief AX.25 Encoder
  * \ingroup packet_protocols
  */
-class PACKET_PROTOCOLS_API ax25_encoder : virtual public gr::sync_block {
+class PACKET_PROTOCOLS_API ax25_encoder : virtual public gr::block {
   public:
     typedef std::shared_ptr<ax25_encoder> sptr;
 

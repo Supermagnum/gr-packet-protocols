@@ -24,6 +24,10 @@ dependencies are already cached under ``build-gr4/_deps/``).
 Authoritative runbooks, host pitfalls, and verification notes: **[../test-results.md](../test-results.md)**
 (sections 2 and 3).
 
+Contributor and agent handoff (branch boundaries, completed scope, known limits): **[../HANDOFF.md](../HANDOFF.md)**.
+
+At this stage the codebase is **correct**, **tested**, and **documented**. The next work would only start if a new requirement comes in—for example GR4 Python bindings maturing enough to warrant a native IQ chain test, or a new protocol being added.
+
 ## IL2P framing policy
 
 The GR4 ``encodeIl2pBytes`` / ``decodeIl2pBytes`` helpers package IL2P logical frames (preamble,

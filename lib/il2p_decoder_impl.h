@@ -25,6 +25,7 @@
 #include <gnuradio/packet_protocols/common.h> // Include common.h for ReedSolomonDecoder and FEC types
 #include <gnuradio/packet_protocols/il2p_decoder.h>
 #include <gnuradio/packet_protocols/il2p_protocol.h>
+#include <deque>
 #include <string>
 #include <vector>
 
@@ -39,19 +40,23 @@ class il2p_decoder_impl : public il2p_decoder {
     il2p_state_t d_state;                       //!< Current state
     uint8_t d_bit_buffer;                       //!< Bit buffer for byte assembly
     uint8_t d_bit_count;                        //!< Number of bits in buffer
-    std::vector<uint8_t> d_frame_buffer;        //!< Frame buffer
+    std::vector<uint8_t> d_frame_buffer;        //!< Frame buffer (fixed capacity)
     uint16_t d_frame_length;                    //!< Current frame length
     uint8_t d_ones_count;                       //!< Consecutive ones count
-    bool d_escaped;                             //!< Escape flag for bit stuffing
     int d_fec_type;                             //!< FEC type
     ReedSolomonDecoder* d_reed_solomon_decoder; //!< Reed-Solomon decoder
+    std::deque<uint8_t> d_out_queue;            //!< Decoded bytes pending output
 
   public:
     il2p_decoder_impl();
     ~il2p_decoder_impl();
 
-    int work(int noutput_items, gr_vector_const_void_star& input_items,
-             gr_vector_void_star& output_items);
+    void forecast(int noutput_items, gr_vector_int& ninput_items_required) override;
+
+    int general_work(int noutput_items,
+                     gr_vector_int& ninput_items,
+                     gr_vector_const_void_star& input_items,
+                     gr_vector_void_star& output_items) override;
 
   private:
     void process_bit(bool bit);

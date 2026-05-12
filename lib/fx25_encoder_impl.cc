@@ -29,15 +29,42 @@
 namespace gr {
 namespace packet_protocols {
 
+namespace {
+
+void push_msb_bits_raw(uint8_t byte, std::vector<uint8_t>& q)
+{
+    for (int bp = 7; bp >= 0; --bp)
+        q.push_back(static_cast<uint8_t>((byte >> bp) & 1));
+}
+
+void push_msb_bits_stuffed(uint8_t byte, std::vector<uint8_t>& q, int& ones_run)
+{
+    for (int bp = 7; bp >= 0; --bp) {
+        const bool bit = ((byte >> bp) & 1) != 0;
+        q.push_back(bit ? 1 : 0);
+        if (bit) {
+            ones_run++;
+            if (ones_run == 5) {
+                q.push_back(0);
+                ones_run = 0;
+            }
+        } else {
+            ones_run = 0;
+        }
+    }
+}
+
+} // namespace
+
 fx25_encoder::sptr fx25_encoder::make(int fec_type, int interleaver_depth, bool add_checksum) {
     return gnuradio::make_block_sptr<fx25_encoder_impl>(fec_type, interleaver_depth, add_checksum);
 }
 
 fx25_encoder_impl::fx25_encoder_impl(int fec_type, int interleaver_depth, bool add_checksum)
-    : gr::sync_block("fx25_encoder", gr::io_signature::make(1, 1, sizeof(char)),
-                     gr::io_signature::make(1, 1, sizeof(char))),
+    : gr::block("fx25_encoder", gr::io_signature::make(1, 1, sizeof(char)),
+                gr::io_signature::make(1, 1, sizeof(char))),
       d_fec_type(fec_type), d_interleaver_depth(interleaver_depth), d_add_checksum(add_checksum),
-      d_frame_buffer(2048), d_frame_length(0), d_bit_position(0), d_byte_position(0),
+      d_frame_buffer(), d_frame_length(0), d_bit_queue(), d_bit_q_read(0),
       d_reed_solomon_encoder(nullptr) {
     // Initialize Reed-Solomon encoder based on FEC type
     initialize_reed_solomon();
@@ -85,44 +112,59 @@ void fx25_encoder_impl::initialize_reed_solomon() {
     }
 }
 
-int fx25_encoder_impl::work(int noutput_items, gr_vector_const_void_star& input_items,
-                            gr_vector_void_star& output_items) {
+void fx25_encoder_impl::forecast(int noutput_items, gr_vector_int& ninput_items_required)
+{
+    if (d_bit_q_read < d_bit_queue.size()) {
+        ninput_items_required[0] = 0;
+        return;
+    }
+    ninput_items_required[0] = (noutput_items > 0) ? 1 : 0;
+}
+
+int fx25_encoder_impl::general_work(int noutput_items,
+                                   gr_vector_int& ninput_items,
+                                   gr_vector_const_void_star& input_items,
+                                   gr_vector_void_star& output_items)
+{
     const char* in = (const char*)input_items[0];
     char* out = (char*)output_items[0];
-
-    int consumed = 0;
     int produced = 0;
+    int consumed = 0;
+    const int n_in = ninput_items[0];
 
-    // Process input data and create FX.25 frames
-    for (int i = 0; i < noutput_items; i++) {
-        if (d_frame_length == 0) {
-            // Start building a new frame
-            build_fx25_frame(in[i]);
+    while (produced < noutput_items) {
+        while (d_bit_q_read < d_bit_queue.size() && produced < noutput_items) {
+            out[produced++] = static_cast<char>(d_bit_queue[d_bit_q_read++]);
         }
-
-        if (d_frame_length > 0) {
-            // Output frame data bit by bit
-            if (d_bit_position < 8) {
-                out[produced] = (d_frame_buffer[d_byte_position] >> (7 - d_bit_position)) & 0x01;
-                d_bit_position++;
-                produced++;
-            } else {
-                d_bit_position = 0;
-                d_byte_position++;
-                if (d_byte_position >= d_frame_length) {
-                    // Frame complete, reset for next frame
-                    d_frame_length = 0;
-                    d_byte_position = 0;
-                    d_bit_position = 0;
-                    d_frame_buffer.clear();
-                }
-            }
-        }
-
+        if (produced >= noutput_items)
+            break;
+        if (consumed >= n_in)
+            break;
+        build_fx25_frame(in[consumed]);
         consumed++;
     }
 
+    if (d_bit_q_read >= d_bit_queue.size() && !d_bit_queue.empty()) {
+        d_bit_queue.clear();
+        d_bit_q_read = 0;
+    }
+
+    consume_each(consumed);
     return produced;
+}
+
+void fx25_encoder_impl::rebuild_bit_queue_from_frame()
+{
+    d_bit_queue.clear();
+    d_bit_q_read = 0;
+    if (d_frame_length < 2)
+        return;
+    /* Raw HDLC flags MSB-first; stuff only octets between opening and closing delimiters */
+    push_msb_bits_raw(d_frame_buffer[0], d_bit_queue);
+    int ones_run = 0;
+    for (uint16_t i = 1; i + 1 < d_frame_length; ++i)
+        push_msb_bits_stuffed(d_frame_buffer[i], d_bit_queue, ones_run);
+    push_msb_bits_raw(d_frame_buffer[d_frame_length - 1], d_bit_queue);
 }
 
 void fx25_encoder_impl::build_fx25_frame(char data_byte) {
@@ -156,9 +198,11 @@ void fx25_encoder_impl::build_fx25_frame(char data_byte) {
         d_frame_length += 2;
     }
 
-    // Reset bit position for output
-    d_bit_position = 0;
-    d_byte_position = 0;
+    /* Closing HDLC flag so the decoder can exit STATE_DATA */
+    d_frame_buffer.push_back(0x7E);
+    d_frame_length++;
+
+    rebuild_bit_queue_from_frame();
 }
 
 void fx25_encoder_impl::add_fx25_header() {

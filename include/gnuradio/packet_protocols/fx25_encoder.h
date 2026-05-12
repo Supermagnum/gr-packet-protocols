@@ -24,7 +24,7 @@
 
 #include <gnuradio/packet_protocols/api.h>
 #include <gnuradio/packet_protocols/common.h>
-#include <gnuradio/sync_block.h>
+#include <gnuradio/block.h>
 
 namespace gr {
 namespace packet_protocols {
@@ -33,7 +33,7 @@ namespace packet_protocols {
  * \brief FX.25 Encoder with Forward Error Correction
  * \ingroup packet_protocols
  */
-class PACKET_PROTOCOLS_API fx25_encoder : virtual public gr::sync_block {
+class PACKET_PROTOCOLS_API fx25_encoder : virtual public gr::block {
   public:
     typedef std::shared_ptr<fx25_encoder> sptr;
 
