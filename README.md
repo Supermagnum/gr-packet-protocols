@@ -32,6 +32,7 @@
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 - [Security Testing](#security-testing)
+- [Automated testing](#automated-testing)
 - [Support](#support)
 - [Uninstallation](#uninstallation)
 - [Changelog](#changelog)
@@ -44,7 +45,7 @@ This code has not been reviewed by professional coders, it is a large task. If t
 
 ### GNU Radio 4.0
 
-A GR4-compatible port lives on GitHub branch **[gnuradio4](https://github.com/Supermagnum/gr-packet-protocols/tree/gnuradio4)** (`gnuradio4/` subdirectory in that branch). Use GNU Radio 4.0 RC2 or later (for example installs under `/opt/gnuradio4-gcc`). It is independent of the GNU Radio 3.10 tree checked out here on **`main`** ([repository README](https://github.com/Supermagnum/gr-packet-protocols/blob/main/README.md)).
+A GR4-compatible port lives on branch **[gnuradio4](https://github.com/Supermagnum/gr-packet-protocols/tree/gnuradio4)** (also mirrored on [Codeberg](https://codeberg.org/Supermagnum/gr-packet-protocols)). Checkout that branch for the **`gnuradio4/`** CMake package, headers, and **`gnuradio4/README.md`** build notes (**GCC 14+** is typically required for upstream GR4 headers). Use GNU Radio 4.0 RC2 or later (for example installs under `/opt/gnuradio4-gcc`). This port is independent of the GNU Radio 3.10 **`main`** tree checked out here.
 
 ---
 
@@ -729,6 +730,13 @@ Scapy attack vector tests and parser stress tests live in `security/scapy_tests/
 cd security/scapy_tests
 ./run_scapy_tests.sh
 ```
+
+## Automated testing
+
+Full **`ctest`** workflows for this tree (GNU Radio **3.10** top-level CMake on **`main`**, and **GNU Radio 4**
+under **`gnuradio4/`**) are documented in **[test-results.md](test-results.md)**. That file lists the
+required **`PYTHONPATH`** / **`LD_LIBRARY_PATH`** settings for Python QA, Boost.UT FetchContent for GR4,
+compiler/toolchain pitfalls, and recorded verification passes.
 
 ## Support
 
