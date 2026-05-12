@@ -9,44 +9,13 @@
 import os
 import sys
 
-# Force use of build directory module - MUST be before any gnuradio imports
-build_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../build'))
-test_modules = os.path.join(build_dir, 'test_modules')
-if os.path.exists(test_modules):
-    # Insert test_modules at the beginning of sys.path
-    if test_modules not in sys.path:
-        sys.path.insert(0, test_modules)
-    # Set PYTHONPATH environment variable
-    os.environ['PYTHONPATH'] = test_modules + ':' + os.environ.get('PYTHONPATH', '')
+from qa_gr_test_env import ensure_build_packet_protocols_first
+
+ensure_build_packet_protocols_first()
 
 from gnuradio import gr, gr_unittest
 from gnuradio import blocks
 
-# Import packet_protocols and verify we're using the build version
-import gnuradio.packet_protocols
-expected_path = os.path.join(test_modules, 'gnuradio/packet_protocols/__init__.py')
-
-# Check if link_quality_monitor is available
-if 'link_quality_monitor' not in dir(gnuradio.packet_protocols):
-    # Try to force reload from test_modules if we're using system package
-    if os.path.exists(expected_path) and gnuradio.packet_protocols.__file__ != expected_path:
-        import importlib
-        importlib.invalidate_caches()
-        if 'gnuradio.packet_protocols' in sys.modules:
-            del sys.modules['gnuradio.packet_protocols']
-        # Manually load from test_modules
-        import importlib.util
-        spec = importlib.util.spec_from_file_location('gnuradio.packet_protocols', expected_path)
-        if spec and spec.loader:
-            try:
-                mod = importlib.util.module_from_spec(spec)
-                spec.loader.exec_module(mod)
-                sys.modules['gnuradio.packet_protocols'] = mod
-                gnuradio.packet_protocols = mod
-            except Exception:
-                pass  # Will try import below
-
-# Try to import - if it fails, tests will be skipped
 try:
     from gnuradio.packet_protocols import link_quality_monitor
     _has_bindings = True

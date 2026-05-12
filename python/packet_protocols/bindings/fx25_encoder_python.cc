@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(fx25_encoder.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(d288434538529ada1869a9076120c2fe)                     */
+/* BINDTOOL_HEADER_FILE_HASH(0)                                                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -34,7 +34,6 @@ void bind_fx25_encoder(py::module& m)
 
 
     py::class_<fx25_encoder,
-               gr::sync_block,
                gr::block,
                gr::basic_block,
                std::shared_ptr<fx25_encoder>>(m, "fx25_encoder", D(fx25_encoder))

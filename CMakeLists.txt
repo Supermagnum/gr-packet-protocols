@@ -36,6 +36,26 @@ list(INSERT CMAKE_MODULE_PATH 0 ${PROJECT_SOURCE_DIR}/cmake/Modules)
 # Find gnuradio to get access to the cmake modules
 find_package(Gnuradio "3.10" REQUIRED)
 
+option(
+  GR_PACKET_PROTOCOLS_VERIFY_GR_RUNTIME
+  "Abort CMake configure when GNU Radio headers disagree with Python gnuradio (major.minor.patch)"
+  ON)
+option(
+  GR_PACKET_PROTOCOLS_ALLOW_GR_MISMATCH
+  "Allow CMake configure to continue when GNU Radio headers disagree with Python gnuradio (unsafe)"
+  OFF)
+if(GR_PACKET_PROTOCOLS_VERIFY_GR_RUNTIME)
+  find_package(Python3 COMPONENTS Interpreter QUIET)
+  if(Python3_Interpreter_FOUND)
+    include("${CMAKE_CURRENT_SOURCE_DIR}/cmake/PacketProtocolsRuntimeMatch.cmake")
+    gr_packet_protocols_verify_gnuradio_headers_vs_python("${CMAKE_CURRENT_SOURCE_DIR}"
+                                                           "${Python3_EXECUTABLE}" gnuradio::gnuradio-runtime
+                                                           "${GR_PACKET_PROTOCOLS_ALLOW_GR_MISMATCH}")
+  else()
+    message(WARNING "gr-packet-protocols: Python3 interpreter not found; skipping GNU Radio header/runtime match.")
+  endif()
+endif()
+
 # Set the version information here
 # cmake-format: off
 set(VERSION_MAJOR 1)

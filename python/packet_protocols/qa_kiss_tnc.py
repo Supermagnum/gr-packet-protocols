@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
 # Copyright 2025 gr-packet-protocols.
@@ -6,16 +6,12 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 
+from qa_gr_test_env import ensure_build_packet_protocols_first
+
+ensure_build_packet_protocols_first()
+
 from gnuradio import gr, gr_unittest
-# from gnuradio import blocks
-try:
-    from gnuradio.packet_protocols import kiss_tnc
-except ImportError:
-    import os
-    import sys
-    dirname, filename = os.path.split(os.path.abspath(__file__))
-    sys.path.append(os.path.join(dirname, "bindings"))
-    from gnuradio.packet_protocols import kiss_tnc
+from gnuradio.packet_protocols import kiss_tnc
 
 class qa_kiss_tnc(gr_unittest.TestCase):
 

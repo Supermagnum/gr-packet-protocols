@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(il2p_encoder.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(de610fa9a48afc43e7bdd28627aa8e58)                     */
+/* BINDTOOL_HEADER_FILE_HASH(0)                                                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -34,7 +34,6 @@ void bind_il2p_encoder(py::module& m)
 
 
     py::class_<il2p_encoder,
-               gr::sync_block,
                gr::block,
                gr::basic_block,
                std::shared_ptr<il2p_encoder>>(m, "il2p_encoder", D(il2p_encoder))
