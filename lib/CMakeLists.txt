@@ -33,8 +33,24 @@ if(NOT packet_protocols_sources)
     return()
 endif(NOT packet_protocols_sources)
 
+find_package(PkgConfig QUIET)
+if(PkgConfig_FOUND)
+  pkg_check_modules(LIBGPIOD_PC libgpiod)
+endif()
+
 add_library(gnuradio-packet_protocols SHARED ${packet_protocols_sources})
 target_link_libraries(gnuradio-packet_protocols gnuradio::gnuradio-runtime)
+if(LIBGPIOD_PC_FOUND)
+  target_compile_definitions(gnuradio-packet_protocols PRIVATE HAVE_LIBGPIOD)
+  target_include_directories(gnuradio-packet_protocols PRIVATE ${LIBGPIOD_PC_INCLUDE_DIRS})
+  target_link_libraries(gnuradio-packet_protocols PRIVATE ${LIBGPIOD_PC_LIBRARIES})
+else()
+  message(
+    STATUS
+      "gr-packet-protocols: libgpiod not found; kiss_tnc GPIO PTT falls back to sysfs "
+      "(/sys/class/gpio), which is deprecated and often removed on kernel 5.x+. Install libgpiod "
+      "for a stable GPIO stack.")
+endif()
 target_include_directories(
     gnuradio-packet_protocols
     PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../include>
@@ -51,6 +67,15 @@ endif(APPLE)
 ########################################################################
 include(GrMiscUtils)
 gr_library_foo(gnuradio-packet_protocols)
+
+add_executable(test_rs_golden_vectors test_rs_golden_vectors.cc)
+target_include_directories(
+  test_rs_golden_vectors PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../include)
+
+add_executable(test_rs_single_symbol_flip test_rs_single_symbol_flip.cc)
+target_include_directories(
+  test_rs_single_symbol_flip PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../include)
+add_test(NAME packet_protocols_rs_single_symbol_flip COMMAND test_rs_single_symbol_flip)
 
 ########################################################################
 # Print summary

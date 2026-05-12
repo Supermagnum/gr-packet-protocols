@@ -30,7 +30,7 @@ gr_python_install(FILES
 ########################################################################
 include(GrTest)
 
-set(GR_TEST_TARGET_DEPS gnuradio-packet_protocols)
+set(GR_TEST_TARGET_DEPS gnuradio-packet_protocols test_rs_golden_vectors)
 
 # Create a package directory that tests can import. It includes everything
 # from `python/`.
@@ -47,3 +47,7 @@ GR_ADD_TEST(qa_il2p_decoder ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_
 GR_ADD_TEST(qa_kiss_tnc ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_kiss_tnc.py)
 GR_ADD_TEST(qa_link_quality_monitor ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_link_quality_monitor.py)
 GR_ADD_TEST(qa_adaptive_rate_control ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_adaptive_rate_control.py)
+GR_ADD_TEST(qa_rs_fec_codec ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_rs_fec_codec.py)
+GR_ADD_TEST(qa_rs_cpp_golden_match ${PYTHON_EXECUTABLE}
+            ${CMAKE_CURRENT_SOURCE_DIR}/qa_rs_cpp_golden_match.py)
+GR_ADD_TEST(qa_packet_iq_chain ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_packet_iq_chain.py)
