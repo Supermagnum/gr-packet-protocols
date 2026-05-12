@@ -78,7 +78,7 @@ Host: Linux workspace with GNU Radio **3.10** from **`/usr/local`** (Python QA +
 |------|--------|
 | Configure / build | `cmake -S . -B build-full-main && cmake --build build-full-main -j` |
 | **`ctest`** | **`cd build-full-main`**, then **`export PYTHONPATH="$(pwd)/test_modules${PYTHONPATH:+:$PYTHONPATH}"`** and **`export LD_LIBRARY_PATH="$(pwd)/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"`**, then **`ctest --output-on-failure`** |
-| Result | **13 / 13** tests passed |
+| Result | **13 / 13** tests passed (includes **`qa_ax25_encoder`**; scheduler / HDLC fixes noted in §5) |
 
 Registered tests include **`packet_protocols_rs_single_symbol_flip`**, all Python QA scripts under **`python/packet_protocols/`**, and **`qa_rs_cpp_golden_match`** (invokes **`lib/test_rs_golden_vectors`**; executable path is resolved from **`PYTHONPATH`** / **`RS_CPP_GOLDEN_EXE`**).
 
@@ -107,15 +107,27 @@ Configure-stage **`cmake/gr_python_matches_headers.py`** compares **`gnuradio4::
 
 ---
 
-## 5. Design-level limitations (tracked separately)
+## 5. Reed-Solomon decoder alignment (recorded 2026-05-12)
 
-- **RS vs `reedsolo`**: Byte-wise parity differs due to systematic encoding layout; **SHA-256** over **`test_rs_golden_vectors`** output is the locked reference (documented in **`qa_rs_cpp_golden_match.py`**).
-- **BM/Chien/Forney vs rare data-region miscorrection**: Documented limitation for heavy tails beyond pristine / parity-focused checks; a Karn-style RS stack would be a separate change set.
+**What changed**
+
+- **`common.h` / GR4 `detail/ReedSolomon.hpp`**: The RS decoder uses a **`decode_rs.h`-style pipeline** (Berlekamp–Massey, libfec Chien search with **`IPRIM=1`** and root/loc/Horner-style registers, libfec-style Omega and Forney). Parameters match the Karn RS(255,*k*) convention used here: **`no_eras = 0`**, **`PAD = 0`**, **`NROOTS = 255 − k`**, **`FCR = 1`**, **`PRIM = 1`**, primitive polynomial **`0x11D`**. **`ReedSolomonEncoder`** remains the Karn **`encode_rs.h`** LFSR implementation with **`init_rs`/`encode_rs`** generator recurrence; **`decode_rs_inplace`** mirrors **`decode_rs.h`** as transcribed into this tree.
+- **Syndrome consistency**: **`calculate_syndromes`** still implements explicit evaluation at **`α^{i+1}`** for **`i = 0 … 2t−1`**, with **coefficient order aligned to the same polynomial indexing as the Horner syndromes inside `decode_rs_inplace`** (wire byte **`j`** is the coefficient of **`x^{254−j}`**). Without that ordering agreement, a valid codeword could show non-zero explicit syndromes while Karn Horner reports zero.
+- **Stricter than stock libfec**: After Forney XOR corrections, **`calculate_syndromes`** is run again on the corrected buffer. **If any syndrome is non-zero, decoding fails and the output is cleared.** Stock **`decode_rs`** does not apply this second membership check.
+- **Golden SHA table**: Encoder parity bytes follow the Karn LFSR layout above; **`RS_GOLDEN_SHA256`** in **`python/packet_protocols/qa_rs_cpp_golden_match.py`** was refreshed so SHA-256 over each **`test_rs_golden_vectors`** line matches the current emitter.
+
+**Verification run in this workspace**
+
+- **`lib/test_rs_golden_vectors`**: passed (encode→decode round-trip and SHA over emitted codewords for all **`k`** in the FX.25 / IL2P union).
+- **`lib/test_rs_single_symbol_flip`**: passed (data-region and parity-region single-byte flips within **`t`**).
+- **`qa_rs_cpp_golden_match.py`**: passed after the **`RS_GOLDEN_SHA256`** update (**`PYTHONPATH`** / **`LD_LIBRARY_PATH`** set per §1.1 relative to **`build-full-main/`**).
+- **Python QA scheduler / HDLC (`qa_ax25_encoder` hang, FX.25, IL2P)**: **`gr::sync_block`** assumes a **1:1** byte schedule, but these blocks emit or consume **one bit per char sample** while handling multi-byte frames. That mismatch could stall **`tb.run()`** indefinitely or emit truncated streams. **`ax25_encoder` / `ax25_decoder`**, **FX.25**, and **IL2P** now use **`gr::block`** with **`forecast` / `general_work`** and bit or byte queues where needed. HDLC rules match **AX.25**: **raw MSB-first `0x7E` opening and closing delimiters**, **bit-stuffed interior only** (the **FX.25** encoder had been stuffing the closing flag, which broke end-of-frame detection and RS round-trip). **IL2P** frames are wrapped the same way on transmit; **IL2P** decode uses the shared **`STATE_DATA`** unstuff path, **`FEC` at octet index 4** (after the **`F1 5E 48`** sync), and payload extraction after **19** octets (preamble + sync + FEC + dest/src addresses).
+- **Full **`ctest`** on **`main`** in **`build-full-main/`** with §1.1 **`PYTHONPATH`** / **`LD_LIBRARY_PATH`**: **13 / 13** passed (2026-05-12).
 
 ---
 
 ## 6. Re-run checklist before release
 
-- [x] **`main`**: Full **`ctest`** after clean configure with matching GR 3.10 Python + **`reedsolo`** optional (see §3.1; **`reedsolo`** remains optional).
-- [x] **`gnuradio4`**: Full **`ctest`** against **`/opt/gnuradio4-gcc`** with **GCC 14+** (§3.2).
-- [ ] Refresh §3 execution rows if encoder or **`RS_GOLDEN_SHA256`** tables change.
+- [x] **`main`**: Full **`ctest`** after clean configure with matching GR 3.10 Python + **`reedsolo`** optional (see §1.1; **`reedsolo`** remains optional). §5 records **`build-full-main/`** **13 / 13** after fixing **`sync_block`** scheduling and HDLC framing for AX.25 / FX.25 / IL2P.
+- [x] **`gnuradio4`**: Full **`ctest`** against **`/opt/gnuradio4-gcc`** with **GCC 14+** (§3.2) after syncing **`detail/ReedSolomon.hpp`** (§3.2 records **13 / 13**).
+- [x] **`RS_GOLDEN_SHA256`** refreshed for the current Karn encoder output (§5).

@@ -24,25 +24,29 @@
 #endif
 
 #include "il2p_decoder_impl.h"
+#include <algorithm>
 #include <gnuradio/io_signature.h>
 
 namespace gr {
 namespace packet_protocols {
+
+namespace {
+constexpr int IL2P_ENC_HEADER_OCTETS =
+    1 + IL2P_SYNC_WORD_SIZE + 1 + 14; //!< preamble + sync + fec + dest(7) + src(7)
+}
 
 il2p_decoder::sptr il2p_decoder::make() {
     return gnuradio::make_block_sptr<il2p_decoder_impl>();
 }
 
 il2p_decoder_impl::il2p_decoder_impl()
-    : gr::sync_block("il2p_decoder", gr::io_signature::make(1, 1, sizeof(char)),
-                     gr::io_signature::make(1, 1, sizeof(char))),
-      d_state(STATE_IDLE), d_bit_buffer(0), d_bit_count(0), d_frame_buffer(2048), d_frame_length(0),
-      d_ones_count(0), d_escaped(false), d_fec_type(IL2P_FEC_RS_255_223),
-      d_reed_solomon_decoder(nullptr) {
+    : gr::block("il2p_decoder", gr::io_signature::make(1, 1, sizeof(char)),
+                gr::io_signature::make(1, 1, sizeof(char))),
+      d_state(STATE_IDLE), d_bit_buffer(0), d_bit_count(0), d_frame_buffer(8192), d_frame_length(0),
+      d_ones_count(0), d_fec_type(IL2P_FEC_RS_255_223), d_reed_solomon_decoder(nullptr) {
     // Initialize Reed-Solomon decoder
     initialize_reed_solomon();
 
-    d_frame_buffer.clear();
     d_frame_length = 0;
 }
 
@@ -70,46 +74,59 @@ void il2p_decoder_impl::initialize_reed_solomon() {
     }
 }
 
-int il2p_decoder_impl::work(int noutput_items, gr_vector_const_void_star& input_items,
-                            gr_vector_void_star& output_items) {
+void il2p_decoder_impl::forecast(int noutput_items, gr_vector_int& ninput_items_required)
+{
+    const int pending = static_cast<int>(d_out_queue.size());
+    if (noutput_items <= pending) {
+        ninput_items_required[0] = 0;
+        return;
+    }
+    const int deficit = noutput_items - pending;
+    ninput_items_required[0] = std::max(deficit * 8, 1);
+}
+
+int il2p_decoder_impl::general_work(int noutput_items,
+                                    gr_vector_int& ninput_items,
+                                    gr_vector_const_void_star& input_items,
+                                    gr_vector_void_star& output_items)
+{
     const char* in = (const char*)input_items[0];
     char* out = (char*)output_items[0];
-
-    int consumed = 0;
     int produced = 0;
+    int consumed = 0;
+    const int nin = ninput_items[0];
 
-    for (int i = 0; i < noutput_items; i++) {
-        bool bit = in[i] != 0;
+    while (produced < noutput_items && !d_out_queue.empty()) {
+        out[produced++] = static_cast<char>(d_out_queue.front());
+        d_out_queue.pop_front();
+    }
 
-        // Process bit through state machine
+    while (produced < noutput_items && consumed < nin) {
+        bool bit = in[consumed] != 0;
+        consumed++;
         process_bit(bit);
 
-        // Check if we have a complete frame to output
         if (d_state == STATE_FRAME_COMPLETE) {
             if (d_frame_length > 0) {
-                // Decode IL2P frame
                 std::vector<uint8_t> decoded_data = decode_il2p_frame();
-
-                // Output decoded data
-                for (size_t j = 0; j < decoded_data.size() && produced < noutput_items; j++) {
-                    out[produced] = decoded_data[j];
-                    produced++;
-                }
+                for (uint8_t b : decoded_data)
+                    d_out_queue.push_back(b);
             }
 
-            // Reset for next frame
             d_state = STATE_IDLE;
-            d_frame_buffer.clear();
             d_frame_length = 0;
             d_bit_buffer = 0;
             d_bit_count = 0;
             d_ones_count = 0;
-            d_escaped = false;
-        }
 
-        consumed++;
+            while (produced < noutput_items && !d_out_queue.empty()) {
+                out[produced++] = static_cast<char>(d_out_queue.front());
+                d_out_queue.pop_front();
+            }
+        }
     }
 
+    consume_each(consumed);
     return produced;
 }
 
@@ -124,7 +141,6 @@ void il2p_decoder_impl::process_bit(bool bit) {
                 d_ones_count = 0;
                 d_bit_buffer = 0;
                 d_bit_count = 0;
-                d_frame_buffer.clear();
                 d_frame_length = 0;
             }
         } else {
@@ -142,55 +158,46 @@ void il2p_decoder_impl::process_bit(bool bit) {
         }
         break;
 
-    case STATE_DATA:
+    case STATE_DATA: {
+        auto append_data_bit = [&](bool data_bit) {
+            d_bit_buffer = static_cast<uint8_t>((d_bit_buffer << 1) | (data_bit ? 1 : 0));
+            d_bit_count++;
+            if (d_bit_count == 8) {
+                uint8_t byte = d_bit_buffer;
+                if (d_frame_length < static_cast<int>(d_frame_buffer.size())) {
+                    d_frame_buffer[d_frame_length] = byte;
+                    d_frame_length++;
+                }
+                d_bit_buffer = 0;
+                d_bit_count = 0;
+            }
+        };
+
         if (bit) {
             d_ones_count++;
             if (d_ones_count >= 6) {
-                // Found ending flag
                 d_state = STATE_FRAME_COMPLETE;
                 return;
             }
+            append_data_bit(true);
         } else {
-            d_ones_count = 0;
-        }
-
-        // Accumulate bits
-        d_bit_buffer = (d_bit_buffer << 1) | (bit ? 1 : 0);
-        d_bit_count++;
-
-        if (d_bit_count == 8) {
-            // Complete byte received
-            uint8_t byte = d_bit_buffer;
-
-            // Handle bit stuffing
-            if (d_ones_count == 5 && !d_escaped) {
-                // Skip stuffed bit
+            if (d_ones_count == 5) {
                 d_ones_count = 0;
-                d_bit_count = 0;
-                d_bit_buffer = 0;
                 return;
             }
-
-            // Store byte in frame buffer
-            if (d_frame_length < d_frame_buffer.size()) {
-                d_frame_buffer[d_frame_length] = byte;
-                d_frame_length++;
-            }
-
-            // Reset for next byte
-            d_bit_buffer = 0;
-            d_bit_count = 0;
+            d_ones_count = 0;
+            append_data_bit(false);
         }
-        break;
+    } break;
 
     case STATE_FRAME_COMPLETE:
-        // Frame is complete, will be handled in work()
+        // Frame is complete, will be handled in general_work()
         break;
     }
 }
 
 std::vector<uint8_t> il2p_decoder_impl::decode_il2p_frame() {
-    if (d_frame_length < 8) { // Minimum IL2P frame size
+    if (d_frame_length < IL2P_ENC_HEADER_OCTETS + 4) {
         return std::vector<uint8_t>();
     }
 
@@ -199,11 +206,10 @@ std::vector<uint8_t> il2p_decoder_impl::decode_il2p_frame() {
         return std::vector<uint8_t>();
     }
 
-    // Extract data portion
+    // Extract scrambled RS codeword octets (fixed header through frame checksum)
     std::vector<uint8_t> data;
-    for (int i = 6; i < d_frame_length - 4; i++) { // Skip header and checksum
+    for (int i = IL2P_ENC_HEADER_OCTETS; i < d_frame_length - 4; i++)
         data.push_back(d_frame_buffer[i]);
-    }
 
     // Descramble data (IL2P uses scrambling)
     std::vector<uint8_t> descrambled_data = descramble_data(data);
@@ -215,7 +221,7 @@ std::vector<uint8_t> il2p_decoder_impl::decode_il2p_frame() {
 }
 
 bool il2p_decoder_impl::parse_il2p_header() {
-    if (d_frame_length < 6) {
+    if (d_frame_length < IL2P_ENC_HEADER_OCTETS) {
         return false;
     }
 
@@ -225,15 +231,13 @@ bool il2p_decoder_impl::parse_il2p_header() {
     }
 
     // Check IL2P sync word (0xF15E48)
-    if (d_frame_length < 4 || d_frame_buffer[1] != 0xF1 || 
-        d_frame_buffer[2] != 0x5E || d_frame_buffer[3] != 0x48) {
+    if (d_frame_buffer[1] != 0xF1 || d_frame_buffer[2] != 0x5E || d_frame_buffer[3] != 0x48) {
         return false;
     }
 
-    // Extract FEC type
-    d_fec_type = d_frame_buffer[5];
+    // FEC type follows sync (matches il2p_encoder_impl::add_il2p_header)
+    d_fec_type = d_frame_buffer[4];
 
-    // Update Reed-Solomon decoder if needed
     initialize_reed_solomon();
 
     return true;

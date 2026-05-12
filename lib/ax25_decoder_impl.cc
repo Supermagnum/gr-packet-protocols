@@ -24,6 +24,7 @@
 #endif
 
 #include "ax25_decoder_impl.h"
+#include <algorithm>
 #include <gnuradio/io_signature.h>
 
 namespace gr {
@@ -34,58 +35,73 @@ ax25_decoder::sptr ax25_decoder::make() {
 }
 
 ax25_decoder_impl::ax25_decoder_impl()
-    : gr::sync_block("ax25_decoder", gr::io_signature::make(1, 1, sizeof(char)),
-                     gr::io_signature::make(1, 1, sizeof(char))),
-      d_state(STATE_IDLE), d_bit_buffer(0), d_bit_count(0), d_frame_buffer(1024), d_frame_length(0),
+    : gr::block("ax25_decoder", gr::io_signature::make(1, 1, sizeof(char)),
+                gr::io_signature::make(1, 1, sizeof(char))),
+      d_state(STATE_IDLE), d_bit_buffer(0), d_bit_count(0), d_frame_buffer(2048), d_frame_length(0),
       d_ones_count(0), d_escaped(false) {
-    d_frame_buffer.clear();
     d_frame_length = 0;
 }
 
 ax25_decoder_impl::~ax25_decoder_impl() {
 }
 
-int ax25_decoder_impl::work(int noutput_items, gr_vector_const_void_star& input_items,
-                            gr_vector_void_star& output_items) {
+void ax25_decoder_impl::forecast(int noutput_items, gr_vector_int& ninput_items_required)
+{
+    const int pending = static_cast<int>(d_out_queue.size());
+    if (noutput_items <= pending) {
+        ninput_items_required[0] = 0;
+        return;
+    }
+    const int deficit = noutput_items - pending;
+    ninput_items_required[0] = std::max(deficit * 8, 1);
+}
+
+int ax25_decoder_impl::general_work(int noutput_items,
+                                    gr_vector_int& ninput_items,
+                                    gr_vector_const_void_star& input_items,
+                                    gr_vector_void_star& output_items)
+{
     const char* in = (const char*)input_items[0];
     char* out = (char*)output_items[0];
-
-    int consumed = 0;
     int produced = 0;
+    int consumed = 0;
+    const int nin = ninput_items[0];
 
-    for (int i = 0; i < noutput_items; i++) {
-        bool bit = in[i] != 0;
+    while (produced < noutput_items && !d_out_queue.empty()) {
+        out[produced++] = (char)d_out_queue.front();
+        d_out_queue.pop_front();
+    }
 
-        // Process bit through state machine
+    while (produced < noutput_items && consumed < nin) {
+        bool bit = in[consumed] != 0;
+        consumed++;
         process_bit(bit);
 
-        // Check if we have a complete frame to output
         if (d_state == STATE_FRAME_COMPLETE) {
             if (d_frame_length > 0) {
-                // Output frame data
-                for (int j = 0; j < d_frame_length && produced < noutput_items; j++) {
-                    out[produced] = d_frame_buffer[j];
-                    produced++;
-                }
+                for (int j = 0; j < d_frame_length; j++)
+                    d_out_queue.push_back(d_frame_buffer[j]);
             }
-
-            // Reset for next frame
             d_state = STATE_IDLE;
-            d_frame_buffer.clear();
             d_frame_length = 0;
             d_bit_buffer = 0;
             d_bit_count = 0;
             d_ones_count = 0;
             d_escaped = false;
-        }
 
-        consumed++;
+            while (produced < noutput_items && !d_out_queue.empty()) {
+                out[produced++] = (char)d_out_queue.front();
+                d_out_queue.pop_front();
+            }
+        }
     }
 
+    consume_each(consumed);
     return produced;
 }
 
-void ax25_decoder_impl::process_bit(bool bit) {
+void ax25_decoder_impl::process_bit(bool bit)
+{
     switch (d_state) {
     case STATE_IDLE:
         if (bit) {
@@ -96,7 +112,6 @@ void ax25_decoder_impl::process_bit(bool bit) {
                 d_ones_count = 0;
                 d_bit_buffer = 0;
                 d_bit_count = 0;
-                d_frame_buffer.clear();
                 d_frame_length = 0;
             }
         } else {
@@ -114,46 +129,38 @@ void ax25_decoder_impl::process_bit(bool bit) {
         }
         break;
 
-    case STATE_DATA:
+    case STATE_DATA: {
+        auto append_data_bit = [&](bool data_bit) {
+            d_bit_buffer = static_cast<uint8_t>((d_bit_buffer << 1) | (data_bit ? 1 : 0));
+            d_bit_count++;
+            if (d_bit_count == 8) {
+                uint8_t byte = d_bit_buffer;
+                if (d_frame_length < static_cast<int>(d_frame_buffer.size())) {
+                    d_frame_buffer[d_frame_length] = byte;
+                    d_frame_length++;
+                }
+                d_bit_buffer = 0;
+                d_bit_count = 0;
+            }
+        };
+
         if (bit) {
             d_ones_count++;
             if (d_ones_count >= 6) {
-                // Found ending flag
                 d_state = STATE_FRAME_COMPLETE;
                 return;
             }
+            append_data_bit(true);
         } else {
-            d_ones_count = 0;
-        }
-
-        // Accumulate bits
-        d_bit_buffer = (d_bit_buffer << 1) | (bit ? 1 : 0);
-        d_bit_count++;
-
-        if (d_bit_count == 8) {
-            // Complete byte received
-            uint8_t byte = d_bit_buffer;
-
-            // Handle bit stuffing
-            if (d_ones_count == 5 && !d_escaped) {
-                // Skip stuffed bit
+            if (d_ones_count == 5) {
+                /* Transmitter inserted a 0 after five 1s; drop this stuffed bit */
                 d_ones_count = 0;
-                d_bit_count = 0;
-                d_bit_buffer = 0;
                 return;
             }
-
-            // Store byte in frame buffer
-            if (d_frame_length < d_frame_buffer.size()) {
-                d_frame_buffer[d_frame_length] = byte;
-                d_frame_length++;
-            }
-
-            // Reset for next byte
-            d_bit_buffer = 0;
-            d_bit_count = 0;
+            d_ones_count = 0;
+            append_data_bit(false);
         }
-        break;
+    } break;
 
     case STATE_FRAME_COMPLETE:
         // Frame is complete, will be handled in work()

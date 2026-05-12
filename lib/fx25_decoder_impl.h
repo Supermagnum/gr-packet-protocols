@@ -25,6 +25,7 @@
 #include <gnuradio/packet_protocols/common.h>
 #include <gnuradio/packet_protocols/fx25_decoder.h>
 #include <gnuradio/packet_protocols/fx25_protocol.h>
+#include <deque>
 #include <vector>
 
 namespace gr {
@@ -52,6 +53,7 @@ class fx25_decoder_impl : public fx25_decoder {
     int d_fec_type;                             //!< FEC type
     int d_interleaver_depth;                    //!< Interleaver depth
     ReedSolomonDecoder* d_reed_solomon_decoder; //!< Reed-Solomon decoder
+    std::deque<uint8_t> d_out_queue;            //!< Pending decoded bytes
 
   public:
     /*!
@@ -71,8 +73,11 @@ class fx25_decoder_impl : public fx25_decoder {
      * \param output_items Output items
      * \return Number of items produced
      */
-    int work(int noutput_items, gr_vector_const_void_star& input_items,
-             gr_vector_void_star& output_items);
+    void forecast(int noutput_items, gr_vector_int& ninput_items_required) override;
+    int general_work(int noutput_items,
+                     gr_vector_int& ninput_items,
+                     gr_vector_const_void_star& input_items,
+                     gr_vector_void_star& output_items) override;
 
   private:
     /*!

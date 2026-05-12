@@ -42,10 +42,10 @@ class fx25_encoder_impl : public fx25_encoder {
     int d_fec_type;                             //!< FEC type
     int d_interleaver_depth;                    //!< Interleaver depth
     bool d_add_checksum;                        //!< Add checksum flag
-    std::vector<uint8_t> d_frame_buffer;        //!< Frame buffer
-    uint16_t d_frame_length;                    //!< Current frame length
-    uint8_t d_bit_position;                     //!< Current bit position
-    uint16_t d_byte_position;                   //!< Current byte position
+    std::vector<uint8_t> d_frame_buffer;          //!< Frame bytes (opening 0x7E + payload)
+    uint16_t d_frame_length{ 0 };               //!< Valid length in d_frame_buffer
+    std::vector<uint8_t> d_bit_queue;             //!< Serialized bits to emit (stuffed body)
+    size_t d_bit_q_read{ 0 };
     ReedSolomonEncoder* d_reed_solomon_encoder; //!< Reed-Solomon encoder
 
   public:
@@ -69,8 +69,11 @@ class fx25_encoder_impl : public fx25_encoder {
      * \param output_items Output items
      * \return Number of items produced
      */
-    int work(int noutput_items, gr_vector_const_void_star& input_items,
-             gr_vector_void_star& output_items);
+    void forecast(int noutput_items, gr_vector_int& ninput_items_required) override;
+    int general_work(int noutput_items,
+                     gr_vector_int& ninput_items,
+                     gr_vector_const_void_star& input_items,
+                     gr_vector_void_star& output_items) override;
 
     /*!
      * \brief Set FEC type
@@ -91,6 +94,8 @@ class fx25_encoder_impl : public fx25_encoder {
     void set_add_checksum(bool add_checksum);
 
   private:
+    void rebuild_bit_queue_from_frame();
+
     /*!
      * \brief Initialize Reed-Solomon encoder
      */

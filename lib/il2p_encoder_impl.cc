@@ -40,12 +40,11 @@ il2p_encoder::sptr il2p_encoder::make(const std::string& dest_callsign,
 il2p_encoder_impl::il2p_encoder_impl(const std::string& dest_callsign, const std::string& dest_ssid,
                                      const std::string& src_callsign, const std::string& src_ssid,
                                      int fec_type, bool add_checksum)
-    : gr::sync_block("il2p_encoder", gr::io_signature::make(1, 1, sizeof(char)),
-                     gr::io_signature::make(1, 1, sizeof(char))),
+    : gr::block("il2p_encoder", gr::io_signature::make(1, 1, sizeof(char)),
+                gr::io_signature::make(1, 1, sizeof(char))),
       d_dest_callsign(dest_callsign), d_dest_ssid(dest_ssid), d_src_callsign(src_callsign),
-      d_src_ssid(src_ssid), d_fec_type(fec_type), d_add_checksum(add_checksum),
-      d_frame_buffer(2048), d_frame_length(0), d_bit_position(0), d_byte_position(0),
-      d_reed_solomon_encoder(nullptr) {
+      d_src_ssid(src_ssid), d_fec_type(fec_type), d_add_checksum(add_checksum), d_frame_length(0),
+      d_bit_q_read(0), d_reed_solomon_encoder(nullptr) {
     // Initialize Reed-Solomon encoder
     initialize_reed_solomon();
 
@@ -77,43 +76,80 @@ void il2p_encoder_impl::initialize_reed_solomon() {
     }
 }
 
-int il2p_encoder_impl::work(int noutput_items, gr_vector_const_void_star& input_items,
-                            gr_vector_void_star& output_items) {
+void il2p_encoder_impl::push_msb_bits_raw(uint8_t byte, std::vector<uint8_t>& q)
+{
+    for (int bp = 7; bp >= 0; --bp)
+        q.push_back(static_cast<uint8_t>((byte >> bp) & 1));
+}
+
+void il2p_encoder_impl::push_msb_bits_stuffed(uint8_t byte, std::vector<uint8_t>& q, int& ones_run)
+{
+    for (int bp = 7; bp >= 0; --bp) {
+        const bool bit = ((byte >> bp) & 1) != 0;
+        q.push_back(bit ? 1 : 0);
+        if (bit) {
+            ones_run++;
+            if (ones_run == 5) {
+                q.push_back(0);
+                ones_run = 0;
+            }
+        } else {
+            ones_run = 0;
+        }
+    }
+}
+
+void il2p_encoder_impl::rebuild_bit_queue_from_frame()
+{
+    d_bit_queue.clear();
+    d_bit_q_read = 0;
+    if (d_frame_buffer.size() < 2)
+        return;
+    push_msb_bits_raw(d_frame_buffer[0], d_bit_queue);
+    int ones_run = 0;
+    for (size_t i = 1; i + 1 < d_frame_buffer.size(); ++i)
+        push_msb_bits_stuffed(d_frame_buffer[i], d_bit_queue, ones_run);
+    push_msb_bits_raw(d_frame_buffer[d_frame_buffer.size() - 1], d_bit_queue);
+}
+
+void il2p_encoder_impl::forecast(int noutput_items, gr_vector_int& ninput_items_required)
+{
+    if (d_bit_q_read < d_bit_queue.size()) {
+        ninput_items_required[0] = 0;
+        return;
+    }
+    ninput_items_required[0] = (noutput_items > 0) ? 1 : 0;
+}
+
+int il2p_encoder_impl::general_work(int noutput_items,
+                                    gr_vector_int& ninput_items,
+                                    gr_vector_const_void_star& input_items,
+                                    gr_vector_void_star& output_items)
+{
     const char* in = (const char*)input_items[0];
     char* out = (char*)output_items[0];
-
-    int consumed = 0;
     int produced = 0;
+    int consumed = 0;
+    const int n_in = ninput_items[0];
 
-    // Process input data and create IL2P frames
-    for (int i = 0; i < noutput_items; i++) {
-        if (d_frame_length == 0) {
-            // Start building a new frame
-            build_il2p_frame(in[i]);
+    while (produced < noutput_items) {
+        while (d_bit_q_read < d_bit_queue.size() && produced < noutput_items) {
+            out[produced++] = static_cast<char>(d_bit_queue[d_bit_q_read++]);
         }
-
-        if (d_frame_length > 0) {
-            // Output frame data bit by bit
-            if (d_bit_position < 8) {
-                out[produced] = (d_frame_buffer[d_byte_position] >> (7 - d_bit_position)) & 0x01;
-                d_bit_position++;
-                produced++;
-            } else {
-                d_bit_position = 0;
-                d_byte_position++;
-                if (d_byte_position >= d_frame_length) {
-                    // Frame complete, reset for next frame
-                    d_frame_length = 0;
-                    d_byte_position = 0;
-                    d_bit_position = 0;
-                    d_frame_buffer.clear();
-                }
-            }
-        }
-
+        if (produced >= noutput_items)
+            break;
+        if (consumed >= n_in)
+            break;
+        build_il2p_frame(in[consumed]);
         consumed++;
     }
 
+    if (d_bit_q_read >= d_bit_queue.size() && !d_bit_queue.empty()) {
+        d_bit_queue.clear();
+        d_bit_q_read = 0;
+    }
+
+    consume_each(consumed);
     return produced;
 }
 
@@ -150,9 +186,11 @@ void il2p_encoder_impl::build_il2p_frame(char data_byte) {
         d_frame_length += 4;
     }
 
-    // Reset bit position for output
-    d_bit_position = 0;
-    d_byte_position = 0;
+    /* HDLC framing: checksum covers interior only; raw flags on the wire */
+    d_frame_buffer.insert(d_frame_buffer.begin(), static_cast<uint8_t>(0x7E));
+    d_frame_buffer.push_back(static_cast<uint8_t>(0x7E));
+
+    rebuild_bit_queue_from_frame();
 }
 
 void il2p_encoder_impl::add_il2p_header() {

@@ -46,11 +46,16 @@ class il2p_encoder_impl : public il2p_encoder {
     std::string d_src_ssid;                     //!< Source SSID
     int d_fec_type;                             //!< FEC type
     bool d_add_checksum;                        //!< Add checksum flag
-    std::vector<uint8_t> d_frame_buffer;        //!< Frame buffer
-    uint16_t d_frame_length;                    //!< Current frame length
-    uint8_t d_bit_position;                     //!< Current bit position
-    uint16_t d_byte_position;                   //!< Current byte position
+    std::vector<uint8_t> d_frame_buffer;        //!< Frame buffer (HDLC flags + interior)
+    uint16_t d_frame_length;                    //!< Current frame length (interior; for checksum)
+    std::vector<uint8_t> d_bit_queue;           //!< Serialized stuffed bits for general_work
+    size_t d_bit_q_read;                        //!< Read index into d_bit_queue
+
     ReedSolomonEncoder* d_reed_solomon_encoder; //!< Reed-Solomon encoder
+
+    static void push_msb_bits_raw(uint8_t byte, std::vector<uint8_t>& q);
+    static void push_msb_bits_stuffed(uint8_t byte, std::vector<uint8_t>& q, int& ones_run);
+    void rebuild_bit_queue_from_frame();
 
   public:
     /*!
@@ -71,15 +76,12 @@ class il2p_encoder_impl : public il2p_encoder {
      */
     ~il2p_encoder_impl();
 
-    /*!
-     * \brief Main work function
-     * \param noutput_items Number of output items
-     * \param input_items Input items
-     * \param output_items Output items
-     * \return Number of items produced
-     */
-    int work(int noutput_items, gr_vector_const_void_star& input_items,
-             gr_vector_void_star& output_items);
+    void forecast(int noutput_items, gr_vector_int& ninput_items_required) override;
+
+    int general_work(int noutput_items,
+                     gr_vector_int& ninput_items,
+                     gr_vector_const_void_star& input_items,
+                     gr_vector_void_star& output_items) override;
 
     /*!
      * \brief Set FEC type

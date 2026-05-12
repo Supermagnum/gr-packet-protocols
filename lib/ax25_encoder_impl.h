@@ -47,10 +47,10 @@ class ax25_encoder_impl : public ax25_encoder {
     bool d_poll_final;           //!< Poll/Final flag
 
     ax25_tnc_t d_tnc;                    //!< AX.25 TNC context
-    std::vector<uint8_t> d_frame_buffer; //!< Frame buffer
-    uint16_t d_frame_length;             //!< Current frame length
-    uint8_t d_bit_position;              //!< Current bit position
-    uint16_t d_byte_position;            //!< Current byte position
+    std::vector<uint8_t> d_frame_buffer; //!< Encoded frame bytes (scratch, incl. HDLC flags)
+    /** Serialized bits to emit: opening/closing flags raw MSB-first; body HDLC bit-stuffed */
+    std::vector<uint8_t> d_bit_queue;
+    size_t d_bit_q_read{ 0 }; //!< Read index into d_bit_queue
 
   public:
     /*!
@@ -73,14 +73,17 @@ class ax25_encoder_impl : public ax25_encoder {
     ~ax25_encoder_impl();
 
     /*!
-     * \brief Main work function
-     * \param noutput_items Number of output items
-     * \param input_items Input items
-     * \param output_items Output items
-     * \return Number of items produced
+     * \brief Estimate input bytes needed for a produce request
      */
-    int work(int noutput_items, gr_vector_const_void_star& input_items,
-             gr_vector_void_star& output_items);
+    void forecast(int noutput_items, gr_vector_int& ninput_items_required) override;
+
+    /*!
+     * \brief Expand payload bytes to serialized HDLC bits (non 1:1 rate)
+     */
+    int general_work(int noutput_items,
+                     gr_vector_int& ninput_items,
+                     gr_vector_const_void_star& input_items,
+                     gr_vector_void_star& output_items) override;
 
   private:
     /*!
@@ -88,6 +91,8 @@ class ax25_encoder_impl : public ax25_encoder {
      * \param data_byte Input data byte
      */
     void build_ax25_frame(char data_byte);
+    static void push_msb_bits_raw(uint8_t byte, std::vector<uint8_t>& q);
+    static void push_msb_bits_stuffed(uint8_t byte, std::vector<uint8_t>& q, int& ones_run);
 };
 
 } // namespace packet_protocols

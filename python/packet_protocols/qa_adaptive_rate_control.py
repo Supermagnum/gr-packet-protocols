@@ -189,7 +189,7 @@ class qa_adaptive_rate_control(gr_unittest.TestCase):
         rate_control = adaptive_rate_control(
             initial_mode=modulation_mode_t.MODE_4FSK
         )
-        source = blocks.vector_source_b([0x48, 0x65, 0x6C, 0x6C, 0x6F])
+        source = blocks.vector_source_b([0x48, 0x65, 0x6C, 0x6C, 0x6F], False)
         sink = blocks.vector_sink_b()
         
         self.tb.connect(source, rate_control, sink)

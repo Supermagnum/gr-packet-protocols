@@ -738,6 +738,10 @@ under **`gnuradio4/`**) are documented in **[test-results.md](test-results.md)**
 required **`PYTHONPATH`** / **`LD_LIBRARY_PATH`** settings for Python QA, Boost.UT FetchContent for GR4,
 compiler/toolchain pitfalls, and recorded verification passes.
 
+Contributor and agent handoff (branch boundaries, completed scope, known limits): **[HANDOFF.md](HANDOFF.md)**.
+
+At this stage the codebase is **correct**, **tested**, and **documented**. The next work would only start if a new requirement comes in—for example GR4 Python bindings maturing enough to warrant a native IQ chain test, or a new protocol being added.
+
 ## Support
 
 For questions and support:

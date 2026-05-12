@@ -23,7 +23,7 @@
 #define INCLUDED_PACKET_PROTOCOLS_IL2P_DECODER_H
 
 #include <gnuradio/packet_protocols/api.h>
-#include <gnuradio/sync_block.h>
+#include <gnuradio/block.h>
 
 namespace gr {
 namespace packet_protocols {
@@ -32,7 +32,7 @@ namespace packet_protocols {
  * \brief IL2P (Improved Layer 2 Protocol) Decoder
  * \ingroup packet_protocols
  */
-class PACKET_PROTOCOLS_API il2p_decoder : virtual public gr::sync_block {
+class PACKET_PROTOCOLS_API il2p_decoder : virtual public gr::block {
   public:
     typedef std::shared_ptr<il2p_decoder> sptr;
 
