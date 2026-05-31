@@ -42,6 +42,9 @@
 
 ## Modulation validation
 
+**Branch `gnuradio4`:** GNU Radio **4.x** port (`gnuradio4/`). The **GNU Radio 3.10** OOT on
+branch **`main`** has the same mode list and [VALIDATION_REPORT.md](VALIDATION_REPORT.md) there.
+
 Reference IQ for modulator blocks was checked with
 [radio-modulation-validator](https://github.com/Supermagnum/radio-modulation-validator)
 (2026-05-31). Summary: **SOFT FAIL** — 4/8 blocks passed, 4 soft fail, **0 hard fail**, 3 skipped.
@@ -60,7 +63,7 @@ This code has not been reviewed by professional coders, it is a large task. If t
 
 ### GNU Radio 4.0
 
-A GR4-compatible port lives on branch **[gnuradio4](https://github.com/Supermagnum/gr-packet-protocols/tree/gnuradio4)** (also mirrored on [Codeberg](https://codeberg.org/Supermagnum/gr-packet-protocols)); the **`gnuradio4/`** subdirectory carries the CMake package and headers. Use GNU Radio 4.0 RC2 or later (for example installs under `/opt/gnuradio4-gcc`). See **`gnuradio4/README.md`** for build notes (**GCC 14+** is typically required for upstream GR4 headers). It is independent of the GNU Radio 3.10 flow on **`main`**.
+A GR4-compatible port lives on branch **[gnuradio4](https://github.com/Supermagnum/gr-packet-protocols/tree/gnuradio4)** (also mirrored on [Codeberg](https://codeberg.org/Supermagnum/gr-packet-protocols)). Checkout that branch for the **`gnuradio4/`** CMake package, headers, and **`gnuradio4/README.md`** build notes (**GCC 14+** is typically required for upstream GR4 headers). Use GNU Radio 4.0 RC2 or later (for example installs under `/opt/gnuradio4-gcc`). This port is independent of the GNU Radio 3.10 **`main`** tree checked out here.
 
 ---
 
@@ -752,6 +755,10 @@ Full **`ctest`** workflows for this tree (GNU Radio **3.10** top-level CMake on 
 under **`gnuradio4/`**) are documented in **[test-results.md](test-results.md)**. That file lists the
 required **`PYTHONPATH`** / **`LD_LIBRARY_PATH`** settings for Python QA, Boost.UT FetchContent for GR4,
 compiler/toolchain pitfalls, and recorded verification passes.
+
+Contributor and agent handoff (branch boundaries, completed scope, known limits): **[HANDOFF.md](HANDOFF.md)**.
+
+At this stage the codebase is **correct**, **tested**, and **documented**. The next work would only start if a new requirement comes in—for example GR4 Python bindings maturing enough to warrant a native IQ chain test, or a new protocol being added.
 
 ## Support
 
