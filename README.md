@@ -42,6 +42,9 @@
 
 ## Modulation validation
 
+**Branch `main`:** GNU Radio **3.10** OOT. The **GNU Radio 4** port is on branch **`gnuradio4`**
+(same validation report mirrored there).
+
 Reference IQ for modulator blocks was checked with
 [radio-modulation-validator](https://github.com/Supermagnum/radio-modulation-validator)
 (2026-05-31). Summary: **SOFT FAIL** — 4/8 blocks passed, 4 soft fail, **0 hard fail**, 3 skipped.
