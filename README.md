@@ -2,6 +2,7 @@
 
 ## Table of contents
 
+- [Modulation validation](#modulation-validation)
 - [GNU Radio 4.0](#gnu-radio-40)
 - [Features](#features)
   - [AX.25 Protocol](#ax25-protocol)
@@ -36,6 +37,20 @@
 - [Support](#support)
 - [Uninstallation](#uninstallation)
 - [Changelog](#changelog)
+
+---
+
+## Modulation validation
+
+Reference IQ for modulator blocks was checked with
+[radio-modulation-validator](https://github.com/Supermagnum/radio-modulation-validator)
+(2026-05-31). Summary: **SOFT FAIL** — 4/8 blocks passed, 4 soft fail, **0 hard fail**, 3 skipped.
+
+PSK modes (BPSK, QPSK, 8PSK, SOQPSK) passed at family and order level. FSK modes passed at
+family level; order-level soft fails (CPFSK vs 2FSK/4FSK/8FSK/M17) match classifier training
+coverage, not broken modulator output.
+
+Full per-block results: **[VALIDATION_REPORT.md](VALIDATION_REPORT.md)**
 
 ---
 
