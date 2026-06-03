@@ -12,13 +12,16 @@ The test suite includes:
 
 ## Prerequisites
 
-```bash
-# Install Scapy
-pip install scapy
+Install Scapy in a virtual environment (do not install into system Python):
 
-# For protocol parser tests, GNU Radio must be installed
-# (Already required for gr-packet-protocols)
+```bash
+cd /path/to/gr-packet-protocols
+python3 -m venv .venv
+source .venv/bin/activate
+pip install scapy
 ```
+
+For protocol parser tests, GNU Radio must be installed (already required for gr-packet-protocols).
 
 ## Usage
 
@@ -123,6 +126,8 @@ These tests can be integrated into CI/CD pipelines:
 # Example GitHub Actions
 - name: Run Scapy Security Tests
   run: |
+    python3 -m venv .venv
+    source .venv/bin/activate
     pip install scapy
     cd security/scapy_tests
     ./run_scapy_tests.sh

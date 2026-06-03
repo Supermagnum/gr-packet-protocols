@@ -170,14 +170,13 @@ brew install gnuradio cmake
 
 #### Optional Dependencies
 
-For PlutoSDR PTT control functionality:
-```bash
-pip install pylibiio
-```
+For PlutoSDR PTT control functionality, install in a virtual environment (prefer this over `pip install --break-system-packages` on system Python):
 
-On some systems (e.g., newer Debian/Ubuntu), you may need to use:
 ```bash
-pip install --break-system-packages pylibiio
+cd /path/to/gr-packet-protocols
+python3 -m venv .venv
+source .venv/bin/activate
+pip install pylibiio
 ```
 
 This package provides Python bindings for libiio, required to control GPIO pins on PlutoSDR devices. See `docs/PTT_CONTROL.md` for more information.
