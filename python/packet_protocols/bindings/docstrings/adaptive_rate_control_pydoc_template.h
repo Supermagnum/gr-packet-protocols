@@ -52,6 +52,10 @@ static const char*
     __doc_gr_packet_protocols_adaptive_rate_control_set_adaptation_enabled = R"doc()doc";
 
 
+static const char* __doc_gr_packet_protocols_adaptive_rate_control_set_tier4_enabled =
+    R"doc()doc";
+
+
 static const char* __doc_gr_packet_protocols_adaptive_rate_control_update_quality =
     R"doc()doc";
 

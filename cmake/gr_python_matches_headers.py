@@ -76,11 +76,32 @@ def _triple_from_gnuradio4_cmake(prefix: pathlib.Path) -> tuple[int, int, int | 
     return major, minor, patch
 
 
-def _triple_py_module() -> tuple[int, int, int | None]:
+def _triple_from_gnuradio_gr() -> tuple[int, int, int | None] | None:
+    """GNU Radio 3.10+ exposes version via ``gnuradio.gr`` (not ``gnuradio.version``)."""
+    try:
+        from gnuradio import gr  # type: ignore[import-untyped]
+    except ImportError:
+        return None
+
+    major_fn = getattr(gr, "major_version", None)
+    api_fn = getattr(gr, "api_version", None)
+    if not (callable(major_fn) and callable(api_fn)):
+        return None
+
+    major = int(major_fn())
+    # Match version.h: GR_VERSION_API is the second compare component.
+    api = int(api_fn())
+    minor_fn = getattr(gr, "minor_version", None)
+    patch = int(minor_fn()) if callable(minor_fn) else None
+    return major, api, patch
+
+
+def _triple_from_gnuradio_version() -> tuple[int, int, int | None] | None:
+    """Some GR4 layouts expose ``gnuradio.version`` with major()/minor()/patch()."""
     try:
         import gnuradio.version as gv  # type: ignore[import-untyped]
-    except ImportError as e:
-        raise RuntimeError(f"cannot import gnuradio.version ({e})") from e
+    except ImportError:
+        return None
 
     major_fn = getattr(gv, "major", None)
     minor_fn = getattr(gv, "minor", None)
@@ -101,8 +122,17 @@ def _triple_py_module() -> tuple[int, int, int | None]:
             pat_i = int(parts[2]) if len(parts) > 2 else None
             return maj_i, min_i, pat_i
 
+    return None
+
+
+def _triple_py_module() -> tuple[int, int, int | None]:
+    for loader in (_triple_from_gnuradio_gr, _triple_from_gnuradio_version):
+        triple = loader()
+        if triple is not None:
+            return triple
     raise RuntimeError(
-        "gnuradio.version has neither major()/minor() nor a parsable version() string"
+        "cannot read GNU Radio Python version "
+        "(tried gnuradio.gr major_version/api_version and gnuradio.version)"
     )
 
 

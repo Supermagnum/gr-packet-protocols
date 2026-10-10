@@ -45,14 +45,26 @@ option(
   "Allow CMake configure to continue when GNU Radio headers disagree with Python gnuradio (unsafe)"
   OFF)
 if(GR_PACKET_PROTOCOLS_VERIFY_GR_RUNTIME)
-  find_package(Python3 COMPONENTS Interpreter QUIET)
-  if(Python3_Interpreter_FOUND)
+  # Prefer PYTHON_EXECUTABLE from GrPython (via find_package(Gnuradio) above).
+  # Do not call find_package(Python3 COMPONENTS Interpreter) alone: that poisons
+  # later pybind11/FindPython3 Development discovery (python3_add_library missing
+  # or empty SOURCES on packet_protocols_python).
+  set(_gr_pp_python_exe "")
+  if(PYTHON_EXECUTABLE)
+    set(_gr_pp_python_exe "${PYTHON_EXECUTABLE}")
+  else()
+    find_package(Python3 COMPONENTS Interpreter Development QUIET)
+    if(Python3_Interpreter_FOUND)
+      set(_gr_pp_python_exe "${Python3_EXECUTABLE}")
+    endif()
+  endif()
+  if(_gr_pp_python_exe)
     include("${CMAKE_CURRENT_SOURCE_DIR}/cmake/PacketProtocolsRuntimeMatch.cmake")
     gr_packet_protocols_verify_gnuradio_headers_vs_python("${CMAKE_CURRENT_SOURCE_DIR}"
-                                                           "${Python3_EXECUTABLE}" gnuradio::gnuradio-runtime
+                                                           "${_gr_pp_python_exe}" gnuradio::gnuradio-runtime
                                                            "${GR_PACKET_PROTOCOLS_ALLOW_GR_MISMATCH}")
   else()
-    message(WARNING "gr-packet-protocols: Python3 interpreter not found; skipping GNU Radio header/runtime match.")
+    message(WARNING "gr-packet-protocols: Python interpreter not found; skipping GNU Radio header/runtime match.")
   endif()
 endif()
 
